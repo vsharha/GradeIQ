@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="adjust assignments">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="update header">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/layout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/custom/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +100,7 @@
       <workItem from="1759957475912" duration="1170000" />
       <workItem from="1759958663651" duration="3416000" />
       <workItem from="1759963283408" duration="154000" />
-      <workItem from="1759963456103" duration="7450000" />
+      <workItem from="1759963456103" duration="7923000" />
     </task>
     <task id="LOCAL-00001" summary="implement darkmode">
       <option name="closed" value="true" />
@@ -142,7 +142,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759970631227</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="update header">
+      <option name="closed" value="true" />
+      <created>1759971007692</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1759971007692</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,6 +163,7 @@
     <MESSAGE value="empty project" />
     <MESSAGE value="working on assignment section" />
     <MESSAGE value="adjust assignments" />
-    <option name="LAST_COMMIT_MESSAGE" value="adjust assignments" />
+    <MESSAGE value="update header" />
+    <option name="LAST_COMMIT_MESSAGE" value="update header" />
   </component>
 </project>
