@@ -4,7 +4,7 @@ import { ModeToggle } from "@/components/ui/mode-toggle";
 
 function Header() {
   return (
-    <header className="sticky top-0 border-sidebar-border border-b p-4 bg-sidebar flex justify-between items-center">
+    <header className="sticky top-0 border-sidebar-border border-b p-4 flex justify-between items-center z-50 bg-sidebar backdrop-blur supports-[backdrop-filter]:bg-sidebar/60">
       <div className="flex flex-row items-center gap-5">
         <Logo/>
         <Navbar/>

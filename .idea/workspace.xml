@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="working on assignment section">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="adjust assignments">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components.json" beforeDir="false" afterPath="$PROJECT_DIR$/components.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/assignments/Assignment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/Assignment.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/layout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/Header.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +100,7 @@
       <workItem from="1759957475912" duration="1170000" />
       <workItem from="1759958663651" duration="3416000" />
       <workItem from="1759963283408" duration="154000" />
-      <workItem from="1759963456103" duration="7119000" />
+      <workItem from="1759963456103" duration="7450000" />
     </task>
     <task id="LOCAL-00001" summary="implement darkmode">
       <option name="closed" value="true" />
@@ -136,7 +134,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759968047331</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="adjust assignments">
+      <option name="closed" value="true" />
+      <created>1759970631227</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1759970631227</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,6 +154,7 @@
     <MESSAGE value="set up navigation" />
     <MESSAGE value="empty project" />
     <MESSAGE value="working on assignment section" />
-    <option name="LAST_COMMIT_MESSAGE" value="working on assignment section" />
+    <MESSAGE value="adjust assignments" />
+    <option name="LAST_COMMIT_MESSAGE" value="adjust assignments" />
   </component>
 </project>

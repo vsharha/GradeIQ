@@ -4,7 +4,7 @@ function AppLayout({children}) {
   return (
     <>
       <Header/>
-      <main className="py-7 px-5">
+      <main className="py-7 px-5 overscroll-contain">
         {children}
       </main>
     </>
