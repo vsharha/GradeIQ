@@ -4,7 +4,7 @@ function AppLayout({children}) {
   return (
     <>
       <Header/>
-      <main>
+      <main className="py-7 px-5">
         {children}
       </main>
     </>
