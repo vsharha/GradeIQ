@@ -3,7 +3,7 @@ import "@/app/globals.css"
 
 export const metadata = {
   title: "GradeIQ",
-  description: "Your AI tutoring companion",
+  description: "Your AI tutoring companionn",
 };
 
 export default function RootLayout({ children }) {
