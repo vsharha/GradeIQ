@@ -135,6 +135,8 @@
     --spacing-screen-dynamic: 100dvh;
     --font-sans: var(--font-sans), system-ui, sans-serif;
     --font-heading: var(--font-heading), serif;
+
+    --animate-fade-in: fade-in 1s linear;
 }
 
 :root {
