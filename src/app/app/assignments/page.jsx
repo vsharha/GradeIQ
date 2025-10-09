@@ -49,9 +49,9 @@ const assignments = [
 function Page() {
   return (
     <div className="flex flex-col gap-4">
-      <div className="flex items-center justify-between">
+      <div className="flex items-center flex-col gap-4 justify-center sm:flex-row sm:justify-between">
         <h1 className="font-bold text-2xl">Created Assignments</h1>
-        <Button><Plus/> New assignment</Button>
+        <Button className=""><Plus/> New assignment</Button>
       </div>
       <div className="flex flex-row flex-wrap h-fit">
         {assignments.map((assignment, i)=><Assignment key={assignment.id} index={i} assignment={assignment}/>)}
