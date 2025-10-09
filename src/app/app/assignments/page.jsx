@@ -40,7 +40,7 @@ function Page() {
               default:
                 result = 0;
             }
-            return direction === "down" ? -result : result;
+            return direction === "up" ? -result : result;
           })
           .map((assignment, i)=>
           <Assignment key={assignment.id} index={i} assignment={assignment} onClick={()=>handleClick(assignment.id)}/>

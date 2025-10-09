@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="added sorting">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="fix mobile layout">
       <change beforePath="$PROJECT_DIR$/src/app/app/assignments/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/page.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -109,7 +108,7 @@
       <workItem from="1760009173503" duration="3301000" />
       <workItem from="1760032450911" duration="4919000" />
       <workItem from="1760038144353" duration="840000" />
-      <workItem from="1760051132383" duration="2438000" />
+      <workItem from="1760051132383" duration="2488000" />
     </task>
     <task id="LOCAL-00001" summary="implement darkmode">
       <option name="closed" value="true" />
@@ -287,7 +286,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760053503732</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="fix mobile layout">
+      <option name="closed" value="true" />
+      <created>1760053601210</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1760053601210</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,6 +323,7 @@
     <MESSAGE value="added cursor-pointer" />
     <MESSAGE value="improve landing page" />
     <MESSAGE value="added sorting" />
-    <option name="LAST_COMMIT_MESSAGE" value="added sorting" />
+    <MESSAGE value="fix mobile layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix mobile layout" />
   </component>
 </project>
