@@ -1,7 +1,9 @@
 function Logo() {
   return (
-    <div className="font-bold text-xl">
-      GradeIQ
+    <div className="font-bold text-xl font-heading">
+      <h1>
+        GradeIQ
+      </h1>
     </div>
   );
 }

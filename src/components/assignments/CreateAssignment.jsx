@@ -10,11 +10,11 @@ import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
 import CreateAssignmentForm from "@/components/assignments/CreateAssignmentForm";
 
-function CreateAssignment() {
+function CreateAssignment({className}) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button><Plus/> New assignment</Button>
+        <Button className={className}><Plus/> New assignment</Button>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>

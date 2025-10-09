@@ -10,9 +10,9 @@ function Page() {
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="flex items-center flex-col gap-4 justify-center sm:flex-row sm:justify-between">
-        <h1 className="font-bold text-2xl">Created Assignments</h1>
-        <CreateAssignment/>
+      <div className="flex items-center flex-col gap-4 sm:flex-row sm:justify-between px-3">
+        <h1 className="font-bold text-2xl w-full flex-1 text-left">Created Assignments</h1>
+        <CreateAssignment className="mr-auto sm:m-none"/>
       </div>
       <div className="flex flex-row flex-wrap h-fit">
         {assignments.map((assignment, i)=><Assignment key={assignment.id} index={i} assignment={assignment} onClick={()=>router.push(`./assignments/${assignment.id}`)}/>)}
