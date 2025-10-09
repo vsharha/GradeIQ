@@ -1,12 +1,11 @@
-"use client";
+"use client"
 
 import { useForm } from "react-hook-form";
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
 import { Dropzone, DropzoneContent, DropzoneEmptyState } from "@/components/ui/shadcn-io/dropzone";
-import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
-function CreateAssignmentForm() {
+function RubricForm() {
   const form = useForm({
     defaultValues: {
       files: null,
@@ -65,4 +64,4 @@ function CreateAssignmentForm() {
   );
 }
 
-export default CreateAssignmentForm;
+export default RubricForm;
