@@ -1,6 +1,7 @@
 import { ThemeProvider } from "@/components/ThemeProvider";
 import "@/app/globals.css"
 import { Archivo_Black, Ubuntu } from "next/font/google";
+import Header from "@/components/custom/Header";
 
 export const metadata = {
   title: "GradeIQ",
