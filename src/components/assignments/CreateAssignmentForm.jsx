@@ -3,11 +3,16 @@
 import { useForm } from "react-hook-form";
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Dropzone } from "@/components/ui/shadcn-io/dropzone";
+import { Dropzone, DropzoneContent, DropzoneEmptyState } from "@/components/ui/shadcn-io/dropzone";
 import { UploadIcon } from "lucide-react";
 
 function CreateAssignmentForm() {
-  const form = useForm()
+  const form = useForm({
+    defaultValues: {
+      files: [],
+      assignment_name: ""
+    }
+  })
 
   return (
     <Form {...form}>
@@ -24,12 +29,11 @@ function CreateAssignmentForm() {
                     maxFiles={1}
                     maxSize={10 * 1024 * 1024}
                     onDrop={(files) => field.onChange(files)}
-                    value={field.value}
+                    src={field.value}
+                    className="border-2 border-dashed"
                   >
-                    <h2 className="font-bold text-lg">Upload rubric</h2>
-                    <UploadIcon/>
-                    <p className="font-normal">Drag & drop files here, or click to select files</p>
-                    <p className="text-muted-foreground font-normal">Supported filetypes: pdf</p>
+                    <DropzoneEmptyState />
+                    <DropzoneContent />
                   </Dropzone>
                 </FormControl>
                 <FormDescription>

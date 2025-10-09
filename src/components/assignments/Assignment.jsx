@@ -2,15 +2,17 @@
 
 import StyledProgress from "@/components/assignments/StyledProgress";
 import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
-import {useState} from "react";
-import Loader from "@/components/custom/Loader";
-import {cn} from "@/lib/utils";
+import {useState, useEffect} from "react";
 import OverlayLoader from "@/components/custom/OverlayLoader";
 
 function Assignment({assignment, index, onClick}) {
   const { title, createdOn, description, submitted, marked } = assignment
 
   const [isLoading, setIsLoading] = useState(false)
+
+  useEffect(() => {
+    setIsLoading(false);
+  }, [assignment]);
 
   function handleClick() {
     setIsLoading(true)
