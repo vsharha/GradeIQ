@@ -4,9 +4,15 @@ import Assignment from "@/components/assignments/Assignment";
 import CreateAssignment from "@/components/assignments/CreateAssignment";
 import { assignments } from "@/data/data";
 import { useRouter } from "next/navigation";
+import Loader from "@/components/custom/Loader";
+import {useState} from "react";
 
 function Page() {
   const router = useRouter()
+
+  function handleClick(id) {
+    router.push(`./assignments/${id}`)
+  }
 
   return (
     <div className="flex flex-col gap-4">
@@ -15,7 +21,9 @@ function Page() {
         <CreateAssignment className="mr-auto sm:m-none"/>
       </div>
       <div className="flex flex-row flex-wrap h-fit">
-        {assignments.map((assignment, i)=><Assignment key={assignment.id} index={i} assignment={assignment} onClick={()=>router.push(`./assignments/${assignment.id}`)}/>)}
+        {assignments.map((assignment, i)=>
+          <Assignment key={assignment.id} index={i} assignment={assignment} onClick={()=>handleClick(assignment.id)}/>
+        )}
       </div>
     </div>
   );

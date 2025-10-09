@@ -24,12 +24,13 @@ const archivo_black = Archivo_Black({
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning className={`${ubuntu.variable} ${archivo_black.variable}`}>
-      <body>
+      <body className="min-h-screen-dynamic flex flex-col">
           <ThemeProvider
               attribute="class"
               defaultTheme="system"
               enableSystem
               disableTransitionOnChange
+              className="min-h-full"
           >
               {children}
           </ThemeProvider>
