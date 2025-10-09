@@ -1,4 +1,4 @@
-import { Card, CardContent, CardDescription, CardFooter, CardHeader } from "@/components/ui/card";
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import StyledProgress from "@/components/assignments/StyledProgress";
 
 function AssignmentView({assignment}) {
