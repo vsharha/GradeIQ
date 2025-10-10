@@ -11,7 +11,7 @@ async function Page({params}) {
   const submissions = studentSubmissions.find((submission) => submission.assignmentID === Number(id)).submissions
 
   return(
-    <div className="flex flex-col gap-3 max-w-350 m-auto">
+    <div className="flex flex-col gap-3 w-content">
       <BackButton href="/app/assignments"/>
       <AssignmentView assignment={assignment}/>
       <Card className="mt-5 sm:mt-8 gap-2 pb-6">

@@ -7,7 +7,7 @@ import { formatDate } from "@/services/services";
 import { Calendar, ChevronRight } from "lucide-react";
 import SubmissionProgress from "@/components/custom/SubmissionProgress";
 
-function Assignment({assignment, index, onClick}) {
+function Assignment({assignment, onClick}) {
   const { title, description, dueDate } = assignment
 
   const [isLoading, setIsLoading] = useState(false)

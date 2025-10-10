@@ -142,6 +142,7 @@
     --color-shadow: var(--shadow);
 
     --spacing-screen-dynamic: 100dvh;
+    --spacing-content: 100rem;
     --font-sans: var(--font-sans), system-ui, sans-serif;
     --font-heading: var(--font-heading), serif;
 }

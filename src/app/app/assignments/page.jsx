@@ -18,7 +18,7 @@ function Page() {
   const [sort, setSort] = useState("date");
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 w-content">
       <div className="flex items-center flex-col gap-4 sm:flex-row sm:justify-between px-3">
         <h1 className="font-bold text-2xl w-full flex-1 text-left">Created Assignments</h1>
         <div className="w-fit flex items-center gap-3 mr-auto">

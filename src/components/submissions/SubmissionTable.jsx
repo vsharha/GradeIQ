@@ -6,8 +6,7 @@ import {
 } from "@tanstack/react-table";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { formatDate } from "@/services/services";
-import { Input } from "@/components/ui/input";
-import { Check, Cross, LucideX } from "lucide-react";
+import { Check, LucideX } from "lucide-react";
 
 function SubmissionTable({submissions, maxGrade}) {
   const columns = [
