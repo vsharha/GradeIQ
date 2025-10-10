@@ -26,7 +26,7 @@ function Page() {
           <CreateAssignment className="mr-auto sm:m-none"/>
         </div>
       </div>
-      <div className="flex flex-row flex-wrap h-fit">
+      <div className="flex flex-row flex-wrap h-fit sm:gap-y-2">
         {assignments
           .sort((a, b) => {
             let result = 0;

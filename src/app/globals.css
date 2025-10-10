@@ -7,7 +7,7 @@
     --radius: 0.65rem;
     --background: oklch(1 0 0);
     --foreground: oklch(0.141 0.005 285.823);
-    --card: oklch(1 0 0);
+    --card: oklch(0.99 0 0);
     --card-foreground: oklch(0.141 0.005 285.823);
     --popover: oklch(1 0 0);
     --popover-foreground: oklch(0.141 0.005 285.823);
@@ -130,21 +130,19 @@
 
 }
 
-@theme {
-    --color-shadow: var(--shadow);
-    --spacing-screen-dynamic: 100dvh;
-    --font-sans: var(--font-sans), system-ui, sans-serif;
-    --font-heading: var(--font-heading), serif;
-
-    --animate-fade-in: fade-in 1s linear;
-}
-
 :root {
     --shadow: oklch(0 0 0 / 0.15);
 }
 
 .dark {
     --shadow: oklch(0 0 0 / 0.6)
+}
+
+@theme {
+    --color-shadow: var(--shadow);
+    --spacing-screen-dynamic: 100dvh;
+    --font-sans: var(--font-sans), system-ui, sans-serif;
+    --font-heading: var(--font-heading), serif;
 }
 
 @layer base {
