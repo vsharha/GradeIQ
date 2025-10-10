@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="fix mobile layout">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="fixed sorting direction">
+      <change afterPath="$PROJECT_DIR$/src/components/custom/BackButton.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/[id]/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/[id]/page.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app/assignments/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/services.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/assignments/Assignment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/Assignment.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/assignments/AssignmentView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/AssignmentView.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom/Sort.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/Sort.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +69,7 @@
       <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\gradeiq\src\app\app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\GradeIQ\src\services" />
       <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\gradeiq\src\app\app" />
       <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\gradeiq\src\app" />
       <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\gradeiq\src\components\ui" />
@@ -108,7 +116,7 @@
       <workItem from="1760009173503" duration="3301000" />
       <workItem from="1760032450911" duration="4919000" />
       <workItem from="1760038144353" duration="840000" />
-      <workItem from="1760051132383" duration="2488000" />
+      <workItem from="1760051132383" duration="4125000" />
     </task>
     <task id="LOCAL-00001" summary="implement darkmode">
       <option name="closed" value="true" />
@@ -294,7 +302,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760053601210</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="fixed sorting direction">
+      <option name="closed" value="true" />
+      <created>1760053659634</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1760053659634</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -324,6 +340,7 @@
     <MESSAGE value="improve landing page" />
     <MESSAGE value="added sorting" />
     <MESSAGE value="fix mobile layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix mobile layout" />
+    <MESSAGE value="fixed sorting direction" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed sorting direction" />
   </component>
 </project>

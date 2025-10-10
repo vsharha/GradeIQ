@@ -22,7 +22,7 @@ function Page() {
       <div className="flex items-center flex-col gap-4 sm:flex-row sm:justify-between px-3">
         <h1 className="font-bold text-2xl w-full flex-1 text-left">Created Assignments</h1>
         <div className="w-fit flex items-center gap-3 mr-auto">
-          <Sort setSort={setSort} setDirection={setDirection} direction={direction}/>
+          <Sort sort={sort} setSort={setSort} setDirection={setDirection} direction={direction}/>
           <CreateAssignment className="mr-auto sm:m-none"/>
         </div>
       </div>

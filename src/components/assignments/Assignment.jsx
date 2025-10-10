@@ -4,7 +4,7 @@ import StyledProgress from "@/components/assignments/StyledProgress";
 import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
 import {useState, useEffect} from "react";
 import OverlayLoader from "@/components/custom/OverlayLoader";
-import { formatDate } from "@/app/services";
+import { formatDate } from "@/services/services";
 import { Calendar } from "lucide-react";
 
 function Assignment({assignment, index, onClick}) {
@@ -26,6 +26,7 @@ function Assignment({assignment, index, onClick}) {
       <Card className="h-full overflow-hidden hover:-translate-y-2 transition-all duration-150 hover:shadow-lg shadow-shadow/50 relative cursor-pointer" onClick={handleClick}>
         <OverlayLoader isLoading={isLoading}/>
         <CardHeader>
+          <h2 className="font-bold text-lg">{title}</h2>
           <div className="flex gap-3 flex-wrap justify-between">
             <div className="flex gap-2 flex-row items-center">
               <span className="flex items-center gap-2"><Calendar size={15}/> Due:</span>
@@ -36,7 +37,6 @@ function Assignment({assignment, index, onClick}) {
             {/*  <h3 className="text-sm text-muted-foreground">{formatDate(createdOn)}</h3>*/}
             {/*</div>*/}
           </div>
-          <h2 className="font-bold text-lg">{title}</h2>
         </CardHeader>
         <CardContent className="flex-1">
           <p>{description}</p>

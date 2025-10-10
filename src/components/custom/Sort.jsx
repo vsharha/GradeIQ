@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowDown, ArrowUp } from "lucide-react";
 
 
-function Sort({setSort, direction, setDirection}) {
+function Sort({sort, setSort, direction, setDirection}) {
   function handleSetDirection(){
     setDirection((direction)=>direction==="up"?"down":"up")
   }
@@ -21,7 +21,7 @@ function Sort({setSort, direction, setDirection}) {
       </Button>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="outline">Sort by</Button>
+          <Button variant="outline">{sort}</Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end">
           <DropdownMenuItem onClick={() => setSort("name")}>
