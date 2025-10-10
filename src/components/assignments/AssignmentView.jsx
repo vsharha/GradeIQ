@@ -2,6 +2,7 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import StyledProgress from "@/components/assignments/StyledProgress";
 import { Calendar } from "lucide-react";
 import { formatDate } from "@/services/services";
+import SubmissionProgress from "@/components/custom/SubmissionProgress";
 
 function AssignmentView({assignment}) {
   const { title, createdOn, dueDate, description, submitted, marked } = assignment
@@ -28,7 +29,7 @@ function AssignmentView({assignment}) {
       </Card>
       <Card>
         <CardContent>
-          <StyledProgress value={marked} max={submitted} label="Grading progress"/>
+          <SubmissionProgress assignmentID={assignment.id}/>
         </CardContent>
       </Card>
     </div>

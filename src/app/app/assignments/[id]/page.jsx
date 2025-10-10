@@ -12,14 +12,14 @@ async function Page({params}) {
 
   return(
     <div className="flex flex-col gap-3 max-w-350 m-auto">
-      <BackButton/>
+      <BackButton href="/app/assignments"/>
       <AssignmentView assignment={assignment}/>
       <Card className="mt-5 sm:mt-8 gap-2 pb-2 sm:pb-4">
         <CardHeader>
           <h1 className="text-xl font-bold">Submissions</h1>
         </CardHeader>
         <CardContent className="px-3 sm:px-4">
-          <SubmissionTable submissions={submissions}/>
+          <SubmissionTable submissions={submissions} maxGrade={assignment.maxGrade}/>
         </CardContent>
       </Card>
     </div>

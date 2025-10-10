@@ -1,14 +1,14 @@
 "use client";
 
-import StyledProgress from "@/components/assignments/StyledProgress";
 import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
 import {useState, useEffect} from "react";
 import OverlayLoader from "@/components/custom/OverlayLoader";
 import { formatDate } from "@/services/services";
 import { Calendar, ChevronRight } from "lucide-react";
+import SubmissionProgress from "@/components/custom/SubmissionProgress";
 
 function Assignment({assignment, index, onClick}) {
-  const { title, createdOn, description, submitted, marked, dueDate } = assignment
+  const { title, description, dueDate } = assignment
 
   const [isLoading, setIsLoading] = useState(false)
 
@@ -43,7 +43,7 @@ function Assignment({assignment, index, onClick}) {
           <p>{description}</p>
         </CardContent>
         <CardFooter className="w-full">
-          <StyledProgress value={marked} max={submitted} label="Grading progress"/>
+          <SubmissionProgress assignmentID={assignment.id}/>
         </CardFooter>
       </Card>
     </div>

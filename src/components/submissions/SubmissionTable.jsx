@@ -6,28 +6,48 @@ import {
 } from "@tanstack/react-table";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { formatDate } from "@/services/services";
+import { Input } from "@/components/ui/input";
+import { Check, Cross, LucideX } from "lucide-react";
 
-const columns = [
-  {
-    id: "header",
-    header: "",
-    cell: info => info.row.index + 1
-  },
-  {
-    accessorKey: "studentName",
-    header: "Name"
-  },
-  {
-    accessorKey: "submittedOn",
-    header: "Submitted On",
-    cell: info => {
-      const value = info.getValue();
-      return value ? formatDate(value) : "";
+function SubmissionTable({submissions, maxGrade}) {
+  const columns = [
+    {
+      id: "header",
+      header: "",
+      cell: info => info.row.index + 1
+    },
+    {
+      accessorKey: "studentName",
+      header: "Name"
+    },
+    {
+      accessorKey: "submittedOn",
+      header: "Submitted On",
+      cell: info => {
+        const value = info.getValue();
+        return value ? formatDate(value) : "";
+      }
+    },
+    {
+      accessorKey: "grade",
+      header: "Grade",
+      cell: info => {
+        const value = info.getValue();
+        return `${value.toFixed(2)} / ${maxGrade.toFixed(2)}`
+      }
+    },
+    {
+      accessorKey: "gradeConfirmed",
+      header: "Confirmed",
+      cell: info => {
+        const value = info.getValue();
+        return <div>
+          {value ? <Check className="text-green-700 dark:text-green-400"/>:<LucideX className="text-red-700 dark:text-red-400"/>}
+        </div>
+      }
     }
-  }
-]
+  ]
 
-function SubmissionTable({submissions}) {
   const table = useReactTable({
     data: submissions,
     columns,
