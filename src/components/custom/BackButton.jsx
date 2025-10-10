@@ -4,11 +4,11 @@ import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 
-function BackButton() {
+function BackButton({href}) {
   const router = useRouter();
 
   return (
-    <Button onClick={() => router.back()} variant="outline" className="w-fit">
+    <Button onClick={() => href?router.push(href):router.back()} variant="outline" className="w-fit">
       <ArrowLeft/> Back
     </Button>
   );
