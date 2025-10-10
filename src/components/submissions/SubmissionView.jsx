@@ -1,20 +1,38 @@
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Eye } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Eye, Gauge, User } from "lucide-react";
+import VariableView from "@/components/custom/VariableView";
 
-function SubmissionView() {
+function SubmissionView({submission, assignment}) {
+  const {studentName, grade} = submission
+  const {maxGrade} = assignment
+
   return (
-    <Dialog>
-      <DialogTrigger asChild>
-        <button>
-          <Eye/>
-        </button>
-      </DialogTrigger>
-      <DialogContent>
-        <DialogHeader>
-          <DialogTitle>Submission</DialogTitle>
-        </DialogHeader>
-      </DialogContent>
-    </Dialog>
+    <div className="w-full flex items-center">
+      <Dialog>
+        <DialogTrigger asChild>
+          <button>
+            <Eye size={20}/>
+          </button>
+        </DialogTrigger>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Submission</DialogTitle>
+          </DialogHeader>
+          <VariableView>
+            <User size={15}/> {studentName}
+          </VariableView>
+          <VariableView>
+            <Gauge size={15}/> {`${grade.toFixed(2)} / ${maxGrade.toFixed(2)}`}
+          </VariableView>
+        </DialogContent>
+      </Dialog>
+    </div>
   );
 }
 

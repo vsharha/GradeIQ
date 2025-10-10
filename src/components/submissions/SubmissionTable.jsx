@@ -18,7 +18,10 @@ function SubmissionTable({assignment}) {
     {
       id: "view",
       header: "",
-      cell: <SubmissionView/>
+      cell: info => {
+        const submission = info.row.original;
+        return <SubmissionView submission={submission} assignment={assignment}/>;
+      }
     },
     {
       id: "header",

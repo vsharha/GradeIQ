@@ -3,7 +3,7 @@ import StyledProgress from "@/components/assignments/StyledProgress";
 import { ArrowUp, ArrowUpCircle, Calendar, Gauge, Target, Trophy } from "lucide-react";
 import { formatDate } from "@/services/services";
 import SubmissionProgress from "@/components/custom/SubmissionProgress";
-import VariableView from "@/components/custom/VariableView";
+import VariableTitleView from "@/components/custom/VariableTitleView";
 
 function AssignmentView({assignment}) {
   const { title, createdOn, dueDate, description, maxGrade, passingGrade } = assignment
@@ -17,18 +17,18 @@ function AssignmentView({assignment}) {
         </CardHeader>
         <CardContent>
           <div className="flex gap-y-5 flex-wrap mt-2">
-            <VariableView variable={formatDate(dueDate)}>
+            <VariableTitleView variable={formatDate(dueDate)}>
               <Calendar size={15}/> Due
-            </VariableView>
-            <VariableView variable={formatDate(createdOn)}>
+            </VariableTitleView>
+            <VariableTitleView variable={formatDate(createdOn)}>
               <Calendar size={15}/> Created on
-            </VariableView>
-            <VariableView variable={maxGrade}>
+            </VariableTitleView>
+            <VariableTitleView variable={maxGrade}>
               <Target size={15}/> Max grade
-            </VariableView>
-            <VariableView variable={passingGrade}>
+            </VariableTitleView>
+            <VariableTitleView variable={passingGrade}>
               <ArrowUpCircle size={15}/> Passing grade
-            </VariableView>
+            </VariableTitleView>
           </div>
         </CardContent>
       </Card>
