@@ -9,7 +9,7 @@ async function Page({params}) {
   const assignment = assignments.find((assignment)=>assignment.id === Number(id))
 
   return(
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-3 max-w-350 m-auto">
       <BackButton/>
       <AssignmentView assignment={assignment} key={assignment.id}/>
       <Card className="mt-5 sm:mt-8">
