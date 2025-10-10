@@ -6,6 +6,7 @@ const assignments = [
         dueDate: "2025-10-18T23:59:59Z",
         description: "An in-depth analysis of the socio-political structure of the Roman Republic and its transition into the Roman Empire. Students are expected to cite primary sources.",
         maxGrade: 100.0,
+        passingGrade: 90.0,
     },
     {
         id: 2,
@@ -14,6 +15,7 @@ const assignments = [
         dueDate: "2025-10-24T23:59:59Z",
         description: "Explain Newton's three laws of motion with real-world examples. Include diagrams and calculations.",
         maxGrade: 80.0,
+        passingGrade: 48.0,
     },
     {
         id: 3,
@@ -22,6 +24,7 @@ const assignments = [
         dueDate: "2025-10-29T23:59:59Z",
         description: "Compare and contrast the themes in Hamlet and Macbeth. Provide textual evidence.",
         maxGrade: 100.0,
+        passingGrade: 60.0,
     },
     {
         id: 4,
@@ -30,6 +33,7 @@ const assignments = [
         dueDate: "2025-11-03T23:59:59Z",
         description: "Describe the functions of cell organelles. Include labeled diagrams.",
         maxGrade: 100.0,
+        passingGrade: 60.0,
     },
     {
         id: 5,
@@ -38,6 +42,7 @@ const assignments = [
         dueDate: "2025-11-08T23:59:59Z",
         description: "Solve basic differentiation and integration problems. Show all steps.",
         maxGrade: 100.0,
+        passingGrade: 90.0,
     }
 ];
 

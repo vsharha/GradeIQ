@@ -8,7 +8,6 @@ async function Page({params}) {
   const {id} = await params;
 
   const assignment = assignments.find((assignment) => assignment.id === Number(id))
-  const submissions = studentSubmissions.find((submission) => submission.assignmentID === Number(id)).submissions
 
   return(
     <div className="flex flex-col gap-3 w-full max-w-content">
@@ -19,7 +18,7 @@ async function Page({params}) {
           <h1 className="text-xl font-bold">Submissions</h1>
         </CardHeader>
         <CardContent className="px-3 sm:px-4">
-          <SubmissionTable submissions={submissions} maxGrade={assignment.maxGrade}/>
+          <SubmissionTable assignment={assignment}/>
         </CardContent>
       </Card>
     </div>
