@@ -8,7 +8,7 @@ function Logo({size="small"}) {
   }
 
   return (
-    <div className={cn("font-bold text-xl font-heading", sizes[size])}>
+    <div className={cn("font-bold text-xl font-heading flex items-center h-10", sizes[size])}>
       <h1>
         GradeIQ
       </h1>

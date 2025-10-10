@@ -140,6 +140,7 @@
 
 @theme {
     --color-shadow: var(--shadow);
+
     --spacing-screen-dynamic: 100dvh;
     --font-sans: var(--font-sans), system-ui, sans-serif;
     --font-heading: var(--font-heading), serif;
