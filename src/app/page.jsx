@@ -12,10 +12,10 @@ export default function Home() {
         <section className="flex items-center justify-center relative bg-card border-1 border-border w-full">
           <div className="absolute top-10 h-20 w-60 bg-primary rounded-full blur-3xl z-1 opacity-0 dark:opacity-100"></div>
           <div className="h-full w-full flex flex-col items-center justify-center pt-15 pb-10 z-2 dark:backdrop-brightness-90 gap-8">
-            <div className="max-w-150 flex items-center justify-center flex-col gap-3">
-              <div>
-                <h1 className="font-bold text-3xl font-heading text-center">Grading, Reimagined.</h1>
-                <div className="font-bold text-3xl font-heading text-center flex flex-col sm:gap-[0.25em] sm:flex-row"><span>Powered by</span> <h1><span className="text-primary">Artificial Intelligence</span>.
+            <div className="max-w-150 flex items-center justify-center flex-col gap-3 p-3">
+              <div className="font-bold font-heading text-center text-2xl sm:text-3xl">
+                <h1>Grading, Reimagined.</h1>
+                <div className="text-center flex flex-col sm:gap-[0.25em] sm:flex-row"><span>Powered by</span> <h1><span className="text-primary">Artificial Intelligence</span>.
                 </h1>
                 </div>
               </div>

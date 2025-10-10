@@ -1,6 +1,8 @@
+import Header from "@/components/custom/Header";
+
 function Layout({children}) {
   return (
-    <div className="px-2">{children}</div>
+    children
   );
 }
 
