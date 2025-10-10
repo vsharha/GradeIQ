@@ -44,17 +44,10 @@ function SubmissionTable({assignment}) {
       accessorKey: "grade",
       header: "Grade",
       cell: info => {
-        const value = info.getValue();
-        return `${value.toFixed(2)} / ${maxGrade.toFixed(2)}`
-      }
-    },
-    {
-      id: "passed",
-      accessorKey: "grade",
-      header: "Passed",
-      cell: info => {
         const grade = info.getValue();
-        return <CheckX value={grade>passingGrade}/>;
+        return <div>
+          <span className={grade>passingGrade?"text-passed":"text-failed"}>{grade.toFixed(2)}</span> / <span>{maxGrade.toFixed(2)}</span>
+        </div>
       }
     },
     {
