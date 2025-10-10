@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="fix flexbox layout">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="fix layout issues">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/[id]/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/[id]/page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/layout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/layout.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/assignments/Assignment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/Assignment.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/custom/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/Header.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +114,8 @@
       <workItem from="1760112119847" duration="1614000" />
       <workItem from="1760113811987" duration="98000" />
       <workItem from="1760114026538" duration="1629000" />
-      <workItem from="1760122239026" duration="1875000" />
+      <workItem from="1760122239026" duration="1894000" />
+      <workItem from="1760129820393" duration="167000" />
     </task>
     <task id="LOCAL-00001" summary="implement darkmode">
       <option name="closed" value="true" />
@@ -450,14 +445,21 @@
       <option name="project" value="LOCAL" />
       <updated>1760123201857</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="fix layout issues">
+      <option name="closed" value="true" />
+      <created>1760124141428</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1760124141428</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update title" />
     <MESSAGE value="update theme" />
     <MESSAGE value="update fonts, theme" />
     <MESSAGE value="added loaders" />
@@ -482,6 +484,7 @@
     <MESSAGE value="improve max width" />
     <MESSAGE value="improve landing page" />
     <MESSAGE value="fix flexbox layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix flexbox layout" />
+    <MESSAGE value="fix layout issues" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix layout issues" />
   </component>
 </project>
