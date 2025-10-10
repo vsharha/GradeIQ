@@ -16,6 +16,11 @@ function SubmissionTable({assignment}) {
 
   const columns = [
     {
+      id: "header",
+      header: "",
+      cell: info => info.row.index + 1
+    },
+    {
       id: "view",
       header: "",
       cell: info => {
@@ -24,21 +29,8 @@ function SubmissionTable({assignment}) {
       }
     },
     {
-      id: "header",
-      header: "",
-      cell: info => info.row.index + 1
-    },
-    {
       accessorKey: "studentName",
       header: "Name"
-    },
-    {
-      accessorKey: "submittedOn",
-      header: "Submitted On",
-      cell: info => {
-        const value = info.getValue();
-        return value ? formatDate(value) : "";
-      }
     },
     {
       accessorKey: "grade",
@@ -50,12 +42,20 @@ function SubmissionTable({assignment}) {
         </div>
       }
     },
+    // {
+    //   accessorKey: "gradeConfirmed",
+    //   header: "Confirmed",
+    //   cell: info => {
+    //     const gradeConfirmed = info.getValue();
+    //     return <CheckX value={gradeConfirmed}/>;
+    //   }
+    // },
     {
-      accessorKey: "gradeConfirmed",
-      header: "Confirmed",
+      accessorKey: "submittedOn",
+      header: "Submitted On",
       cell: info => {
-        const gradeConfirmed = info.getValue();
-        return <CheckX value={gradeConfirmed}/>;
+        const value = info.getValue();
+        return value ? formatDate(value) : "";
       }
     },
   ]

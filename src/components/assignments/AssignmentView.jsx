@@ -13,7 +13,7 @@ function AssignmentView({assignment}) {
       <Card>
         <CardHeader>
           <h1 className="font-bold text-2xl">{title}</h1>
-          <p className="text-muted-foreground text-xl">{description}</p>
+          <p className="text-muted-foreground text-md sm:text-xl">{description}</p>
         </CardHeader>
         <CardContent>
           <div className="flex gap-y-5 flex-wrap mt-2">

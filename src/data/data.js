@@ -3,7 +3,7 @@ const assignments = [
         id: 1,
         title: "History of Ancient Rome",
         createdOn: "2025-10-04T09:00:00Z",
-        dueDate: "2025-10-18T23:59:59Z",
+        dueDate: "2025-09-10T23:59:59Z",
         description: "An in-depth analysis of the socio-political structure of the Roman Republic and its transition into the Roman Empire. Students are expected to cite primary sources.",
         maxGrade: 100.0,
         passingGrade: 90.0,

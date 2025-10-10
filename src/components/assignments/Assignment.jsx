@@ -6,6 +6,7 @@ import OverlayLoader from "@/components/custom/OverlayLoader";
 import { formatDate } from "@/services/services";
 import { Calendar, ChevronRight } from "lucide-react";
 import SubmissionProgress from "@/components/custom/SubmissionProgress";
+import { cn } from "@/lib/utils";
 
 function Assignment({assignment, onClick}) {
   const { title, description, dueDate } = assignment
@@ -35,7 +36,7 @@ function Assignment({assignment, onClick}) {
           <div className="flex gap-3 flex-wrap justify-between">
             <div className="flex gap-2 flex-row items-center">
               <span className="flex items-center gap-2"><Calendar size={15}/> Due:</span>
-              <p className="text-sm text-muted-foreground">{formatDate(dueDate)}</p>
+              <p className={cn("text-sm text-muted-foreground", new Date(dueDate) < new Date() ? "text-failed" : "")}>{formatDate(dueDate)}</p>
             </div>
           </div>
         </CardHeader>
