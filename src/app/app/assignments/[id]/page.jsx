@@ -2,7 +2,7 @@ import { assignments, studentSubmissions, submissions } from "@/data/data";
 import AssignmentView from "@/components/assignments/AssignmentView";
 import BackButton from "@/components/custom/BackButton";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import Submission from "@/components/assignments/Submission";
+import SubmissionTable from "@/components/submissions/SubmissionTable";
 
 async function Page({params}) {
   const {id} = await params;
@@ -19,7 +19,7 @@ async function Page({params}) {
           <h1 className="text-xl font-bold">Submissions</h1>
         </CardHeader>
         <CardContent>
-          {submissions.map((submission)=><Submission submission={submission} key={submission.submittedOn}/>)}
+          <SubmissionTable submissions={submissions}/>
         </CardContent>
       </Card>
     </div>
