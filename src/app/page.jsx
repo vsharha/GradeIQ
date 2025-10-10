@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <div>
       <Header showNavbar={false} showSettings={true}/>
-      <main className="pb-10">
-        <section className="flex items-center justify-center relative bg-card border-1 border-border">
+      <main className="pb-10 flex flex-col justify-center items-center">
+        <section className="flex items-center justify-center relative bg-card border-1 border-border w-full">
           <div className="absolute top-10 h-20 w-60 bg-primary rounded-full blur-3xl z-1 opacity-0 dark:opacity-100"></div>
           <div className="h-full w-full flex flex-col items-center justify-center pt-15 pb-10 z-2 dark:backdrop-brightness-90 gap-8">
             <div className="max-w-150 flex items-center justify-center flex-col gap-3">
@@ -24,7 +24,7 @@ export default function Home() {
             <Link href={"/app"}><Button className="text-lg font-semibold px-7 py-6 shadow-primary shadow-2xl">Start Grading for Free</Button></Link>
           </div>
         </section>
-        <section className="p-3 mt-5 flex flex-col items-center sm:mt-10 sm:flex-row mx-15 h-65 md:h-60 lg:h-50">
+        <section className="p-3 mt-5 flex flex-col items-center sm:mt-10 sm:flex-row mx-15 h-65 md:h-60 lg:h-50 max-w-content m-auto">
           <LandingCard>
             <div className="flex items-center flex-1">
               <h1 className="text-xl font-bold">

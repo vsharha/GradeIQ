@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="increase table padding">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="improve max width">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/[id]/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/[id]/page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/page.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/layout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/assignments/Assignment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/Assignment.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/custom/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom/LandingCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/LandingCard.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +116,7 @@
       <workItem from="1760112119847" duration="1614000" />
       <workItem from="1760113811987" duration="98000" />
       <workItem from="1760114026538" duration="1629000" />
-      <workItem from="1760122239026" duration="683000" />
+      <workItem from="1760122239026" duration="894000" />
     </task>
     <task id="LOCAL-00001" summary="implement darkmode">
       <option name="closed" value="true" />
@@ -426,14 +422,21 @@
       <option name="project" value="LOCAL" />
       <updated>1760115662379</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="improve max width">
+      <option name="closed" value="true" />
+      <created>1760122996351</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1760122996351</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added create assignment form" />
     <MESSAGE value="added the Assignment view" />
     <MESSAGE value="update title" />
     <MESSAGE value="update theme" />
@@ -458,6 +461,7 @@
     <MESSAGE value="add backbutton href" />
     <MESSAGE value="add more table rows" />
     <MESSAGE value="increase table padding" />
-    <option name="LAST_COMMIT_MESSAGE" value="increase table padding" />
+    <MESSAGE value="improve max width" />
+    <option name="LAST_COMMIT_MESSAGE" value="improve max width" />
   </component>
 </project>
