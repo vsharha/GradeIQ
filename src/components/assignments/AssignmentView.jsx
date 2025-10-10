@@ -1,11 +1,12 @@
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import StyledProgress from "@/components/assignments/StyledProgress";
-import { Calendar } from "lucide-react";
+import { ArrowUp, ArrowUpCircle, Calendar, Gauge, Target, Trophy } from "lucide-react";
 import { formatDate } from "@/services/services";
 import SubmissionProgress from "@/components/custom/SubmissionProgress";
+import VariableView from "@/components/custom/VariableView";
 
 function AssignmentView({assignment}) {
-  const { title, createdOn, dueDate, description, submitted, marked } = assignment
+  const { title, createdOn, dueDate, description, maxGrade, passingGrade } = assignment
 
   return (
     <div className="flex flex-col gap-3">
@@ -15,15 +16,19 @@ function AssignmentView({assignment}) {
           <p className="text-muted-foreground text-xl">{description}</p>
         </CardHeader>
         <CardContent>
-          <div className="flex gap-10 flex-wrap mt-2">
-            <div className="flex gap-1 flex-col">
-              <span className="flex items-center gap-2"><Calendar size={15}/> Due:</span>
-              <p className="text-sm text-muted-foreground">{formatDate(dueDate)}</p>
-            </div>
-            <div className="flex gap-1 flex-col">
-              <span className="flex items-center gap-2"><Calendar size={15}/> Created on:</span>
-              <p className="text-sm text-muted-foreground">{formatDate(createdOn)}</p>
-            </div>
+          <div className="flex gap-y-5 flex-wrap mt-2">
+            <VariableView variable={formatDate(dueDate)}>
+              <Calendar size={15}/> Due
+            </VariableView>
+            <VariableView variable={formatDate(createdOn)}>
+              <Calendar size={15}/> Created on
+            </VariableView>
+            <VariableView variable={maxGrade}>
+              <Target size={15}/> Max grade
+            </VariableView>
+            <VariableView variable={passingGrade}>
+              <ArrowUpCircle size={15}/> Passing grade
+            </VariableView>
           </div>
         </CardContent>
       </Card>

@@ -6,10 +6,9 @@ import {
 } from "@tanstack/react-table";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { formatDate } from "@/services/services";
-import { Check, ChevronRight, Eye, LucideX } from "lucide-react";
 import { studentSubmissions } from "@/data/data";
-import checkX from "@/components/custom/CheckX";
 import CheckX from "@/components/custom/CheckX";
+import SubmissionView from "@/components/submissions/SubmissionView";
 
 function SubmissionTable({assignment}) {
   const {id, maxGrade, passingGrade} = assignment
@@ -19,7 +18,7 @@ function SubmissionTable({assignment}) {
     {
       id: "view",
       header: "",
-      cell: <Eye/>
+      cell: <SubmissionView/>
     },
     {
       id: "header",
