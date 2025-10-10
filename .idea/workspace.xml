@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="improve assignment view">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="improve paddings; add submissions card">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/assignments/Assignment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/Assignment.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +110,7 @@
       <workItem from="1760009173503" duration="3301000" />
       <workItem from="1760032450911" duration="4919000" />
       <workItem from="1760038144353" duration="840000" />
-      <workItem from="1760051132383" duration="4496000" />
+      <workItem from="1760051132383" duration="6030000" />
     </task>
     <task id="LOCAL-00001" summary="implement darkmode">
       <option name="closed" value="true" />
@@ -312,15 +312,29 @@
       <option name="project" value="LOCAL" />
       <updated>1760055298725</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="add chevron">
+      <option name="closed" value="true" />
+      <created>1760055668040</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1760055668040</updated>
+    </task>
+    <task id="LOCAL-00027" summary="improve paddings; add submissions card">
+      <option name="closed" value="true" />
+      <created>1760056967491</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1760056967491</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="implement darkmode" />
-    <MESSAGE value="set up project with daisyui" />
     <MESSAGE value="set up navigation" />
     <MESSAGE value="empty project" />
     <MESSAGE value="working on assignment section" />
@@ -344,6 +358,8 @@
     <MESSAGE value="fix mobile layout" />
     <MESSAGE value="fixed sorting direction" />
     <MESSAGE value="improve assignment view" />
-    <option name="LAST_COMMIT_MESSAGE" value="improve assignment view" />
+    <MESSAGE value="add chevron" />
+    <MESSAGE value="improve paddings; add submissions card" />
+    <option name="LAST_COMMIT_MESSAGE" value="improve paddings; add submissions card" />
   </component>
 </project>
