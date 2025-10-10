@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="install tanstack table">
-      <change afterPath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" afterDir="false" />
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add submissiontable">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/[id]/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/[id]/page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/assignments/Submission.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +111,7 @@
       <workItem from="1760032450911" duration="4919000" />
       <workItem from="1760038144353" duration="840000" />
       <workItem from="1760051132383" duration="9283000" />
-      <workItem from="1760112119847" duration="1000000" />
+      <workItem from="1760112119847" duration="1195000" />
     </task>
     <task id="LOCAL-00001" summary="implement darkmode">
       <option name="closed" value="true" />
@@ -379,14 +377,21 @@
       <option name="project" value="LOCAL" />
       <updated>1760112686514</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="add submissiontable">
+      <option name="closed" value="true" />
+      <created>1760113155066</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1760113155066</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="adjust assignments" />
     <MESSAGE value="update header" />
     <MESSAGE value="improve homepage" />
     <MESSAGE value="improve responsive design" />
@@ -411,6 +416,7 @@
     <MESSAGE value="add max width" />
     <MESSAGE value="add fake submmission data" />
     <MESSAGE value="install tanstack table" />
-    <option name="LAST_COMMIT_MESSAGE" value="install tanstack table" />
+    <MESSAGE value="add submissiontable" />
+    <option name="LAST_COMMIT_MESSAGE" value="add submissiontable" />
   </component>
 </project>

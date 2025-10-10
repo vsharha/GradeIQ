@@ -5,11 +5,25 @@ import {
   getCoreRowModel, flexRender,
 } from "@tanstack/react-table";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { formatDate } from "@/services/services";
 
 const columns = [
   {
+    id: "header",
+    header: "",
+    cell: info => info.row.index + 1
+  },
+  {
     accessorKey: "studentName",
     header: "Name"
+  },
+  {
+    accessorKey: "submittedOn",
+    header: "Submitted On",
+    cell: info => {
+      const value = info.getValue();
+      return value ? formatDate(value) : "";
+    }
   }
 ]
 
