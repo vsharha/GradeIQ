@@ -14,7 +14,7 @@ async function Page({params}) {
     <div className="flex flex-col gap-3 max-w-350 m-auto">
       <BackButton href="/app/assignments"/>
       <AssignmentView assignment={assignment}/>
-      <Card className="mt-5 sm:mt-8 gap-2 pb-2 sm:pb-4">
+      <Card className="mt-5 sm:mt-8 gap-2 pb-6">
         <CardHeader>
           <h1 className="text-xl font-bold">Submissions</h1>
         </CardHeader>
