@@ -15,11 +15,11 @@ function SubmissionTable({assignment}) {
 
   const columns = [
     {
-      id: "header",
+      id: "view",
       header: "",
       cell: info => {
         const submission = info.row.original;
-        return <div className="flex flex-row items-center gap-5 w-fit">
+        return <div className="flex flex-row items-center gap-3 w-fit sm:gap-5">
           <SubmissionView submission={submission} assignment={assignment} />
           <span>{info.row.index+1}</span>
         </div>;
