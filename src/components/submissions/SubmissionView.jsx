@@ -10,8 +10,8 @@ import VariableView from "@/components/custom/VariableView";
 import { useState } from "react";
 
 function SubmissionView({submission, assignment}) {
-  const {studentName, grade} = submission
-  const {maxGrade} = assignment
+  const {name, grade} = submission
+  const {max_grade} = assignment
 
   const [open, setOpen] = useState(false)
 
@@ -28,10 +28,10 @@ function SubmissionView({submission, assignment}) {
             <DialogTitle>Submission</DialogTitle>
           </DialogHeader>
           <VariableView>
-            <User size={15}/> {studentName}
+            <User size={15}/> {name}
           </VariableView>
           <VariableView>
-            <Gauge size={15}/> {`${grade.toFixed(2)} / ${maxGrade.toFixed(2)}`}
+            <Gauge size={15}/> {`${grade.toFixed(2)} / ${max_grade.toFixed(2)}`}
           </VariableView>
         </DialogContent>
       </Dialog>

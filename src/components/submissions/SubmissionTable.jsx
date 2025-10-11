@@ -7,12 +7,11 @@ import {
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { formatDate } from "@/services/services";
 import { studentSubmissions } from "@/data/data";
-import CheckX from "@/components/custom/CheckX";
 import SubmissionView from "@/components/submissions/SubmissionView";
 
 function SubmissionTable({assignment}) {
-  const {id, maxGrade, passingGrade} = assignment
-  const submissions = studentSubmissions.find((submission) => submission.assignmentID === Number(id)).submissions
+  const {id, max_grade, passing_grade} = assignment
+  const submissions = studentSubmissions.find((submission) => submission.assignment_id === Number(id)).submissions
 
   const columns = [
     {
@@ -38,7 +37,7 @@ function SubmissionTable({assignment}) {
       cell: info => {
         const grade = info.getValue();
         return <div>
-          <span className={grade>=passingGrade?"text-passed":"text-failed"}>{grade.toFixed(2)}</span> / <span>{maxGrade.toFixed(2)}</span>
+          <span className={grade>=passing_grade?"text-passed":"text-failed"}>{grade.toFixed(2)}</span> / <span>{max_grade.toFixed(2)}</span>
         </div>
       }
     },

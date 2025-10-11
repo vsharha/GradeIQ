@@ -32,7 +32,7 @@ function Page() {
             let result = 0;
             switch (sort) {
               case "date":
-                result = new Date(a.dueDate) - new Date(b.dueDate);
+                result = new Date(a.due) - new Date(b.due);
                 break;
               case "name":
                 result = a.title.localeCompare(b.title);

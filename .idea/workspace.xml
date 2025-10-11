@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="change maximize buttons">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/data.js" afterDir="false" />
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="change naming convention to snake_case for fake data">
+      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/page.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,23 +115,7 @@
       <workItem from="1760114026538" duration="1629000" />
       <workItem from="1760122239026" duration="1894000" />
       <workItem from="1760129820393" duration="3477000" />
-      <workItem from="1760213359496" duration="2737000" />
-    </task>
-    <task id="LOCAL-00004" summary="working on assignment section">
-      <option name="closed" value="true" />
-      <created>1759968047331</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1759968047331</updated>
-    </task>
-    <task id="LOCAL-00005" summary="adjust assignments">
-      <option name="closed" value="true" />
-      <created>1759970631227</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1759970631227</updated>
+      <workItem from="1760213359496" duration="4089000" />
     </task>
     <task id="LOCAL-00006" summary="update header">
       <option name="closed" value="true" />
@@ -510,15 +493,29 @@
       <option name="project" value="LOCAL" />
       <updated>1760215496977</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="fix submissioncount function">
+      <option name="closed" value="true" />
+      <created>1760216462740</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1760216462740</updated>
+    </task>
+    <task id="LOCAL-00054" summary="change naming convention to snake_case for fake data">
+      <option name="closed" value="true" />
+      <created>1760217714918</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1760217714918</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="improve assignment view" />
-    <MESSAGE value="add chevron" />
     <MESSAGE value="improve paddings; add submissions card" />
     <MESSAGE value="add max width" />
     <MESSAGE value="add fake submmission data" />
@@ -542,6 +539,8 @@
     <MESSAGE value="improve landing page anims" />
     <MESSAGE value="improve animations; fix submission table to use &gt;= instead of &gt;" />
     <MESSAGE value="change maximize buttons" />
-    <option name="LAST_COMMIT_MESSAGE" value="change maximize buttons" />
+    <MESSAGE value="fix submissioncount function" />
+    <MESSAGE value="change naming convention to snake_case for fake data" />
+    <option name="LAST_COMMIT_MESSAGE" value="change naming convention to snake_case for fake data" />
   </component>
 </project>

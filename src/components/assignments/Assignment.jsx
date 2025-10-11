@@ -9,7 +9,7 @@ import SubmissionProgress from "@/components/custom/SubmissionProgress";
 import { cn } from "@/lib/utils";
 
 function Assignment({assignment, onClick}) {
-  const { title, description, dueDate } = assignment
+  const { title, description, due } = assignment
 
   const [isLoading, setIsLoading] = useState(false)
 
@@ -36,7 +36,7 @@ function Assignment({assignment, onClick}) {
           <div className="flex gap-3 flex-wrap justify-between">
             <div className="flex gap-2 flex-row items-center">
               <span className="flex items-center gap-2"><Calendar size={15}/> Due:</span>
-              <p className={cn("text-sm text-muted-foreground", new Date(dueDate) < new Date() ? "text-failed" : "")}>{formatDate(dueDate)}</p>
+              <p className={cn("text-sm text-muted-foreground", new Date(due) < new Date() ? "text-failed" : "")}>{formatDate(due)}</p>
             </div>
           </div>
         </CardHeader>

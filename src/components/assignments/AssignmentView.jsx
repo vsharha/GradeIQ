@@ -6,7 +6,7 @@ import SubmissionProgress from "@/components/custom/SubmissionProgress";
 import VariableTitleView from "@/components/custom/VariableTitleView";
 
 function AssignmentView({assignment}) {
-  const { title, createdOn, dueDate, description, maxGrade, passingGrade } = assignment
+  const { title, created_at, due, description, max_grade, passing_grade } = assignment
 
   return (
     <div className="flex flex-col gap-3">
@@ -17,16 +17,16 @@ function AssignmentView({assignment}) {
         </CardHeader>
         <CardContent>
           <div className="flex gap-y-5 flex-wrap mt-2">
-            <VariableTitleView variable={formatDate(dueDate)}>
+            <VariableTitleView variable={formatDate(due)}>
               <Calendar size={15}/> Due
             </VariableTitleView>
-            <VariableTitleView variable={formatDate(createdOn)}>
+            <VariableTitleView variable={formatDate(created_at)}>
               <Calendar size={15}/> Created on
             </VariableTitleView>
-            <VariableTitleView variable={maxGrade}>
+            <VariableTitleView variable={max_grade}>
               <Target size={15}/> Max grade
             </VariableTitleView>
-            <VariableTitleView variable={passingGrade}>
+            <VariableTitleView variable={passing_grade}>
               <ArrowUpCircle size={15}/> Passing grade
             </VariableTitleView>
           </div>
