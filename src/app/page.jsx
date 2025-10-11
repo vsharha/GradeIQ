@@ -24,15 +24,15 @@ export default function Home() {
             <Link href={"/app"}><Button className="text-lg font-semibold px-7 py-6 shadow-primary shadow-2xl animate-fade-in">Start Grading for Free</Button></Link>
           </div>
         </section>
-        <section className="p-3 mt-5 flex flex-col items-center sm:mt-10 sm:flex-row mx-15 h-65 md:h-60 lg:h-50 max-w-content m-auto">
+        <section className="p-3 mt-0 flex flex-col items-center sm:mt-3 sm:flex-row mx-15 h-65 md:h-60 lg:h-50 max-w-content m-auto">
           <LandingCard>
             <div className="flex items-center flex-1">
               <h1 className="text-xl font-bold">
                 Set your grading criteria
               </h1>
             </div>
-            <div className="min-h-fit">
-              <Settings size={32} className="text-primary mb-2" />
+            <div className="h-fit">
+              <Settings size={32} className="text-primary" />
             </div>
           </LandingCard>
           <LandingCard>
@@ -41,8 +41,8 @@ export default function Home() {
                 Students upload assignments
               </h1>
             </div>
-            <div className="min-h-fit">
-              <Upload size={32} className="text-primary mb-2" />
+            <div className="h-fit">
+              <Upload size={32} className="text-primary" />
             </div>
           </LandingCard>
           <LandingCard>
@@ -51,8 +51,8 @@ export default function Home() {
                 Our AI grades them instantly
               </h1>
             </div>
-            <div className="min-h-fit">
-              <Brain size={32} className="text-primary mb-2" />
+            <div className="h-fit">
+              <Brain size={32} className="text-primary" />
             </div>
           </LandingCard>
           <LandingCard>
@@ -61,8 +61,8 @@ export default function Home() {
                 You review and verify results
               </h1>
             </div>
-            <div className="min-h-fit">
-              <Eye size={32} className="text-primary mb-2" />
+            <div className="h-fit">
+              <Eye size={32} className="text-primary" />
             </div>
           </LandingCard>
         </section>

@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="change naming convention to snake_case for fake data">
-      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom/LandingCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/LandingCard.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,15 +117,7 @@
       <workItem from="1760114026538" duration="1629000" />
       <workItem from="1760122239026" duration="1894000" />
       <workItem from="1760129820393" duration="3477000" />
-      <workItem from="1760213359496" duration="4089000" />
-    </task>
-    <task id="LOCAL-00006" summary="update header">
-      <option name="closed" value="true" />
-      <created>1759971007692</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1759971007692</updated>
+      <workItem from="1760213359496" duration="4835000" />
     </task>
     <task id="LOCAL-00007" summary="improve homepage">
       <option name="closed" value="true" />
@@ -509,7 +503,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760217714918</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="change naming convention to snake_case for fake data">
+      <option name="closed" value="true" />
+      <created>1760217753731</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1760217753731</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
