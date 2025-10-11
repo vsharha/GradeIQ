@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="improve pass/fail display">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="conditional formatting for assignments past due date">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/assignments/Assignment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/Assignment.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/assignments/AssignmentView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/AssignmentView.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +116,8 @@
       <workItem from="1760113811987" duration="98000" />
       <workItem from="1760114026538" duration="1629000" />
       <workItem from="1760122239026" duration="1894000" />
-      <workItem from="1760129820393" duration="3397000" />
+      <workItem from="1760129820393" duration="3477000" />
+      <workItem from="1760213359496" duration="829000" />
     </task>
     <task id="LOCAL-00001" summary="implement darkmode">
       <option name="closed" value="true" />
@@ -496,14 +495,21 @@
       <option name="project" value="LOCAL" />
       <updated>1760132800475</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="conditional formatting for assignments past due date">
+      <option name="closed" value="true" />
+      <created>1760133316545</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1760133316545</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change landing page" />
     <MESSAGE value="added cursor-pointer" />
     <MESSAGE value="added sorting" />
     <MESSAGE value="fix mobile layout" />
@@ -528,6 +534,7 @@
     <MESSAGE value="add more variables to assignment view; add submission view" />
     <MESSAGE value="add data to submission view" />
     <MESSAGE value="improve pass/fail display" />
-    <option name="LAST_COMMIT_MESSAGE" value="improve pass/fail display" />
+    <MESSAGE value="conditional formatting for assignments past due date" />
+    <option name="LAST_COMMIT_MESSAGE" value="conditional formatting for assignments past due date" />
   </component>
 </project>
