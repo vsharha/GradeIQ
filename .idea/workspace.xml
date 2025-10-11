@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="conditional formatting for assignments past due date">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add landing page anims">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +116,7 @@
       <workItem from="1760114026538" duration="1629000" />
       <workItem from="1760122239026" duration="1894000" />
       <workItem from="1760129820393" duration="3477000" />
-      <workItem from="1760213359496" duration="829000" />
+      <workItem from="1760213359496" duration="906000" />
     </task>
     <task id="LOCAL-00001" summary="implement darkmode">
       <option name="closed" value="true" />
@@ -503,14 +502,21 @@
       <option name="project" value="LOCAL" />
       <updated>1760133316545</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="add landing page anims">
+      <option name="closed" value="true" />
+      <created>1760214231197</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1760214231197</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added cursor-pointer" />
     <MESSAGE value="added sorting" />
     <MESSAGE value="fix mobile layout" />
     <MESSAGE value="fixed sorting direction" />
@@ -535,6 +541,7 @@
     <MESSAGE value="add data to submission view" />
     <MESSAGE value="improve pass/fail display" />
     <MESSAGE value="conditional formatting for assignments past due date" />
-    <option name="LAST_COMMIT_MESSAGE" value="conditional formatting for assignments past due date" />
+    <MESSAGE value="add landing page anims" />
+    <option name="LAST_COMMIT_MESSAGE" value="add landing page anims" />
   </component>
 </project>

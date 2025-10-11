@@ -175,24 +175,24 @@
 
     @keyframes pulse {
         0% {
-            transform: scale(100%);
+            transform: scale(80%);
             opacity: 100%;
         }
 
         50% {
-            transform: scale(120%);
+            transform: scale(100%);
             opacity: 90%;
         }
 
         100% {
-            transform: scale(100%);
+            transform: scale(80%);
             opacity: 100%;
         }
     }
 
     --animate-fade-in: fade-in 0.6s linear;
     --animate-slide-in: slide-in 0.7s ease-in-out;
-    --animate-pulse: pulse 5s ease-in infinite;
+    --animate-pulse: pulse 5s ease-in-out infinite;
 }
 
 @layer base {
