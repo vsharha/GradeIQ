@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="improve animations; fix submission table to use &gt;= instead of &gt;">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="change maximize buttons">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/submissions/SubmissionView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/SubmissionView.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/data.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,15 +116,7 @@
       <workItem from="1760114026538" duration="1629000" />
       <workItem from="1760122239026" duration="1894000" />
       <workItem from="1760129820393" duration="3477000" />
-      <workItem from="1760213359496" duration="1843000" />
-    </task>
-    <task id="LOCAL-00003" summary="empty project">
-      <option name="closed" value="true" />
-      <created>1759966190055</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1759966190055</updated>
+      <workItem from="1760213359496" duration="2737000" />
     </task>
     <task id="LOCAL-00004" summary="working on assignment section">
       <option name="closed" value="true" />
@@ -510,14 +502,21 @@
       <option name="project" value="LOCAL" />
       <updated>1760215308338</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="change maximize buttons">
+      <option name="closed" value="true" />
+      <created>1760215496977</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1760215496977</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed sorting direction" />
     <MESSAGE value="improve assignment view" />
     <MESSAGE value="add chevron" />
     <MESSAGE value="improve paddings; add submissions card" />
@@ -542,6 +541,7 @@
     <MESSAGE value="add landing page anims" />
     <MESSAGE value="improve landing page anims" />
     <MESSAGE value="improve animations; fix submission table to use &gt;= instead of &gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="improve animations; fix submission table to use &gt;= instead of &gt;" />
+    <MESSAGE value="change maximize buttons" />
+    <option name="LAST_COMMIT_MESSAGE" value="change maximize buttons" />
   </component>
 </project>
