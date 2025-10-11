@@ -10,7 +10,7 @@ export default function Home() {
       <Header showNavbar={false} showSettings={true}/>
       <main className="pb-10 flex flex-col justify-center items-center">
         <section className="flex items-center justify-center relative bg-card border-1 border-border w-full">
-          <div className="absolute top-20 h-20 w-80 bg-primary rounded-full blur-3xl z-1 opacity-0 dark:opacity-100 animate-pulse"></div>
+          <div className="absolute top-20 h-20 w-80 bg-primary rounded-full blur-3xl z-1  opacity-0 dark:animate-pulse"></div>
           <div className="h-full w-full flex flex-col items-center justify-center pt-10 pb-8 md:pt-20 md:pb-15 z-2 dark:backdrop-brightness-90 gap-8">
             <div className="max-w-150 sm:max-w-200 flex items-center justify-center flex-col gap-3 p-3 animate-fade-in">
               <div className="font-bold font-heading text-center text-2xl sm:text-3xl md:text-4xl">

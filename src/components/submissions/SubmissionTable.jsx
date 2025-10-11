@@ -38,7 +38,7 @@ function SubmissionTable({assignment}) {
       cell: info => {
         const grade = info.getValue();
         return <div>
-          <span className={grade>passingGrade?"text-passed":"text-failed"}>{grade.toFixed(2)}</span> / <span>{maxGrade.toFixed(2)}</span>
+          <span className={grade>=passingGrade?"text-passed":"text-failed"}>{grade.toFixed(2)}</span> / <span>{maxGrade.toFixed(2)}</span>
         </div>
       }
     },
