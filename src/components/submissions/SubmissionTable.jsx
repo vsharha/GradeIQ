@@ -17,18 +17,24 @@ function SubmissionTable({assignment}) {
     {
       id: "header",
       header: "",
-      cell: info => info.row.index + 1
-    },
-    {
-      id: "view",
-      header: "",
       cell: info => {
         const submission = info.row.original;
-        return <SubmissionView submission={submission} assignment={assignment}/>;
+        return <div className="flex flex-row items-center gap-5 w-fit">
+          <SubmissionView submission={submission} assignment={assignment} />
+          <span>{info.row.index+1}</span>
+        </div>;
       }
     },
+    // {
+    //   id: "view",
+    //   header: "",
+    //   cell: info => {
+    //     const submission = info.row.original;
+    //     return <SubmissionView submission={submission} assignment={assignment}/>;
+    //   }
+    // },
     {
-      accessorKey: "studentName",
+      accessorKey: "name",
       header: "Name"
     },
     {
@@ -42,7 +48,7 @@ function SubmissionTable({assignment}) {
       }
     },
     // {
-    //   accessorKey: "gradeConfirmed",
+    //   accessorKey: "grade_confirmed",
     //   header: "Confirmed",
     //   cell: info => {
     //     const gradeConfirmed = info.getValue();
@@ -50,7 +56,7 @@ function SubmissionTable({assignment}) {
     //   }
     // },
     {
-      accessorKey: "submittedOn",
+      accessorKey: "created_at",
       header: "Submitted On",
       cell: info => {
         const value = info.getValue();

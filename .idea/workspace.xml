@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="fix landing page paddings">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="improve loader colors">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/custom/Loader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/Loader.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom/SubmissionProgress.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/SubmissionProgress.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,15 +117,8 @@
       <workItem from="1760114026538" duration="1629000" />
       <workItem from="1760122239026" duration="1894000" />
       <workItem from="1760129820393" duration="3477000" />
-      <workItem from="1760213359496" duration="5056000" />
-    </task>
-    <task id="LOCAL-00008" summary="improve homepage">
-      <option name="closed" value="true" />
-      <created>1759971626224</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1759971626224</updated>
+      <workItem from="1760213359496" duration="5087000" />
+      <workItem from="1760218898379" duration="221000" />
     </task>
     <task id="LOCAL-00009" summary="improve responsive design">
       <option name="closed" value="true" />
@@ -511,14 +504,21 @@
       <option name="project" value="LOCAL" />
       <updated>1760218508561</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="improve loader colors">
+      <option name="closed" value="true" />
+      <created>1760218742595</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1760218742595</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add max width" />
     <MESSAGE value="add fake submmission data" />
     <MESSAGE value="install tanstack table" />
     <MESSAGE value="add submissiontable" />
@@ -543,6 +543,7 @@
     <MESSAGE value="fix submissioncount function" />
     <MESSAGE value="change naming convention to snake_case for fake data" />
     <MESSAGE value="fix landing page paddings" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix landing page paddings" />
+    <MESSAGE value="improve loader colors" />
+    <option name="LAST_COMMIT_MESSAGE" value="improve loader colors" />
   </component>
 </project>
