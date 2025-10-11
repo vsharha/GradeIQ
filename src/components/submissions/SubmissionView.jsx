@@ -5,19 +5,22 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { Eye, Gauge, User } from "lucide-react";
+import { Eye, Gauge, Maximize, Maximize2, User } from "lucide-react";
 import VariableView from "@/components/custom/VariableView";
+import { useState } from "react";
 
 function SubmissionView({submission, assignment}) {
   const {studentName, grade} = submission
   const {maxGrade} = assignment
 
+  const [open, setOpen] = useState(false)
+
   return (
     <div className="w-full flex items-center">
-      <Dialog>
+      <Dialog open={open} onOpenChange={setOpen}>
         <DialogTrigger asChild>
           <button>
-            <Eye size={20}/>
+            {open?<Maximize size={20}/>:<Maximize2 size={20} />}
           </button>
         </DialogTrigger>
         <DialogContent>
