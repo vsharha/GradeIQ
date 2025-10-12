@@ -1,13 +1,28 @@
-import { assignments, studentSubmissions, submissions } from "@/data/data";
+"use client";
+
+import {use} from "react"
 import AssignmentView from "@/components/assignments/AssignmentView";
 import BackButton from "@/components/custom/BackButton";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import SubmissionTable from "@/components/submissions/SubmissionTable";
+import useAssignments from "@/hooks/useAssignments";
+import PageLoader from "@/components/loader/PageLoader";
+import ErrorMessage from "@/components/custom/ErrorMessage";
 
-async function Page({params}) {
-  const {id} = await params;
+function Page({params}) {
+  const {id} = use(params);
 
-  const assignment = assignments.find((assignment) => assignment.id === Number(id))
+  const { assignments, isLoading, error } = useAssignments();
+
+  if(isLoading) {
+    return <PageLoader/>;
+  }
+
+  if(error) {
+    return <ErrorMessage error={error}/>;
+  }
+
+  const assignment = assignments.find((assignment) => assignment.id === Number(id));
 
   return(
     <div className="flex flex-col gap-3 w-full max-w-content">

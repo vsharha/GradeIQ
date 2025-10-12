@@ -91,13 +91,5 @@ const studentSubmissions = [
     }
 ];
 
-export function getSubmissionCount(assignment_id) {
-    const submissions = studentSubmissions.find((submission)=>submission.assignment_id===assignment_id).submissions;
-    return {
-        count: submissions.length,
-        confirmed_count: submissions.reduce((total, submission) => total + (submission.grade_confirmed ? 1 : 0), 0),
-    }
-}
-
 export {assignments, studentSubmissions}
 

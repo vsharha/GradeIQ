@@ -5,13 +5,14 @@ import {
   getCoreRowModel, flexRender,
 } from "@tanstack/react-table";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { formatDate } from "@/services/formatDate";
-import { studentSubmissions } from "@/data/data";
+import { formatDate } from "@/lib/formatDate";
 import SubmissionView from "@/components/submissions/SubmissionView";
+import useSubmissions from "@/hooks/useSubmissions";
+import ErrorMessage from "@/components/custom/ErrorMessage";
+import BlockLoader from "@/components/loader/BlockLoader";
 
 function SubmissionTable({assignment}) {
   const {id, max_grade, passing_grade} = assignment
-  const submissions = studentSubmissions.find((submission) => submission.assignment_id === Number(id)).submissions
 
   const columns = [
     {
@@ -65,8 +66,11 @@ function SubmissionTable({assignment}) {
     },
   ]
 
+
+  const {submissions, error, isLoading} = useSubmissions(id)
+
   const table = useReactTable({
-    data: submissions,
+    data: submissions || [],
     columns,
     getCoreRowModel: getCoreRowModel(),
   })
@@ -86,8 +90,23 @@ function SubmissionTable({assignment}) {
           )}
         </TableHeader>
         <TableBody>
-          {table.getRowModel().rows?.length ? (
-            table.getRowModel().rows.map((row) => (
+          {error && <ErrorMessage error={error}/>}
+          {isLoading &&
+            <TableRow>
+              <TableCell colSpan={columns.length} className="h-24 text-center">
+                <BlockLoader/>
+              </TableCell>
+            </TableRow>
+          }
+          {!table.getRowModel().rows?.length &&
+            <TableRow>
+              <TableCell colSpan={columns.length} className="h-24 text-center">
+                No results.
+              </TableCell>
+            </TableRow>
+          }
+          {!error && !isLoading &&
+            (table.getRowModel().rows.map((row) => (
               <TableRow
                 key={row.id}
                 data-state={row.getIsSelected() && "selected"}
@@ -98,14 +117,8 @@ function SubmissionTable({assignment}) {
                   </TableCell>
                 ))}
               </TableRow>
-            ))
-          ) : (
-            <TableRow>
-              <TableCell colSpan={columns.length} className="h-24 text-center">
-                No results.
-              </TableCell>
-            </TableRow>
-          )}
+            )))
+          }
         </TableBody>
       </Table>
     </div>

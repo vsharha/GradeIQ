@@ -2,8 +2,8 @@
 
 import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
 import {useState, useEffect} from "react";
-import OverlayLoader from "@/components/custom/OverlayLoader";
-import { formatDate } from "@/services/formatDate";
+import OverlayLoader from "@/components/loader/OverlayLoader";
+import { formatDate } from "@/lib/formatDate";
 import { Calendar, ChevronRight } from "lucide-react";
 import SubmissionProgress from "@/components/custom/SubmissionProgress";
 import { cn } from "@/lib/utils";
@@ -24,7 +24,7 @@ function Assignment({assignment, onClick}) {
 
   return (
     <div className="w-full py-2 min-h-64 sm:px-2 sm:w-1/2 md:w-1/3 lg:w-1/4 select-none">
-      <Card className="h-full overflow-hidden sm:hover:-translate-y-2 transition-all duration-150 hover:shadow-xl shadow-shadow relative cursor-pointer" onClick={handleClick}>
+      <Card className="w-full h-full overflow-hidden sm:hover:-translate-y-2 transition-all duration-150 hover:shadow-xl shadow-shadow relative cursor-pointer" onClick={handleClick}>
         <OverlayLoader isLoading={isLoading}/>
         <CardHeader>
           <div className="font-bold text-lg flex flex-row justify-between">
@@ -44,7 +44,7 @@ function Assignment({assignment, onClick}) {
           <p>{description}</p>
         </CardContent>
         <CardFooter className="w-full">
-          <SubmissionProgress assignmentID={assignment.id}/>
+          <SubmissionProgress assignment={assignment}/>
         </CardFooter>
       </Card>
     </div>

@@ -1,4 +1,4 @@
-import PageLoader from "@/components/custom/PageLoader";
+import PageLoader from "@/components/loader/PageLoader";
 
 function Loading() {
   return (

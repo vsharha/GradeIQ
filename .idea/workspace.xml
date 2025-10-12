@@ -4,19 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="revert log in implementation">
-      <change afterPath="$PROJECT_DIR$/src/app/providers.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/react-query-client.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/fetchApi.js" afterDir="false" />
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="restructure providers">
+      <change afterPath="$PROJECT_DIR$/src/components/custom/ErrorMessage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/loader/BlockLoader.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useAssignments.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useSubmissions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/[id]/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/[id]/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/loading.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/loading.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app/loading.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/loading.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/loading.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/loading.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/assignments/Assignment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/Assignment.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/assignments/AssignmentView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/AssignmentView.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom/Loader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/loader/Loader.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom/OverlayLoader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/loader/OverlayLoader.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom/PageLoader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/loader/PageLoader.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom/SubmissionProgress.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/SubmissionProgress.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/custom/VariableTitleView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/VariableTitleView.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/formatDate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/react-query-client.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/react-query-client.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/fetchApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/fetchApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/formatDate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/formatDate.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,11 +84,11 @@
       <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\gradeiq\src\app\app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\GradeIQ\src\components\loader" />
+      <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\GradeIQ\src\lib" />
       <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\GradeIQ\src\services" />
       <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\gradeiq\src\app\app" />
       <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\gradeiq\src\app" />
-      <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\gradeiq\src\components\ui" />
-      <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\gradeiq\src\components" />
     </key>
   </component>
   <component name="RunManager" selected="npm.Next.js: server-side">
@@ -130,14 +140,6 @@
       <workItem from="1760213359496" duration="5087000" />
       <workItem from="1760218898379" duration="2780000" />
       <workItem from="1760288612489" duration="1091000" />
-    </task>
-    <task id="LOCAL-00012" summary="added the Assignment view">
-      <option name="closed" value="true" />
-      <created>1759975651902</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1759975651902</updated>
     </task>
     <task id="LOCAL-00013" summary="update title">
       <option name="closed" value="true" />
@@ -523,7 +525,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760295325406</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="restructure providers">
+      <option name="closed" value="true" />
+      <created>1760296139236</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1760296139236</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -541,7 +551,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="adjust table paddings" />
     <MESSAGE value="add backbutton href" />
     <MESSAGE value="add more table rows" />
     <MESSAGE value="increase table padding" />
@@ -566,6 +575,7 @@
     <MESSAGE value="fix table" />
     <MESSAGE value="adjust table gap" />
     <MESSAGE value="revert log in implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="revert log in implementation" />
+    <MESSAGE value="restructure providers" />
+    <option name="LAST_COMMIT_MESSAGE" value="restructure providers" />
   </component>
 </project>
