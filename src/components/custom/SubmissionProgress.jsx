@@ -1,6 +1,7 @@
 import StyledProgress from "@/components/assignments/StyledProgress";
 import useSubmissions from "@/hooks/useSubmissions";
 import ErrorMessage from "@/components/custom/ErrorMessage";
+import BlockLoader from "@/components/loader/BlockLoader";
 
 function SubmissionProgress({ assignment }) {
   const { id } = assignment;
@@ -12,7 +13,7 @@ function SubmissionProgress({ assignment }) {
   }
 
   if(isLoading || !submissions) {
-    return null
+    return <BlockLoader/>
   }
 
   const confirmed_count = submissions.reduce((total, submission) => total + (submission.grade_confirmed ? 1 : 0), 0)

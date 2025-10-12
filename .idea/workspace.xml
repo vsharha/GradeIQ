@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="fix submission fetching">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" afterDir="false" />
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="fix table loading state">
+      <change beforePath="$PROJECT_DIR$/src/components/custom/SubmissionProgress.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/SubmissionProgress.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,14 +119,6 @@
       <workItem from="1760213359496" duration="5087000" />
       <workItem from="1760218898379" duration="2780000" />
       <workItem from="1760288612489" duration="1091000" />
-    </task>
-    <task id="LOCAL-00016" summary="added loaders">
-      <option name="closed" value="true" />
-      <created>1760034535450</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1760034535450</updated>
     </task>
     <task id="LOCAL-00017" summary="improve loading colors">
       <option name="closed" value="true" />
@@ -513,7 +504,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760302765422</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="fix table loading state">
+      <option name="closed" value="true" />
+      <created>1760302860807</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1760302860807</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -554,8 +553,8 @@
     <MESSAGE value="revert log in implementation" />
     <MESSAGE value="restructure providers" />
     <MESSAGE value="implement react query fetching" />
-    <MESSAGE value="fix table loading state" />
     <MESSAGE value="fix submission fetching" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix submission fetching" />
+    <MESSAGE value="fix table loading state" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix table loading state" />
   </component>
 </project>
