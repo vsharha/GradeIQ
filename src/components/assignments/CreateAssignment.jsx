@@ -24,7 +24,7 @@ function CreateAssignment({className}) {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button className={className}><Plus/> New assignment</Button>
+        <Button className={className}><Plus/> <span className="hidden lg:block">New</span></Button>
       </DialogTrigger>
       <DialogContent>
         {step===0 &&
