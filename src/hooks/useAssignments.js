@@ -4,7 +4,8 @@ import { fetchAssignments } from "@/services/fetchApi";
 function useAssignments() {
     const query = useQuery({
         queryKey: ["assignments"],
-        queryFn: fetchAssignments
+        queryFn: fetchAssignments,
+        refetchOnWindowFocus: true,
     })
 
     return {...query, assignments: query.data}
