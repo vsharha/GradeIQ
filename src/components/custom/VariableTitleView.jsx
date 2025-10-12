@@ -1,5 +1,5 @@
 import { Calendar } from "lucide-react";
-import { formatDate } from "@/services/services";
+import { formatDate } from "@/services/formatDate";
 
 function VariableTitleView({children, variable}) {
   return (

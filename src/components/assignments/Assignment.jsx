@@ -3,7 +3,7 @@
 import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
 import {useState, useEffect} from "react";
 import OverlayLoader from "@/components/custom/OverlayLoader";
-import { formatDate } from "@/services/services";
+import { formatDate } from "@/services/formatDate";
 import { Calendar, ChevronRight } from "lucide-react";
 import SubmissionProgress from "@/components/custom/SubmissionProgress";
 import { cn } from "@/lib/utils";

@@ -5,7 +5,7 @@ import {
   getCoreRowModel, flexRender,
 } from "@tanstack/react-table";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { formatDate } from "@/services/services";
+import { formatDate } from "@/services/formatDate";
 import { studentSubmissions } from "@/data/data";
 import SubmissionView from "@/components/submissions/SubmissionView";
 
