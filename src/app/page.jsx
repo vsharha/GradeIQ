@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div>
       <Header showNavbar={false} showSettings={true}>
-        <Link href={"/app/login"}>
+        <Link href={"/app"}>
           <Button>Log in</Button>
         </Link>
       </Header>

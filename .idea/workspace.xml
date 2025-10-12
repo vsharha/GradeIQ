@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="adjust table gap">
-      <change afterPath="$PROJECT_DIR$/src/app/app/login/layout.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/app/login/page.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/page.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/custom/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/Header.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +23,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -523,6 +519,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add submissiontable" />
