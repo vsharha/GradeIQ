@@ -38,8 +38,7 @@ function Page() {
       <div className="flex flex-row flex-wrap h-fit sm:gap-y-2 w-full">
         {isLoading && <PageLoader/>}
         {error && <ErrorMessage error={error} className="mt-5"/>}
-        {!isLoading && !error && assignments
-          .sort((a, b) => {
+        {!isLoading && !error && assignments?.sort((a, b) => {
             let result = 0;
             switch (sort) {
               case "date":

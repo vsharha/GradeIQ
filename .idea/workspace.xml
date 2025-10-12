@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="improve responsive layout">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/page.jsx" afterDir="false" />
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="start auth implementation">
+      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/[id]/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(public)/app/assignments/[id]/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(public)/app/assignments/layout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/loading.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(public)/app/assignments/loading.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(public)/app/assignments/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app/layout.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app/loading.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(public)/app/loading.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app/login/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(public)/login/layout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app/login/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(public)/login/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(public)/app/page.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,11 +71,11 @@
       <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\gradeiq\src\app\app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\GradeIQ\src\app\(public)\app" />
+      <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\GradeIQ\src\app\(public)" />
+      <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\GradeIQ\src\components\Login" />
       <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\GradeIQ\src\components\loader" />
       <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\GradeIQ\src\lib" />
-      <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\GradeIQ\src\services" />
-      <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\gradeiq\src\app\app" />
-      <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\gradeiq\src\app" />
     </key>
   </component>
   <component name="RunManager" selected="npm.Next.js: server-side">
@@ -120,23 +127,7 @@
       <workItem from="1760213359496" duration="5087000" />
       <workItem from="1760218898379" duration="2780000" />
       <workItem from="1760288612489" duration="1091000" />
-      <workItem from="1760306235394" duration="809000" />
-    </task>
-    <task id="LOCAL-00023" summary="fix mobile layout">
-      <option name="closed" value="true" />
-      <created>1760053601210</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1760053601210</updated>
-    </task>
-    <task id="LOCAL-00024" summary="fixed sorting direction">
-      <option name="closed" value="true" />
-      <created>1760053659634</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1760053659634</updated>
+      <workItem from="1760306235394" duration="2562000" />
     </task>
     <task id="LOCAL-00025" summary="improve assignment view">
       <option name="closed" value="true" />
@@ -514,7 +505,23 @@
       <option name="project" value="LOCAL" />
       <updated>1760307031635</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="decrease gap on mobile layouts">
+      <option name="closed" value="true" />
+      <created>1760307076397</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1760307076397</updated>
+    </task>
+    <task id="LOCAL-00073" summary="start auth implementation">
+      <option name="closed" value="true" />
+      <created>1760308676944</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1760308676944</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -532,8 +539,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add more variables to assignment view; add submission view" />
-    <MESSAGE value="add data to submission view" />
     <MESSAGE value="improve pass/fail display" />
     <MESSAGE value="conditional formatting for assignments past due date" />
     <MESSAGE value="add landing page anims" />
@@ -557,6 +562,8 @@
     <MESSAGE value="improve loading state for assignments" />
     <MESSAGE value="add padding to errormessage on assignments page" />
     <MESSAGE value="improve responsive layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="improve responsive layout" />
+    <MESSAGE value="decrease gap on mobile layouts" />
+    <MESSAGE value="start auth implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="start auth implementation" />
   </component>
 </project>
