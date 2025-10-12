@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="improve progress loading state">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add refetching on window focus">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useAssignments.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useAssignments.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useSubmissions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useSubmissions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/loader/PageLoader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/loader/PageLoader.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,14 +121,6 @@
       <workItem from="1760213359496" duration="5087000" />
       <workItem from="1760218898379" duration="2780000" />
       <workItem from="1760288612489" duration="1091000" />
-    </task>
-    <task id="LOCAL-00018" summary="fix assignment uploading">
-      <option name="closed" value="true" />
-      <created>1760036475174</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1760036475174</updated>
     </task>
     <task id="LOCAL-00019" summary="change landing page">
       <option name="closed" value="true" />
@@ -514,7 +506,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760302913888</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="add refetching on window focus">
+      <option name="closed" value="true" />
+      <created>1760302977324</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1760302977324</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -532,7 +532,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="improve landing page" />
     <MESSAGE value="fix flexbox layout" />
     <MESSAGE value="fix layout issues" />
     <MESSAGE value="improve responsive layout landing" />
@@ -557,6 +556,7 @@
     <MESSAGE value="fix submission fetching" />
     <MESSAGE value="fix table loading state" />
     <MESSAGE value="improve progress loading state" />
-    <option name="LAST_COMMIT_MESSAGE" value="improve progress loading state" />
+    <MESSAGE value="add refetching on window focus" />
+    <option name="LAST_COMMIT_MESSAGE" value="add refetching on window focus" />
   </component>
 </project>

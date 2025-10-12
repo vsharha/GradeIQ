@@ -9,6 +9,7 @@ import { useState } from "react";
 import useAssignments from "@/hooks/useAssignments";
 import Loader from "@/components/loader/Loader";
 import ErrorMessage from "@/components/custom/ErrorMessage";
+import PageLoader from "@/components/loader/PageLoader";
 
 function Page() {
   const router = useRouter()
@@ -23,7 +24,7 @@ function Page() {
   const [sort, setSort] = useState("date");
 
   if(isLoading) {
-    return <Loader/>
+    return <PageLoader/>
   }
 
   if(error) {
