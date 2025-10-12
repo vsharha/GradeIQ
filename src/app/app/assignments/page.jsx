@@ -34,7 +34,7 @@ function Page() {
       {/*<Input placeholder="Start typing..."/>*/}
       <div className="flex flex-row flex-wrap h-fit sm:gap-y-2 w-full">
         {isLoading && <PageLoader/>}
-        {error && <ErrorMessage error={error}/>}
+        {error && <ErrorMessage error={error} className="mt-5"/>}
         {!isLoading && !error && assignments
           .sort((a, b) => {
             let result = 0;

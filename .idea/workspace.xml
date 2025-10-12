@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="make react query use pageloader on assignments page">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="improve loading state for assignments">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app/assignments/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/page.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/custom/ErrorMessage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/ErrorMessage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/fetchApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/fetchApi.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,14 +121,6 @@
       <workItem from="1760213359496" duration="5087000" />
       <workItem from="1760218898379" duration="2780000" />
       <workItem from="1760288612489" duration="1091000" />
-    </task>
-    <task id="LOCAL-00020" summary="added cursor-pointer">
-      <option name="closed" value="true" />
-      <created>1760038249759</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1760038249759</updated>
     </task>
     <task id="LOCAL-00021" summary="improve landing page">
       <option name="closed" value="true" />
@@ -515,7 +506,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760303532814</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="improve loading state for assignments">
+      <option name="closed" value="true" />
+      <created>1760304358863</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1760304358863</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -533,7 +532,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix layout issues" />
     <MESSAGE value="improve responsive layout landing" />
     <MESSAGE value="improve table" />
     <MESSAGE value="add more variables to assignment view; add submission view" />
@@ -558,6 +556,7 @@
     <MESSAGE value="improve progress loading state" />
     <MESSAGE value="add refetching on window focus" />
     <MESSAGE value="make react query use pageloader on assignments page" />
-    <option name="LAST_COMMIT_MESSAGE" value="make react query use pageloader on assignments page" />
+    <MESSAGE value="improve loading state for assignments" />
+    <option name="LAST_COMMIT_MESSAGE" value="improve loading state for assignments" />
   </component>
 </project>
