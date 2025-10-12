@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="fix table">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="adjust table gap">
+      <change afterPath="$PROJECT_DIR$/src/app/app/login/layout.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app/login/page.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/Header.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,15 +123,8 @@
       <workItem from="1760122239026" duration="1894000" />
       <workItem from="1760129820393" duration="3477000" />
       <workItem from="1760213359496" duration="5087000" />
-      <workItem from="1760218898379" duration="369000" />
-    </task>
-    <task id="LOCAL-00010" summary="added create assignment form">
-      <option name="closed" value="true" />
-      <created>1759973912593</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1759973912593</updated>
+      <workItem from="1760218898379" duration="2780000" />
+      <workItem from="1760288612489" duration="1091000" />
     </task>
     <task id="LOCAL-00011" summary="added create assignment form">
       <option name="closed" value="true" />
@@ -511,14 +510,21 @@
       <option name="project" value="LOCAL" />
       <updated>1760219123089</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="adjust table gap">
+      <option name="closed" value="true" />
+      <created>1760219272786</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1760219272786</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="install tanstack table" />
     <MESSAGE value="add submissiontable" />
     <MESSAGE value="adjust table paddings" />
     <MESSAGE value="add backbutton href" />
@@ -543,6 +549,7 @@
     <MESSAGE value="fix landing page paddings" />
     <MESSAGE value="improve loader colors" />
     <MESSAGE value="fix table" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix table" />
+    <MESSAGE value="adjust table gap" />
+    <option name="LAST_COMMIT_MESSAGE" value="adjust table gap" />
   </component>
 </project>

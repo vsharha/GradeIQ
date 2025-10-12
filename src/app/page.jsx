@@ -7,7 +7,11 @@ import LandingCard from "@/components/custom/LandingCard";
 export default function Home() {
   return (
     <div>
-      <Header showNavbar={false} showSettings={true}/>
+      <Header showNavbar={false} showSettings={true}>
+        <Link href={"/app/login"}>
+          <Button>Log in</Button>
+        </Link>
+      </Header>
       <main className="pb-10 flex flex-col justify-center items-center">
         <section className="flex items-center justify-center relative bg-card border-1 border-border w-full">
           <div className="absolute top-20 h-20 w-80 bg-primary rounded-full blur-3xl z-1  opacity-0 dark:animate-pulse"></div>

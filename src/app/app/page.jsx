@@ -1,7 +1,7 @@
 import { redirect } from "next/navigation";
 
 function Page() {
-  redirect('/app/assignments');
+  redirect('/app/login');
   
   return null;
 }
