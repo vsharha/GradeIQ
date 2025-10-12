@@ -98,7 +98,7 @@ function SubmissionTable({assignment}) {
               </TableCell>
             </TableRow>
           }
-          {!table.getRowModel().rows &&
+          {!error && !isLoading && !table.getRowModel().rows?.length &&
             <TableRow>
               <TableCell colSpan={columns.length} className="h-24 text-center">
                 No results.
