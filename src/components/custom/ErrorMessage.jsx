@@ -4,7 +4,7 @@ function ErrorMessage({error}) {
   console.log(error)
 
   return (
-    <div className="flex flex-row gap-2">
+    <div className="flex flex-row gap-2 justify-center w-full">
       <LucideX/>
       <span>
         {error.message}

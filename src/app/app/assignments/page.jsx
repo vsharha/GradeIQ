@@ -2,14 +2,13 @@
 
 import Assignment from "@/components/assignments/Assignment";
 import CreateAssignment from "@/components/assignments/CreateAssignment";
-import { assignments } from "@/data/data";
 import { useRouter } from "next/navigation";
 import Sort from "@/components/custom/Sort";
 import { useState } from "react";
 import useAssignments from "@/hooks/useAssignments";
-import Loader from "@/components/loader/Loader";
 import ErrorMessage from "@/components/custom/ErrorMessage";
 import PageLoader from "@/components/loader/PageLoader";
+import { Input } from "@/components/ui/input";
 
 function Page() {
   const router = useRouter()
@@ -23,14 +22,6 @@ function Page() {
   const [direction, setDirection] = useState("up");
   const [sort, setSort] = useState("date");
 
-  if(isLoading) {
-    return <PageLoader/>
-  }
-
-  if(error) {
-    return <ErrorMessage error={error}/>
-  }
-
   return (
     <div className="flex flex-col gap-4 w-full max-w-content">
       <div className="flex items-center flex-col gap-4 sm:flex-row sm:justify-between px-1">
@@ -40,8 +31,11 @@ function Page() {
           <CreateAssignment className="mr-auto sm:m-none"/>
         </div>
       </div>
+      {/*<Input placeholder="Start typing..."/>*/}
       <div className="flex flex-row flex-wrap h-fit sm:gap-y-2 w-full">
-        {assignments
+        {isLoading && <PageLoader/>}
+        {error && <ErrorMessage error={error}/>}
+        {!isLoading && !error && assignments
           .sort((a, b) => {
             let result = 0;
             switch (sort) {

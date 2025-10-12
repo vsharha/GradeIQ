@@ -1,4 +1,5 @@
 const BASE_URL = "https://gradeiq.onrender.com"
+// const BASE_URL = "https://localhost:8000"
 
 export async function fetchAssignments() {
     const response = await fetch(`${BASE_URL}/assignments?user_id=${1}`)
