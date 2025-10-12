@@ -11,12 +11,12 @@ function SubmissionProgress({ assignment }) {
     return <ErrorMessage error={error}/>
   }
 
-  if(isLoading) {
+  if(isLoading || !submissions) {
     return null
   }
 
   const confirmed_count = submissions.reduce((total, submission) => total + (submission.grade_confirmed ? 1 : 0), 0)
-  
+
   return (
     <StyledProgress value={confirmed_count} max={submissions.length} label="Grading progress"/>
   );

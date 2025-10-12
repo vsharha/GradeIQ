@@ -3,7 +3,7 @@ import { fetchSubmissions } from "@/services/fetchApi";
 
 function useSubmissions(assignment_id) {
     const query = useQuery({
-        queryKey: ["submissions"],
+        queryKey: ["submissions", assignment_id],
         queryFn: () => fetchSubmissions(assignment_id)
     })
 
