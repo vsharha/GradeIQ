@@ -25,7 +25,7 @@ function Page() {
 
   return (
     <div className="flex flex-col gap-4 w-full max-w-content">
-      <div className="flex items-center flex-col gap-6 sm:flex-row sm:justify-between px-1">
+      <div className="flex items-center flex-col gap-4 sm:gap-6 sm:flex-row sm:justify-between px-1">
         <div className="flex flex-row gap-3 justify-between w-full flex-1 items-center">
           <h1 className="font-bold text-2xl w-full flex-1 text-left">Created Assignments</h1>
           <CreateAssignment className="mr-auto sm:m-none"/>

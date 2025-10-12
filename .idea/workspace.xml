@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add padding to errormessage on assignments page">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="improve responsive layout">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app/assignments/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/assignments/CreateAssignment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/CreateAssignment.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/data.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,15 +120,7 @@
       <workItem from="1760213359496" duration="5087000" />
       <workItem from="1760218898379" duration="2780000" />
       <workItem from="1760288612489" duration="1091000" />
-      <workItem from="1760306235394" duration="769000" />
-    </task>
-    <task id="LOCAL-00022" summary="added sorting">
-      <option name="closed" value="true" />
-      <created>1760053503732</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1760053503732</updated>
+      <workItem from="1760306235394" duration="809000" />
     </task>
     <task id="LOCAL-00023" summary="fix mobile layout">
       <option name="closed" value="true" />
@@ -516,7 +506,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760304558878</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="improve responsive layout">
+      <option name="closed" value="true" />
+      <created>1760307031635</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1760307031635</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -534,7 +532,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="improve table" />
     <MESSAGE value="add more variables to assignment view; add submission view" />
     <MESSAGE value="add data to submission view" />
     <MESSAGE value="improve pass/fail display" />
@@ -559,6 +556,7 @@
     <MESSAGE value="make react query use pageloader on assignments page" />
     <MESSAGE value="improve loading state for assignments" />
     <MESSAGE value="add padding to errormessage on assignments page" />
-    <option name="LAST_COMMIT_MESSAGE" value="add padding to errormessage on assignments page" />
+    <MESSAGE value="improve responsive layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="improve responsive layout" />
   </component>
 </project>
