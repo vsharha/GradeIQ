@@ -8,7 +8,7 @@ function AppLayout({children}) {
   return (
     <>
       <Header>
-        <div className="flex flex-row flex-1 justify-end sm:justify-between items-center">
+        <div className="flex flex-row flex-1 justify-end sm:justify-between items-center h-full">
           <Navbar/>
           <Profile/>
         </div>

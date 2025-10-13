@@ -12,7 +12,7 @@ function Header({showSettings=true, children}) {
             <Logo/>
           </Link>
         </div>
-        <div className="flex-1 flex flex-row pl-5 pr-4 justify-end items-center">
+        <div className="flex-1 flex flex-row pl-5 pr-4 justify-end items-center h-full">
           {children}
         </div>
         <div className="flex items-center gap-3">

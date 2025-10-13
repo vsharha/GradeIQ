@@ -23,7 +23,7 @@ function Sort({sort, setSort, direction, setDirection}) {
         <DropdownMenuTrigger asChild>
           <Button variant="outline">{sort}</Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="end" className="mt-2">
+        <DropdownMenuContent align="end">
           <DropdownMenuItem onClick={() => setSort("name")}>
             Name
           </DropdownMenuItem>

@@ -18,9 +18,13 @@ async function Profile() {
   return (
     <div className="h-full flex items-center relative">
       <DropdownMenu>
-        <DropdownMenuTrigger className="rounded-full">
-          <UserCircle/>
+        <DropdownMenuTrigger asChild>
+          <div className="h-full cursor-pointer">
+            <div className="h-full flex items-center aspect-square justify-center">
+              <UserCircle size={25}/>
+            </div>
             <span>{user?.name}</span>
+          </div>
         </DropdownMenuTrigger>
         <DropdownMenuContent>
           <LogoutButton/>
