@@ -3,56 +3,88 @@
 import { useForm } from "react-hook-form";
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Dropzone, DropzoneContent, DropzoneEmptyState } from "@/components/ui/shadcn-io/dropzone";
-import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import { DateTimePicker } from "@/components/ui/datetime-picker";
 
 function CreateAssignmentForm() {
   const form = useForm({
     defaultValues: {
-      files: null,
-      assignment_name: ""
+      due: new Date(Date.now() + 5 * 24 * 60 * 60 * 1000),
+      title: "",
+      description: "",
+      max_grade: 100,
+      passing_grade: 50,
     }
   })
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit()} className="space-y-5">
-        <div>
+      <form onSubmit={form.handleSubmit()} className="space-y-3 mt-2">
+        <FormField
+          control={form.control}
+          name="due"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Due date</FormLabel>
+              <FormControl>
+                <DateTimePicker value={field.value} onChange={field.onChange}/>
+              </FormControl>
+              <FormDescription />
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="title"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Assignment title</FormLabel>
+              <FormControl>
+                <Input placeholder="" {...field}/>
+              </FormControl>
+              <FormDescription />
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="description"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Assignment description</FormLabel>
+              <FormControl>
+                <Textarea placeholder="" {...field}/>
+              </FormControl>
+              <FormDescription />
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <div className="flex gap-3">
           <FormField
             control={form.control}
-            name="files"
+            name="max_grade"
             render={({ field }) => (
               <FormItem>
+                <FormLabel>Max grade</FormLabel>
                 <FormControl>
-                  <Dropzone
-                    accept={{ "application/pdf": [] }}
-                    maxFiles={1}
-                    maxSize={10 * 1024 * 1024}
-                    onDrop={(files) => field.onChange(files)}
-                    src={field.value}
-                    className="border-2 border-dashed"
-                  >
-                    <DropzoneEmptyState />
-                    <DropzoneContent />
-                  </Dropzone>
+                  <Input type="number" {...field}/>
                 </FormControl>
-                <FormDescription>
-
-                </FormDescription>
+                <FormDescription />
                 <FormMessage />
               </FormItem>
             )}
           />
-        </div>
-        <div>
           <FormField
             control={form.control}
-            name="assignment_name"
+            name="passing_grade"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Assignment name</FormLabel>
+                <FormLabel>Passing grade</FormLabel>
                 <FormControl>
-                  <Input placeholder="" {...field}/>
+                  <Input type="number" {...field}/>
                 </FormControl>
                 <FormDescription />
                 <FormMessage />

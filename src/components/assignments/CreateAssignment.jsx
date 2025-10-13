@@ -34,7 +34,7 @@ function CreateAssignment({className, wide=false}) {
             </DialogHeader>
             <CreateAssignmentForm/>
             <DialogFooter>
-              <Button onClick={()=>setStep((step)=>step+1)}>Upload</Button>
+              <Button onClick={()=>setStep((step)=>step+1)}>Create</Button>
             </DialogFooter>
           </>
         }
