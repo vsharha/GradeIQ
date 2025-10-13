@@ -27,15 +27,17 @@ function Page({params}) {
   return(
     <div className="flex flex-col gap-3 w-full max-w-content">
       <BackButton href="/app/assignments"/>
-      <AssignmentView assignment={assignment}/>
-      <Card className="mt-5 sm:mt-8 gap-2 pb-6">
-        <CardHeader>
-          <h1 className="text-xl font-bold">Submissions</h1>
-        </CardHeader>
-        <CardContent className="px-3 sm:px-4">
-          <SubmissionTable assignment={assignment}/>
-        </CardContent>
-      </Card>
+      <div className="flex flex-col lg:flex-row gap-6 lg:gap-4">
+        <AssignmentView assignment={assignment}/>
+        <Card className="gap-2 pb-6 lg:flex-1 lg:min-h-[calc(100dvh*3/4)]">
+          <CardHeader>
+            <h1 className="text-xl font-bold">Submissions</h1>
+          </CardHeader>
+          <CardContent className="px-3 sm:px-4">
+            <SubmissionTable assignment={assignment}/>
+          </CardContent>
+        </Card>
+      </div>
     </div>
   );
 }

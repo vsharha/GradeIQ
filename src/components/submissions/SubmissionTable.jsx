@@ -77,7 +77,7 @@ function SubmissionTable({assignment}) {
 
   return (
     <div>
-      <Table>
+      <Table className="lg:h-full">
         <TableHeader>
           {table.getHeaderGroups().map((headerGroup)=>
             <TableRow key={headerGroup.id}>
@@ -89,7 +89,7 @@ function SubmissionTable({assignment}) {
             </TableRow>
           )}
         </TableHeader>
-        <TableBody>
+        <TableBody className="lg:h-full lg:overflow-scroll">
           {error && <ErrorMessage error={error}/>}
           {isLoading &&
             <TableRow>

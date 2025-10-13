@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add default values to login form">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="improve progress loader">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/assignments/StyledProgress.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/StyledProgress.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/custom/SubmissionProgress.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/SubmissionProgress.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/login/LoginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/LoginForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/[id]/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/[id]/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom/VariableTitleView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/VariableTitleView.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,15 +134,7 @@
       <workItem from="1760306235394" duration="10882000" />
       <workItem from="1760317233907" duration="2621000" />
       <workItem from="1760319997557" duration="38000" />
-      <workItem from="1760364005390" duration="6817000" />
-    </task>
-    <task id="LOCAL-00044" summary="improve table">
-      <option name="closed" value="true" />
-      <created>1760130863923</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1760130863923</updated>
+      <workItem from="1760364005390" duration="7353000" />
     </task>
     <task id="LOCAL-00045" summary="add more variables to assignment view; add submission view">
       <option name="closed" value="true" />
@@ -528,7 +520,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760374665871</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="improve progress loader">
+      <option name="closed" value="true" />
+      <created>1760374941288</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1760374941288</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -546,7 +546,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="make react query use pageloader on assignments page" />
     <MESSAGE value="improve loading state for assignments" />
     <MESSAGE value="add padding to errormessage on assignments page" />
     <MESSAGE value="improve responsive layout" />
@@ -571,6 +570,7 @@
     <MESSAGE value="adjust dropdown menus" />
     <MESSAGE value="improve landing layout" />
     <MESSAGE value="add default values to login form" />
-    <option name="LAST_COMMIT_MESSAGE" value="add default values to login form" />
+    <MESSAGE value="improve progress loader" />
+    <option name="LAST_COMMIT_MESSAGE" value="improve progress loader" />
   </component>
 </project>
