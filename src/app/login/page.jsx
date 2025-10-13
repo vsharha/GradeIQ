@@ -3,7 +3,6 @@ import LoginForm from "@/components/login/LoginForm";
 import { LogIn } from "lucide-react";
 
 function Page() {
-
   return (
     <Card className="w-full max-w-120">
       <CardHeader>

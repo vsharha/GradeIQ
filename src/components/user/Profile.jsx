@@ -1,6 +1,6 @@
 "use client";
 
-import { UserCircle } from "lucide-react";
+import { LucideX, UserCircle } from "lucide-react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import LogoutButton from "@/components/login/LogoutButton";
 import LoginButton from "@/components/login/LoginButton";
@@ -15,25 +15,30 @@ function Profile() {
   }
 
   if(error) {
-    return null
+    return <span><LucideX/></span>
   }
 
   if(!user) {
     return <LoginButton/>
   }
 
+  const {user_name, role} = user
+
   return (
     <div className="h-full flex items-center relative">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <div className="h-full cursor-pointer">
+          <div className="h-full cursor-pointer flex items-center gap-1 mr-2">
             <div className="h-full flex items-center aspect-square justify-center">
               <UserCircle size={25}/>
             </div>
-            <span>{user?.name}</span>
+            <div className="flex flex-col">
+              <span className="text-sm">{user_name}</span>
+              <span className="text-muted-foreground text-sm">{role}</span>
+            </div>
           </div>
         </DropdownMenuTrigger>
-        <DropdownMenuContent>
+        <DropdownMenuContent className="w-fit">
           <LogoutButton/>
         </DropdownMenuContent>
       </DropdownMenu>
