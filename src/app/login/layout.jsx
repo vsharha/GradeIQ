@@ -1,8 +1,15 @@
 import Header from "@/components/custom/Header";
-import { Button } from "@/components/ui/button";
-import BlockLoader from "@/components/loader/BlockLoader";
+import { createClient } from "@/utils/supabase/server";
+import { redirect } from "next/navigation";
 
-function Layout({children}) {
+async function Layout({children}) {
+  const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
+
+  if (user) {
+    return redirect("/app")
+  }
+
   return (
     <>
       <Header />

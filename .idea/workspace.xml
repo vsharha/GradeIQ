@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="fix assignments view">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(public)/app/assignments/[id]/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/[id]/layout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(public)/app/assignments/[id]/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/[id]/page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(public)/app/assignments/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/layout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(public)/app/assignments/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(public)/app/layout.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(public)/app/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(public)/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/layout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(public)/login/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/layout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(public)/login/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/page.jsx" afterDir="false" />
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="refactor file structure; remove log out button from log in screen">
+      <change beforePath="$PROJECT_DIR$/src/app/login/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/layout.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,15 +131,7 @@
       <workItem from="1760306235394" duration="10882000" />
       <workItem from="1760317233907" duration="2621000" />
       <workItem from="1760319997557" duration="38000" />
-      <workItem from="1760364005390" duration="247000" />
-    </task>
-    <task id="LOCAL-00037" summary="add more table rows">
-      <option name="closed" value="true" />
-      <created>1760115147722</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1760115147722</updated>
+      <workItem from="1760364005390" duration="315000" />
     </task>
     <task id="LOCAL-00038" summary="increase table padding">
       <option name="closed" value="true" />
@@ -534,7 +517,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760320031802</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="refactor file structure; remove log out button from log in screen">
+      <option name="closed" value="true" />
+      <created>1760364281347</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1760364281347</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -552,7 +543,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="revert log in implementation" />
     <MESSAGE value="restructure providers" />
     <MESSAGE value="implement react query fetching" />
     <MESSAGE value="fix submission fetching" />
@@ -577,6 +567,7 @@
     <MESSAGE value="add hard redirect after login" />
     <MESSAGE value="add redirects for non-existent assignment ids; handled no assignments on account" />
     <MESSAGE value="fix assignments view" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix assignments view" />
+    <MESSAGE value="refactor file structure; remove log out button from log in screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor file structure; remove log out button from log in screen" />
   </component>
 </project>
