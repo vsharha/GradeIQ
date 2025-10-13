@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="reset tanstack query cache during logout">
-      <change beforePath="$PROJECT_DIR$/src/components/Login/LoginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/LoginForm.jsx" afterDir="false" />
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add hard redirect after login">
+      <change afterPath="$PROJECT_DIR$/src/app/(public)/app/assignments/[id]/layout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(public)/app/assignments/[id]/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(public)/app/assignments/[id]/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(public)/app/assignments/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(public)/app/assignments/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(public)/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(public)/layout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/assignments/CreateAssignment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/CreateAssignment.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/Navbar.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,15 +135,7 @@
       <workItem from="1760218898379" duration="2780000" />
       <workItem from="1760288612489" duration="1091000" />
       <workItem from="1760306235394" duration="10882000" />
-      <workItem from="1760317233907" duration="1303000" />
-    </task>
-    <task id="LOCAL-00034" summary="add submissiontable">
-      <option name="closed" value="true" />
-      <created>1760113155066</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1760113155066</updated>
+      <workItem from="1760317233907" duration="2499000" />
     </task>
     <task id="LOCAL-00035" summary="adjust table paddings">
       <option name="closed" value="true" />
@@ -523,7 +521,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760318412691</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="add hard redirect after login">
+      <option name="closed" value="true" />
+      <created>1760318566422</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1760318566423</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -541,7 +547,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="improve loader colors" />
     <MESSAGE value="fix table" />
     <MESSAGE value="adjust table gap" />
     <MESSAGE value="revert log in implementation" />
@@ -566,6 +571,7 @@
     <MESSAGE value="attempt fix for redirecting after login" />
     <MESSAGE value="add log out functionality" />
     <MESSAGE value="reset tanstack query cache during logout" />
-    <option name="LAST_COMMIT_MESSAGE" value="reset tanstack query cache during logout" />
+    <MESSAGE value="add hard redirect after login" />
+    <option name="LAST_COMMIT_MESSAGE" value="add hard redirect after login" />
   </component>
 </project>

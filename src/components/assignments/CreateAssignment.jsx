@@ -13,7 +13,7 @@ import CreateAssignmentForm from "@/components/assignments/CreateAssignmentForm"
 import { useEffect, useState } from "react";
 import RubricForm from "@/components/assignments/RubricForm";
 
-function CreateAssignment({className}) {
+function CreateAssignment({className, wide=false}) {
   const [step, setStep] = useState(0);
   const [open, setOpen] = useState(false);
 
@@ -24,7 +24,7 @@ function CreateAssignment({className}) {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button className={className}><Plus/> <span className="hidden lg:block">New</span></Button>
+        <Button className={className}><Plus/> <span className={!wide?"hidden lg:block":""}>New</span></Button>
       </DialogTrigger>
       <DialogContent>
         {step===0 &&

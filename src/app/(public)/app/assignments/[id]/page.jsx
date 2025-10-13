@@ -8,6 +8,7 @@ import SubmissionTable from "@/components/submissions/SubmissionTable";
 import useAssignments from "@/hooks/useAssignments";
 import PageLoader from "@/components/loader/PageLoader";
 import ErrorMessage from "@/components/custom/ErrorMessage";
+import { useRouter } from "next/navigation";
 
 function Page({params}) {
   const {id} = use(params);
@@ -21,8 +22,6 @@ function Page({params}) {
   if(error) {
     return <ErrorMessage error={error}/>;
   }
-
-  const assignment = assignments.find((assignment) => assignment.id === Number(id));
 
   return(
     <div className="flex flex-col gap-3 w-full max-w-content">

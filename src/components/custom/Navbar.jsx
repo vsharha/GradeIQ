@@ -18,7 +18,7 @@ function Navbar() {
   const pathname = usePathname()
 
   return (
-    <NavigationMenu>
+    <NavigationMenu className="hidden sm:block">
       <NavigationMenuList>
         {links.map((link)=>
           <NavigationMenuItem key={link.label}>

@@ -28,7 +28,7 @@ function Page() {
       <div className="flex items-center flex-col gap-4 sm:gap-6 sm:flex-row sm:justify-between px-1">
         <div className="flex flex-row gap-3 justify-between w-full flex-1 items-center">
           <h1 className="font-bold text-2xl w-full flex-1 text-left">Created Assignments</h1>
-          <CreateAssignment className="mr-auto sm:m-none"/>
+          {!isLoading && !error && assignments.length !== 0 && <CreateAssignment className="mr-auto sm:m-none" />}
         </div>
         <div className="w-full sm:w-fit flex items-center gap-3 mr-auto">
           <Input placeholder="Search..." autoComplete="off" value={searchQuery} onChange={(e)=>setSearchQuery(e.target.value)} className="flex-1 w-full sm:w-35 md:w-60"/>
@@ -38,6 +38,12 @@ function Page() {
       <div className="flex flex-row flex-wrap h-fit sm:gap-y-2 w-full">
         {isLoading && <PageLoader/>}
         {error && <ErrorMessage error={error} className="mt-5"/>}
+        {!isLoading && !error && assignments.length === 0 &&
+          <div className="w-full flex flex-col justify-center items-center gap-5 mt-10">
+            <p className="w-fit text-2xl">Add your first assignment</p>
+            <CreateAssignment className="w-fit" wide={true}/>
+          </div>
+        }
         {!isLoading && !error && assignments?.sort((a, b) => {
             let result = 0;
             switch (sort) {

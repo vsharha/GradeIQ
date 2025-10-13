@@ -21,7 +21,7 @@ function AppLayout({children}) {
     queryClient.clear();
     router.push("/");
     router.refresh();
-  }
+  }[]
 
   return (
     <>
