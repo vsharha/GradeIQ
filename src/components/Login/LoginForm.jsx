@@ -6,9 +6,8 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { createClient } from "@/utils/supabase/client";
 import { toast } from "sonner";
-import { redirect } from "next/navigation";
+import { redirect, useRouter } from "next/navigation";
 import { useState } from "react";
-import { Loader } from "lucide-react";
 import BlockLoader from "@/components/loader/BlockLoader";
 
 function LoginForm() {
@@ -20,6 +19,8 @@ function LoginForm() {
   })
 
   const [isLoading, setIsLoading] = useState(false);
+
+  const router = useRouter()
 
   async function onSubmit(data) {
     setIsLoading(true)
@@ -33,7 +34,7 @@ function LoginForm() {
       toast(error.message);
       setIsLoading(false)
     } else {
-      return redirect("/app");
+      router.push("/app")
     }
   }
 
