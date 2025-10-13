@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="update profile dropdown">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add footer to landing page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/providers.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/providers.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/landing/LandingCards.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/landing/LandingCards.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/assignments/StyledProgress.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/StyledProgress.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom/SubmissionProgress.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/SubmissionProgress.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,15 +133,7 @@
       <workItem from="1760306235394" duration="10882000" />
       <workItem from="1760317233907" duration="2621000" />
       <workItem from="1760319997557" duration="38000" />
-      <workItem from="1760364005390" duration="12290000" />
-    </task>
-    <task id="LOCAL-00049" summary="add landing page anims">
-      <option name="closed" value="true" />
-      <created>1760214231197</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1760214231197</updated>
+      <workItem from="1760364005390" duration="12514000" />
     </task>
     <task id="LOCAL-00050" summary="improve landing page anims">
       <option name="closed" value="true" />
@@ -528,7 +519,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760382919605</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="add footer to landing page">
+      <option name="closed" value="true" />
+      <created>1760383922580</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1760383922581</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -546,7 +545,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="reorganise file structure" />
     <MESSAGE value="start auth implementation" />
     <MESSAGE value="implement supabase auth with custom api authorisation; change redirects to use next.config.mjs" />
     <MESSAGE value="improve loaders; add login loading state" />
@@ -571,6 +569,7 @@
     <MESSAGE value="split header fetching logic between server and client" />
     <MESSAGE value="add error handling for server side fetching" />
     <MESSAGE value="update profile dropdown" />
-    <option name="LAST_COMMIT_MESSAGE" value="update profile dropdown" />
+    <MESSAGE value="add footer to landing page" />
+    <option name="LAST_COMMIT_MESSAGE" value="add footer to landing page" />
   </component>
 </project>
