@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="improve loaders; add login loading state">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="fix search to use lowercase version; make router use await in LoginForm.jsx">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/custom/LandingCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/LandingCard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login/LoginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/LoginForm.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,30 +35,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "JavaScript Debug.assignments.executor": "Debug",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "js.debugger.nextJs.config.created.client": "true",
-    "js.debugger.nextJs.config.created.server": "true",
-    "last_opened_file_path": "//wsl.localhost/Ubuntu/home/viktor/projects/GradeIQ",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "\\\\wsl.localhost\\Ubuntu\\usr\\local\\lib\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
-    "ts.external.directory.path": "C:\\Users\\Viktor\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;JavaScript Debug.assignments.executor&quot;: &quot;Debug&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
+    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;//wsl.localhost/Ubuntu/home/viktor/projects/GradeIQ&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;\\\\wsl.localhost\\Ubuntu\\usr\\local\\lib\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Viktor\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\gradeiq\src\app" />
@@ -129,31 +129,8 @@
       <workItem from="1760213359496" duration="5087000" />
       <workItem from="1760218898379" duration="2780000" />
       <workItem from="1760288612489" duration="1091000" />
-      <workItem from="1760306235394" duration="10847000" />
-    </task>
-    <task id="LOCAL-00028" summary="improve landing page">
-      <option name="closed" value="true" />
-      <created>1760057232077</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1760057232077</updated>
-    </task>
-    <task id="LOCAL-00029" summary="improve landing page">
-      <option name="closed" value="true" />
-      <created>1760059098993</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1760059098993</updated>
-    </task>
-    <task id="LOCAL-00030" summary="improve landing page">
-      <option name="closed" value="true" />
-      <created>1760060393297</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1760060393297</updated>
+      <workItem from="1760306235394" duration="10882000" />
+      <workItem from="1760317233907" duration="825000" />
     </task>
     <task id="LOCAL-00031" summary="add max width">
       <option name="closed" value="true" />
@@ -523,7 +500,31 @@
       <option name="project" value="LOCAL" />
       <updated>1760316995126</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="fix LandingCard.jsx">
+      <option name="closed" value="true" />
+      <created>1760317184417</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1760317184417</updated>
+    </task>
+    <task id="LOCAL-00078" summary="fix LoginForm.jsx to use server side routing">
+      <option name="closed" value="true" />
+      <created>1760317320775</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1760317320775</updated>
+    </task>
+    <task id="LOCAL-00079" summary="fix search to use lowercase version; make router use await in LoginForm.jsx">
+      <option name="closed" value="true" />
+      <created>1760317698687</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1760317698688</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -541,9 +542,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="improve landing page anims" />
-    <MESSAGE value="improve animations; fix submission table to use &gt;= instead of &gt;" />
-    <MESSAGE value="change maximize buttons" />
     <MESSAGE value="fix submissioncount function" />
     <MESSAGE value="change naming convention to snake_case for fake data" />
     <MESSAGE value="fix landing page paddings" />
@@ -566,6 +564,9 @@
     <MESSAGE value="start auth implementation" />
     <MESSAGE value="implement supabase auth with custom api authorisation; change redirects to use next.config.mjs" />
     <MESSAGE value="improve loaders; add login loading state" />
-    <option name="LAST_COMMIT_MESSAGE" value="improve loaders; add login loading state" />
+    <MESSAGE value="fix LandingCard.jsx" />
+    <MESSAGE value="fix LoginForm.jsx to use server side routing" />
+    <MESSAGE value="fix search to use lowercase version; make router use await in LoginForm.jsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix search to use lowercase version; make router use await in LoginForm.jsx" />
   </component>
 </project>

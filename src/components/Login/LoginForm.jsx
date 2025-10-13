@@ -34,7 +34,9 @@ function LoginForm() {
       toast(error.message);
       setIsLoading(false)
     } else {
-      await router.push("/app")
+      await supabase.auth.getSession();
+      router.push("/app")
+      router.refresh()
     }
   }
 
