@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="refactor file structure; remove log out button from log in screen">
-      <change beforePath="$PROJECT_DIR$/src/app/login/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/layout.jsx" afterDir="false" />
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="redirect from login screen if already logged in">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/layout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/Header.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,15 +134,7 @@
       <workItem from="1760306235394" duration="10882000" />
       <workItem from="1760317233907" duration="2621000" />
       <workItem from="1760319997557" duration="38000" />
-      <workItem from="1760364005390" duration="315000" />
-    </task>
-    <task id="LOCAL-00038" summary="increase table padding">
-      <option name="closed" value="true" />
-      <created>1760115662379</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1760115662379</updated>
+      <workItem from="1760364005390" duration="532000" />
     </task>
     <task id="LOCAL-00039" summary="improve max width">
       <option name="closed" value="true" />
@@ -525,7 +520,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760364281347</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="redirect from login screen if already logged in">
+      <option name="closed" value="true" />
+      <created>1760364340240</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1760364340240</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -543,7 +546,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="restructure providers" />
     <MESSAGE value="implement react query fetching" />
     <MESSAGE value="fix submission fetching" />
     <MESSAGE value="fix table loading state" />
@@ -568,6 +570,7 @@
     <MESSAGE value="add redirects for non-existent assignment ids; handled no assignments on account" />
     <MESSAGE value="fix assignments view" />
     <MESSAGE value="refactor file structure; remove log out button from log in screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor file structure; remove log out button from log in screen" />
+    <MESSAGE value="redirect from login screen if already logged in" />
+    <option name="LAST_COMMIT_MESSAGE" value="redirect from login screen if already logged in" />
   </component>
 </project>

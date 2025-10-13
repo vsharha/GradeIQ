@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import BlockLoader from "@/components/loader/BlockLoader";
 import { useQueryClient } from "@tanstack/react-query";
+import Navbar from "@/components/custom/Navbar";
 
 function AppLayout({children}) {
   const router = useRouter();
@@ -26,13 +27,16 @@ function AppLayout({children}) {
   return (
     <>
       <Header>
-        <Button onClick={handleLogout}>
-          {isLoading?
-            <BlockLoader/>
-            :
-            <span>Log out</span>
-          }
-        </Button>
+        <div className="flex flex-row flex-1 justify-end sm:justify-between">
+          <Navbar/>
+          <Button onClick={handleLogout}>
+            {isLoading?
+              <BlockLoader/>
+              :
+              <span>Log out</span>
+            }
+          </Button>
+        </div>
       </Header>
       <main className="py-5 overscroll-contain px-4 sm:px-6 sm:py-7 flex-1 w-full flex flex-col items-center">
         {children}

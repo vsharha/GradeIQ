@@ -7,7 +7,7 @@ import LandingCard from "@/components/custom/LandingCard";
 export default function Home() {
   return (
     <div>
-      <Header showNavbar={false} showSettings={true}>
+      <Header>
         <Link href={"/app"}>
           <Button>Log in</Button>
         </Link>
