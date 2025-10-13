@@ -1,13 +1,13 @@
 "use client"
 
 import Header from "@/components/custom/Header";
-import { Button } from "@/components/ui/button";
 import { createClient } from "@/utils/supabase/client";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import BlockLoader from "@/components/loader/BlockLoader";
 import { useQueryClient } from "@tanstack/react-query";
 import Navbar from "@/components/custom/Navbar";
+import Profile from "@/components/user/Profile";
 
 function AppLayout({children}) {
   const router = useRouter();
@@ -27,15 +27,14 @@ function AppLayout({children}) {
   return (
     <>
       <Header>
-        <div className="flex flex-row flex-1 justify-end sm:justify-between">
+        <div className="flex flex-row flex-1 justify-end sm:justify-between items-center">
           <Navbar/>
-          <Button onClick={handleLogout}>
-            {isLoading?
-              <BlockLoader/>
-              :
-              <span>Log out</span>
-            }
-          </Button>
+
+          {isLoading?
+            <BlockLoader/>
+            :
+            <Profile/>
+          }
         </div>
       </Header>
       <main className="py-5 overscroll-contain px-4 sm:px-6 sm:py-7 flex-1 w-full flex flex-col items-center">
