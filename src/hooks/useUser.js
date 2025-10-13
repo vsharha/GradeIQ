@@ -12,7 +12,7 @@ function useUser() {
         refetchOnWindowFocus: true,
     })
 
-    return {...query, assignments: query.data}
+    return {...query, user: query.data}
 }
 
 export default useUser

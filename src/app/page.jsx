@@ -2,16 +2,14 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/custom/Header";
 import { Settings, Upload, Brain, Eye } from "lucide-react";
-import LandingCard from "@/components/landing/LandingCard";
 import LandingCards from "@/components/landing/LandingCards";
+import Profile from "@/components/user/Profile";
 
 export default function Home() {
   return (
     <div>
       <Header>
-        <Link href={"/app"}>
-          <Button>Log in</Button>
-        </Link>
+        <Profile/>
       </Header>
       <main className="pb-10 flex flex-col justify-center items-center">
         <section className="flex items-center justify-center relative bg-card border-1 border-border w-full">

@@ -5,10 +5,16 @@ import getServerAuthHeaders from "@/services/getServerAuthHeaders";
 async function Layout({children, params}) {
   const {id} = await params;
 
-  const headers = await getServerAuthHeaders()
-  const assignments = await fetchAssignments(headers);
+  let assignment = {}
 
-  const assignment = assignments.find((assignment) => assignment.id === Number(id));
+  try {
+    const headers = await getServerAuthHeaders()
+    const assignments = await fetchAssignments(headers);
+    assignment = assignments.find((assignment) => assignment.id === Number(id));
+  } catch (e) {
+    console.log(e)
+    redirect("/app")
+  }
 
   if (!assignment) {
     redirect("/app")
