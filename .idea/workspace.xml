@@ -5,15 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="start auth implementation">
-      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/[id]/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(public)/app/assignments/[id]/page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(public)/app/assignments/layout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/loading.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(public)/app/assignments/loading.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(public)/app/assignments/page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app/layout.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app/loading.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(public)/app/loading.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app/login/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(public)/login/layout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app/login/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(public)/login/page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(public)/app/page.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(public)/app/layout.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/middleware.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/supabase/client.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/supabase/middleware.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/supabase/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(public)/app/assignments/loading.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(public)/app/loading.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(public)/app/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(public)/app/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login/LoginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/LoginForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/supabase.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/fetchApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/fetchApi.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,44 +48,48 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
-    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;//wsl.localhost/Ubuntu/home/viktor/projects/GradeIQ&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;\\\\wsl.localhost\\Ubuntu\\usr\\local\\lib\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Viktor\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "JavaScript Debug.assignments.executor": "Debug",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "js.debugger.nextJs.config.created.client": "true",
+    "js.debugger.nextJs.config.created.server": "true",
+    "last_opened_file_path": "//wsl.localhost/Ubuntu/home/viktor/projects/GradeIQ",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "\\\\wsl.localhost\\Ubuntu\\usr\\local\\lib\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "ts.external.directory.path": "C:\\Users\\Viktor\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\gradeiq\src\app" />
       <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\gradeiq\src\app\app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\GradeIQ\src\app\api\proxy\[endpoint]" />
+      <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\GradeIQ\src\app" />
       <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\GradeIQ\src\app\(public)\app" />
       <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\GradeIQ\src\app\(public)" />
       <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\GradeIQ\src\components\Login" />
-      <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\GradeIQ\src\components\loader" />
-      <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\GradeIQ\src\lib" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.Next.js: server-side">
+  <component name="RunManager" selected="JavaScript Debug.assignments">
     <configuration name="Next.js: debug client-side" type="JavascriptDebugType" uri="http://localhost:3000/">
+      <method v="2" />
+    </configuration>
+    <configuration name="assignments" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:3000/api/proxy/assignments">
       <method v="2" />
     </configuration>
     <configuration name="Next.js: server-side" type="js.build_tools.npm">
@@ -92,6 +102,11 @@
       <envs />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.assignments" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -127,15 +142,7 @@
       <workItem from="1760213359496" duration="5087000" />
       <workItem from="1760218898379" duration="2780000" />
       <workItem from="1760288612489" duration="1091000" />
-      <workItem from="1760306235394" duration="2562000" />
-    </task>
-    <task id="LOCAL-00025" summary="improve assignment view">
-      <option name="closed" value="true" />
-      <created>1760055298725</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1760055298725</updated>
+      <workItem from="1760306235394" duration="9120000" />
     </task>
     <task id="LOCAL-00026" summary="add chevron">
       <option name="closed" value="true" />
@@ -521,7 +528,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760308676944</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="start auth implementation">
+      <option name="closed" value="true" />
+      <created>1760308855933</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1760308855933</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -539,7 +554,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="improve pass/fail display" />
     <MESSAGE value="conditional formatting for assignments past due date" />
     <MESSAGE value="add landing page anims" />
     <MESSAGE value="improve landing page anims" />
@@ -563,6 +577,7 @@
     <MESSAGE value="add padding to errormessage on assignments page" />
     <MESSAGE value="improve responsive layout" />
     <MESSAGE value="decrease gap on mobile layouts" />
+    <MESSAGE value="reorganise file structure" />
     <MESSAGE value="start auth implementation" />
     <option name="LAST_COMMIT_MESSAGE" value="start auth implementation" />
   </component>

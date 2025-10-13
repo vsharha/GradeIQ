@@ -3,10 +3,10 @@
 import { Form, FormControl, FormField, FormItem, FormLabel } from "@/components/ui/form";
 import { useForm } from "react-hook-form";
 import { Input } from "@/components/ui/input";
-import { createSupabaseClient } from "@/lib/supabase";
+import { Button } from "@/components/ui/button";
+import { createClient } from "@/utils/supabase/client";
 import { toast } from "sonner";
 import { redirect } from "next/navigation";
-import { Button } from "@/components/ui/button";
 
 function LoginForm() {
   const form = useForm({
@@ -17,16 +17,16 @@ function LoginForm() {
   })
 
   async function onSubmit(data) {
-    const {email, password} = data
+    const { email, password } = data;
 
-    const supabase = createSupabaseClient()
+    const supabase = await createClient();
 
-    const {error} = await supabase.auth.signInWithPassword({email, password})
+    const { error } = await supabase.auth.signInWithPassword({ email, password });
 
-    if(error) {
-      toast(error.message)
+    if (error) {
+      toast(error.message);
     } else {
-      return redirect("/app")
+      return redirect("/app");
     }
   }
 
