@@ -1,7 +1,7 @@
 import { redirect } from "next/navigation";
 import { createClient } from "@/utils/supabase/server";
 
-async function Layout({children}) {
+async function Page() {
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
 
@@ -9,7 +9,7 @@ async function Layout({children}) {
     return redirect("/login")
   }
 
-  return children;
+  return null;
 }
 
-export default Layout;
+export default Page;

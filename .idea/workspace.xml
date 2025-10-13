@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add hard redirect after login">
-      <change afterPath="$PROJECT_DIR$/src/app/(public)/app/assignments/[id]/layout.jsx" afterDir="false" />
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="fix assignments view">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(public)/app/assignments/[id]/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(public)/app/assignments/[id]/page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(public)/app/assignments/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(public)/app/assignments/page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(public)/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(public)/layout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/assignments/CreateAssignment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/CreateAssignment.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/custom/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/Navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(public)/app/assignments/[id]/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/[id]/layout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(public)/app/assignments/[id]/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/[id]/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(public)/app/assignments/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/layout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(public)/app/assignments/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(public)/app/layout.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(public)/app/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(public)/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/layout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(public)/login/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/layout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(public)/login/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/page.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,11 +73,11 @@
       <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\gradeiq\src\app\app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\GradeIQ\src\app\api\proxy\[endpoint]" />
+      <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\GradeIQ\src\app\app" />
       <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\GradeIQ\src\app" />
+      <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\GradeIQ\src\app\api\proxy\[endpoint]" />
       <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\GradeIQ\src\app\(public)\app" />
       <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\GradeIQ\src\app\(public)" />
-      <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\GradeIQ\src\components\Login" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.assignments">
@@ -135,23 +138,9 @@
       <workItem from="1760218898379" duration="2780000" />
       <workItem from="1760288612489" duration="1091000" />
       <workItem from="1760306235394" duration="10882000" />
-      <workItem from="1760317233907" duration="2499000" />
-    </task>
-    <task id="LOCAL-00035" summary="adjust table paddings">
-      <option name="closed" value="true" />
-      <created>1760113739928</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1760113739928</updated>
-    </task>
-    <task id="LOCAL-00036" summary="add backbutton href">
-      <option name="closed" value="true" />
-      <created>1760113907639</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1760113907639</updated>
+      <workItem from="1760317233907" duration="2621000" />
+      <workItem from="1760319997557" duration="38000" />
+      <workItem from="1760364005390" duration="247000" />
     </task>
     <task id="LOCAL-00037" summary="add more table rows">
       <option name="closed" value="true" />
@@ -529,7 +518,23 @@
       <option name="project" value="LOCAL" />
       <updated>1760318566423</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="add redirects for non-existent assignment ids; handled no assignments on account">
+      <option name="closed" value="true" />
+      <created>1760319858767</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1760319858767</updated>
+    </task>
+    <task id="LOCAL-00085" summary="fix assignments view">
+      <option name="closed" value="true" />
+      <created>1760320031802</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1760320031802</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -547,8 +552,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix table" />
-    <MESSAGE value="adjust table gap" />
     <MESSAGE value="revert log in implementation" />
     <MESSAGE value="restructure providers" />
     <MESSAGE value="implement react query fetching" />
@@ -572,6 +575,8 @@
     <MESSAGE value="add log out functionality" />
     <MESSAGE value="reset tanstack query cache during logout" />
     <MESSAGE value="add hard redirect after login" />
-    <option name="LAST_COMMIT_MESSAGE" value="add hard redirect after login" />
+    <MESSAGE value="add redirects for non-existent assignment ids; handled no assignments on account" />
+    <MESSAGE value="fix assignments view" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix assignments view" />
   </component>
 </project>
