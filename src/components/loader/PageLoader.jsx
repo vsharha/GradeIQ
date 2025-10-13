@@ -1,9 +1,9 @@
-import Loader from "@/components/loader/Loader";
+import AnimatedLoader from "@/components/loader/AnimatedLoader";
 
-function PageLoader() {
+function PageLoader({ size=40, ...props }) {
   return (
     <div className="w-full mt-10 flex items-center justify-center">
-      <Loader size={2}/>
+      <AnimatedLoader size={size} {...props}/>
     </div>
   );
 }

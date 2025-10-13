@@ -4,22 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="start auth implementation">
-      <change afterPath="$PROJECT_DIR$/src/app/(public)/app/layout.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/middleware.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/supabase/client.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/supabase/middleware.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/supabase/server.js" afterDir="false" />
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="implement supabase auth with custom api authorisation; change redirects to use next.config.mjs">
+      <change afterPath="$PROJECT_DIR$/src/components/loader/AnimatedLoader.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(public)/app/assignments/loading.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(public)/app/loading.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(public)/app/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(public)/app/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(public)/app/assignments/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(public)/app/assignments/page.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Login/LoginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/LoginForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/supabase.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/fetchApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/fetchApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/loader/BlockLoader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/loader/BlockLoader.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/loader/Loader.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/loader/OverlayLoader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/loader/OverlayLoader.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/loader/PageLoader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/loader/PageLoader.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,15 +135,7 @@
       <workItem from="1760213359496" duration="5087000" />
       <workItem from="1760218898379" duration="2780000" />
       <workItem from="1760288612489" duration="1091000" />
-      <workItem from="1760306235394" duration="9120000" />
-    </task>
-    <task id="LOCAL-00026" summary="add chevron">
-      <option name="closed" value="true" />
-      <created>1760055668040</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1760055668040</updated>
+      <workItem from="1760306235394" duration="10662000" />
     </task>
     <task id="LOCAL-00027" summary="improve paddings; add submissions card">
       <option name="closed" value="true" />
@@ -536,7 +521,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760308855933</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="implement supabase auth with custom api authorisation; change redirects to use next.config.mjs">
+      <option name="closed" value="true" />
+      <created>1760315653943</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1760315653943</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -554,7 +547,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="conditional formatting for assignments past due date" />
     <MESSAGE value="add landing page anims" />
     <MESSAGE value="improve landing page anims" />
     <MESSAGE value="improve animations; fix submission table to use &gt;= instead of &gt;" />
@@ -579,6 +571,7 @@
     <MESSAGE value="decrease gap on mobile layouts" />
     <MESSAGE value="reorganise file structure" />
     <MESSAGE value="start auth implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="start auth implementation" />
+    <MESSAGE value="implement supabase auth with custom api authorisation; change redirects to use next.config.mjs" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement supabase auth with custom api authorisation; change redirects to use next.config.mjs" />
   </component>
 </project>

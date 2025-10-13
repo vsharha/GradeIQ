@@ -1,9 +1,9 @@
-import Loader from "@/components/loader/Loader";
+import AnimatedLoader from "@/components/loader/AnimatedLoader";
 
-function BlockLoader() {
+function BlockLoader(props) {
   return (
     <div className="w-full flex justify-center">
-      <Loader/>
+      <AnimatedLoader {...props}/>
     </div>
   );
 }

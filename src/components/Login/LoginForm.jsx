@@ -7,6 +7,9 @@ import { Button } from "@/components/ui/button";
 import { createClient } from "@/utils/supabase/client";
 import { toast } from "sonner";
 import { redirect } from "next/navigation";
+import { useState } from "react";
+import { Loader } from "lucide-react";
+import BlockLoader from "@/components/loader/BlockLoader";
 
 function LoginForm() {
   const form = useForm({
@@ -16,7 +19,10 @@ function LoginForm() {
     }
   })
 
+  const [isLoading, setIsLoading] = useState(false);
+
   async function onSubmit(data) {
+    setIsLoading(true)
     const { email, password } = data;
 
     const supabase = await createClient();
@@ -25,6 +31,7 @@ function LoginForm() {
 
     if (error) {
       toast(error.message);
+      setIsLoading(false)
     } else {
       return redirect("/app");
     }
@@ -36,6 +43,7 @@ function LoginForm() {
         <FormField
           control = {form.control}
           name = "email"
+          disabled={isLoading}
           render={({field})=> (
             <FormItem>
               <FormLabel>Email</FormLabel>
@@ -48,6 +56,7 @@ function LoginForm() {
         <FormField
           control = {form.control}
           name = "password"
+          disabled={isLoading}
           render={({field})=> (
             <FormItem>
               <FormLabel>Password</FormLabel>
@@ -57,7 +66,13 @@ function LoginForm() {
             </FormItem>
           )}
         />
-        <Button>Log in</Button>
+        <Button disabled={isLoading}>
+          {isLoading?
+            <BlockLoader size={3}/>
+            :
+            <span>Log in</span>
+          }
+        </Button>
       </form>
     </Form>
   );
