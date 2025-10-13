@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add error handling for server side fetching">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="update profile dropdown">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/layout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/custom/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/custom/Sort.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/Sort.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/dropdown-menu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/dropdown-menu.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/mode-toggle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/mode-toggle.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/user/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/user/Profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/fetchApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/fetchApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/providers.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/providers.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/landing/LandingCards.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/landing/LandingCards.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,15 +134,7 @@
       <workItem from="1760306235394" duration="10882000" />
       <workItem from="1760317233907" duration="2621000" />
       <workItem from="1760319997557" duration="38000" />
-      <workItem from="1760364005390" duration="11266000" />
-    </task>
-    <task id="LOCAL-00048" summary="conditional formatting for assignments past due date">
-      <option name="closed" value="true" />
-      <created>1760133316545</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1760133316545</updated>
+      <workItem from="1760364005390" duration="12290000" />
     </task>
     <task id="LOCAL-00049" summary="add landing page anims">
       <option name="closed" value="true" />
@@ -532,7 +520,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760382363830</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="update profile dropdown">
+      <option name="closed" value="true" />
+      <created>1760382919605</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1760382919605</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -550,7 +546,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="decrease gap on mobile layouts" />
     <MESSAGE value="reorganise file structure" />
     <MESSAGE value="start auth implementation" />
     <MESSAGE value="implement supabase auth with custom api authorisation; change redirects to use next.config.mjs" />
@@ -575,6 +570,7 @@
     <MESSAGE value="introduce side by side layout on large screens" />
     <MESSAGE value="split header fetching logic between server and client" />
     <MESSAGE value="add error handling for server side fetching" />
-    <option name="LAST_COMMIT_MESSAGE" value="add error handling for server side fetching" />
+    <MESSAGE value="update profile dropdown" />
+    <option name="LAST_COMMIT_MESSAGE" value="update profile dropdown" />
   </component>
 </project>

@@ -13,7 +13,7 @@ function Providers({children}) {
       defaultTheme="system"
       enableSystem
       disableTransitionOnChange
-      className="min-h-full"
+      className="h-full"
     >
       <QueryClientProvider client={queryClient}>
         {children}
