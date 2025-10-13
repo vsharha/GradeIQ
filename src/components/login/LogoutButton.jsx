@@ -24,7 +24,7 @@ function LogoutButton() {
   }
 
   return (
-    <Button className="w-full" onClick={handleLogout} disabled={isLoading}>
+    <Button className="w-full" onClick={handleLogout} disabled={isLoading} variant="secondary">
       {isLoading?<BlockLoader/>:<span>Log out</span>}
     </Button>
   );
