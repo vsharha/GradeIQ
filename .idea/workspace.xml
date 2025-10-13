@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="fix user fetching">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add username">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/login/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/user/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/user/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/login/LoginButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/LoginButton.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useUser.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,15 +133,7 @@
       <workItem from="1760306235394" duration="10882000" />
       <workItem from="1760317233907" duration="2621000" />
       <workItem from="1760319997557" duration="38000" />
-      <workItem from="1760364005390" duration="14245000" />
-    </task>
-    <task id="LOCAL-00053" summary="fix submissioncount function">
-      <option name="closed" value="true" />
-      <created>1760216462740</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1760216462740</updated>
+      <workItem from="1760364005390" duration="14434000" />
     </task>
     <task id="LOCAL-00054" summary="change naming convention to snake_case for fake data">
       <option name="closed" value="true" />
@@ -527,7 +519,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760385439892</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="add username">
+      <option name="closed" value="true" />
+      <created>1760385896041</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1760385896041</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -545,7 +545,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix LandingCard.jsx" />
     <MESSAGE value="fix LoginForm.jsx to use server side routing" />
     <MESSAGE value="fix search to use lowercase version; make router use await in LoginForm.jsx" />
     <MESSAGE value="attempt fix for redirecting after login" />
@@ -570,6 +569,7 @@
     <MESSAGE value="adjust progress error display" />
     <MESSAGE value="adjust loader spinner; change profile to use client side fetching" />
     <MESSAGE value="fix user fetching" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix user fetching" />
+    <MESSAGE value="add username" />
+    <option name="LAST_COMMIT_MESSAGE" value="add username" />
   </component>
 </project>
