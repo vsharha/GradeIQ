@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="fix datetime-picker.tsx styles">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add assignment action buttons; functional assignment form">
+      <change afterPath="$PROJECT_DIR$/src/components/assignments/DeleteAssignment.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/assignments/EditAssignment.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useAssignmentMutation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/assignments/Assignment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/Assignment.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/assignments/AssignmentView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/AssignmentView.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/assignments/CreateAssignment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/CreateAssignment.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/assignments/CreateAssignmentForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/CreateAssignmentForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/assignments/RubricForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/RubricForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/fetchApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/fetchApi.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,15 +137,7 @@
       <workItem from="1760306235394" duration="10882000" />
       <workItem from="1760317233907" duration="2621000" />
       <workItem from="1760319997557" duration="38000" />
-      <workItem from="1760364005390" duration="19817000" />
-    </task>
-    <task id="LOCAL-00060" summary="revert log in implementation">
-      <option name="closed" value="true" />
-      <created>1760295325406</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1760295325406</updated>
+      <workItem from="1760364005390" duration="20480000" />
     </task>
     <task id="LOCAL-00061" summary="restructure providers">
       <option name="closed" value="true" />
@@ -530,7 +523,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760390108891</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL-00109" summary="add assignment action buttons; functional assignment form">
+      <option name="closed" value="true" />
+      <created>1760391512384</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1760391512384</updated>
+    </task>
+    <option name="localTasksCounter" value="110" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -548,7 +549,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add redirects for non-existent assignment ids; handled no assignments on account" />
     <MESSAGE value="fix assignments view" />
     <MESSAGE value="refactor file structure; remove log out button from log in screen" />
     <MESSAGE value="redirect from login screen if already logged in" />
@@ -573,6 +573,7 @@
     <MESSAGE value="add date picker; adjust create assignment form" />
     <MESSAGE value="add missing files from previous commit" />
     <MESSAGE value="fix datetime-picker.tsx styles" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix datetime-picker.tsx styles" />
+    <MESSAGE value="add assignment action buttons; functional assignment form" />
+    <option name="LAST_COMMIT_MESSAGE" value="add assignment action buttons; functional assignment form" />
   </component>
 </project>

@@ -4,6 +4,8 @@ import { formatDate } from "@/lib/formatDate";
 import SubmissionProgress from "@/components/custom/SubmissionProgress";
 import VariableTitleView from "@/components/custom/VariableTitleView";
 import { Button } from "@/components/ui/button";
+import EditAssignment from "@/components/assignments/EditAssignment";
+import DeleteAssignment from "@/components/assignments/DeleteAssignment";
 
 function AssignmentView({assignment}) {
   const { title, created_at, due, description, max_grade, passing_grade } = assignment
@@ -17,12 +19,8 @@ function AssignmentView({assignment}) {
             <p className="text-muted-foreground text-md sm:text-xl">{description}</p>
           </div>
           <div className="flex w-full gap-3 items-center sm:w-fit h-full">
-            <Button variant="secondary">
-              <Pencil/>
-            </Button>
-            <Button variant="secondary">
-              <Trash/>
-            </Button>
+            <EditAssignment/>
+            <DeleteAssignment/>
           </div>
         </CardHeader>
         <CardContent>

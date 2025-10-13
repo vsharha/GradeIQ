@@ -13,10 +13,9 @@ import CreateAssignmentForm from "@/components/assignments/CreateAssignmentForm"
 import { useState } from "react";
 import RubricForm from "@/components/assignments/RubricForm";
 import { useForm } from "react-hook-form";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { createAssignment } from "@/services/fetchApi";
 import getClientAuthHeaders from "@/services/getClientAuthHeaders";
-import { toast } from "sonner";
+import useAssignmentMutation from "@/hooks/useAssignmentMutation";
 
 function CreateAssignment({className, wide=false}) {
   const [step, setStep] = useState(0);
@@ -34,21 +33,10 @@ function CreateAssignment({className, wide=false}) {
     }
   })
 
-  const queryClient = useQueryClient();
-
-  const {isLoading, mutate} = useMutation({
-    mutationFn: async (assignment) => {
-      const headers = await getClientAuthHeaders();
-      return await createAssignment(assignment, headers);
-    },
-    onSuccess: async () => {
-      await queryClient.invalidateQueries(["assignments"]);
-      toast("Successfully added assignment")
-    },
-    onError: (error) => {
-      console.error(error);
-    }
-  });
+  const {isLoading, mutate} = useAssignmentMutation(async (assignment) => {
+    const headers = await getClientAuthHeaders();
+    return await createAssignment(assignment, headers);
+  })
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>

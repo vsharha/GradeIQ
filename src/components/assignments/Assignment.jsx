@@ -23,8 +23,8 @@ function Assignment({assignment, onClick}) {
   }
 
   return (
-    <div className="w-full py-2 min-h-64 sm:px-2 sm:w-1/2 md:w-1/3 lg:w-1/4 select-none">
-      <Card className="w-full h-full overflow-hidden sm:hover:-translate-y-2 transition-all duration-150 hover:shadow-xl shadow-shadow relative cursor-pointer" onClick={handleClick}>
+    <div className="w-full py-1.5 min-h-64 sm:px-2 sm:w-1/2 md:w-1/3 lg:w-1/4 select-none">
+      <Card className="w-full h-full overflow-hidden sm:hover:-translate-y-1 transition-all duration-150 hover:shadow-xl shadow-shadow relative cursor-pointer" onClick={handleClick}>
         <OverlayLoader isLoading={isLoading}/>
         <CardHeader>
           <div className="font-bold text-lg flex flex-row justify-between">
