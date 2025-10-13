@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="adjust header creation logic">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="changed header to use justify end">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/custom/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom/Sort.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/Sort.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/mode-toggle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/mode-toggle.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/fetchApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/fetchApi.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -133,15 +135,7 @@
       <workItem from="1760306235394" duration="10882000" />
       <workItem from="1760317233907" duration="2621000" />
       <workItem from="1760319997557" duration="38000" />
-      <workItem from="1760364005390" duration="847000" />
-    </task>
-    <task id="LOCAL-00040" summary="improve landing page">
-      <option name="closed" value="true" />
-      <created>1760123157728</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1760123157728</updated>
+      <workItem from="1760364005390" duration="1004000" />
     </task>
     <task id="LOCAL-00041" summary="fix flexbox layout">
       <option name="closed" value="true" />
@@ -527,7 +521,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760364563666</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="changed header to use justify end">
+      <option name="closed" value="true" />
+      <created>1760364880038</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1760364880038</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -545,7 +547,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix submission fetching" />
     <MESSAGE value="fix table loading state" />
     <MESSAGE value="improve progress loading state" />
     <MESSAGE value="add refetching on window focus" />
@@ -570,6 +571,7 @@
     <MESSAGE value="refactor file structure; remove log out button from log in screen" />
     <MESSAGE value="redirect from login screen if already logged in" />
     <MESSAGE value="adjust header creation logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="adjust header creation logic" />
+    <MESSAGE value="changed header to use justify end" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed header to use justify end" />
   </component>
 </project>

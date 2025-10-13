@@ -11,7 +11,7 @@ import Link from "next/link";
 
 const links = [
   {label: 'Assignments', href: '/app/assignments'},
-  {label: 'Analytics', href: '/app/analytics'},
+  // {label: 'Analytics', href: '/app/analytics'},
 ]
 
 function Navbar() {
