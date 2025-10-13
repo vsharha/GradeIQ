@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="implement supabase auth with custom api authorisation; change redirects to use next.config.mjs">
-      <change afterPath="$PROJECT_DIR$/src/components/loader/AnimatedLoader.jsx" afterDir="false" />
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="improve loaders; add login loading state">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(public)/app/assignments/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(public)/app/assignments/page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Login/LoginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/LoginForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/loader/BlockLoader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/loader/BlockLoader.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/loader/Loader.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/loader/OverlayLoader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/loader/OverlayLoader.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/loader/PageLoader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/loader/PageLoader.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom/LandingCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/LandingCard.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,15 +129,7 @@
       <workItem from="1760213359496" duration="5087000" />
       <workItem from="1760218898379" duration="2780000" />
       <workItem from="1760288612489" duration="1091000" />
-      <workItem from="1760306235394" duration="10662000" />
-    </task>
-    <task id="LOCAL-00027" summary="improve paddings; add submissions card">
-      <option name="closed" value="true" />
-      <created>1760056967491</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1760056967491</updated>
+      <workItem from="1760306235394" duration="10847000" />
     </task>
     <task id="LOCAL-00028" summary="improve landing page">
       <option name="closed" value="true" />
@@ -529,7 +515,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760315653943</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="improve loaders; add login loading state">
+      <option name="closed" value="true" />
+      <created>1760316995126</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1760316995126</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -547,7 +541,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add landing page anims" />
     <MESSAGE value="improve landing page anims" />
     <MESSAGE value="improve animations; fix submission table to use &gt;= instead of &gt;" />
     <MESSAGE value="change maximize buttons" />
@@ -572,6 +565,7 @@
     <MESSAGE value="reorganise file structure" />
     <MESSAGE value="start auth implementation" />
     <MESSAGE value="implement supabase auth with custom api authorisation; change redirects to use next.config.mjs" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement supabase auth with custom api authorisation; change redirects to use next.config.mjs" />
+    <MESSAGE value="improve loaders; add login loading state" />
+    <option name="LAST_COMMIT_MESSAGE" value="improve loaders; add login loading state" />
   </component>
 </project>
