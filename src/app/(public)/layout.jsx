@@ -6,9 +6,11 @@ import { createClient } from "@/utils/supabase/client";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import BlockLoader from "@/components/loader/BlockLoader";
+import { useQueryClient } from "@tanstack/react-query";
 
 function AppLayout({children}) {
   const router = useRouter();
+  const queryClient = useQueryClient();
 
   const [isLoading, setIsLoading] = useState(false);
 
@@ -16,6 +18,7 @@ function AppLayout({children}) {
     const supabase = await createClient();
     setIsLoading(true)
     await supabase.auth.signOut();
+    queryClient.clear();
     router.push("/");
     router.refresh();
   }
