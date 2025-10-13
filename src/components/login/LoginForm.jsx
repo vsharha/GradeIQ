@@ -13,8 +13,8 @@ import BlockLoader from "@/components/loader/BlockLoader";
 function LoginForm() {
   const form = useForm({
     defaultValues: {
-      email: "",
-      password: "",
+      email: "test@example.com",
+      password: "test",
     }
   })
 

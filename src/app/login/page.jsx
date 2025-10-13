@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import LoginForm from "@/components/Login/LoginForm";
+import LoginForm from "@/components/login/LoginForm";
 import { LogIn } from "lucide-react";
 
 function Page() {

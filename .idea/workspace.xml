@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="adjust dropdown menus">
-      <change afterPath="$PROJECT_DIR$/src/components/landing/LandingCard.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/landing/LandingCards.jsx" afterDir="false" />
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="improve landing layout">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/custom/LandingCard.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/login/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login/LoginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/LoginForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/landing/LandingCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/landing/LandingCard.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,15 +134,7 @@
       <workItem from="1760306235394" duration="10882000" />
       <workItem from="1760317233907" duration="2621000" />
       <workItem from="1760319997557" duration="38000" />
-      <workItem from="1760364005390" duration="4668000" />
-    </task>
-    <task id="LOCAL-00042" summary="fix layout issues">
-      <option name="closed" value="true" />
-      <created>1760124141428</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1760124141428</updated>
+      <workItem from="1760364005390" duration="6537000" />
     </task>
     <task id="LOCAL-00043" summary="improve responsive layout landing">
       <option name="closed" value="true" />
@@ -530,7 +520,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760365029431</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="improve landing layout">
+      <option name="closed" value="true" />
+      <created>1760368740629</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1760368740629</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -548,7 +546,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="improve progress loading state" />
     <MESSAGE value="add refetching on window focus" />
     <MESSAGE value="make react query use pageloader on assignments page" />
     <MESSAGE value="improve loading state for assignments" />
@@ -573,6 +570,7 @@
     <MESSAGE value="adjust header creation logic" />
     <MESSAGE value="changed header to use justify end" />
     <MESSAGE value="adjust dropdown menus" />
-    <option name="LAST_COMMIT_MESSAGE" value="adjust dropdown menus" />
+    <MESSAGE value="improve landing layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="improve landing layout" />
   </component>
 </project>
