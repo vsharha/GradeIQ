@@ -190,11 +190,11 @@
         }
     }
 
-
     --animate-fade-in: fade-in 0.6s linear;
     --animate-fade-in-loader: fade-in 0.3s linear;
     --animate-slide-in: slide-in 0.7s ease-in-out;
     --animate-pulse: pulse 5s ease-in-out infinite;
+    --animate-spin: spin 2s ease infinite;
 
     --text-landing: 1.75em
 }

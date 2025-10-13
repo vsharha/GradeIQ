@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add footer to landing page">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="adjust progress error display">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/assignments/StyledProgress.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/StyledProgress.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/custom/SubmissionProgress.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/SubmissionProgress.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/login/LoginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/LoginForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/login/LogoutButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/LogoutButton.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/user/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/user/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useUser.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,15 +137,7 @@
       <workItem from="1760306235394" duration="10882000" />
       <workItem from="1760317233907" duration="2621000" />
       <workItem from="1760319997557" duration="38000" />
-      <workItem from="1760364005390" duration="12514000" />
-    </task>
-    <task id="LOCAL-00050" summary="improve landing page anims">
-      <option name="closed" value="true" />
-      <created>1760214292480</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1760214292480</updated>
+      <workItem from="1760364005390" duration="13720000" />
     </task>
     <task id="LOCAL-00051" summary="improve animations; fix submission table to use &gt;= instead of &gt;">
       <option name="closed" value="true" />
@@ -527,7 +523,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760383922581</updated>
     </task>
-    <option name="localTasksCounter" value="99" />
+    <task id="LOCAL-00099" summary="adjust progress error display">
+      <option name="closed" value="true" />
+      <created>1760384198897</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1760384198897</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -545,7 +549,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="start auth implementation" />
     <MESSAGE value="implement supabase auth with custom api authorisation; change redirects to use next.config.mjs" />
     <MESSAGE value="improve loaders; add login loading state" />
     <MESSAGE value="fix LandingCard.jsx" />
@@ -570,6 +573,7 @@
     <MESSAGE value="add error handling for server side fetching" />
     <MESSAGE value="update profile dropdown" />
     <MESSAGE value="add footer to landing page" />
-    <option name="LAST_COMMIT_MESSAGE" value="add footer to landing page" />
+    <MESSAGE value="adjust progress error display" />
+    <option name="LAST_COMMIT_MESSAGE" value="adjust progress error display" />
   </component>
 </project>

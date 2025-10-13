@@ -1,18 +1,25 @@
-"use server"
+"use client";
 
 import { UserCircle } from "lucide-react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import LogoutButton from "@/components/login/LogoutButton";
-import { fetchUser } from "@/services/fetchApi";
-import getServerAuthHeaders from "@/services/getServerAuthHeaders";
+import LoginButton from "@/components/login/LoginButton";
+import useUser from "@/hooks/useUser";
+import AnimatedLoader from "@/components/loader/AnimatedLoader";
 
-async function Profile() {
-  let user = {}
-  try {
-    const headers = await getServerAuthHeaders()
-    user = await fetchUser(headers)
-  } catch (e) {
-    console.log(e)
+function Profile() {
+  const {user, isLoading, error} = useUser()
+
+  if(isLoading) {
+    return <AnimatedLoader/>
+  }
+
+  if(error) {
+    return null
+  }
+
+  if(!user) {
+    return <LoginButton/>
   }
 
   return (

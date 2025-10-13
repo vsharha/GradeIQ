@@ -31,7 +31,7 @@ function Page() {
           {!isLoading && !error && assignments.length !== 0 && <CreateAssignment className="mr-auto sm:m-none" />}
         </div>
         <div className="w-full sm:w-fit flex items-center gap-3 mr-auto">
-          <Input placeholder="Search..." autoComplete="off" value={searchQuery} onChange={(e)=>setSearchQuery(e.target.value)} className="flex-1 w-full sm:w-35 md:w-60"/>
+          <Input placeholder="Search..." autoComplete="new-password" value={searchQuery} onChange={(e)=>setSearchQuery(e.target.value)} className="flex-1 w-full sm:w-35 md:w-60"/>
           <Sort sort={sort} setSort={setSort} setDirection={setDirection} direction={direction}/>
         </div>
       </div>

@@ -6,7 +6,7 @@ function useUser() {
     const query = useQuery({
         queryKey: ["user"],
         queryFn: async () => {
-            const headers = getClientAuthHeaders()
+            const headers = await getClientAuthHeaders()
             return await fetchUser(headers);
         },
         refetchOnWindowFocus: true,
