@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add username">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="fix logged out state">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/login/LoginButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/LoginButton.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/login/LogoutButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/LogoutButton.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,15 +132,7 @@
       <workItem from="1760306235394" duration="10882000" />
       <workItem from="1760317233907" duration="2621000" />
       <workItem from="1760319997557" duration="38000" />
-      <workItem from="1760364005390" duration="14434000" />
-    </task>
-    <task id="LOCAL-00054" summary="change naming convention to snake_case for fake data">
-      <option name="closed" value="true" />
-      <created>1760217714918</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1760217714918</updated>
+      <workItem from="1760364005390" duration="14480000" />
     </task>
     <task id="LOCAL-00055" summary="change naming convention to snake_case for fake data">
       <option name="closed" value="true" />
@@ -527,7 +518,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760385896041</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="fix logged out state">
+      <option name="closed" value="true" />
+      <created>1760386080923</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1760386080923</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -545,7 +544,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix LoginForm.jsx to use server side routing" />
     <MESSAGE value="fix search to use lowercase version; make router use await in LoginForm.jsx" />
     <MESSAGE value="attempt fix for redirecting after login" />
     <MESSAGE value="add log out functionality" />
@@ -570,6 +568,7 @@
     <MESSAGE value="adjust loader spinner; change profile to use client side fetching" />
     <MESSAGE value="fix user fetching" />
     <MESSAGE value="add username" />
-    <option name="LAST_COMMIT_MESSAGE" value="add username" />
+    <MESSAGE value="fix logged out state" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix logged out state" />
   </component>
 </project>

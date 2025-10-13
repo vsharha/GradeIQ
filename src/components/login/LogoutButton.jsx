@@ -20,7 +20,6 @@ function LogoutButton() {
 
     queryClient.clear();
     router.push("/");
-    setIsLoading(false)
     router.refresh();
   }
 
