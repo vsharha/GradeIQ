@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add missing files from previous commit">
-      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="fix datetime-picker.tsx styles">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/datetime-picker.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/datetime-picker.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/assignments/AssignmentView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/AssignmentView.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/assignments/CreateAssignment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/CreateAssignment.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/assignments/CreateAssignmentForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/CreateAssignmentForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/assignments/RubricForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/RubricForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/fetchApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/fetchApi.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,15 +136,7 @@
       <workItem from="1760306235394" duration="10882000" />
       <workItem from="1760317233907" duration="2621000" />
       <workItem from="1760319997557" duration="38000" />
-      <workItem from="1760364005390" duration="18395000" />
-    </task>
-    <task id="LOCAL-00059" summary="adjust table gap">
-      <option name="closed" value="true" />
-      <created>1760219272786</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1760219272786</updated>
+      <workItem from="1760364005390" duration="19817000" />
     </task>
     <task id="LOCAL-00060" summary="revert log in implementation">
       <option name="closed" value="true" />
@@ -530,7 +522,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760389353478</updated>
     </task>
-    <option name="localTasksCounter" value="108" />
+    <task id="LOCAL-00108" summary="fix datetime-picker.tsx styles">
+      <option name="closed" value="true" />
+      <created>1760390108891</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1760390108891</updated>
+    </task>
+    <option name="localTasksCounter" value="109" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -548,7 +548,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add hard redirect after login" />
     <MESSAGE value="add redirects for non-existent assignment ids; handled no assignments on account" />
     <MESSAGE value="fix assignments view" />
     <MESSAGE value="refactor file structure; remove log out button from log in screen" />
@@ -573,6 +572,7 @@
     <MESSAGE value="change logout button type" />
     <MESSAGE value="add date picker; adjust create assignment form" />
     <MESSAGE value="add missing files from previous commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="add missing files from previous commit" />
+    <MESSAGE value="fix datetime-picker.tsx styles" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix datetime-picker.tsx styles" />
   </component>
 </project>

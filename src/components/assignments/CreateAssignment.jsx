@@ -10,16 +10,45 @@ import {
 import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
 import CreateAssignmentForm from "@/components/assignments/CreateAssignmentForm";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import RubricForm from "@/components/assignments/RubricForm";
+import { useForm } from "react-hook-form";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { createAssignment } from "@/services/fetchApi";
+import getClientAuthHeaders from "@/services/getClientAuthHeaders";
+import { toast } from "sonner";
 
 function CreateAssignment({className, wide=false}) {
   const [step, setStep] = useState(0);
   const [open, setOpen] = useState(false);
 
-  useEffect(()=>{
-    setStep(0)
-  },[open])
+  const form = useForm({
+    defaultValues: {
+      due: new Date(Date.now() + 5 * 24 * 60 * 60 * 1000),
+      title: "",
+      description: "",
+      max_grade: 100,
+      passing_grade: 50,
+      files: null,
+      assignment_name: ""
+    }
+  })
+
+  const queryClient = useQueryClient();
+
+  const {isLoading, mutate} = useMutation({
+    mutationFn: async (assignment) => {
+      const headers = await getClientAuthHeaders();
+      return await createAssignment(assignment, headers);
+    },
+    onSuccess: async () => {
+      await queryClient.invalidateQueries(["assignments"]);
+      toast("Successfully added assignment")
+    },
+    onError: (error) => {
+      console.error(error);
+    }
+  });
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
@@ -32,9 +61,9 @@ function CreateAssignment({className, wide=false}) {
             <DialogHeader>
               <DialogTitle>Create assignment</DialogTitle>
             </DialogHeader>
-            <CreateAssignmentForm/>
+            <CreateAssignmentForm form={form}/>
             <DialogFooter>
-              <Button onClick={()=>setStep((step)=>step+1)}>Create</Button>
+              <Button onClick={form.handleSubmit(mutate)} disabled={isLoading}>Create</Button>
             </DialogFooter>
           </>
         }
@@ -43,7 +72,7 @@ function CreateAssignment({className, wide=false}) {
             <DialogHeader>
               <DialogTitle>Edit rubric</DialogTitle>
             </DialogHeader>
-            <RubricForm/>
+            <RubricForm form={form}/>
             <DialogFooter>
               <Button>Create assignment</Button>
             </DialogFooter>

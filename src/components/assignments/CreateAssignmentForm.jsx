@@ -1,22 +1,11 @@
 "use client";
 
-import { useForm } from "react-hook-form";
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { DateTimePicker } from "@/components/ui/datetime-picker";
 
-function CreateAssignmentForm() {
-  const form = useForm({
-    defaultValues: {
-      due: new Date(Date.now() + 5 * 24 * 60 * 60 * 1000),
-      title: "",
-      description: "",
-      max_grade: 100,
-      passing_grade: 50,
-    }
-  })
-
+function CreateAssignmentForm({form}) {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit()} className="space-y-3 mt-2">

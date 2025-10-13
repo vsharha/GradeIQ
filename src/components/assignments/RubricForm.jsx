@@ -5,14 +5,7 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { Dropzone, DropzoneContent, DropzoneEmptyState } from "@/components/ui/shadcn-io/dropzone";
 import { Input } from "@/components/ui/input";
 
-function RubricForm() {
-  const form = useForm({
-    defaultValues: {
-      files: null,
-      assignment_name: ""
-    }
-  })
-
+function RubricForm({form}) {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit()} className="space-y-5">

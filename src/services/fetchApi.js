@@ -15,3 +15,16 @@ export async function fetchUser(headers) {
     if(!response.ok) throw new Error("Could not fetch user")
     return await response.json()
 }
+
+export async function createAssignment(assignment, headers) {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_FASTAPI_URL}/assignments`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            ...headers
+        },
+        body: JSON.stringify(assignment)
+    });
+    if(!response.ok) throw new Error("Could not create assignment")
+    return await response.json()
+}

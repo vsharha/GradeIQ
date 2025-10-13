@@ -1,8 +1,9 @@
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { ArrowUp, ArrowUpCircle, Calendar, Gauge, Target, Trophy } from "lucide-react";
+import { ArrowUp, ArrowUpCircle, Calendar, Gauge, Pencil, Target, Trash, Trophy } from "lucide-react";
 import { formatDate } from "@/lib/formatDate";
 import SubmissionProgress from "@/components/custom/SubmissionProgress";
 import VariableTitleView from "@/components/custom/VariableTitleView";
+import { Button } from "@/components/ui/button";
 
 function AssignmentView({assignment}) {
   const { title, created_at, due, description, max_grade, passing_grade } = assignment
@@ -10,9 +11,19 @@ function AssignmentView({assignment}) {
   return (
     <div className="flex flex-col gap-3">
       <Card>
-        <CardHeader>
-          <h1 className="font-bold text-2xl">{title}</h1>
-          <p className="text-muted-foreground text-md sm:text-xl">{description}</p>
+        <CardHeader className="flex flex-col gap-5">
+          <div className="flex w-full gap-3 sm:gap-2 items-start flex-col">
+            <h1 className="font-bold text-xl sm:text-2xl w-fit">{title}</h1>
+            <p className="text-muted-foreground text-md sm:text-xl">{description}</p>
+          </div>
+          <div className="flex w-full gap-3 items-center sm:w-fit h-full">
+            <Button variant="secondary">
+              <Pencil/>
+            </Button>
+            <Button variant="secondary">
+              <Trash/>
+            </Button>
+          </div>
         </CardHeader>
         <CardContent>
           <div className="flex gap-y-5 flex-wrap mt-2">
