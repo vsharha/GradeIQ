@@ -52,7 +52,7 @@ function Page() {
             }
             return direction === "up" ? -result : result;
           })
-          .filter((assignment)=>assignment.title.includes(searchQuery))
+          .filter((assignment)=>assignment.title.toLowerCase().includes(searchQuery.toLowerCase()))
           .map((assignment, i)=>
           <Assignment key={assignment.id} index={i} assignment={assignment} onClick={()=>handleClick(assignment.id)}/>
         )}

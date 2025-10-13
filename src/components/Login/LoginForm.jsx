@@ -34,7 +34,7 @@ function LoginForm() {
       toast(error.message);
       setIsLoading(false)
     } else {
-      router.push("/app")
+      await router.push("/app")
     }
   }
 
