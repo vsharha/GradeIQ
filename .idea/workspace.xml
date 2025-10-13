@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="attempt fix for redirecting after login">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(public)/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(public)/layout.jsx" afterDir="false" />
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="reset tanstack query cache during logout">
+      <change beforePath="$PROJECT_DIR$/src/components/Login/LoginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/LoginForm.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,23 +129,7 @@
       <workItem from="1760218898379" duration="2780000" />
       <workItem from="1760288612489" duration="1091000" />
       <workItem from="1760306235394" duration="10882000" />
-      <workItem from="1760317233907" duration="1051000" />
-    </task>
-    <task id="LOCAL-00032" summary="add fake submmission data">
-      <option name="closed" value="true" />
-      <created>1760112638494</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1760112638494</updated>
-    </task>
-    <task id="LOCAL-00033" summary="install tanstack table">
-      <option name="closed" value="true" />
-      <created>1760112686514</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1760112686514</updated>
+      <workItem from="1760317233907" duration="1303000" />
     </task>
     <task id="LOCAL-00034" summary="add submissiontable">
       <option name="closed" value="true" />
@@ -524,7 +507,23 @@
       <option name="project" value="LOCAL" />
       <updated>1760318103119</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="add log out functionality">
+      <option name="closed" value="true" />
+      <created>1760318331752</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1760318331752</updated>
+    </task>
+    <task id="LOCAL-00082" summary="reset tanstack query cache during logout">
+      <option name="closed" value="true" />
+      <created>1760318412691</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1760318412691</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -542,8 +541,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change naming convention to snake_case for fake data" />
-    <MESSAGE value="fix landing page paddings" />
     <MESSAGE value="improve loader colors" />
     <MESSAGE value="fix table" />
     <MESSAGE value="adjust table gap" />
@@ -567,6 +564,8 @@
     <MESSAGE value="fix LoginForm.jsx to use server side routing" />
     <MESSAGE value="fix search to use lowercase version; make router use await in LoginForm.jsx" />
     <MESSAGE value="attempt fix for redirecting after login" />
-    <option name="LAST_COMMIT_MESSAGE" value="attempt fix for redirecting after login" />
+    <MESSAGE value="add log out functionality" />
+    <MESSAGE value="reset tanstack query cache during logout" />
+    <option name="LAST_COMMIT_MESSAGE" value="reset tanstack query cache during logout" />
   </component>
 </project>
