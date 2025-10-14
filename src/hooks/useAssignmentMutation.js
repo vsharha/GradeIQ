@@ -1,13 +1,15 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { toast } from "sonner";
 
-export default function useAssignmentMutation(mutationFn, setError) {
+export default function useAssignmentMutation(mutationFn, onSuccess) {
     const queryClient = useQueryClient();
 
     const mutation = useMutation({
         mutationFn,
         onSuccess: async () => {
             await queryClient.invalidateQueries(["assignments"]);
+            if (typeof onSuccess === "function") {
+                onSuccess();
+            }
         },
         onError: (error) => {
             console.error(error);

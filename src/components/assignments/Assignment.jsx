@@ -8,7 +8,6 @@ import { Calendar, ChevronRight, Menu } from "lucide-react";
 import SubmissionProgress from "@/components/custom/SubmissionProgress";
 import { cn } from "@/lib/utils";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { Button } from "@/components/ui/button";
 import DeleteAssignment from "@/components/assignments/DeleteAssignment";
 
 function Assignment({assignment, onClick}) {
@@ -35,12 +34,12 @@ function Assignment({assignment, onClick}) {
               <h2>{title}</h2>
             </span>
             <div className="flex items-center justify-center">
-              <DropdownMenu onClick={(e)=>e.stopPropagation()}>
+              <DropdownMenu>
                 <DropdownMenuTrigger className="w-fit h-fit">
                   <Menu/>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
-                  <DeleteAssignment assignment_id={id} title={true} className="w-full"/>
+                  <DeleteAssignment assignment_id={id} title={true} className="w-full" onClick={(e)=>e.stopPropagation()}/>
                 </DropdownMenuContent>
               </DropdownMenu>
             </div>

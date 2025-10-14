@@ -8,7 +8,7 @@ import { deleteAssignment } from "@/services/fetchApi";
 import BlockLoader from "@/components/loader/BlockLoader";
 import { useRouter } from "next/navigation";
 
-function DeleteAssignment({assignment_id, title=false, onDelete, ...props}) {
+function DeleteAssignment({assignment_id, title=false, navigateBack=false, ...props}) {
   const [open, setOpen] = useState(false);
 
   const {isLoading, mutate} = useAssignmentMutation(async (assignment_id)=>{
@@ -18,33 +18,34 @@ function DeleteAssignment({assignment_id, title=false, onDelete, ...props}) {
 
   function handleDelete() {
     mutate(assignment_id)
-    onDelete();
   }
 
   return (
-    <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger asChild>
-        <Button variant="secondary" className="flex gap-2 items-center" {...props}>
-          <Trash />
-          {title&&<span>Delete</span>}
-        </Button>
-      </DialogTrigger>
-      <DialogContent>
-        <DialogHeader>
-          <DialogTitle>
-            Delete?
-          </DialogTitle>
-        </DialogHeader>
-        <DialogFooter>
-          <Button variant="secondary" onClick={()=>setOpen(false)} disabled={isLoading}>
-            No
+    <div onClick={(e)=>e.stopPropagation()}>
+      <Dialog open={open} onOpenChange={setOpen}>
+        <DialogTrigger asChild>
+          <Button variant="secondary" className="flex gap-2 items-center" {...props}>
+            <Trash />
+            {title&&<span>Delete</span>}
           </Button>
-          <Button onClick={handleDelete} disabled={isLoading}>
-            {isLoading?<BlockLoader/>:<span>Yes</span>}
-          </Button>
-        </DialogFooter>
-      </DialogContent>
-    </Dialog>
+        </DialogTrigger>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>
+              Delete?
+            </DialogTitle>
+          </DialogHeader>
+          <DialogFooter>
+            <Button variant="secondary" onClick={()=>setOpen(false)} disabled={isLoading} >
+              No
+            </Button>
+            <Button onClick={handleDelete} disabled={isLoading}>
+              {isLoading?<BlockLoader/>:<span>Yes</span>}
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+    </div>
   );
 }
 

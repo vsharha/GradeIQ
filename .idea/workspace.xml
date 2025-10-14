@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="fix deletion">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="change get submissions api">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/[id]/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/[id]/page.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/assignments/Assignment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/Assignment.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/assignments/AssignmentView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/AssignmentView.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/assignments/CreateAssignment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/CreateAssignment.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/assignments/DeleteAssignment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/DeleteAssignment.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/fetchApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/fetchApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useAssignmentMutation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useAssignmentMutation.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,15 +138,7 @@
       <workItem from="1760317233907" duration="2621000" />
       <workItem from="1760319997557" duration="38000" />
       <workItem from="1760364005390" duration="26560000" />
-      <workItem from="1760471787365" duration="2248000" />
-    </task>
-    <task id="LOCAL-00069" summary="improve loading state for assignments">
-      <option name="closed" value="true" />
-      <created>1760304358863</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1760304358863</updated>
+      <workItem from="1760471787365" duration="3893000" />
     </task>
     <task id="LOCAL-00070" summary="add padding to errormessage on assignments page">
       <option name="closed" value="true" />
@@ -530,7 +524,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760473039445</updated>
     </task>
-    <option name="localTasksCounter" value="118" />
+    <task id="LOCAL-00118" summary="change get submissions api">
+      <option name="closed" value="true" />
+      <created>1760474101416</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1760474101416</updated>
+    </task>
+    <option name="localTasksCounter" value="119" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -548,7 +550,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="improve progress loader" />
     <MESSAGE value="introduce side by side layout on large screens" />
     <MESSAGE value="split header fetching logic between server and client" />
     <MESSAGE value="add error handling for server side fetching" />
@@ -573,6 +574,7 @@
     <MESSAGE value="added assignment deletion" />
     <MESSAGE value="change deletion api" />
     <MESSAGE value="fix deletion" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix deletion" />
+    <MESSAGE value="change get submissions api" />
+    <option name="LAST_COMMIT_MESSAGE" value="change get submissions api" />
   </component>
 </project>
