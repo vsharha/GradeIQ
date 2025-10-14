@@ -34,7 +34,7 @@ function CreateAssignment({className, wide=false}) {
     }
   })
 
-  const {isLoading, mutate} = useAssignmentMutation(async (assignment) => {
+  const {isLoading, mutate, isSuccess} = useAssignmentMutation(async (assignment) => {
     const headers = await getClientAuthHeaders();
     return await createAssignment(assignment, headers, form.setError);
   })
@@ -45,6 +45,14 @@ function CreateAssignment({className, wide=false}) {
       setStep(0);
     }
   }, [open, form]);
+
+  useEffect(() => {
+    if(isSuccess) {
+      form.reset();
+      setStep(0)
+      setOpen(false)
+    }
+  }, [isSuccess]);
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
