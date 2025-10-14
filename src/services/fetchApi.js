@@ -40,3 +40,18 @@ export async function createAssignment(assignment, headers, setError) {
 
     return data;
 }
+
+export async function deleteAssignment(assignment_id, headers) {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_FASTAPI_URL}/assignments`, {
+        method: 'DELETE',
+        headers: {
+            "Content-Type": "application/json",
+            ...headers
+        },
+        body: JSON.stringify({assignment_id})
+    })
+
+    if(!response.ok) throw new Error("Could not delete assignment")
+
+    return await response.json()
+}

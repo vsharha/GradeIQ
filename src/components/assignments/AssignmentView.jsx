@@ -1,14 +1,13 @@
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { ArrowUp, ArrowUpCircle, Calendar, Gauge, Pencil, Target, Trash, Trophy } from "lucide-react";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { ArrowUpCircle, Calendar, Target } from "lucide-react";
 import { formatDate } from "@/lib/formatDate";
 import SubmissionProgress from "@/components/custom/SubmissionProgress";
 import VariableTitleView from "@/components/custom/VariableTitleView";
-import { Button } from "@/components/ui/button";
 import EditAssignment from "@/components/assignments/EditAssignment";
 import DeleteAssignment from "@/components/assignments/DeleteAssignment";
 
 function AssignmentView({assignment}) {
-  const { title, created_at, due, description, max_grade, passing_grade } = assignment
+  const { title, created_at, due, description, max_grade, passing_grade, id } = assignment
 
   return (
     <div className="flex flex-col gap-3">
@@ -20,7 +19,7 @@ function AssignmentView({assignment}) {
           </div>
           <div className="flex w-full gap-3 items-center sm:w-fit h-full">
             <EditAssignment/>
-            <DeleteAssignment/>
+            <DeleteAssignment assignment_id={id}/>
           </div>
         </CardHeader>
         <CardContent>

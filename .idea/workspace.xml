@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add datetime-picker conditional styles">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="added assignment deletion">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/[id]/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/[id]/layout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/assignments/CreateAssignment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/CreateAssignment.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/custom/ErrorMessage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/ErrorMessage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/datetime-picker.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/datetime-picker.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/assignments/AssignmentView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/AssignmentView.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/assignments/DeleteAssignment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/DeleteAssignment.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useAssignmentMutation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useAssignmentMutation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/fetchApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/fetchApi.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -136,23 +135,7 @@
       <workItem from="1760306235394" duration="10882000" />
       <workItem from="1760317233907" duration="2621000" />
       <workItem from="1760319997557" duration="38000" />
-      <workItem from="1760364005390" duration="25204000" />
-    </task>
-    <task id="LOCAL-00064" summary="fix submission fetching">
-      <option name="closed" value="true" />
-      <created>1760302765422</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1760302765422</updated>
-    </task>
-    <task id="LOCAL-00065" summary="fix table loading state">
-      <option name="closed" value="true" />
-      <created>1760302860807</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1760302860807</updated>
+      <workItem from="1760364005390" duration="26262000" />
     </task>
     <task id="LOCAL-00066" summary="improve progress loading state">
       <option name="closed" value="true" />
@@ -530,7 +513,23 @@
       <option name="project" value="LOCAL" />
       <updated>1760467944377</updated>
     </task>
-    <option name="localTasksCounter" value="113" />
+    <task id="LOCAL-00113" summary="remove console logs">
+      <option name="closed" value="true" />
+      <created>1760468080326</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1760468080326</updated>
+    </task>
+    <task id="LOCAL-00114" summary="close form on success">
+      <option name="closed" value="true" />
+      <created>1760468312057</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1760468312057</updated>
+    </task>
+    <option name="localTasksCounter" value="115" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -548,9 +547,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="adjust header creation logic" />
-    <MESSAGE value="changed header to use justify end" />
-    <MESSAGE value="adjust dropdown menus" />
     <MESSAGE value="improve landing layout" />
     <MESSAGE value="add default values to login form" />
     <MESSAGE value="improve progress loader" />
@@ -573,6 +569,9 @@
     <MESSAGE value="start work on assignment edit/delete" />
     <MESSAGE value="form error handling" />
     <MESSAGE value="add datetime-picker conditional styles" />
-    <option name="LAST_COMMIT_MESSAGE" value="add datetime-picker conditional styles" />
+    <MESSAGE value="remove console logs" />
+    <MESSAGE value="close form on success" />
+    <MESSAGE value="added assignment deletion" />
+    <option name="LAST_COMMIT_MESSAGE" value="added assignment deletion" />
   </component>
 </project>
