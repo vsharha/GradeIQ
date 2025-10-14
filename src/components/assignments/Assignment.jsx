@@ -4,12 +4,15 @@ import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
 import {useState, useEffect} from "react";
 import OverlayLoader from "@/components/loader/OverlayLoader";
 import { formatDate } from "@/lib/formatDate";
-import { Calendar, ChevronRight } from "lucide-react";
+import { Calendar, ChevronRight, Menu } from "lucide-react";
 import SubmissionProgress from "@/components/custom/SubmissionProgress";
 import { cn } from "@/lib/utils";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { Button } from "@/components/ui/button";
+import DeleteAssignment from "@/components/assignments/DeleteAssignment";
 
 function Assignment({assignment, onClick}) {
-  const { title, description, due } = assignment
+  const { title, description, due, id } = assignment
 
   const [isLoading, setIsLoading] = useState(false)
 
@@ -31,7 +34,16 @@ function Assignment({assignment, onClick}) {
             <span className="flex-1">
               <h2>{title}</h2>
             </span>
-            <ChevronRight size={24} className="translate-y-1"/>
+            <div className="flex items-center justify-center">
+              <DropdownMenu onClick={(e)=>e.stopPropagation()}>
+                <DropdownMenuTrigger className="w-fit h-fit">
+                  <Menu/>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  <DeleteAssignment assignment_id={id} title={true} className="w-full"/>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </div>
           </div>
           <div className="flex gap-3 flex-wrap justify-between">
             <div className="flex gap-2 flex-row items-center">

@@ -5,9 +5,12 @@ import SubmissionProgress from "@/components/custom/SubmissionProgress";
 import VariableTitleView from "@/components/custom/VariableTitleView";
 import EditAssignment from "@/components/assignments/EditAssignment";
 import DeleteAssignment from "@/components/assignments/DeleteAssignment";
+import { useRouter } from "next/navigation";
 
 function AssignmentView({assignment}) {
   const { title, created_at, due, description, max_grade, passing_grade, id } = assignment
+
+  const router = useRouter()
 
   return (
     <div className="flex flex-col gap-3">
@@ -18,8 +21,8 @@ function AssignmentView({assignment}) {
             <p className="text-muted-foreground text-md sm:text-xl">{description}</p>
           </div>
           <div className="flex w-full gap-3 items-center sm:w-fit h-full">
-            <EditAssignment/>
-            <DeleteAssignment assignment_id={id}/>
+            {/*<EditAssignment/>*/}
+            <DeleteAssignment assignment_id={id} onDelete={()=>router.push("/app")}/>
           </div>
         </CardHeader>
         <CardContent>

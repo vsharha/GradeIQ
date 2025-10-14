@@ -8,9 +8,8 @@ import { deleteAssignment } from "@/services/fetchApi";
 import BlockLoader from "@/components/loader/BlockLoader";
 import { useRouter } from "next/navigation";
 
-function DeleteAssignment({assignment_id}) {
+function DeleteAssignment({assignment_id, title=false, onDelete, ...props}) {
   const [open, setOpen] = useState(false);
-  const router = useRouter();
 
   const {isLoading, mutate} = useAssignmentMutation(async (assignment_id)=>{
     const headers = await getClientAuthHeaders();
@@ -19,14 +18,15 @@ function DeleteAssignment({assignment_id}) {
 
   function handleDelete() {
     mutate(assignment_id)
-    router.push("/app");
+    onDelete();
   }
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button variant="secondary">
-          <Trash/>
+        <Button variant="secondary" className="flex gap-2 items-center" {...props}>
+          <Trash />
+          {title&&<span>Delete</span>}
         </Button>
       </DialogTrigger>
       <DialogContent>
@@ -36,11 +36,11 @@ function DeleteAssignment({assignment_id}) {
           </DialogTitle>
         </DialogHeader>
         <DialogFooter>
-          <Button onClick={handleDelete} disabled={isLoading}>
-            {isLoading?<BlockLoader/>:<span>Yes</span>}
-          </Button>
           <Button variant="secondary" onClick={()=>setOpen(false)} disabled={isLoading}>
             No
+          </Button>
+          <Button onClick={handleDelete} disabled={isLoading}>
+            {isLoading?<BlockLoader/>:<span>Yes</span>}
           </Button>
         </DialogFooter>
       </DialogContent>

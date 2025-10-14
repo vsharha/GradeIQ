@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="added assignment deletion">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="fix deletion">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/assignments/Assignment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/Assignment.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/assignments/AssignmentView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/AssignmentView.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/assignments/DeleteAssignment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/DeleteAssignment.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useAssignmentMutation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useAssignmentMutation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/fetchApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/fetchApi.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -135,31 +135,8 @@
       <workItem from="1760306235394" duration="10882000" />
       <workItem from="1760317233907" duration="2621000" />
       <workItem from="1760319997557" duration="38000" />
-      <workItem from="1760364005390" duration="26262000" />
-    </task>
-    <task id="LOCAL-00066" summary="improve progress loading state">
-      <option name="closed" value="true" />
-      <created>1760302913888</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1760302913888</updated>
-    </task>
-    <task id="LOCAL-00067" summary="add refetching on window focus">
-      <option name="closed" value="true" />
-      <created>1760302977324</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1760302977324</updated>
-    </task>
-    <task id="LOCAL-00068" summary="make react query use pageloader on assignments page">
-      <option name="closed" value="true" />
-      <created>1760303532814</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1760303532814</updated>
+      <workItem from="1760364005390" duration="26560000" />
+      <workItem from="1760471787365" duration="2248000" />
     </task>
     <task id="LOCAL-00069" summary="improve loading state for assignments">
       <option name="closed" value="true" />
@@ -529,7 +506,31 @@
       <option name="project" value="LOCAL" />
       <updated>1760468312057</updated>
     </task>
-    <option name="localTasksCounter" value="115" />
+    <task id="LOCAL-00115" summary="added assignment deletion">
+      <option name="closed" value="true" />
+      <created>1760469143044</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1760469143044</updated>
+    </task>
+    <task id="LOCAL-00116" summary="change deletion api">
+      <option name="closed" value="true" />
+      <created>1760472437893</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1760472437893</updated>
+    </task>
+    <task id="LOCAL-00117" summary="fix deletion">
+      <option name="closed" value="true" />
+      <created>1760473039445</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1760473039445</updated>
+    </task>
+    <option name="localTasksCounter" value="118" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -547,8 +548,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="improve landing layout" />
-    <MESSAGE value="add default values to login form" />
     <MESSAGE value="improve progress loader" />
     <MESSAGE value="introduce side by side layout on large screens" />
     <MESSAGE value="split header fetching logic between server and client" />
@@ -572,6 +571,8 @@
     <MESSAGE value="remove console logs" />
     <MESSAGE value="close form on success" />
     <MESSAGE value="added assignment deletion" />
-    <option name="LAST_COMMIT_MESSAGE" value="added assignment deletion" />
+    <MESSAGE value="change deletion api" />
+    <MESSAGE value="fix deletion" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix deletion" />
   </component>
 </project>
