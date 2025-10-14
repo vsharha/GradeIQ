@@ -10,7 +10,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
 import CreateAssignmentForm from "@/components/assignments/CreateAssignmentForm";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import RubricForm from "@/components/assignments/RubricForm";
 import { useForm } from "react-hook-form";
 import { createAssignment } from "@/services/fetchApi";
@@ -38,6 +38,13 @@ function CreateAssignment({className, wide=false}) {
     const headers = await getClientAuthHeaders();
     return await createAssignment(assignment, headers, form.setError);
   })
+
+  useEffect(() => {
+    if (!open) {
+      form.reset();
+      setStep(0);
+    }
+  }, [open, form]);
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>

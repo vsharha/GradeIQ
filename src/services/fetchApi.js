@@ -30,8 +30,6 @@ export async function createAssignment(assignment, headers, setError) {
 
     if(!response.ok) {
         if(data.errors) {
-            console.log(data.errors)
-
             for(const err of data.errors) {
                 setError(err.field, {message: err.message})
             }

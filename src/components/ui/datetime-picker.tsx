@@ -223,7 +223,6 @@ export function DateTimePicker({
 
   // @ts-ignore
 
-    console.log(props)
     return (
     <Popover open={open} onOpenChange={setOpen} modal={modal}>
       <PopoverTrigger asChild>

@@ -12,7 +12,6 @@ async function Layout({children, params}) {
     const assignments = await fetchAssignments(headers);
     assignment = assignments.find((assignment) => assignment.id === Number(id));
   } catch (e) {
-    console.log(e)
     redirect("/app")
   }
 
