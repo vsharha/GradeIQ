@@ -16,6 +16,7 @@ import { useForm } from "react-hook-form";
 import { createAssignment } from "@/services/fetchApi";
 import getClientAuthHeaders from "@/services/getClientAuthHeaders";
 import useAssignmentMutation from "@/hooks/useAssignmentMutation";
+import BlockLoader from "@/components/loader/BlockLoader";
 
 function CreateAssignment({className, wide=false}) {
   const [step, setStep] = useState(0);
@@ -23,11 +24,11 @@ function CreateAssignment({className, wide=false}) {
 
   const form = useForm({
     defaultValues: {
-      due: new Date(Date.now() + 5 * 24 * 60 * 60 * 1000),
+      due: new Date(Date.now() + 24 * 60 * 60 * 1000),
       title: "",
       description: "",
-      max_grade: 100,
-      passing_grade: 50,
+      max_grade: "",
+      passing_grade: "",
       files: null,
       assignment_name: ""
     }
@@ -35,7 +36,7 @@ function CreateAssignment({className, wide=false}) {
 
   const {isLoading, mutate} = useAssignmentMutation(async (assignment) => {
     const headers = await getClientAuthHeaders();
-    return await createAssignment(assignment, headers);
+    return await createAssignment(assignment, headers, form.setError);
   })
 
   return (
@@ -51,7 +52,9 @@ function CreateAssignment({className, wide=false}) {
             </DialogHeader>
             <CreateAssignmentForm form={form}/>
             <DialogFooter>
-              <Button onClick={form.handleSubmit(mutate)} disabled={isLoading}>Create</Button>
+              <Button onClick={form.handleSubmit(mutate)} disabled={isLoading}>
+                {isLoading?<BlockLoader/>:<span>Create</span>}
+              </Button>
             </DialogFooter>
           </>
         }

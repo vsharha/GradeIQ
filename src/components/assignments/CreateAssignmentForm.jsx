@@ -16,7 +16,9 @@ function CreateAssignmentForm({form}) {
             <FormItem>
               <FormLabel>Due date</FormLabel>
               <FormControl>
-                <DateTimePicker value={field.value} onChange={field.onChange}/>
+                <DateTimePicker
+                  {...field}
+                />
               </FormControl>
               <FormDescription />
               <FormMessage />

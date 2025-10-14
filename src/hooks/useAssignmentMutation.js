@@ -1,11 +1,11 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
 
-export default function useAssignmentMutation(mutationFn) {
+export default function useAssignmentMutation(mutationFn, setError) {
     const queryClient = useQueryClient();
 
-    const {isLoading, mutate} = useMutation({
-        mutationFn,
+    const mutation = useMutation({
+        mutationFn: mutationFn,
         onSuccess: async () => {
             await queryClient.invalidateQueries(["assignments"]);
             toast("Successfully added assignment")
@@ -15,5 +15,5 @@ export default function useAssignmentMutation(mutationFn) {
         }
     });
 
-    return {isLoading, mutate}
+    return mutation
 }
