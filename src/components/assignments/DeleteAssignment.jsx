@@ -18,11 +18,8 @@ function DeleteAssignment({assignment_id}) {
   })
 
   function handleDelete() {
-    mutate(assignment_id, {
-      onSuccess: () => {
-        router.back();
-      }
-    })
+    mutate(assignment_id)
+    router.push("/app");
   }
 
   return (
