@@ -8,7 +8,7 @@ import { deleteAssignment } from "@/services/fetchApi";
 import BlockLoader from "@/components/loader/BlockLoader";
 import { useRouter } from "next/navigation";
 
-function DeleteAssignment({assignment_id, title=false, navigateBack=false, ...props}) {
+function DeleteAssignment({assignment_id, title=false, ...props}) {
   const [open, setOpen] = useState(false);
 
   const {isLoading, mutate} = useAssignmentMutation(async (assignment_id)=>{
