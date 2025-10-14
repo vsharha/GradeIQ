@@ -221,18 +221,23 @@ export function DateTimePicker({
     );
   }, [displayValue, hideTime, use12HourFormat]);
 
-  return (
+  // @ts-ignore
+
+    console.log(props)
+    return (
     <Popover open={open} onOpenChange={setOpen} modal={modal}>
       <PopoverTrigger asChild>
         {renderTrigger ? (
           renderTrigger({ value: displayValue, open, timezone, disabled, use12HourFormat, setOpen })
         ) : (
           <div
+            aria-invalid={props["aria-invalid"]}
             className={cn(
               'flex w-full cursor-pointer items-center h-9 ps-3 pe-1 font-normal border border-input rounded-md text-sm shadow-sm bg-transparent dark:bg-input/30',
               !displayValue && 'text-muted-foreground',
               (!clearable || !value) && 'pe-3',
               disabled && 'opacity-50 cursor-not-allowed',
+              "aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
               classNames?.trigger
             )}
             tabIndex={0}
