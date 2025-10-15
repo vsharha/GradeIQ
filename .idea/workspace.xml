@@ -4,9 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="adjust hover effects, menu icon positioning">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="remove default values from login form">
+      <change afterPath="$PROJECT_DIR$/src/components/assignments/MarkschemeForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/loader/LoadingButton.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useGenerate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/assignments/CreateAssignment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/CreateAssignment.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/assignments/CreateAssignmentForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/CreateAssignmentForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/assignments/DeleteAssignment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/DeleteAssignment.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/assignments/RubricForm.jsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/login/LoginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/LoginForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/login/LogoutButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/LogoutButton.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/datetime-picker.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/datetime-picker.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/simple-time-picker.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/fetchApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/fetchApi.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +28,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="JSX File" />
       </list>
     </option>
   </component>
@@ -136,23 +148,7 @@
       <workItem from="1760471787365" duration="3919000" />
       <workItem from="1760475839737" duration="97000" />
       <workItem from="1760482276280" duration="17000" />
-      <workItem from="1760523238253" duration="2074000" />
-    </task>
-    <task id="LOCAL-00073" summary="start auth implementation">
-      <option name="closed" value="true" />
-      <created>1760308676944</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1760308676944</updated>
-    </task>
-    <task id="LOCAL-00074" summary="start auth implementation">
-      <option name="closed" value="true" />
-      <created>1760308855933</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1760308855933</updated>
+      <workItem from="1760523238253" duration="8740000" />
     </task>
     <task id="LOCAL-00075" summary="implement supabase auth with custom api authorisation; change redirects to use next.config.mjs">
       <option name="closed" value="true" />
@@ -530,7 +526,23 @@
       <option name="project" value="LOCAL" />
       <updated>1760523539122</updated>
     </task>
-    <option name="localTasksCounter" value="122" />
+    <task id="LOCAL-00122" summary="add invalid field highlighting to login form">
+      <option name="closed" value="true" />
+      <created>1760556794688</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1760556794688</updated>
+    </task>
+    <task id="LOCAL-00123" summary="remove default values from login form">
+      <option name="closed" value="true" />
+      <created>1760556827380</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1760556827380</updated>
+    </task>
+    <option name="localTasksCounter" value="124" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -548,8 +560,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add error handling for server side fetching" />
-    <MESSAGE value="update profile dropdown" />
     <MESSAGE value="add footer to landing page" />
     <MESSAGE value="adjust progress error display" />
     <MESSAGE value="adjust loader spinner; change profile to use client side fetching" />
@@ -573,6 +583,8 @@
     <MESSAGE value="fix deletion" />
     <MESSAGE value="fix closing form on success" />
     <MESSAGE value="adjust hover effects, menu icon positioning" />
-    <option name="LAST_COMMIT_MESSAGE" value="adjust hover effects, menu icon positioning" />
+    <MESSAGE value="add invalid field highlighting to login form" />
+    <MESSAGE value="remove default values from login form" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove default values from login form" />
   </component>
 </project>

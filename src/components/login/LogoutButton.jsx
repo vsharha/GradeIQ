@@ -6,6 +6,7 @@ import { useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
 import { createClient } from "@/utils/supabase/client";
 import BlockLoader from "@/components/loader/BlockLoader";
+import LoadingButton from "@/components/loader/LoadingButton";
 
 function LogoutButton() {
   const router = useRouter();
@@ -24,9 +25,9 @@ function LogoutButton() {
   }
 
   return (
-    <Button className="w-full" onClick={handleLogout} disabled={isLoading} variant="secondary">
-      {isLoading?<BlockLoader/>:<span>Log out</span>}
-    </Button>
+    <LoadingButton className="w-full" onClick={handleLogout} isLoading={isLoading} variant="secondary">
+      Log out
+    </LoadingButton>
   );
 }
 

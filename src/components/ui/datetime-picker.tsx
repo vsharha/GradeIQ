@@ -224,7 +224,12 @@ export function DateTimePicker({
   // @ts-ignore
 
     return (
-    <Popover open={open} onOpenChange={setOpen} modal={modal}>
+    <Popover open={open} onOpenChange={(nextOpen) => {
+        setOpen(nextOpen);
+        if (!nextOpen) {
+            onChange(new Date(date));
+        }
+    }} modal={modal}>
       <PopoverTrigger asChild>
         {renderTrigger ? (
           renderTrigger({ value: displayValue, open, timezone, disabled, use12HourFormat, setOpen })
@@ -353,9 +358,9 @@ export function DateTimePicker({
             />
           )}
           <div className="flex flex-row-reverse items-center justify-between">
-            <Button className="ms-2 h-7 px-2" onClick={onSubmit}>
-              Done
-            </Button>
+            {/*<Button className="ms-2 h-7 px-2" onClick={onSubmit}>*/}
+            {/*  Done*/}
+            {/*</Button>*/}
             {timezone && (
               <div className="text-sm">
                 <span>Timezone:</span>
@@ -688,7 +693,7 @@ function TimePicker({
         <div className="flex-col gap-2 p-2">
           <div className="flex h-56 grow">
             {(!timePicker || timePicker.hour) && (
-              <ScrollArea className="h-full flex-grow">
+              <ScrollArea className="hfull8 flex-grow">
                 <div className="flex grow flex-col items-stretch overflow-y-auto pe-2 pb-48">
                   {hours.map((v) => (
                     <div key={v.value} ref={v.value === hour ? hourRef : undefined}>

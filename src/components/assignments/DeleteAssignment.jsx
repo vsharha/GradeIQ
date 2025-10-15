@@ -6,7 +6,7 @@ import useAssignmentMutation from "@/hooks/useAssignmentMutation";
 import getClientAuthHeaders from "@/services/getClientAuthHeaders";
 import { deleteAssignment } from "@/services/fetchApi";
 import BlockLoader from "@/components/loader/BlockLoader";
-import { useRouter } from "next/navigation";
+import LoadingButton from "@/components/loader/LoadingButton";
 
 function DeleteAssignment({assignment_id, title=false, ...props}) {
   const [open, setOpen] = useState(false);
@@ -39,9 +39,9 @@ function DeleteAssignment({assignment_id, title=false, ...props}) {
             <Button variant="secondary" onClick={()=>setOpen(false)} disabled={isLoading} >
               No
             </Button>
-            <Button onClick={handleDelete} disabled={isLoading}>
-              {isLoading?<BlockLoader/>:<span>Yes</span>}
-            </Button>
+            <LoadingButton onClick={handleDelete} isLoading={isLoading}>
+              Yes
+            </LoadingButton>
           </DialogFooter>
         </DialogContent>
       </Dialog>

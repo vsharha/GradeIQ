@@ -8,6 +8,7 @@ import { createClient } from "@/utils/supabase/client";
 import { toast } from "sonner";
 import { useState } from "react";
 import BlockLoader from "@/components/loader/BlockLoader";
+import LoadingButton from "@/components/loader/LoadingButton";
 
 function LoginForm() {
   const form = useForm({
@@ -68,13 +69,9 @@ function LoginForm() {
             </FormItem>
           )}
         />
-        <Button disabled={isLoading}>
-          {isLoading?
-            <BlockLoader size={3}/>
-            :
-            <span>Log in</span>
-          }
-        </Button>
+        <LoadingButton isLoading={isLoading}>
+          Log in
+        </LoadingButton>
       </form>
     </Form>
   );

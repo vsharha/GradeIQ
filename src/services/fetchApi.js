@@ -54,3 +54,20 @@ export async function deleteAssignment(assignment_id, headers) {
 
     return await response.json()
 }
+
+export async function generateRubrics(markscheme, headers) {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_FASTAPI_URL}/rubrics/generate`, {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json",
+            ...headers
+        },
+        body: JSON.stringify(markscheme)
+    })
+
+    if(!response.ok) {
+        throw new Error("Could not upload mark scheme");
+    }
+
+    return await response.json()
+}

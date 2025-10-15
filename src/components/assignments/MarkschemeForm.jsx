@@ -1,0 +1,78 @@
+"use client";
+
+import { Form, FormControl, FormDescription, FormField, FormItem, FormMessage } from "@/components/ui/form";
+import { Dropzone, DropzoneContent, DropzoneEmptyState } from "@/components/ui/shadcn-io/dropzone";
+import { useForm } from "react-hook-form";
+import { Button } from "@/components/ui/button";
+import getClientAuthHeaders from "@/services/getClientAuthHeaders";
+import { generateRubrics } from "@/services/fetchApi";
+import useGenerate from "@/hooks/useGenerate";
+import BlockLoader from "@/components/loader/BlockLoader";
+import LoadingButton from "@/components/loader/LoadingButton";
+
+function fileToBase64(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result.split(',')[1]); // remove data:...;base64,
+    reader.onerror = reject;
+    reader.readAsDataURL(file);
+  });
+}
+
+function MarkschemeForm({onSubmit, setGenerated}) {
+  const form = useForm({
+    defaultValues: {
+      files: null,
+    }
+  })
+
+  const {mutate, isPending} = useGenerate(async (data)=>{
+    const headers = getClientAuthHeaders();
+    const files = data.files;
+    let encoded = null;
+    if (files && files.length > 0) {
+      encoded = await fileToBase64(files[0]);
+    }
+    const payload = { encoded };
+    const response = await generateRubrics(payload, headers);
+    setGenerated(response);
+    onSubmit();
+  })
+
+  return (
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(mutate)} className="space-y-3 mt-2">
+        <FormField
+          control={form.control}
+          name="files"
+          render={({ field }) => (
+            <FormItem>
+              <FormControl>
+                <Dropzone
+                  accept={{ "application/pdf": [] }}
+                  maxFiles={1}
+                  maxSize={10 * 1024 * 1024}
+                  onDrop={(files) => field.onChange(files)}
+                  src={field.value}
+                  className="border-2 border-dashed"
+                >
+                  <DropzoneEmptyState />
+                  <DropzoneContent />
+                </Dropzone>
+              </FormControl>
+              <FormDescription>
+
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <LoadingButton isLoading={isPending}>
+          Generate
+        </LoadingButton>
+      </form>
+    </Form>
+  );
+}
+
+export default MarkschemeForm;
