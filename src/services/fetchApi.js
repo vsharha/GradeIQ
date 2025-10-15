@@ -35,7 +35,7 @@ export async function createAssignment(assignment, headers, setError) {
             }
         }
 
-        throw new Error("Could not fetch assignment")
+        throw new Error("Could not create assignment")
     }
 
     return data;

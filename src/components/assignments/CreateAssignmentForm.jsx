@@ -3,20 +3,30 @@
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { DateTimePicker } from "@/components/ui/datetime-picker";
 import { Input } from "@/components/ui/input";
-import { useForm } from "react-hook-form";
+import { useFieldArray, useForm, useWatch } from "react-hook-form";
 import { Textarea } from "@/components/ui/textarea";
 import useAssignmentMutation from "@/hooks/useAssignmentMutation";
 import getClientAuthHeaders from "@/services/getClientAuthHeaders";
 import { createAssignment } from "@/services/fetchApi";
-import BlockLoader from "@/components/loader/BlockLoader";
-import { Button } from "@/components/ui/button";
 import LoadingButton from "@/components/loader/LoadingButton";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { ChevronRight, Trash } from "lucide-react";
+import StyledCollapsible from "@/components/custom/StyledCollapsible";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 function CreateAssignmentForm({generated = {}}) {
   const {mutate, isPending} = useAssignmentMutation(async (assignment) => {
     const headers = await getClientAuthHeaders();
     return await createAssignment(assignment, headers, form.setError);
   })
+
+  const defaultRubric = {
+    id: 1,
+    question: "",
+    answer: "",
+  }
 
   const form = useForm({
     defaultValues: {
@@ -26,28 +36,27 @@ function CreateAssignmentForm({generated = {}}) {
       files: generated.files ?? null,
       title: generated.title ?? "",
       description: generated.description ?? "",
+      mark_scheme: generated.markscheme ?? [
+        defaultRubric
+      ]
     }
   })
 
+  const {fields, append, remove} = useFieldArray({
+    control: form.control, name: "mark_scheme"
+  })
+
+  const [activeTab, setActiveTab] = useState(fields[0]?.id)
+
+  function addTab() {
+    const id = fields.length+1
+
+    append({...defaultRubric, id})
+  }
+
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(mutate)} className="space-y-3 mt-2">
-        <FormField
-          control={form.control}
-          name="due"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Due date</FormLabel>
-              <FormControl>
-                <DateTimePicker
-                  {...field}
-                />
-              </FormControl>
-              <FormDescription />
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+      <form onSubmit={form.handleSubmit(mutate)} className="space-y-3 mt-5">
         <FormField
           control={form.control}
           name="title"
@@ -106,6 +115,94 @@ function CreateAssignmentForm({generated = {}}) {
             )}
           />
         </div>
+        <FormField
+          control={form.control}
+          name="due"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Due date</FormLabel>
+              <FormControl>
+                <DateTimePicker
+                  {...field}
+                />
+              </FormControl>
+              <FormDescription />
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <Tabs defaultValue={form.watch(`mark_scheme.0.id`)} className="w-full flex flex-col gap-2 mt-5" value={activeTab} onValueChange={setActiveTab}>
+          <h1>Questions</h1>
+          <div className="flex gap-1">
+            <TabsList className="w-full mb-3">
+              {fields.map((field, index) => (
+                <TabsTrigger value={field.id} key={field.id}>
+                  {form.watch(`mark_scheme.${index}.id`)}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+            <Button variant="secondary" onClick={(e)=>{e.preventDefault(); addTab()}}>
+              <span className="flex items-center justify-center w-full h-full text-center">
+                +
+              </span>
+            </Button>
+          </div>
+          {fields.map((field, index) => (
+            <TabsContent value={field.id} key={field.id}>
+              <div className="flex flex-col gap-2">
+                  <FormItem className="flex-1">
+                    <FormLabel>Number</FormLabel>
+                    <div className="flex items-center gap-3">
+                        <FormControl>
+                          <Input {...form.register(`mark_scheme.${index}.id`)} className="w-1/4"/>
+                        </FormControl>
+                        <Button
+                          variant="secondary"
+                          size="icon"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            remove(index);
+                            if (fields.length > 1) {
+                              const prev = fields[Math.max(index - 1, 0)];
+                              setActiveTab(prev.id);
+                            }
+                          }}
+                        >
+                          <Trash/>
+                        </Button>
+                    </div>
+                    <FormDescription />
+                    <FormMessage />
+                  </FormItem>
+
+                <FormItem className="flex-1">
+                  <FormLabel>Question</FormLabel>
+                  <FormControl>
+                    <Textarea {...form.register(`mark_scheme.${index}.question`)}/>
+                  </FormControl>
+                  <FormDescription />
+                  <FormMessage />
+                </FormItem>
+                <FormItem className="flex-1">
+                  <FormLabel>Answer</FormLabel>
+                  <FormControl>
+                    <Textarea {...form.register(`mark_scheme.${index}.answer`)} />
+                  </FormControl>
+                  <FormDescription />
+                  <FormMessage />
+                </FormItem>
+                <FormItem className="flex-1 flex items-center">
+                  <FormControl className="flex items-start">
+                    <Input type="checkbox" className="w-5" {...form.register(`mark_scheme.${index}.suggested_answer`)}/>
+                  </FormControl>
+                  <FormLabel>Answer is suggested</FormLabel>
+                  <FormDescription />
+                  <FormMessage />
+                </FormItem>
+              </div>
+            </TabsContent>
+          ))}
+        </Tabs>
         <LoadingButton isLoading={isPending}>
           Create
         </LoadingButton>

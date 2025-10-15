@@ -4,19 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="remove default values from login form">
-      <change afterPath="$PROJECT_DIR$/src/components/assignments/MarkschemeForm.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/loader/LoadingButton.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/useGenerate.js" afterDir="false" />
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="start work on ai features; refactor api on the backend">
+      <change afterPath="$PROJECT_DIR$/src/components/custom/StyledCollapsible.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/assignments/CreateAssignment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/CreateAssignment.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/assignments/CreateAssignmentForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/CreateAssignmentForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/assignments/DeleteAssignment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/DeleteAssignment.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/assignments/RubricForm.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/login/LoginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/LoginForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/login/LogoutButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/LogoutButton.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/datetime-picker.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/datetime-picker.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/simple-time-picker.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/assignments/MarkschemeForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/MarkschemeForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/loader/LoadingButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/loader/LoadingButton.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/fetchApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/fetchApi.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -148,15 +144,7 @@
       <workItem from="1760471787365" duration="3919000" />
       <workItem from="1760475839737" duration="97000" />
       <workItem from="1760482276280" duration="17000" />
-      <workItem from="1760523238253" duration="8740000" />
-    </task>
-    <task id="LOCAL-00075" summary="implement supabase auth with custom api authorisation; change redirects to use next.config.mjs">
-      <option name="closed" value="true" />
-      <created>1760315653943</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1760315653943</updated>
+      <workItem from="1760523238253" duration="14108000" />
     </task>
     <task id="LOCAL-00076" summary="improve loaders; add login loading state">
       <option name="closed" value="true" />
@@ -542,7 +530,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760556827380</updated>
     </task>
-    <option name="localTasksCounter" value="124" />
+    <task id="LOCAL-00124" summary="start work on ai features; refactor api on the backend">
+      <option name="closed" value="true" />
+      <created>1760563629944</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1760563629944</updated>
+    </task>
+    <option name="localTasksCounter" value="125" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -560,7 +556,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add footer to landing page" />
     <MESSAGE value="adjust progress error display" />
     <MESSAGE value="adjust loader spinner; change profile to use client side fetching" />
     <MESSAGE value="fix user fetching" />
@@ -585,6 +580,7 @@
     <MESSAGE value="adjust hover effects, menu icon positioning" />
     <MESSAGE value="add invalid field highlighting to login form" />
     <MESSAGE value="remove default values from login form" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove default values from login form" />
+    <MESSAGE value="start work on ai features; refactor api on the backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="start work on ai features; refactor api on the backend" />
   </component>
 </project>

@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 function LoadingButton({isLoading, children, ...props}) {
   return (
-    <Button {...props}>
+    <Button disabled={isLoading} {...props}>
       {isLoading?<BlockLoader/>:children}
     </Button>
   );

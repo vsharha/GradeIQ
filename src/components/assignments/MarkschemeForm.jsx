@@ -35,6 +35,7 @@ function MarkschemeForm({onSubmit, setGenerated}) {
     }
     const payload = { encoded };
     const response = await generateRubrics(payload, headers);
+    console.log(response)
     setGenerated(response);
     onSubmit();
   })
