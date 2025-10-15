@@ -1,6 +1,6 @@
 "use client"
 
-import { Form, FormControl, FormField, FormItem, FormLabel } from "@/components/ui/form";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useForm } from "react-hook-form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -28,6 +28,8 @@ function LoginForm() {
     const { error } = await supabase.auth.signInWithPassword({ email, password });
 
     if (error) {
+      form.setError("email", { type: "manual", message: "Invalid email or password" });
+      form.setError("password", { type: "manual", message: "Invalid email or password" });
       toast(error.message);
       setIsLoading(false)
     } else {
@@ -48,6 +50,7 @@ function LoginForm() {
               <FormControl>
                 <Input placeholder="" {...field} type="email"/>
               </FormControl>
+              <FormMessage/>
             </FormItem>
           )}
         />
@@ -61,6 +64,7 @@ function LoginForm() {
               <FormControl>
                 <Input placeholder="" type="password" {...field}/>
               </FormControl>
+              <FormMessage/>
             </FormItem>
           )}
         />

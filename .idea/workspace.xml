@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="fix deletion">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="adjust hover effects, menu icon positioning">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/assignments/CreateAssignment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/CreateAssignment.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/assignments/DeleteAssignment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/DeleteAssignment.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useAssignmentMutation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useAssignmentMutation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/login/LoginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/login/LoginForm.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +98,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-9c94529fcfe0-JavaScript-WS-252.26199.162" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-WS-252.26830.93" />
       </set>
     </attachedChunks>
   </component>
@@ -136,23 +134,9 @@
       <workItem from="1760319997557" duration="38000" />
       <workItem from="1760364005390" duration="26560000" />
       <workItem from="1760471787365" duration="3919000" />
-      <workItem from="1760475839737" duration="75000" />
-    </task>
-    <task id="LOCAL-00071" summary="improve responsive layout">
-      <option name="closed" value="true" />
-      <created>1760307031635</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1760307031635</updated>
-    </task>
-    <task id="LOCAL-00072" summary="decrease gap on mobile layouts">
-      <option name="closed" value="true" />
-      <created>1760307076397</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1760307076397</updated>
+      <workItem from="1760475839737" duration="97000" />
+      <workItem from="1760482276280" duration="17000" />
+      <workItem from="1760523238253" duration="2074000" />
     </task>
     <task id="LOCAL-00073" summary="start auth implementation">
       <option name="closed" value="true" />
@@ -530,7 +514,23 @@
       <option name="project" value="LOCAL" />
       <updated>1760475724829</updated>
     </task>
-    <option name="localTasksCounter" value="120" />
+    <task id="LOCAL-00120" summary="fix closing form on success">
+      <option name="closed" value="true" />
+      <created>1760475936319</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1760475936320</updated>
+    </task>
+    <task id="LOCAL-00121" summary="adjust hover effects, menu icon positioning">
+      <option name="closed" value="true" />
+      <created>1760523539122</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1760523539122</updated>
+    </task>
+    <option name="localTasksCounter" value="122" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -548,8 +548,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="introduce side by side layout on large screens" />
-    <MESSAGE value="split header fetching logic between server and client" />
     <MESSAGE value="add error handling for server side fetching" />
     <MESSAGE value="update profile dropdown" />
     <MESSAGE value="add footer to landing page" />
@@ -573,6 +571,8 @@
     <MESSAGE value="change deletion api" />
     <MESSAGE value="change get submissions api" />
     <MESSAGE value="fix deletion" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix deletion" />
+    <MESSAGE value="fix closing form on success" />
+    <MESSAGE value="adjust hover effects, menu icon positioning" />
+    <option name="LAST_COMMIT_MESSAGE" value="adjust hover effects, menu icon positioning" />
   </component>
 </project>
