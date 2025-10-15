@@ -134,13 +134,15 @@ function CreateAssignmentForm({generated = {}}) {
         <Tabs defaultValue={form.watch(`mark_scheme.0.id`)} className="w-full flex flex-col gap-2 mt-5" value={activeTab} onValueChange={setActiveTab}>
           <h1>Questions</h1>
           <div className="flex gap-1">
-            <TabsList className="w-full mb-3">
-              {fields.map((field, index) => (
-                <TabsTrigger value={field.id} key={field.id}>
-                  {form.watch(`mark_scheme.${index}.id`)}
-                </TabsTrigger>
-              ))}
-            </TabsList>
+            <div className="flex-1">
+              <TabsList className="flex flex-wrap mb-3 w-full h-fit">
+                {fields.map((field, index) => (
+                  <TabsTrigger value={field.id} key={field.id} className="min-w-[8%] w-[50%]">
+                    {form.watch(`mark_scheme.${index}.id`)}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+            </div>
             <Button variant="secondary" onClick={(e)=>{e.preventDefault(); addTab()}}>
               <span className="flex items-center justify-center w-full h-full text-center">
                 +
