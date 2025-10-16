@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="fix multiple rows on tabs">
-      <change afterPath="$PROJECT_DIR$/src/components/assignments/RubricsFieldArray.jsx" afterDir="false" />
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add rubrics to form">
+      <change afterPath="$PROJECT_DIR$/src/components/assignments/OptionsFieldArray.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/assignments/CreateAssignment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/CreateAssignment.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/assignments/CreateAssignmentForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/CreateAssignmentForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/custom/StyledCollapsible.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/StyledCollapsible.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/assignments/RubricsFieldArray.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/RubricsFieldArray.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,15 +139,7 @@
       <workItem from="1760471787365" duration="3919000" />
       <workItem from="1760475839737" duration="97000" />
       <workItem from="1760482276280" duration="17000" />
-      <workItem from="1760523238253" duration="17235000" />
-    </task>
-    <task id="LOCAL-00078" summary="fix LoginForm.jsx to use server side routing">
-      <option name="closed" value="true" />
-      <created>1760317320775</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1760317320775</updated>
+      <workItem from="1760523238253" duration="17739000" />
     </task>
     <task id="LOCAL-00079" summary="fix search to use lowercase version; make router use await in LoginForm.jsx">
       <option name="closed" value="true" />
@@ -534,7 +525,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760571581338</updated>
     </task>
-    <option name="localTasksCounter" value="127" />
+    <task id="LOCAL-00127" summary="add rubrics to form">
+      <option name="closed" value="true" />
+      <created>1760573798810</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1760573798810</updated>
+    </task>
+    <option name="localTasksCounter" value="128" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -552,7 +551,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix user fetching" />
     <MESSAGE value="add username" />
     <MESSAGE value="fix logged out state" />
     <MESSAGE value="fix log out loading state" />
@@ -577,6 +575,7 @@
     <MESSAGE value="start work on ai features; refactor api on the backend" />
     <MESSAGE value="added improved assignment creation form" />
     <MESSAGE value="fix multiple rows on tabs" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix multiple rows on tabs" />
+    <MESSAGE value="add rubrics to form" />
+    <option name="LAST_COMMIT_MESSAGE" value="add rubrics to form" />
   </component>
 </project>

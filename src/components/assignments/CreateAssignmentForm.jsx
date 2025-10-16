@@ -16,6 +16,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import RubricsFieldArray from "@/components/assignments/RubricsFieldArray";
+import OptionsFieldArray from "@/components/assignments/OptionsFieldArray";
 
 function CreateAssignmentForm({generated = {}}) {
   const {mutate, isPending} = useAssignmentMutation(async (assignment) => {
@@ -211,6 +212,7 @@ function CreateAssignmentForm({generated = {}}) {
                   <FormDescription />
                   <FormMessage />
                 </FormItem>
+                <OptionsFieldArray form={form} indx={index}/>
                 <RubricsFieldArray form={form} index={index} defaultRubric={defaultRubric}/>
               </div>
             </TabsContent>

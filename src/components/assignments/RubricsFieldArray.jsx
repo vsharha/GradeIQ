@@ -20,14 +20,14 @@ function RubricsFieldArray({form, index, defaultRubric={}}) {
   return (
     <StyledCollapsible title="Rubrics" defaultOpen={true}>
       {
-        rubricFields.map((field, i) =>
+        rubricFields.map((field, index) =>
           <div key={field.id} className="flex gap-3 items-center">
             <FormItem className="flex-1">
               <FormLabel>Criterion</FormLabel>
               <FormControl>
                 <div className="flex gap-3 items-center">
-                  <h1>{i + 1})</h1>
-                  <Input {...form.register(`${name}.${i}.criterion`)}/>
+                  <h1>{index + 1})</h1>
+                  <Input {...form.register(`${name}.${index}.criterion`)}/>
                 </div>
               </FormControl>
               <FormDescription />
@@ -37,8 +37,8 @@ function RubricsFieldArray({form, index, defaultRubric={}}) {
               <FormLabel>Marks</FormLabel>
               <FormControl>
                 <div className="flex gap-2">
-                  <Input {...form.register(`${name}.${i}.marks`)}/>
-                  <Button variant="secondary" onClick={(e)=>{e.preventDefault();removeRubric(i)}}>
+                  <Input {...form.register(`${name}.${index}.marks`)}/>
+                  <Button variant="secondary" onClick={(e)=>{e.preventDefault();removeRubric(index)}}>
                     <Trash/>
                   </Button>
                 </div>
@@ -49,7 +49,7 @@ function RubricsFieldArray({form, index, defaultRubric={}}) {
           </div>
         )
       }
-      <Button variant="secondary" className="w-fit ml-auto" onClick={(e)=>{e.preventDefault();addRubric(defaultRubric)}}>
+      <Button variant="secondary" className="w-fit" onClick={(e)=>{e.preventDefault();addRubric(defaultRubric)}}>
         + Add rubric
       </Button>
     </StyledCollapsible>
