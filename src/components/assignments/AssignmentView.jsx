@@ -46,13 +46,15 @@ function AssignmentView({assignment}) {
           <SubmissionProgress assignment={assignment}/>
         </CardContent>
       </Card>
-      <Card>
-        <CardContent>
-          <StyledCollapsible title={"Rubrics"} defaultOpen={false} className="font-bold text-xl">
-            <Rubrics rubrics={rubrics}/>
-          </StyledCollapsible>
-        </CardContent>
-      </Card>
+      {rubrics &&
+        <Card>
+          <CardContent>
+            <StyledCollapsible title={"Rubrics"} defaultOpen={false} className="font-bold text-xl">
+              <Rubrics rubrics={rubrics} />
+            </StyledCollapsible>
+          </CardContent>
+        </Card>
+      }
     </div>
   );
 }
