@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add semi-functional pdf viewer">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="adjust pdf viewer scale">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/custom/PdfViewer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/PdfViewer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/[id]/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/[id]/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/assignments/Rubrics.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/Rubrics.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/submissions/SubmissionView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/SubmissionView.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/submissions/UploadSubmissions.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/UploadSubmissions.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,15 +145,7 @@
       <workItem from="1760613577070" duration="4783000" />
       <workItem from="1760620135444" duration="284000" />
       <workItem from="1760634540751" duration="3279000" />
-      <workItem from="1760637876572" duration="4030000" />
-    </task>
-    <task id="LOCAL-00102" summary="add username">
-      <option name="closed" value="true" />
-      <created>1760385896041</created>
-      <option name="number" value="00102" />
-      <option name="presentableId" value="LOCAL-00102" />
-      <option name="project" value="LOCAL" />
-      <updated>1760385896041</updated>
+      <workItem from="1760637876572" duration="4456000" />
     </task>
     <task id="LOCAL-00103" summary="fix logged out state">
       <option name="closed" value="true" />
@@ -536,7 +531,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760645734771</updated>
     </task>
-    <option name="localTasksCounter" value="151" />
+    <task id="LOCAL-00151" summary="adjust pdf viewer scale">
+      <option name="closed" value="true" />
+      <created>1760645781906</created>
+      <option name="number" value="00151" />
+      <option name="presentableId" value="LOCAL-00151" />
+      <option name="project" value="LOCAL" />
+      <updated>1760645781906</updated>
+    </task>
+    <option name="localTasksCounter" value="152" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -554,7 +557,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix multiple rows on tabs" />
     <MESSAGE value="add rubrics to form" />
     <MESSAGE value="added options field array" />
     <MESSAGE value="fix fetching for ai generation; add verbose error logging; removed temporary data" />
@@ -579,6 +581,7 @@
     <MESSAGE value="start work on pdf viewer; adjust loading button messages" />
     <MESSAGE value="change input accent color" />
     <MESSAGE value="add semi-functional pdf viewer" />
-    <option name="LAST_COMMIT_MESSAGE" value="add semi-functional pdf viewer" />
+    <MESSAGE value="adjust pdf viewer scale" />
+    <option name="LAST_COMMIT_MESSAGE" value="adjust pdf viewer scale" />
   </component>
 </project>

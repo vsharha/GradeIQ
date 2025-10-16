@@ -10,6 +10,7 @@ import PageLoader from "@/components/loader/PageLoader";
 import ErrorMessage from "@/components/custom/ErrorMessage";
 import { useRouter } from "next/navigation";
 import UploadSubmissions from "@/components/submissions/UploadSubmissions";
+import LoadingButton from "@/components/loader/LoadingButton";
 
 function Page({params}) {
   const {id} = use(params);
@@ -38,9 +39,14 @@ function Page({params}) {
       <div className="flex flex-col lg:flex-row gap-6 lg:gap-4">
         <AssignmentView assignment={assignment}/>
         <Card className="gap-2 pb-6 lg:flex-1 lg:min-h-[calc(100dvh*3/4)]">
-          <CardHeader className="flex justify-between gap-2 items-center">
+          <CardHeader className="flex flex-col">
             <h1 className="text-xl font-bold">Submissions</h1>
-            <UploadSubmissions assignment_id={assignment.id}/>
+            <div className="flex justify-between gap-2 items-center justify-center">
+              <UploadSubmissions assignment_id={assignment.id}/>
+              <LoadingButton>
+                Grade All
+              </LoadingButton>
+            </div>
           </CardHeader>
           <CardContent className="px-3 sm:px-4">
             <SubmissionTable assignment={assignment}/>

@@ -13,7 +13,7 @@ function Rubrics({rubrics}) {
           <TabsTrigger value={i} key={i} className="min-w-[8%] w-[50%] max-w-[50%]">{rubric.number}</TabsTrigger>
         )}
       </TabsList>
-      <StyledCollapsible title={rubrics.mark_scheme[value].number} defaultOpen={false} className="font-bold text-xl">
+      <StyledCollapsible title={`Question ${rubrics.mark_scheme[value].number}`} defaultOpen={false} className="font-bold text-xl">
         {rubrics.mark_scheme.map((rubric, i)=>
           <TabsContent value={i} key={i}>
             <div key={i} className="flex flex-col gap-2">

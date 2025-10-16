@@ -7,7 +7,7 @@ function UploadSubmissions({assignment_id}) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button>
+        <Button variant="secondary">
           <UploadIcon/> Upload
         </Button>
       </DialogTrigger>

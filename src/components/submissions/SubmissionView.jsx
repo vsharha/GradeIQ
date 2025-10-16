@@ -28,7 +28,7 @@ function SubmissionView({submission, assignment}) {
           </button>
         </DialogTrigger>
         <DialogContent className="max-h-[calc(100dvh*8/10)] overflow-hidden p-0">
-          <div className="overflow-auto p-6">
+          <div className="overflow-y-scroll p-6">
             <DialogHeader>
               <DialogTitle>Submission</DialogTitle>
             </DialogHeader>
