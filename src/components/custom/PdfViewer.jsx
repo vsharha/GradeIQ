@@ -1,47 +1,51 @@
-"use client";
+import { useEffect, useRef, useState } from "react";
+import 'react-pdf/dist/Page/AnnotationLayer.css';
+import 'react-pdf/dist/Page/TextLayer.css';
 
-import { useState, useEffect, useMemo } from "react";
 
-export default function PdfViewer({ base64String }) {
-  const [components, setComponents] = useState(null);
-  const [numPages, setNumPages] = useState(null);
+export default function PdfViewerDynamic({ url }) {
+  const [PdfModule, setPdfModule] = useState(null);
 
   useEffect(() => {
-    let mounted = true;
-    (async () => {
-      const mod = await import("react-pdf");
-      mod.pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${mod.pdfjs.version}/pdf.worker.min.js`;
-      if (mounted) setComponents({ Document: mod.Document, Page: mod.Page });
-    })();
-    return () => {
-      mounted = false;
-    };
+    import("react-pdf").then((mod) => {
+      const { pdfjs } = mod;
+      pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+        "pdfjs-dist/build/pdf.worker.min.mjs",
+        import.meta.url
+      ).toString();
+
+      setPdfModule(mod);
+    });
   }, []);
 
-  const pdfData = useMemo(() => {
-    if (!base64String) return null;
-    const clean = base64String.replace(/^data:application\/pdf;base64,/, "");
-    try {
-      return Uint8Array.from(atob(clean), (c) => c.charCodeAt(0));
-    } catch {
-      return null;
-    }
-  }, [base64String]);
+  const [width, setWidth] = useState(0);
+  const containerRef = useRef();
 
-  if (!components) return <div>Loading PDF viewer...</div>;
-  if (!pdfData) return <div>No PDF data</div>;
+  useEffect(() => {
+    const updateWidth = () => setWidth(containerRef.current?.offsetWidth || 600);
+    updateWidth();
+    window.addEventListener("resize", updateWidth);
+    return () => window.removeEventListener("resize", updateWidth);
+  }, []);
 
-  const { Document, Page } = components;
-  const onLoadSuccess = ({ numPages }) => setNumPages(numPages);
+
+  if (!PdfModule) {
+    return <p>Loading PDF module…</p>;
+  }
+
+  const { Document, Page } = PdfModule;
 
   return (
-    <div className="flex flex-col items-center">
-      <Document file={{ data: pdfData }} onLoadSuccess={onLoadSuccess}>
-        {numPages &&
-          Array.from({ length: numPages }, (_, i) => (
-            <Page key={`page_${i + 1}`} pageNumber={i + 1} width={600} />
-          ))}
-      </Document>
-    </div>
+    <Document
+      file={url}
+      onLoadSuccess={({ numPages }) => {
+      }}
+      loading={<p>Loading PDF …</p>}
+      error={<p>Failed to load PDF.</p>}
+      className="w-full overflow-scroll"
+      ref={containerRef}
+    >
+      <Page pageNumber={1} width={width*0.75} />
+    </Document>
   );
 }

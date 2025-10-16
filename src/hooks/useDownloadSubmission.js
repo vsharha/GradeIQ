@@ -2,7 +2,9 @@ import { useQuery } from "@tanstack/react-query";
 import getClientAuthHeaders from "@/services/getClientAuthHeaders";
 import { downloadSubmissionFile, fetchUser } from "@/services/fetchApi";
 
-export default function useDownloadSubmission(submission_id) {
+export default function useDownloadSubmission(submission_id, options = {}) {
+    const { enabled: optEnabled, ...restOptions } = options
+
     const query = useQuery({
         queryKey: ["submission_file", submission_id],
         queryFn: async () => {
@@ -16,7 +18,9 @@ export default function useDownloadSubmission(submission_id) {
 
             return await downloadSubmissionFile(submission_id,headers);
         },
+        enabled: typeof optEnabled === "boolean" ? optEnabled : Boolean(submission_id),
         refetchOnWindowFocus: true,
+        ...restOptions,
     })
 
     return {...query, file: query.data}
