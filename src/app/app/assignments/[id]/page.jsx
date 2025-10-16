@@ -38,7 +38,7 @@ function Page({params}) {
       <div className="flex flex-col lg:flex-row gap-6 lg:gap-4">
         <AssignmentView assignment={assignment}/>
         <Card className="gap-2 pb-6 lg:flex-1 lg:min-h-[calc(100dvh*3/4)]">
-          <CardHeader className="flex justify-between gap-2">
+          <CardHeader className="flex justify-between gap-2 items-center">
             <h1 className="text-xl font-bold">Submissions</h1>
             <UploadSubmissions assignment_id={assignment.id}/>
           </CardHeader>
