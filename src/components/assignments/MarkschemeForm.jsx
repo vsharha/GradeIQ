@@ -63,11 +63,11 @@ function MarkschemeForm({onSubmit, setGenerated}) {
             </FormItem>
           )}
         />
-        <LoadingButton isLoading={isPending} className="w-full">
+        <LoadingButton isLoading={isPending} className="w-full" type="generate">
           Generate
         </LoadingButton>
         <Button onClick={onSubmit} className="w-full" variant="secondary">
-          Enter by hand
+          Enter manually
         </Button>
       </form>
     </Form>
