@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add loading messages when generating">
-      <change afterPath="$PROJECT_DIR$/src/components/assignments/MarkSchemeFieldArray.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/assignments/Rubrics.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/custom/Boolean.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/data.js" afterDir="false" />
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add rubrics view to assignments">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/assignments/AssignmentView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/AssignmentView.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/assignments/CreateAssignmentForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/CreateAssignmentForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/assignments/Rubrics.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/Rubrics.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/custom/StyledCollapsible.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/StyledCollapsible.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -147,15 +142,7 @@
       <workItem from="1760580551621" duration="113000" />
       <workItem from="1760613577070" duration="4783000" />
       <workItem from="1760620135444" duration="284000" />
-      <workItem from="1760634540751" duration="2544000" />
-    </task>
-    <task id="LOCAL-00094" summary="introduce side by side layout on large screens">
-      <option name="closed" value="true" />
-      <created>1760375492117</created>
-      <option name="number" value="00094" />
-      <option name="presentableId" value="LOCAL-00094" />
-      <option name="project" value="LOCAL" />
-      <updated>1760375492119</updated>
+      <workItem from="1760634540751" duration="2660000" />
     </task>
     <task id="LOCAL-00095" summary="split header fetching logic between server and client">
       <option name="closed" value="true" />
@@ -541,7 +528,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760635351580</updated>
     </task>
-    <option name="localTasksCounter" value="143" />
+    <task id="LOCAL-00143" summary="add rubrics view to assignments">
+      <option name="closed" value="true" />
+      <created>1760637112614</created>
+      <option name="number" value="00143" />
+      <option name="presentableId" value="LOCAL-00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1760637112614</updated>
+    </task>
+    <option name="localTasksCounter" value="144" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -559,7 +554,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change get submissions api" />
     <MESSAGE value="fix deletion" />
     <MESSAGE value="fix closing form on success" />
     <MESSAGE value="adjust hover effects, menu icon positioning" />
@@ -584,6 +578,7 @@
     <MESSAGE value="adjust form paddings" />
     <MESSAGE value="make number always a string" />
     <MESSAGE value="add loading messages when generating" />
-    <option name="LAST_COMMIT_MESSAGE" value="add loading messages when generating" />
+    <MESSAGE value="add rubrics view to assignments" />
+    <option name="LAST_COMMIT_MESSAGE" value="add rubrics view to assignments" />
   </component>
 </project>

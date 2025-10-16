@@ -4,7 +4,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 function Rubrics({rubrics}) {
   return (
     <Tabs className="flex flex-col gap-3 max-w-full" defaultValue={0}>
-      <TabsList className="flex flex-wrap h-fit">
+      <TabsList className="flex flex-wrap h-fit w-full">
         {rubrics.mark_scheme.map((rubric, i)=>
           <TabsTrigger value={i} key={i} className="min-w-[8%] w-[50%] max-w-[50%]">{rubric.number}</TabsTrigger>
         )}

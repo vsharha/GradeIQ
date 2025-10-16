@@ -8,7 +8,7 @@ function StyledCollapsible({title, children, defaultOpen=true, className}) {
 
   return (
     <Collapsible open={open} onOpenChange={setOpen}>
-      <CollapsibleTrigger className={cn("flex items-center mb-4 justify-center h-full gap-2", className)}>
+      <CollapsibleTrigger className={cn("flex items-center mb-4 justify-center h-full gap-2 w-full justify-start", className)}>
         {open?<ChevronDown/>:<ChevronRight />}
         <span>{title}</span>
       </CollapsibleTrigger>
