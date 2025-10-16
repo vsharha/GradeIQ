@@ -12,7 +12,6 @@ import { Plus } from "lucide-react";
 import MarkschemeForm from "@/components/assignments/MarkschemeForm";
 import { useEffect, useState } from "react";
 import CreateAssignmentForm from "@/components/assignments/CreateAssignmentForm";
-// import { testAssignment } from "@/data/data";
 
 function CreateAssignment({className, wide=false}) {
   const [step, setStep] = useState(0);
@@ -25,7 +24,6 @@ function CreateAssignment({className, wide=false}) {
   }, [open]);
 
   const [generated, setGenerated] = useState({});
-  // const [generated, setGenerated] = useState(testAssignment);
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>

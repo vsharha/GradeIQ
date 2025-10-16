@@ -31,7 +31,7 @@ function SubmissionView({submission, assignment}) {
             <User size={15}/> {student_name}
           </VariableView>
           <VariableView>
-            <Gauge size={15}/> {`${grade?.toFixed(2)} / ${max_grade?.toFixed(2)}`}
+            <Gauge size={15}/> {grade?`${grade?.toFixed(2)} / ${max_grade?.toFixed(2)}`:"N/A"}
           </VariableView>
         </DialogContent>
       </Dialog>
