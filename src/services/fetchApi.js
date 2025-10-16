@@ -71,6 +71,27 @@ export async function createAssignment(assignment, headers, setError) {
     return data;
 }
 
+export async function uploadSubmissions(assignment_id, encoded_files, headers) {
+  const response = await fetch(`${process.env.NEXT_PUBLIC_FASTAPI_URL}/assignments/${assignment_id}/submissions/upload`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      ...headers
+    },
+    body: JSON.stringify(encoded_files)
+  });
+
+  let data;
+  try {
+    data = await response.json();
+  } catch (e) {
+    throw new Error("Could not parse error response");
+  }
+  if(!response.ok) handleApiError(response, data, "Could not fetch user");
+
+  return data;
+}
+
 export async function deleteAssignment(assignment_id, headers) {
     const response = await fetch(`${process.env.NEXT_PUBLIC_FASTAPI_URL}/assignments/${assignment_id}`, {
         method: 'DELETE',

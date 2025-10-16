@@ -9,9 +9,12 @@ import useAssignments from "@/hooks/useAssignments";
 import PageLoader from "@/components/loader/PageLoader";
 import ErrorMessage from "@/components/custom/ErrorMessage";
 import { useRouter } from "next/navigation";
+import UploadSubmissions from "@/components/submissions/UploadSubmissions";
 
 function Page({params}) {
   const {id} = use(params);
+
+  const router = useRouter();
 
   const { assignments, isLoading, error } = useAssignments();
 
@@ -25,16 +28,8 @@ function Page({params}) {
 
   const assignment = assignments.find((assignment) => assignment.id === Number(id));
 
-  const router = useRouter();
-
-  useEffect(() => {
-    if (!assignment) {
-      router.push("/app");
-    }
-  }, [assignment, router]);
-
   if(!assignment) {
-    return null
+    router.push("/app");
   }
 
   return(
@@ -43,8 +38,9 @@ function Page({params}) {
       <div className="flex flex-col lg:flex-row gap-6 lg:gap-4">
         <AssignmentView assignment={assignment}/>
         <Card className="gap-2 pb-6 lg:flex-1 lg:min-h-[calc(100dvh*3/4)]">
-          <CardHeader>
+          <CardHeader className="flex justify-between gap-2">
             <h1 className="text-xl font-bold">Submissions</h1>
+            <UploadSubmissions assignment_id={assignment.id}/>
           </CardHeader>
           <CardContent className="px-3 sm:px-4">
             <SubmissionTable assignment={assignment}/>

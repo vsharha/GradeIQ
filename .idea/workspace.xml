@@ -4,10 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="close form on submit; final touches on assignment uploading">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add the option to enter by hand">
+      <change afterPath="$PROJECT_DIR$/src/components/submissions/UploadSubmissions.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/submissions/UploadSubmissionsForm.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/data/data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useSubmissionMutation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/fileToBase64.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/[id]/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/[id]/page.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/assignments/MarkschemeForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/MarkschemeForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/submissions/SubmissionView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/SubmissionView.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/fetchApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/fetchApi.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,15 +147,8 @@
       <workItem from="1760475839737" duration="97000" />
       <workItem from="1760482276280" duration="17000" />
       <workItem from="1760523238253" duration="23852000" />
-      <workItem from="1760580551621" duration="87000" />
-    </task>
-    <task id="LOCAL-00085" summary="fix assignments view">
-      <option name="closed" value="true" />
-      <created>1760320031802</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1760320031802</updated>
+      <workItem from="1760580551621" duration="113000" />
+      <workItem from="1760613577070" duration="3469000" />
     </task>
     <task id="LOCAL-00086" summary="refactor file structure; remove log out button from log in screen">
       <option name="closed" value="true" />
@@ -533,7 +534,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760580206536</updated>
     </task>
-    <option name="localTasksCounter" value="134" />
+    <task id="LOCAL-00134" summary="add the option to enter by hand">
+      <option name="closed" value="true" />
+      <created>1760580662541</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1760580662541</updated>
+    </task>
+    <option name="localTasksCounter" value="135" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -551,7 +560,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix datetime-picker.tsx styles" />
     <MESSAGE value="add assignment action buttons; functional assignment form" />
     <MESSAGE value="start work on assignment edit/delete" />
     <MESSAGE value="form error handling" />
@@ -576,6 +584,7 @@
     <MESSAGE value="add default grade values" />
     <MESSAGE value="change camelCase to snake_case in precise_answer" />
     <MESSAGE value="close form on submit; final touches on assignment uploading" />
-    <option name="LAST_COMMIT_MESSAGE" value="close form on submit; final touches on assignment uploading" />
+    <MESSAGE value="add the option to enter by hand" />
+    <option name="LAST_COMMIT_MESSAGE" value="add the option to enter by hand" />
   </component>
 </project>

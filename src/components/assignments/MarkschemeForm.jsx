@@ -8,15 +8,7 @@ import { generateRubrics } from "@/services/fetchApi";
 import useGenerate from "@/hooks/useGenerate";
 import LoadingButton from "@/components/loader/LoadingButton";
 import { Button } from "@/components/ui/button";
-
-function fileToBase64(file) {
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onload = () => resolve(reader.result.split(',')[1]); // remove data:...;base64,
-    reader.onerror = reject;
-    reader.readAsDataURL(file);
-  });
-}
+import fileToBase64 from "@/services/fileToBase64";
 
 function MarkschemeForm({onSubmit, setGenerated}) {
   const form = useForm({

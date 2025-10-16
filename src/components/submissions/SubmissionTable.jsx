@@ -26,16 +26,8 @@ function SubmissionTable({assignment}) {
         </div>;
       }
     },
-    // {
-    //   id: "view",
-    //   header: "",
-    //   cell: info => {
-    //     const submission = info.row.original;
-    //     return <SubmissionView submission={submission} assignment={assignment}/>;
-    //   }
-    // },
     {
-      accessorKey: "name",
+      accessorKey: "student_name",
       header: "Name"
     },
     {
@@ -44,7 +36,7 @@ function SubmissionTable({assignment}) {
       cell: info => {
         const grade = info.getValue();
         return <div>
-          <span className={grade>=passing_grade?"text-passed":"text-failed"}>{grade.toFixed(2)}</span> / <span>{max_grade.toFixed(2)}</span>
+          <span className={grade>=passing_grade?"text-passed":"text-failed"}>{grade?.toFixed(2)}</span> / <span>{max_grade?.toFixed(2)}</span>
         </div>
       }
     },
