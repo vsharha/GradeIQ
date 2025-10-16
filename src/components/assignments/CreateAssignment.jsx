@@ -24,6 +24,7 @@ function CreateAssignment({className, wide=false}) {
   }, [open]);
 
   const [generated, setGenerated] = useState({});
+  // const [generated, setGenerated] = useState(testAssignment);
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>

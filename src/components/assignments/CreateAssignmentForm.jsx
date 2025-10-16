@@ -17,11 +17,6 @@ import RubricsFieldArray from "@/components/assignments/RubricsFieldArray";
 import OptionsFieldArray from "@/components/assignments/OptionsFieldArray";
 
 function CreateAssignmentForm({generated = {}}) {
-  const {mutate, isPending} = useAssignmentMutation(async (assignment) => {
-    const headers = await getClientAuthHeaders();
-    return await createAssignment(assignment, headers, form.setError);
-  })
-
   const defaultRubric = {
     criterion: "",
     marks: "",
@@ -31,6 +26,7 @@ function CreateAssignmentForm({generated = {}}) {
     number: 1,
     question: "",
     answer: "",
+    preciseAnswer: false,
     rubrics: [
       defaultRubric
     ]
@@ -49,6 +45,11 @@ function CreateAssignmentForm({generated = {}}) {
         defaultMarkScheme
       ]
     }
+  })
+
+  const {mutate, isPending} = useAssignmentMutation(async (assignment) => {
+    const headers = await getClientAuthHeaders();
+    return await createAssignment(assignment, headers, form.setError);
   })
 
   const {fields: markSchemeFields, append: addMarkScheme, remove: removeMarkScheme} = useFieldArray({
@@ -205,9 +206,9 @@ function CreateAssignmentForm({generated = {}}) {
                 <FormItem className="flex-1 flex items-center">
                   <FormControl className="flex items-start">
                     <Input type="checkbox"
-                           className="w-5" {...form.register(`mark_scheme.${index}.suggested_answer`)} />
+                           className="w-5" {...form.register(`mark_scheme.${index}.precise_answer`)} />
                   </FormControl>
-                  <FormLabel>Answer is suggested</FormLabel>
+                  <FormLabel>Answer is precise</FormLabel>
                   <FormDescription />
                   <FormMessage />
                 </FormItem>
