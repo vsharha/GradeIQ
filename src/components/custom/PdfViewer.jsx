@@ -45,7 +45,7 @@ export default function PdfViewerDynamic({ url }) {
       className="w-full overflow-scroll"
       ref={containerRef}
     >
-      <Page pageNumber={1} width={width*0.75} />
+      <Page pageNumber={1} width={width*0.75} scale={1.5} />
     </Document>
   );
 }
