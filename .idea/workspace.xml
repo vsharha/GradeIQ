@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="change camelCase to snake_case in precise_answer">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="close form on submit; final touches on assignment uploading">
       <change afterPath="$PROJECT_DIR$/src/data/data.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/assignments/CreateAssignment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/CreateAssignment.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/assignments/CreateAssignmentForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/CreateAssignmentForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/assignments/MarkschemeForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/MarkschemeForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/assignments/OptionsFieldArray.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/OptionsFieldArray.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,15 +138,8 @@
       <workItem from="1760471787365" duration="3919000" />
       <workItem from="1760475839737" duration="97000" />
       <workItem from="1760482276280" duration="17000" />
-      <workItem from="1760523238253" duration="23584000" />
-    </task>
-    <task id="LOCAL-00084" summary="add redirects for non-existent assignment ids; handled no assignments on account">
-      <option name="closed" value="true" />
-      <created>1760319858767</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1760319858767</updated>
+      <workItem from="1760523238253" duration="23852000" />
+      <workItem from="1760580551621" duration="87000" />
     </task>
     <task id="LOCAL-00085" summary="fix assignments view">
       <option name="closed" value="true" />
@@ -535,7 +525,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760578797995</updated>
     </task>
-    <option name="localTasksCounter" value="133" />
+    <task id="LOCAL-00133" summary="close form on submit; final touches on assignment uploading">
+      <option name="closed" value="true" />
+      <created>1760580206536</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1760580206536</updated>
+    </task>
+    <option name="localTasksCounter" value="134" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -553,7 +551,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add missing files from previous commit" />
     <MESSAGE value="fix datetime-picker.tsx styles" />
     <MESSAGE value="add assignment action buttons; functional assignment form" />
     <MESSAGE value="start work on assignment edit/delete" />
@@ -578,6 +575,7 @@
     <MESSAGE value="change ambiguous field names" />
     <MESSAGE value="add default grade values" />
     <MESSAGE value="change camelCase to snake_case in precise_answer" />
-    <option name="LAST_COMMIT_MESSAGE" value="change camelCase to snake_case in precise_answer" />
+    <MESSAGE value="close form on submit; final touches on assignment uploading" />
+    <option name="LAST_COMMIT_MESSAGE" value="close form on submit; final touches on assignment uploading" />
   </component>
 </project>

@@ -7,6 +7,7 @@ import getClientAuthHeaders from "@/services/getClientAuthHeaders";
 import { generateRubrics } from "@/services/fetchApi";
 import useGenerate from "@/hooks/useGenerate";
 import LoadingButton from "@/components/loader/LoadingButton";
+import { Button } from "@/components/ui/button";
 
 function fileToBase64(file) {
   return new Promise((resolve, reject) => {
@@ -73,6 +74,9 @@ function MarkschemeForm({onSubmit, setGenerated}) {
         <LoadingButton isLoading={isPending} className="w-full">
           Generate
         </LoadingButton>
+        <Button onClick={onSubmit} className="w-full" variant="secondary">
+          Enter by hand
+        </Button>
       </form>
     </Form>
   );
