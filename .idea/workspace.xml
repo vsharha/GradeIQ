@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add loading messages when generating">
+      <change afterPath="$PROJECT_DIR$/src/components/assignments/MarkSchemeFieldArray.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/assignments/Rubrics.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/custom/Boolean.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/data/data.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/assignments/MarkschemeForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/MarkschemeForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/assignments/AssignmentView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/AssignmentView.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/assignments/CreateAssignmentForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/CreateAssignmentForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom/StyledCollapsible.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/StyledCollapsible.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,15 +147,7 @@
       <workItem from="1760580551621" duration="113000" />
       <workItem from="1760613577070" duration="4783000" />
       <workItem from="1760620135444" duration="284000" />
-      <workItem from="1760634540751" duration="802000" />
-    </task>
-    <task id="LOCAL-00093" summary="improve progress loader">
-      <option name="closed" value="true" />
-      <created>1760374941288</created>
-      <option name="number" value="00093" />
-      <option name="presentableId" value="LOCAL-00093" />
-      <option name="project" value="LOCAL" />
-      <updated>1760374941288</updated>
+      <workItem from="1760634540751" duration="2544000" />
     </task>
     <task id="LOCAL-00094" summary="introduce side by side layout on large screens">
       <option name="closed" value="true" />
@@ -535,7 +533,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760635303604</updated>
     </task>
-    <option name="localTasksCounter" value="142" />
+    <task id="LOCAL-00142" summary="add loading messages when generating">
+      <option name="closed" value="true" />
+      <created>1760635351580</created>
+      <option name="number" value="00142" />
+      <option name="presentableId" value="LOCAL-00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1760635351580</updated>
+    </task>
+    <option name="localTasksCounter" value="143" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
