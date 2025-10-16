@@ -170,7 +170,9 @@ function CreateAssignmentForm({generated = {}, onSubmit}) {
                   <FormLabel>Number</FormLabel>
                   <div className="flex items-center gap-3">
                     <FormControl>
-                      <Input {...form.register(`mark_scheme.${index}.number`)} className="w-1/4" />
+                      <Input {...form.register(`mark_scheme.${index}.number`, {
+                       setValueAs: v => (v == null ? "" : String(v))
+                     })} className="w-1/4" />
                     </FormControl>
                     <Button
                       variant="secondary"
