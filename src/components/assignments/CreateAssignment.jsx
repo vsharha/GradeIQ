@@ -27,7 +27,7 @@ function CreateAssignment({className, wide=false}) {
   const [generated, setGenerated] = useState({
     "title": "Discrete Mathematics and Probability: Proof Homework 1",
     "description": "This assessment covers fundamental proof techniques in discrete mathematics, including negation, counterexample, contraposition, and proof by contradiction or cases, focusing on properties of integers and irrational numbers.",
-    "markscheme": [
+    "mark_scheme": [
       {
         "id": 1,
         "question": "(a) Write down the negation of the following statement.\nFor all integers n, if n is odd then (n² + 4) is prime",
@@ -36,7 +36,10 @@ function CreateAssignment({className, wide=false}) {
           {
             "criterion": "Correct negation of the statement",
             "marks": 2
-          }
+          },{
+            "criterion": "Correct negation of the statement",
+            "marks": 2
+          },
         ]
       },
       {

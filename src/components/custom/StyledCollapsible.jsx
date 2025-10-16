@@ -2,8 +2,8 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/component
 import { ChevronDown, ChevronRight } from "lucide-react";
 import { useState } from "react";
 
-function StyledCollapsible({title, children}) {
-  const [open, setOpen] = useState(false);
+function StyledCollapsible({title, children, defaultOpen=true}) {
+  const [open, setOpen] = useState(defaultOpen);
 
   return (
     <Collapsible open={open} onOpenChange={setOpen}>

@@ -15,6 +15,7 @@ import StyledCollapsible from "@/components/custom/StyledCollapsible";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import RubricsFieldArray from "@/components/assignments/RubricsFieldArray";
 
 function CreateAssignmentForm({generated = {}}) {
   const {mutate, isPending} = useAssignmentMutation(async (assignment) => {
@@ -23,9 +24,17 @@ function CreateAssignmentForm({generated = {}}) {
   })
 
   const defaultRubric = {
+    criterion: "",
+    marks: "",
+  }
+
+  const defaultMarkScheme = {
     id: 1,
     question: "",
     answer: "",
+    rubrics: [
+      defaultRubric
+    ]
   }
 
   const form = useForm({
@@ -36,22 +45,22 @@ function CreateAssignmentForm({generated = {}}) {
       files: generated.files ?? null,
       title: generated.title ?? "",
       description: generated.description ?? "",
-      mark_scheme: generated.markscheme ?? [
-        defaultRubric
+      mark_scheme: generated.mark_scheme ?? [
+        defaultMarkScheme
       ]
     }
   })
 
-  const {fields, append, remove} = useFieldArray({
+  const {fields: markSchemeFields, append: addMarkScheme, remove: removeMarkScheme} = useFieldArray({
     control: form.control, name: "mark_scheme"
   })
 
-  const [activeTab, setActiveTab] = useState(fields[0]?.id)
+  const [activeTab, setActiveTab] = useState(markSchemeFields[0]?.id)
 
   function addTab() {
-    const id = fields.length+1
+    const id = markSchemeFields.length+1
 
-    append({...defaultRubric, id})
+    addMarkScheme({...defaultMarkScheme, id})
   }
 
   return (
@@ -136,7 +145,7 @@ function CreateAssignmentForm({generated = {}}) {
           <div className="flex gap-1">
             <div className="flex-1">
               <TabsList className="flex flex-wrap mb-3 w-full h-fit">
-                {fields.map((field, index) => (
+                {markSchemeFields.map((field, index) => (
                   <TabsTrigger value={field.id} key={field.id} className="min-w-[8%] w-[50%]">
                     {form.watch(`mark_scheme.${index}.id`)}
                   </TabsTrigger>
@@ -149,38 +158,38 @@ function CreateAssignmentForm({generated = {}}) {
               </span>
             </Button>
           </div>
-          {fields.map((field, index) => (
+          {markSchemeFields.map((field, index) => (
             <TabsContent value={field.id} key={field.id}>
               <div className="flex flex-col gap-2">
-                  <FormItem className="flex-1">
-                    <FormLabel>Number</FormLabel>
-                    <div className="flex items-center gap-3">
-                        <FormControl>
-                          <Input {...form.register(`mark_scheme.${index}.id`)} className="w-1/4"/>
-                        </FormControl>
-                        <Button
-                          variant="secondary"
-                          size="icon"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            remove(index);
-                            if (fields.length > 1) {
-                              const prev = fields[Math.max(index - 1, 0)];
-                              setActiveTab(prev.id);
-                            }
-                          }}
-                        >
-                          <Trash/>
-                        </Button>
-                    </div>
-                    <FormDescription />
-                    <FormMessage />
-                  </FormItem>
+                <FormItem className="flex-1">
+                  <FormLabel>Number</FormLabel>
+                  <div className="flex items-center gap-3">
+                    <FormControl>
+                      <Input {...form.register(`mark_scheme.${index}.id`)} className="w-1/4" />
+                    </FormControl>
+                    <Button
+                      variant="secondary"
+                      size="icon"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        removeMarkScheme(index);
+                        if (fields.length > 1) {
+                          const prev = fields[Math.max(index - 1, 0)];
+                          setActiveTab(prev.id);
+                        }
+                      }}
+                    >
+                      <Trash />
+                    </Button>
+                  </div>
+                  <FormDescription />
+                </FormItem>
+                  <FormMessage />
 
                 <FormItem className="flex-1">
                   <FormLabel>Question</FormLabel>
                   <FormControl>
-                    <Textarea {...form.register(`mark_scheme.${index}.question`)}/>
+                    <Textarea {...form.register(`mark_scheme.${index}.question`)} />
                   </FormControl>
                   <FormDescription />
                   <FormMessage />
@@ -195,17 +204,19 @@ function CreateAssignmentForm({generated = {}}) {
                 </FormItem>
                 <FormItem className="flex-1 flex items-center">
                   <FormControl className="flex items-start">
-                    <Input type="checkbox" className="w-5" {...form.register(`mark_scheme.${index}.suggested_answer`)}/>
+                    <Input type="checkbox"
+                           className="w-5" {...form.register(`mark_scheme.${index}.suggested_answer`)} />
                   </FormControl>
                   <FormLabel>Answer is suggested</FormLabel>
                   <FormDescription />
                   <FormMessage />
                 </FormItem>
+                <RubricsFieldArray form={form} index={index} defaultRubric={defaultRubric}/>
               </div>
             </TabsContent>
           ))}
         </Tabs>
-        <LoadingButton isLoading={isPending}>
+        <LoadingButton isLoading={isPending} className="w-full">
           Create
         </LoadingButton>
       </form>
