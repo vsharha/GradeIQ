@@ -26,7 +26,7 @@ function CreateAssignmentForm({generated = {}}) {
     number: 1,
     question: "",
     answer: "",
-    preciseAnswer: false,
+    precise_answer: false,
     rubrics: [
       defaultRubric
     ]
