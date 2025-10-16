@@ -128,3 +128,15 @@ export async function generateRubrics(mark_scheme, headers) {
     if(!response.ok) handleApiError(response, data, "Could not upload mark scheme");
     return data;
 }
+
+export async function downloadSubmissionFile(submission_id, headers) {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_FASTAPI_URL}/submissions/${submission_id}/file`, { headers });
+    let data;
+    try {
+        data = await response.json();
+    } catch (e) {
+        throw new Error("Could not parse error response");
+    }
+    if(!response.ok) handleApiError(response, data, "Could not fetch submission file");
+    return data;
+}

@@ -17,7 +17,7 @@ function MarkschemeForm({onSubmit, setGenerated}) {
     }
   })
 
-  const {mutate, isPending} = useGenerate(async (data)=>{
+  const {mutate} = useGenerate(async (data)=>{
     const headers = await getClientAuthHeaders();
     const files = data.files;
     let encoded = null;
@@ -35,6 +35,8 @@ function MarkschemeForm({onSubmit, setGenerated}) {
     }
   })
 
+  const isPending= true
+
   return (
     <Form className="w-full" {...form}>
       <form onSubmit={form.handleSubmit(mutate)} className="space-y-3 mt-2 w-full">
@@ -50,6 +52,7 @@ function MarkschemeForm({onSubmit, setGenerated}) {
                   maxSize={10 * 1024 * 1024}
                   onDrop={(files) => field.onChange(files)}
                   src={field.value}
+                  disabled={isPending}
                   className="border-2 border-dashed w-full"
                 >
                   <DropzoneEmptyState />
@@ -66,7 +69,7 @@ function MarkschemeForm({onSubmit, setGenerated}) {
         <LoadingButton isLoading={isPending} className="w-full" type="generate">
           Generate
         </LoadingButton>
-        <Button onClick={onSubmit} className="w-full" variant="secondary">
+        <Button onClick={onSubmit} className="w-full" variant="secondary" disabled={isPending}>
           Enter manually
         </Button>
       </form>

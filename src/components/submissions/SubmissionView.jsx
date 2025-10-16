@@ -8,12 +8,20 @@ import {
 import { Eye, Gauge, Maximize, Maximize2, User } from "lucide-react";
 import VariableView from "@/components/custom/VariableView";
 import { useState } from "react";
+import PdfViewer from "@/components/custom/PdfViewer";
+import useDownloadSubmission from "@/hooks/useDownloadSubmission";
 
 function SubmissionView({submission, assignment}) {
-  const {student_name, grade} = submission
+  const {student_name, grade, id} = submission
   const {max_grade} = assignment
 
   const [open, setOpen] = useState(false)
+
+  const {isLoading,file} = useDownloadSubmission(id)
+
+  if(!isLoading) {
+    console.log(file)
+  }
 
   return (
     <div className="w-full flex items-center">
@@ -33,6 +41,7 @@ function SubmissionView({submission, assignment}) {
           <VariableView>
             <Gauge size={15}/> {grade?`${grade?.toFixed(2)} / ${max_grade?.toFixed(2)}`:"N/A"}
           </VariableView>
+          {/*<PdfViewer base64String={base64String}/>*/}
         </DialogContent>
       </Dialog>
     </div>

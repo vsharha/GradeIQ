@@ -1,9 +1,8 @@
 import BlockLoader from "@/components/loader/BlockLoader";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect, useMemo } from "react";
-import { cn } from "@/lib/utils";
 
-function LoadingButton({ isLoading, children, type, loadingMessages: customMessages, messageInterval = 2000, ...props }) {
+function LoadingButton({ isLoading, children, type, loadingMessages: customMessages, ...props }) {
   const [loadingMessage, setLoadingMessage] = useState("");
 
   const defaultMessages = [
@@ -29,16 +28,39 @@ function LoadingButton({ isLoading, children, type, loadingMessages: customMessa
       return;
     }
 
-    let index = Math.floor(Math.random() * messages.length);
-    setLoadingMessage(messages[index]);
+    const totalUnique = Math.min(5, messages.length);
 
-    const interval = setInterval(() => {
-      index = (index + 1) % messages.length;
-      setLoadingMessage(messages[index]);
-    }, messageInterval);
+    const indices = messages.map((_, i) => i);
+    for (let i = indices.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [indices[i], indices[j]] = [indices[j], indices[i]];
+    }
+    const selected = indices.slice(0, totalUnique);
 
-    return () => clearInterval(interval);
-  }, [isLoading, messageInterval, messages, type]);
+    let pos = 0;
+    setLoadingMessage(messages[selected[pos]]);
+
+    const randomDelay = () => 2000 + Math.floor(Math.random() * 2001);
+
+    let timer = null;
+
+    const showNext = () => {
+      pos += 1;
+      if (pos >= selected.length) {
+        return;
+      }
+      setLoadingMessage(messages[selected[pos]]);
+      timer = setTimeout(showNext, randomDelay());
+    };
+
+    if (selected.length > 1) {
+      timer = setTimeout(showNext, randomDelay());
+    }
+
+    return () => {
+      if (timer) clearTimeout(timer);
+    };
+  }, [isLoading, messages, type]);
 
   return (
     <Button disabled={isLoading} {...props}>

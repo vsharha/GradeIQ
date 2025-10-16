@@ -5,12 +5,9 @@ import SubmissionProgress from "@/components/custom/SubmissionProgress";
 import VariableTitleView from "@/components/custom/VariableTitleView";
 import DeleteAssignment from "@/components/assignments/DeleteAssignment";
 import Rubrics from "@/components/assignments/Rubrics";
-import StyledCollapsible from "@/components/custom/StyledCollapsible";
 
 function AssignmentView({assignment}) {
   const { title, created_at, due, description, max_grade, passing_grade, id, rubrics } = assignment
-
-  console.log(rubrics)
 
   return (
     <div className="flex flex-col gap-3 sm:max-w-120">
