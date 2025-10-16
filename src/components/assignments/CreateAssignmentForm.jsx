@@ -9,9 +9,7 @@ import useAssignmentMutation from "@/hooks/useAssignmentMutation";
 import getClientAuthHeaders from "@/services/getClientAuthHeaders";
 import { createAssignment } from "@/services/fetchApi";
 import LoadingButton from "@/components/loader/LoadingButton";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { ChevronRight, Trash } from "lucide-react";
-import StyledCollapsible from "@/components/custom/StyledCollapsible";
+import { Trash } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
@@ -30,7 +28,7 @@ function CreateAssignmentForm({generated = {}}) {
   }
 
   const defaultMarkScheme = {
-    id: 1,
+    number: 1,
     question: "",
     answer: "",
     rubrics: [
@@ -46,6 +44,7 @@ function CreateAssignmentForm({generated = {}}) {
       files: generated.files ?? null,
       title: generated.title ?? "",
       description: generated.description ?? "",
+      encoded: generated.encoded??"",
       mark_scheme: generated.mark_scheme ?? [
         defaultMarkScheme
       ]
@@ -148,7 +147,7 @@ function CreateAssignmentForm({generated = {}}) {
               <TabsList className="flex flex-wrap mb-3 w-full h-fit">
                 {markSchemeFields.map((field, index) => (
                   <TabsTrigger value={field.id} key={field.id} className="min-w-[8%] w-[50%]">
-                    {form.watch(`mark_scheme.${index}.id`)}
+                    {form.watch(`mark_scheme.${index}.number`)}
                   </TabsTrigger>
                 ))}
               </TabsList>
@@ -166,7 +165,7 @@ function CreateAssignmentForm({generated = {}}) {
                   <FormLabel>Number</FormLabel>
                   <div className="flex items-center gap-3">
                     <FormControl>
-                      <Input {...form.register(`mark_scheme.${index}.id`)} className="w-1/4" />
+                      <Input {...form.register(`mark_scheme.${index}.number`)} className="w-1/4" />
                     </FormControl>
                     <Button
                       variant="secondary"

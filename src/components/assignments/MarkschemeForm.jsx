@@ -3,11 +3,9 @@
 import { Form, FormControl, FormDescription, FormField, FormItem, FormMessage } from "@/components/ui/form";
 import { Dropzone, DropzoneContent, DropzoneEmptyState } from "@/components/ui/shadcn-io/dropzone";
 import { useForm } from "react-hook-form";
-import { Button } from "@/components/ui/button";
 import getClientAuthHeaders from "@/services/getClientAuthHeaders";
 import { generateRubrics } from "@/services/fetchApi";
 import useGenerate from "@/hooks/useGenerate";
-import BlockLoader from "@/components/loader/BlockLoader";
 import LoadingButton from "@/components/loader/LoadingButton";
 
 function fileToBase64(file) {
@@ -27,7 +25,7 @@ function MarkschemeForm({onSubmit, setGenerated}) {
   })
 
   const {mutate, isPending} = useGenerate(async (data)=>{
-    const headers = getClientAuthHeaders();
+    const headers = await getClientAuthHeaders();
     const files = data.files;
     let encoded = null;
     if (files && files.length > 0) {
@@ -35,14 +33,17 @@ function MarkschemeForm({onSubmit, setGenerated}) {
     }
     const payload = { encoded };
     const response = await generateRubrics(payload, headers);
-    console.log(response)
-    setGenerated(response);
+
+    const result = {...response, encoded}
+    console.log(result)
+    setGenerated(result);
+
     onSubmit();
   })
 
   return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(mutate)} className="space-y-3 mt-2">
+    <Form className="w-full" {...form}>
+      <form onSubmit={form.handleSubmit(mutate)} className="space-y-3 mt-2 w-full">
         <FormField
           control={form.control}
           name="files"
@@ -55,7 +56,7 @@ function MarkschemeForm({onSubmit, setGenerated}) {
                   maxSize={10 * 1024 * 1024}
                   onDrop={(files) => field.onChange(files)}
                   src={field.value}
-                  className="border-2 border-dashed"
+                  className="border-2 border-dashed w-full"
                 >
                   <DropzoneEmptyState />
                   <DropzoneContent />
@@ -68,7 +69,7 @@ function MarkschemeForm({onSubmit, setGenerated}) {
             </FormItem>
           )}
         />
-        <LoadingButton isLoading={isPending}>
+        <LoadingButton isLoading={isPending} className="w-full">
           Generate
         </LoadingButton>
       </form>

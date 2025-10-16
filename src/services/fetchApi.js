@@ -1,22 +1,52 @@
+function handleApiError(response, data, defaultMessage) {
+    if (data && data.errors && Array.isArray(data.errors)) {
+        const errorMsg = data.errors.map(err => err.message).join(", ");
+        throw new Error(errorMsg);
+    } else if (data && data.message) {
+        throw new Error(data.message);
+    } else {
+        throw new Error(defaultMessage);
+    }
+}
+
 export async function fetchAssignments(headers) {
     const response = await fetch(`${process.env.NEXT_PUBLIC_FASTAPI_URL}/assignments`, { headers });
-    if(!response.ok) throw new Error("Could not fetch assignments")
-    return await response.json()
+    let data;
+    try {
+        data = await response.json();
+    } catch (e) {
+        throw new Error("Could not parse error response");
+    }
+    if(!response.ok) handleApiError(response, data, "Could not fetch assignments");
+    return data;
 }
 
 export async function fetchSubmissions(assignment_id, headers) {
     const response = await fetch(`${process.env.NEXT_PUBLIC_FASTAPI_URL}/assignments/${assignment_id}/submissions`, { headers });
-    if(!response.ok) throw new Error("Could not fetch submissions")
-    return await response.json()
+    let data;
+    try {
+        data = await response.json();
+    } catch (e) {
+        throw new Error("Could not parse error response");
+    }
+    if(!response.ok) handleApiError(response, data, "Could not fetch submissions");
+    return data;
 }
 
 export async function fetchUser(headers) {
     const response = await fetch(`${process.env.NEXT_PUBLIC_FASTAPI_URL}/users/me`, { headers });
-    if(!response.ok) throw new Error("Could not fetch user")
-    return await response.json()
+    let data;
+    try {
+        data = await response.json();
+    } catch (e) {
+        throw new Error("Could not parse error response");
+    }
+    if(!response.ok) handleApiError(response, data, "Could not fetch user");
+    return data;
 }
 
 export async function createAssignment(assignment, headers, setError) {
+    console.log(assignment)
     const response = await fetch(`${process.env.NEXT_PUBLIC_FASTAPI_URL}/assignments`, {
         method: "POST",
         headers: {
@@ -49,25 +79,31 @@ export async function deleteAssignment(assignment_id, headers) {
             ...headers
         },
     })
-
-    if(!response.ok) throw new Error("Could not delete assignment")
-
-    return await response.json()
+    let data;
+    try {
+        data = await response.json();
+    } catch (e) {
+        throw new Error("Could not parse error response");
+    }
+    if(!response.ok) handleApiError(response, data, "Could not delete assignment");
+    return data;
 }
 
-export async function generateRubrics(markscheme, headers) {
+export async function generateRubrics(mark_scheme, headers) {
     const response = await fetch(`${process.env.NEXT_PUBLIC_FASTAPI_URL}/rubrics/generate`, {
         method: 'POST',
         headers: {
             "Content-Type": "application/json",
             ...headers
         },
-        body: JSON.stringify(markscheme)
+        body: JSON.stringify(mark_scheme)
     })
-
-    if(!response.ok) {
-        throw new Error("Could not upload mark scheme");
+    let data;
+    try {
+        data = await response.json();
+    } catch (e) {
+        throw new Error("Could not parse error response");
     }
-
-    return await response.json()
+    if(!response.ok) handleApiError(response, data, "Could not upload mark scheme");
+    return data;
 }

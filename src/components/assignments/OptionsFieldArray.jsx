@@ -17,7 +17,7 @@ function OptionsFieldArray({form, index}) {
   });
 
   return (
-    <div className="w-full">
+    <div className="w-full mb-2">
       <h1 className={"mb-2"}>Options</h1>
       {
         optionFields.map((option, index)=>
