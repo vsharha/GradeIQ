@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="fix display for no grade">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="Change upload submissions name">
       <change afterPath="$PROJECT_DIR$/src/data/data.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/[id]/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/[id]/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/assignments/CreateAssignment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/CreateAssignment.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/assignments/CreateAssignmentForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/CreateAssignmentForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/assignments/OptionsFieldArray.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/OptionsFieldArray.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,15 +142,7 @@
       <workItem from="1760482276280" duration="17000" />
       <workItem from="1760523238253" duration="23852000" />
       <workItem from="1760580551621" duration="113000" />
-      <workItem from="1760613577070" duration="3915000" />
-    </task>
-    <task id="LOCAL-00088" summary="adjust header creation logic">
-      <option name="closed" value="true" />
-      <created>1760364563666</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1760364563666</updated>
+      <workItem from="1760613577070" duration="4627000" />
     </task>
     <task id="LOCAL-00089" summary="changed header to use justify end">
       <option name="closed" value="true" />
@@ -534,7 +528,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760617265448</updated>
     </task>
-    <option name="localTasksCounter" value="137" />
+    <task id="LOCAL-00137" summary="Change upload submissions name">
+      <option name="closed" value="true" />
+      <created>1760617535649</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1760617535649</updated>
+    </task>
+    <option name="localTasksCounter" value="138" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -552,7 +554,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add datetime-picker conditional styles" />
     <MESSAGE value="remove console logs" />
     <MESSAGE value="close form on success" />
     <MESSAGE value="added assignment deletion" />
@@ -577,6 +578,7 @@
     <MESSAGE value="add submissions uploading" />
     <MESSAGE value="fixed display for no grade" />
     <MESSAGE value="fix display for no grade" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix display for no grade" />
+    <MESSAGE value="Change upload submissions name" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change upload submissions name" />
   </component>
 </project>

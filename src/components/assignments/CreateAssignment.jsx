@@ -2,7 +2,7 @@
 
 import {
   Dialog,
-  DialogContent,
+  DialogContent, DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -35,7 +35,8 @@ function CreateAssignment({className, wide=false}) {
           {step===0 &&
             <>
               <DialogHeader>
-                <DialogTitle>Create assignment</DialogTitle>
+                <DialogTitle>Upload mark scheme</DialogTitle>
+                <DialogDescription>The AI will extract questions and rubrics for you</DialogDescription>
               </DialogHeader>
               <MarkschemeForm onSubmit={()=>setStep((step)=>step+1)} setGenerated={setGenerated}/>
             </>
@@ -44,7 +45,7 @@ function CreateAssignment({className, wide=false}) {
           {step === 1 &&
             <>
               <DialogHeader>
-                <DialogTitle>Upload mark scheme</DialogTitle>
+                <DialogTitle>Create assignment</DialogTitle>
               </DialogHeader>
               <CreateAssignmentForm onSubmit={()=>setOpen(false)} generated={generated}/>
             </>

@@ -26,7 +26,6 @@ function CreateAssignmentForm({generated = {}, onSubmit}) {
     number: 1,
     question: "",
     answer: "",
-    options: [""],
     precise_answer: false,
     rubrics: [
       defaultRubric
@@ -152,7 +151,7 @@ function CreateAssignmentForm({generated = {}, onSubmit}) {
             <div className="flex-1">
               <TabsList className="flex flex-wrap mb-3 w-full h-fit">
                 {markSchemeFields.map((field, index) => (
-                  <TabsTrigger value={field.id} key={field.id} className="min-w-[8%] w-[50%]">
+                  <TabsTrigger value={field.id} key={field.id} className="min-w-[8%] w-[50%] max-w-[50%]">
                     {form.watch(`mark_scheme.${index}.number`)}
                   </TabsTrigger>
                 ))}
