@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add dynamic collapsable title">
-      <change afterPath="$PROJECT_DIR$/src/components/custom/PdfViewer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/useDownloadSubmission.js" afterDir="false" />
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="start work on pdf viewer; adjust loading button messages">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/assignments/AssignmentView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/AssignmentView.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/assignments/MarkSchemeFieldArray.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/MarkSchemeFieldArray.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/assignments/MarkschemeForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/MarkschemeForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/loader/LoadingButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/loader/LoadingButton.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/submissions/SubmissionView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/SubmissionView.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/fetchApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/fetchApi.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,15 +143,7 @@
       <workItem from="1760613577070" duration="4783000" />
       <workItem from="1760620135444" duration="284000" />
       <workItem from="1760634540751" duration="3279000" />
-      <workItem from="1760637876572" duration="2389000" />
-    </task>
-    <task id="LOCAL-00099" summary="adjust progress error display">
-      <option name="closed" value="true" />
-      <created>1760384198897</created>
-      <option name="number" value="00099" />
-      <option name="presentableId" value="LOCAL-00099" />
-      <option name="project" value="LOCAL" />
-      <updated>1760384198897</updated>
+      <workItem from="1760637876572" duration="2500000" />
     </task>
     <task id="LOCAL-00100" summary="adjust loader spinner; change profile to use client side fetching">
       <option name="closed" value="true" />
@@ -544,7 +529,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760638175310</updated>
     </task>
-    <option name="localTasksCounter" value="148" />
+    <task id="LOCAL-00148" summary="start work on pdf viewer; adjust loading button messages">
+      <option name="closed" value="true" />
+      <created>1760644160138</created>
+      <option name="number" value="00148" />
+      <option name="presentableId" value="LOCAL-00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1760644160138</updated>
+    </task>
+    <option name="localTasksCounter" value="149" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -562,7 +555,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="remove default values from login form" />
     <MESSAGE value="start work on ai features; refactor api on the backend" />
     <MESSAGE value="added improved assignment creation form" />
     <MESSAGE value="fix multiple rows on tabs" />
@@ -587,6 +579,7 @@
     <MESSAGE value="handle missing rubrics case" />
     <MESSAGE value="keep tabs when collapsed" />
     <MESSAGE value="add dynamic collapsable title" />
-    <option name="LAST_COMMIT_MESSAGE" value="add dynamic collapsable title" />
+    <MESSAGE value="start work on pdf viewer; adjust loading button messages" />
+    <option name="LAST_COMMIT_MESSAGE" value="start work on pdf viewer; adjust loading button messages" />
   </component>
 </project>

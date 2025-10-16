@@ -91,7 +91,7 @@ function MarkSchemeFieldArray({form, defaultMarkScheme, defaultRubric}) {
             <FormItem className="flex-1 flex items-center">
               <FormControl className="flex items-start">
                 <Input type="checkbox"
-                       className="w-5" {...form.register(`mark_scheme.${index}.precise_answer`)} />
+                       className="w-5 accent-color-primary" {...form.register(`mark_scheme.${index}.precise_answer`)} />
               </FormControl>
               <FormLabel>Answer is precise</FormLabel>
               <FormDescription />

@@ -17,7 +17,7 @@ function MarkschemeForm({onSubmit, setGenerated}) {
     }
   })
 
-  const {mutate} = useGenerate(async (data)=>{
+  const {mutate, isPending} = useGenerate(async (data)=>{
     const headers = await getClientAuthHeaders();
     const files = data.files;
     let encoded = null;
@@ -35,7 +35,6 @@ function MarkschemeForm({onSubmit, setGenerated}) {
     }
   })
 
-  const isPending= true
 
   return (
     <Form className="w-full" {...form}>
