@@ -2,7 +2,7 @@
 
 import {
   Dialog,
-  DialogContent, DialogFooter,
+  DialogContent,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
