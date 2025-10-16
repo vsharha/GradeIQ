@@ -31,7 +31,7 @@ function CreateAssignment({className, wide=false}) {
         <Button className={className}><Plus/> <span className={!wide?"hidden lg:block":""}>New</span></Button>
       </DialogTrigger>
       <DialogContent className="p-0 overflow-hidden w-full">
-        <div className="overflow-auto w-full max-h-[calc(100dvh*9/10)]  p-8 h-full">
+        <div className="overflow-auto w-full max-h-[calc(100dvh*9/10)]  py-6 px-4 sm:p-8 h-full">
           {step===0 &&
             <>
               <DialogHeader>
