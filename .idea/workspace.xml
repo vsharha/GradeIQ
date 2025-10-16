@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="handle missing rubrics case">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="keep tabs when collapsed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/assignments/AssignmentView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/AssignmentView.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/assignments/Rubrics.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/Rubrics.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -143,15 +142,7 @@
       <workItem from="1760613577070" duration="4783000" />
       <workItem from="1760620135444" duration="284000" />
       <workItem from="1760634540751" duration="3279000" />
-      <workItem from="1760637876572" duration="63000" />
-    </task>
-    <task id="LOCAL-00097" summary="update profile dropdown">
-      <option name="closed" value="true" />
-      <created>1760382919605</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1760382919605</updated>
+      <workItem from="1760637876572" duration="277000" />
     </task>
     <task id="LOCAL-00098" summary="add footer to landing page">
       <option name="closed" value="true" />
@@ -537,7 +528,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760637713680</updated>
     </task>
-    <option name="localTasksCounter" value="146" />
+    <task id="LOCAL-00146" summary="keep tabs when collapsed">
+      <option name="closed" value="true" />
+      <created>1760637988698</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1760637988698</updated>
+    </task>
+    <option name="localTasksCounter" value="147" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -555,7 +554,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="adjust hover effects, menu icon positioning" />
     <MESSAGE value="add invalid field highlighting to login form" />
     <MESSAGE value="remove default values from login form" />
     <MESSAGE value="start work on ai features; refactor api on the backend" />
@@ -580,6 +578,7 @@
     <MESSAGE value="add rubrics view to assignments" />
     <MESSAGE value="improve behaviour" />
     <MESSAGE value="handle missing rubrics case" />
-    <option name="LAST_COMMIT_MESSAGE" value="handle missing rubrics case" />
+    <MESSAGE value="keep tabs when collapsed" />
+    <option name="LAST_COMMIT_MESSAGE" value="keep tabs when collapsed" />
   </component>
 </project>
