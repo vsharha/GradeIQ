@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="make number always a string">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add loading messages when generating">
       <change afterPath="$PROJECT_DIR$/src/data/data.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/assignments/CreateAssignmentForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/CreateAssignmentForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/assignments/MarkschemeForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/MarkschemeForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/loader/LoadingButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/loader/LoadingButton.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,15 +141,7 @@
       <workItem from="1760580551621" duration="113000" />
       <workItem from="1760613577070" duration="4783000" />
       <workItem from="1760620135444" duration="284000" />
-      <workItem from="1760634540751" duration="692000" />
-    </task>
-    <task id="LOCAL-00092" summary="add default values to login form">
-      <option name="closed" value="true" />
-      <created>1760374665871</created>
-      <option name="number" value="00092" />
-      <option name="presentableId" value="LOCAL-00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1760374665871</updated>
+      <workItem from="1760634540751" duration="802000" />
     </task>
     <task id="LOCAL-00093" summary="improve progress loader">
       <option name="closed" value="true" />
@@ -538,7 +527,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760620277542</updated>
     </task>
-    <option name="localTasksCounter" value="141" />
+    <task id="LOCAL-00141" summary="add loading messages when generating">
+      <option name="closed" value="true" />
+      <created>1760635303604</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1760635303604</updated>
+    </task>
+    <option name="localTasksCounter" value="142" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -556,7 +553,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change deletion api" />
     <MESSAGE value="change get submissions api" />
     <MESSAGE value="fix deletion" />
     <MESSAGE value="fix closing form on success" />
@@ -581,6 +577,7 @@
     <MESSAGE value="adjust assignment creation form; adjust options array schema" />
     <MESSAGE value="adjust form paddings" />
     <MESSAGE value="make number always a string" />
-    <option name="LAST_COMMIT_MESSAGE" value="make number always a string" />
+    <MESSAGE value="add loading messages when generating" />
+    <option name="LAST_COMMIT_MESSAGE" value="add loading messages when generating" />
   </component>
 </project>
