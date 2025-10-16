@@ -49,9 +49,7 @@ function AssignmentView({assignment}) {
       {rubrics &&
         <Card>
           <CardContent>
-            <StyledCollapsible title={"Rubrics"} defaultOpen={false} className="font-bold text-xl">
-              <Rubrics rubrics={rubrics} />
-            </StyledCollapsible>
+            <Rubrics rubrics={rubrics} />
           </CardContent>
         </Card>
       }

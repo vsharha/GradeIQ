@@ -1,5 +1,6 @@
 import Boolean from "@/components/custom/Boolean";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import StyledCollapsible from "@/components/custom/StyledCollapsible";
 
 function Rubrics({rubrics}) {
   return (
@@ -9,40 +10,42 @@ function Rubrics({rubrics}) {
           <TabsTrigger value={i} key={i} className="min-w-[8%] w-[50%] max-w-[50%]">{rubric.number}</TabsTrigger>
         )}
       </TabsList>
-      {rubrics.mark_scheme.map((rubric, i)=>
-        <TabsContent value={i} key={i}>
-          <div key={i} className="flex flex-col gap-2">
-            <div>
-              <h1 className="font-bold">Question</h1>
-              <h1>{rubric.question}</h1>
-            </div>
-            <div>
-              <h1 className="font-bold">Answer</h1>
-              <h1>{rubric.answer}</h1>
-            </div>
-            <div className="flex flex-row gap-2">
-              <span className="font-bold">Precise answer:</span>
-              <Boolean flag={rubric.precise_answer}/>
-            </div>
-            {rubric.options?.map((option, i)=>
-              <p key={i}>{option}</p>
-            )}
-            <div className="flex flex-col gap-2">
-              <h1 className="font-bold">Rubrics</h1>
-              {rubric.rubrics.map((rubric, i)=>
-                <div key={i} className="flex gap-1 justify-between">
-                  <span>
-                    {rubric.criterion}
-                  </span>
-                  <span className="font-bold">
-                    {rubric.marks}
-                  </span>
-                </div>
+      <StyledCollapsible title={"Rubrics"} defaultOpen={false} className="font-bold text-xl">
+        {rubrics.mark_scheme.map((rubric, i)=>
+          <TabsContent value={i} key={i}>
+            <div key={i} className="flex flex-col gap-2">
+              <div>
+                <h1 className="font-bold">Question</h1>
+                <h1>{rubric.question}</h1>
+              </div>
+              <div>
+                <h1 className="font-bold">Answer</h1>
+                <h1>{rubric.answer}</h1>
+              </div>
+              <div className="flex flex-row gap-2">
+                <span className="font-bold">Precise answer:</span>
+                <Boolean flag={rubric.precise_answer}/>
+              </div>
+              {rubric.options?.map((option, i)=>
+                <p key={i}>{option}</p>
               )}
+              <div className="flex flex-col gap-2">
+                <h1 className="font-bold">Rubrics</h1>
+                {rubric.rubrics.map((rubric, i)=>
+                  <div key={i} className="flex gap-1 justify-between">
+                    <span>
+                      {rubric.criterion}
+                    </span>
+                    <span className="font-bold">
+                      {rubric.marks}
+                    </span>
+                  </div>
+                )}
+              </div>
             </div>
-          </div>
-        </TabsContent>
-      )}
+          </TabsContent>
+        )}
+      </StyledCollapsible>
     </Tabs>
   );
 }
