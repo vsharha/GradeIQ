@@ -37,8 +37,9 @@ function MarkschemeForm({onSubmit, setGenerated}) {
     const result = {...response, encoded}
     console.log(result)
     setGenerated(result);
-
-    onSubmit();
+    if(typeof onSubmit === "function") {
+      onSubmit();
+    }
   })
 
   return (

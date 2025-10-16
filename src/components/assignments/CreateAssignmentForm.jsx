@@ -16,7 +16,7 @@ import { useState } from "react";
 import RubricsFieldArray from "@/components/assignments/RubricsFieldArray";
 import OptionsFieldArray from "@/components/assignments/OptionsFieldArray";
 
-function CreateAssignmentForm({generated = {}}) {
+function CreateAssignmentForm({generated = {}, onSubmit}) {
   const defaultRubric = {
     criterion: "",
     marks: "",
@@ -26,6 +26,7 @@ function CreateAssignmentForm({generated = {}}) {
     number: 1,
     question: "",
     answer: "",
+    options: [""],
     precise_answer: false,
     rubrics: [
       defaultRubric
@@ -49,7 +50,11 @@ function CreateAssignmentForm({generated = {}}) {
 
   const {mutate, isPending} = useAssignmentMutation(async (assignment) => {
     const headers = await getClientAuthHeaders();
-    return await createAssignment(assignment, headers, form.setError);
+    const result = await createAssignment(assignment, headers, form.setError);
+    if(typeof onSubmit === "function") {
+      onSubmit();
+    }
+    return result;
   })
 
   const {fields: markSchemeFields, append: addMarkScheme, remove: removeMarkScheme} = useFieldArray({
@@ -183,9 +188,9 @@ function CreateAssignmentForm({generated = {}}) {
                       <Trash />
                     </Button>
                   </div>
+                  <FormMessage />
                   <FormDescription />
                 </FormItem>
-                  <FormMessage />
 
                 <FormItem className="flex-1">
                   <FormLabel>Question</FormLabel>

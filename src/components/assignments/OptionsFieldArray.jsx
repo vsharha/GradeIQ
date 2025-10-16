@@ -24,7 +24,7 @@ function OptionsFieldArray({form, index}) {
           <FormItem className="flex-1" key={index}>
             <FormControl>
               <div className="flex gap-3 items-center">
-                <Input {...form.register(`${name}.${index}.criterion`)}/>
+                <Input {...form.register(`${name}.${index}`)}/>
                 <Button variant="secondary" onClick={(e)=>{e.preventDefault();removeOption(index)}}>
                   <Trash/>
                 </Button>
