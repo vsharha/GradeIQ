@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="adjust pdf viewer scale">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add grade all button">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/[id]/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/[id]/page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/assignments/Rubrics.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/Rubrics.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom/PdfViewer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/PdfViewer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/submissions/SubmissionView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/SubmissionView.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/submissions/UploadSubmissions.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/UploadSubmissions.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,15 +143,7 @@
       <workItem from="1760613577070" duration="4783000" />
       <workItem from="1760620135444" duration="284000" />
       <workItem from="1760634540751" duration="3279000" />
-      <workItem from="1760637876572" duration="4456000" />
-    </task>
-    <task id="LOCAL-00103" summary="fix logged out state">
-      <option name="closed" value="true" />
-      <created>1760386080923</created>
-      <option name="number" value="00103" />
-      <option name="presentableId" value="LOCAL-00103" />
-      <option name="project" value="LOCAL" />
-      <updated>1760386080923</updated>
+      <workItem from="1760637876572" duration="4902000" />
     </task>
     <task id="LOCAL-00104" summary="fix log out loading state">
       <option name="closed" value="true" />
@@ -539,7 +529,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760645781906</updated>
     </task>
-    <option name="localTasksCounter" value="152" />
+    <task id="LOCAL-00152" summary="add grade all button">
+      <option name="closed" value="true" />
+      <created>1760646200767</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1760646200767</updated>
+    </task>
+    <option name="localTasksCounter" value="153" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -557,7 +555,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add rubrics to form" />
     <MESSAGE value="added options field array" />
     <MESSAGE value="fix fetching for ai generation; add verbose error logging; removed temporary data" />
     <MESSAGE value="change ambiguous field names" />
@@ -582,6 +579,7 @@
     <MESSAGE value="change input accent color" />
     <MESSAGE value="add semi-functional pdf viewer" />
     <MESSAGE value="adjust pdf viewer scale" />
-    <option name="LAST_COMMIT_MESSAGE" value="adjust pdf viewer scale" />
+    <MESSAGE value="add grade all button" />
+    <option name="LAST_COMMIT_MESSAGE" value="add grade all button" />
   </component>
 </project>

@@ -27,8 +27,8 @@ function SubmissionView({submission, assignment}) {
             {open?<Maximize size={20}/>:<Maximize2 size={20} />}
           </button>
         </DialogTrigger>
-        <DialogContent className="max-h-[calc(100dvh*8/10)] overflow-hidden p-0">
-          <div className="overflow-y-scroll p-6">
+        <DialogContent className="sm:h-fit max-h-[calc(100dvh*8/10)] w-600 sm:max-w-1/2 overflow-hidden p-0 flex">
+          <div className="overflow-y-scroll p-6 w-full">
             <DialogHeader>
               <DialogTitle>Submission</DialogTitle>
             </DialogHeader>
@@ -38,7 +38,7 @@ function SubmissionView({submission, assignment}) {
             <VariableView>
               <Gauge size={15}/> {grade?`${grade?.toFixed(2)} / ${max_grade?.toFixed(2)}`:"N/A"}
             </VariableView>
-            <div className="mt-3 rounded-sm overflow-hidden">
+            <div className="mt-3 overflow-hidden flex-1 w-full flex justify-center">
               <PdfViewer url={file?.url}/>
             </div>
           </div>

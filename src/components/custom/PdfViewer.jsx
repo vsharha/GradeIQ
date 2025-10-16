@@ -3,7 +3,7 @@ import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
 
 
-export default function PdfViewerDynamic({ url }) {
+export default function PdfViewer({ url }) {
   const [PdfModule, setPdfModule] = useState(null);
 
   useEffect(() => {
@@ -42,10 +42,10 @@ export default function PdfViewerDynamic({ url }) {
       }}
       loading={<p>Loading PDF …</p>}
       error={<p>Failed to load PDF.</p>}
-      className="w-full overflow-scroll"
+      className="overflow-auto h-fit w-fit rounded-sm"
       ref={containerRef}
     >
-      <Page pageNumber={1} width={width*0.75} scale={1.5} />
+      <Page pageNumber={1} width={width*0.9} scale={1} />
     </Document>
   );
 }
