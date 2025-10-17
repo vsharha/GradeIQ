@@ -16,14 +16,14 @@ function MarkScheme({rubrics}) {
       <StyledCollapsible title={`Question ${rubrics.mark_scheme[value].number}`} defaultOpen={false} className="font-bold text-xl">
         {rubrics.mark_scheme.map((rubric, i)=>
           <TabsContent value={i} key={i}>
-            <div key={i} className="flex flex-col gap-2">
+            <div key={i} className="flex flex-col gap-3">
               <div>
                 <h1 className="font-bold">Question</h1>
-                <h1 className="border-1 p-2 rounded-sm mt-2">{rubric.question}</h1>
+                <h1 className="border-2 p-2 rounded-sm mt-2">{rubric.question}</h1>
               </div>
               <div>
                 <h1 className="font-bold">Answer</h1>
-                <h1 className="border-1 p-2 rounded-sm mt-2">{rubric.answer}</h1>
+                <h1 className="border-2 p-2 rounded-sm mt-2">{rubric.answer}</h1>
               </div>
               <div className="flex flex-row gap-2">
                 <span className="font-bold">Precise answer:</span>

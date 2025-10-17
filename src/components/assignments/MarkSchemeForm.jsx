@@ -10,7 +10,7 @@ import LoadingButton from "@/components/loader/LoadingButton";
 import { Button } from "@/components/ui/button";
 import fileToBase64 from "@/services/fileToBase64";
 
-function MarkschemeForm({onSubmit, setGenerated}) {
+function MarkSchemeForm({onSubmit, setGenerated}) {
   const form = useForm({
     defaultValues: {
       files: null,
@@ -76,4 +76,4 @@ function MarkschemeForm({onSubmit, setGenerated}) {
   );
 }
 
-export default MarkschemeForm;
+export default MarkSchemeForm;

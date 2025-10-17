@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
-import MarkschemeForm from "@/components/assignments/MarkschemeForm";
+import MarkSchemeForm from "@/components/assignments/MarkSchemeForm";
 import { useEffect, useState } from "react";
 import CreateAssignmentForm from "@/components/assignments/CreateAssignmentForm";
 
@@ -38,7 +38,7 @@ function CreateAssignment({className, wide=false}) {
                 <DialogTitle>Upload mark scheme</DialogTitle>
                 <DialogDescription>The AI will extract questions and rubrics for you</DialogDescription>
               </DialogHeader>
-              <MarkschemeForm onSubmit={()=>setStep((step)=>step+1)} setGenerated={setGenerated}/>
+              <MarkSchemeForm onSubmit={()=>setStep((step)=>step+1)} setGenerated={setGenerated}/>
             </>
           }
 
