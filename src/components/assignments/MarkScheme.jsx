@@ -8,7 +8,7 @@ function MarkScheme({rubrics}) {
   const [value, setValue] = useState(0);
 
   return (
-    <Tabs className="flex flex-col gap-3 max-w-full" defaultValue={0} value={value} onValueChange={setValue}>
+    <Tabs className="flex flex-col gap-5 max-w-full" defaultValue={0} value={value} onValueChange={setValue}>
       <TabsList className="flex flex-wrap h-fit w-full">
         {rubrics.mark_scheme.map((rubric, i)=>
           <TabsTrigger value={i} key={i} className="min-w-[8%] w-[50%] max-w-[calc(100%*1/3)]">{rubric.number}</TabsTrigger>

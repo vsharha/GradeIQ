@@ -34,10 +34,6 @@ export default function PdfViewer({ url }) {
     return () => window.removeEventListener("resize", updateHeight);
   }, []);
 
-  if (!PdfModule) return <p>Loading PDF module…</p>;
-
-  const { Document, Page } = PdfModule;
-
   const goPrevious = () => setPageNumber((p) => Math.max(1, p - 1));
   const goNext = () => setPageNumber((p) => Math.min(numPages || p, p + 1));
 
@@ -61,25 +57,29 @@ export default function PdfViewer({ url }) {
       <div ref={containerRef} className="mt-3 w-full flex justify-center max-h-full">
         <div className="w-fit rounded-sm overflow-hidden">
           <div
-            className="overflow-auto h-100 sm:h-150 bg-white text-black w-full sm:min-w-120 sm:w-fit"
+            className="overflow-auto h-100 sm:h-150 w-full"
             // style={{ maxHeight: `${height}px` }}
           >
-            <Document
-              file={url}
-              onLoadSuccess={({ numPages }) => {
-                setNumPages(numPages);
-                setPageNumber((p) => Math.min(Math.max(1, p), numPages));
-              }}
-              loading={<p>Loading PDF …</p>}
-              error={<p>Failed to load PDF.</p>}
-              className="min-h-full min-w-full w-fit flex items-center justify-center"
-            >
-              <Page
-                key={pageNumber}
-                pageNumber={pageNumber}
-                scale={1}
-              />
-            </Document>
+            {!PdfModule?
+              <p>Loading PDF module...</p>
+              :
+              <PdfModule.Document
+                file={url}
+                onLoadSuccess={({ numPages }) => {
+                  setNumPages(numPages);
+                  setPageNumber((p) => Math.min(Math.max(1, p), numPages));
+                }}
+                loading={<p>Loading PDF …</p>}
+                error={<p>Failed to load PDF.</p>}
+                className="min-h-full min-w-full w-fit flex items-center justify-center"
+              >
+                <PdfModule.Page
+                  key={pageNumber}
+                  pageNumber={pageNumber}
+                  scale={1}
+                />
+              </PdfModule.Document>
+            }
           </div>
         </div>
       </div>
