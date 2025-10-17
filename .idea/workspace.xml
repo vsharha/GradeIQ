@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="changed markscheme display">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="fix truncate for short strings">
       <change afterPath="$PROJECT_DIR$/src/hooks/useGrade.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/assignments/MarkScheme.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/MarkScheme.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/custom/Truncate.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/Truncate.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom/PdfViewer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/PdfViewer.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,15 +144,7 @@
       <workItem from="1760620135444" duration="284000" />
       <workItem from="1760634540751" duration="3279000" />
       <workItem from="1760637876572" duration="5520000" />
-      <workItem from="1760724247174" duration="6365000" />
-    </task>
-    <task id="LOCAL-00114" summary="close form on success">
-      <option name="closed" value="true" />
-      <created>1760468312057</created>
-      <option name="number" value="00114" />
-      <option name="presentableId" value="LOCAL-00114" />
-      <option name="project" value="LOCAL" />
-      <updated>1760468312057</updated>
+      <workItem from="1760724247174" duration="6659000" />
     </task>
     <task id="LOCAL-00115" summary="added assignment deletion">
       <option name="closed" value="true" />
@@ -539,7 +530,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760730450311</updated>
     </task>
-    <option name="localTasksCounter" value="163" />
+    <task id="LOCAL-00163" summary="fix truncate for short strings">
+      <option name="closed" value="true" />
+      <created>1760730654295</created>
+      <option name="number" value="00163" />
+      <option name="presentableId" value="LOCAL-00163" />
+      <option name="project" value="LOCAL" />
+      <updated>1760730654295</updated>
+    </task>
+    <option name="localTasksCounter" value="164" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -557,7 +556,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Change upload submissions name" />
     <MESSAGE value="adjust assignment creation form; adjust options array schema" />
     <MESSAGE value="adjust form paddings" />
     <MESSAGE value="make number always a string" />
@@ -582,6 +580,7 @@
     <MESSAGE value="added text truncation" />
     <MESSAGE value="improve pdf viewer styling" />
     <MESSAGE value="changed markscheme display" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed markscheme display" />
+    <MESSAGE value="fix truncate for short strings" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix truncate for short strings" />
   </component>
 </project>

@@ -38,22 +38,24 @@ export default function PdfViewer({ url }) {
   const goNext = () => setPageNumber((p) => Math.min(numPages || p, p + 1));
 
   return (
-    <div className="mb-2">
-      <div className="flex items-center justify-center gap-2 mb-2">
-        <Button onClick={goPrevious} disabled={pageNumber <= 1}>
-          <ArrowLeft/>
-        </Button>
+    <div className="mb-2 bg-muted rounded-md p-2">
 
-        <span>
-          {pageNumber}
-          {numPages ? ` / ${numPages}` : ''}
-        </span>
+      {!!PdfModule &&
+        <div className="flex items-center justify-center gap-2">
+          <Button onClick={goPrevious} disabled={pageNumber <= 1} variant="ghost">
+            <ArrowLeft />
+          </Button>
 
-        <Button onClick={goNext} disabled={!numPages || pageNumber >= numPages}>
-          <ArrowRight/>
-        </Button>
-      </div>
+          <span>
+            {pageNumber}
+            {numPages ? ` / ${numPages}` : ""}
+          </span>
 
+          <Button onClick={goNext} disabled={!numPages || pageNumber >= numPages} variant="ghost">
+            <ArrowRight />
+          </Button>
+        </div>
+      }
       <div ref={containerRef} className="mt-3 w-full flex justify-center max-h-full">
         <div className="w-fit rounded-sm overflow-hidden">
           <div
