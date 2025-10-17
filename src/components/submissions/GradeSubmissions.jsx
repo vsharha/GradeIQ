@@ -6,7 +6,7 @@ import getClientAuthHeaders from "@/services/getClientAuthHeaders";
 import { gradeSubmissions } from "@/services/fetchApi";
 import useSubmissionMutation from "@/hooks/useSubmissionMutation";
 
-function GradeSubmissions({selected, setSelected, assignment_id}) {
+function GradeSubmissions({selected, setSelected, assignment_id, ...props}) {
   const [open, setOpen] = useState(false);
 
   const {mutate, isPending} = useSubmissionMutation(assignment_id, async ({ assignment_id, submission_ids }) => {
@@ -17,7 +17,9 @@ function GradeSubmissions({selected, setSelected, assignment_id}) {
   function handleGrade() {
     mutate({assignment_id, selected})
     setOpen(false)
-    setSelected([])
+    if(typeof setSelected === "function") {
+      setSelected([])
+    }
   }
 
   const messages = [
@@ -34,29 +36,26 @@ function GradeSubmissions({selected, setSelected, assignment_id}) {
   ];
 
   return (
-    <div className="flex gap-4 justify-center items-center">
-      <Dialog open={open} onOpenChange={setOpen}>
-        <DialogTrigger disabled={selected.length===0} asChild>
-          <LoadingButton isLoading={isPending} messages={messages}>
-            Grade
-          </LoadingButton>
-        </DialogTrigger>
-        <DialogContent>
-          <DialogTitle>
-            Grade {selected.length} submission{selected.length>1?"s":""}?
-          </DialogTitle>
-          <DialogFooter>
-            <Button variant="secondary" onClick={()=>setOpen(false)} >
-              No
-            </Button>
-            <Button onClick={handleGrade}>
-              Yes
-            </Button>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog>
-      {selected.length!==0&&<span>Selected: {selected.length}</span>}
-    </div>
+    <Dialog open={open} onOpenChange={setOpen}>
+      <DialogTrigger disabled={selected.length===0} asChild>
+        <LoadingButton isLoading={isPending} messages={messages} {...props}>
+          Grade
+        </LoadingButton>
+      </DialogTrigger>
+      <DialogContent>
+        <DialogTitle>
+          Grade {selected.length} submission{selected.length>1?"s":""}?
+        </DialogTitle>
+        <DialogFooter>
+          <Button variant="secondary" onClick={()=>setOpen(false)} >
+            No
+          </Button>
+          <Button onClick={handleGrade}>
+            Yes
+          </Button>
+        </DialogFooter>
+      </DialogContent>
+    </Dialog>
   );
 }
 

@@ -10,14 +10,16 @@ import VariableView from "@/components/custom/VariableView";
 import { useState } from "react";
 import PdfViewer from "@/components/custom/PdfViewer";
 import useDownloadSubmission from "@/hooks/useDownloadSubmission";
+import GradeSubmissions from "@/components/submissions/GradeSubmissions";
+import Feedback from "@/components/submissions/Feedback";
 
 function SubmissionView({submission, assignment}) {
-  const {student_name, grade, id} = submission
+  const {student_name, grade, id, feedback} = submission
   const {max_grade} = assignment
 
   const [open, setOpen] = useState(false)
 
-  const {isLoading,file} = useDownloadSubmission(id, {enabled:open})
+  const {isLoading, file} = useDownloadSubmission(id, {enabled:open})
 
   return (
     <div className="w-full flex items-center">
@@ -30,8 +32,11 @@ function SubmissionView({submission, assignment}) {
         <DialogContent className="sm:h-fit max-h-[calc(100dvh*9/10)] w-600 sm:max-w-1/2 overflow-hidden flex flex-col p-0">
           <div className="overflow-auto flex flex-col gap-3">
             <div className="p-6 pb-0 w-full">
-              <DialogHeader className="mb-4">
-                <DialogTitle>Submission</DialogTitle>
+              <DialogHeader className="mb-4 flex flex-row justify-between items-center">
+                <DialogTitle>
+                  Submission
+                </DialogTitle>
+                <GradeSubmissions selected={[id]} className="w-fit"/>
               </DialogHeader>
               <VariableView>
                 <User size={15}/> {student_name}
@@ -39,6 +44,9 @@ function SubmissionView({submission, assignment}) {
               <VariableView>
                 <Gauge size={15}/> {Number.isFinite(grade)?`${grade?.toFixed(2)} / ${max_grade?.toFixed(2)}`:"N/A"}
               </VariableView>
+              <div className="mt-2">
+                <Feedback feedback={feedback}/>
+              </div>
             </div>
             <div className="p-2 sm:p-4 pt-0 sm:pt-0 flex-1">
               <PdfViewer url={file?.url}/>
