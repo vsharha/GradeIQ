@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add pdf viewer background">
-      <change afterPath="$PROJECT_DIR$/src/components/submissions/GradeSubmissions.jsx" afterDir="false" />
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="integrate grading endpoint">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app/assignments/[id]/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/[id]/page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/assignments/MarkSchemeForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/MarkSchemeForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/loader/LoadingButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/loader/LoadingButton.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom/VariableTitleView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/VariableTitleView.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/submissions/GradeSubmissions.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/GradeSubmissions.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useDownloadSubmission.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useDownloadSubmission.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/fetchApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/fetchApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/submissions/SubmissionView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/SubmissionView.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,15 +147,7 @@
       <workItem from="1760620135444" duration="284000" />
       <workItem from="1760634540751" duration="3279000" />
       <workItem from="1760637876572" duration="5520000" />
-      <workItem from="1760724247174" duration="9748000" />
-    </task>
-    <task id="LOCAL-00116" summary="change deletion api">
-      <option name="closed" value="true" />
-      <created>1760472437893</created>
-      <option name="number" value="00116" />
-      <option name="presentableId" value="LOCAL-00116" />
-      <option name="project" value="LOCAL" />
-      <updated>1760472437893</updated>
+      <workItem from="1760724247174" duration="10334000" />
     </task>
     <task id="LOCAL-00117" summary="fix deletion">
       <option name="closed" value="true" />
@@ -543,7 +533,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760730938057</updated>
     </task>
-    <option name="localTasksCounter" value="165" />
+    <task id="LOCAL-00165" summary="integrate grading endpoint">
+      <option name="closed" value="true" />
+      <created>1760734345390</created>
+      <option name="number" value="00165" />
+      <option name="presentableId" value="LOCAL-00165" />
+      <option name="project" value="LOCAL" />
+      <updated>1760734345390</updated>
+    </task>
+    <option name="localTasksCounter" value="166" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -561,7 +559,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="adjust form paddings" />
     <MESSAGE value="make number always a string" />
     <MESSAGE value="add loading messages when generating" />
     <MESSAGE value="add rubrics view to assignments" />
@@ -586,6 +583,7 @@
     <MESSAGE value="changed markscheme display" />
     <MESSAGE value="fix truncate for short strings" />
     <MESSAGE value="add pdf viewer background" />
-    <option name="LAST_COMMIT_MESSAGE" value="add pdf viewer background" />
+    <MESSAGE value="integrate grading endpoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="integrate grading endpoint" />
   </component>
 </project>

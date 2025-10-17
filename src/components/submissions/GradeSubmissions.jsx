@@ -6,7 +6,7 @@ import getClientAuthHeaders from "@/services/getClientAuthHeaders";
 import { gradeSubmissions } from "@/services/fetchApi";
 import useSubmissionMutation from "@/hooks/useSubmissionMutation";
 
-function GradeSubmissions({selected, assignment_id}) {
+function GradeSubmissions({selected, setSelected, assignment_id}) {
   const [open, setOpen] = useState(false);
 
   const {mutate, isPending} = useSubmissionMutation(assignment_id, async ({ assignment_id, submission_ids }) => {
@@ -16,6 +16,8 @@ function GradeSubmissions({selected, assignment_id}) {
 
   function handleGrade() {
     mutate({assignment_id, selected})
+    setOpen(false)
+    setSelected([])
   }
 
   const messages = [

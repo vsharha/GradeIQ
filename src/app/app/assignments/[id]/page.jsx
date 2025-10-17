@@ -45,7 +45,7 @@ function Page({params}) {
             <h1 className="text-xl font-bold">Submissions</h1>
             <div className="flex justify-between gap-2 items-center justify-center">
               <UploadSubmissions assignment_id={assignment.id}/>
-              <GradeSubmissions selected={selected} assignment_id={id}/>
+              <GradeSubmissions selected={selected} assignment_id={id} setSelected={setSelected}/>
             </div>
           </CardHeader>
           <CardContent className="px-3 sm:px-4">
