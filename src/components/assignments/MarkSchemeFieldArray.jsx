@@ -30,7 +30,7 @@ function MarkSchemeFieldArray({form, defaultMarkScheme, defaultRubric}) {
         <div className="flex-1">
           <TabsList className="flex flex-wrap mb-3 w-full h-fit">
             {markSchemeFields.map((field, index) => (
-              <TabsTrigger value={field.id} key={field.id} className="min-w-[8%] w-[50%] max-w-[50%]">
+              <TabsTrigger value={field.id} key={field.id} className="min-w-[8%] w-[50%] max-w-[calc(100%*1/3)]">
                 {form.watch(`mark_scheme.${index}.number`)}
               </TabsTrigger>
             ))}
@@ -91,7 +91,7 @@ function MarkSchemeFieldArray({form, defaultMarkScheme, defaultRubric}) {
             <FormItem className="flex-1 flex items-center">
               <FormControl className="flex items-start">
                 <Input type="checkbox"
-                       className="w-5 accent-color-primary" {...form.register(`mark_scheme.${index}.precise_answer`)} />
+                       className="w-5 accent-primary" {...form.register(`mark_scheme.${index}.precise_answer`)} />
               </FormControl>
               <FormLabel>Answer is precise</FormLabel>
               <FormDescription />

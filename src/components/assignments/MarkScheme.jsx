@@ -3,14 +3,14 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import StyledCollapsible from "@/components/custom/StyledCollapsible";
 import { useState } from "react";
 
-function Rubrics({rubrics}) {
+function MarkScheme({rubrics}) {
   const [value, setValue] = useState(0);
 
   return (
     <Tabs className="flex flex-col gap-3 max-w-full" defaultValue={0} value={value} onValueChange={setValue}>
       <TabsList className="flex flex-wrap h-fit w-full">
         {rubrics.mark_scheme.map((rubric, i)=>
-          <TabsTrigger value={i} key={i} className="min-w-[8%] w-[50%] max-w-[50%]">{rubric.number}</TabsTrigger>
+          <TabsTrigger value={i} key={i} className="min-w-[8%] w-[50%] max-w-[calc(100%*1/3)]">{rubric.number}</TabsTrigger>
         )}
       </TabsList>
       <StyledCollapsible title={`Question ${rubrics.mark_scheme[value].number}`} defaultOpen={false} className="font-bold text-xl">
@@ -55,4 +55,4 @@ function Rubrics({rubrics}) {
   );
 }
 
-export default Rubrics;
+export default MarkScheme;

@@ -4,7 +4,7 @@ import { formatDate } from "@/lib/formatDate";
 import SubmissionProgress from "@/components/custom/SubmissionProgress";
 import VariableTitleView from "@/components/custom/VariableTitleView";
 import DeleteAssignment from "@/components/assignments/DeleteAssignment";
-import Rubrics from "@/components/assignments/Rubrics";
+import MarkScheme from "@/components/assignments/MarkScheme";
 
 function AssignmentView({assignment}) {
   const { title, created_at, due, description, max_grade, passing_grade, id, rubrics } = assignment
@@ -46,7 +46,7 @@ function AssignmentView({assignment}) {
       {rubrics &&
         <Card>
           <CardContent>
-            <Rubrics rubrics={rubrics} />
+            <MarkScheme rubrics={rubrics} />
           </CardContent>
         </Card>
       }
