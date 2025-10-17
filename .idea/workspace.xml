@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="extract pdf viewer logic to a separate file">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/custom/CustomPdfViewer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/CustomPdfViewer.jsx" afterDir="false" />
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="improve worker loading">
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/custom/PdfViewer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/PdfViewer.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -146,14 +145,6 @@
       <workItem from="1760637876572" duration="5520000" />
       <workItem from="1760724247174" duration="14809000" />
       <workItem from="1760742011811" duration="1846000" />
-    </task>
-    <task id="LOCAL-00123" summary="remove default values from login form">
-      <option name="closed" value="true" />
-      <created>1760556827380</created>
-      <option name="number" value="00123" />
-      <option name="presentableId" value="LOCAL-00123" />
-      <option name="project" value="LOCAL" />
-      <updated>1760556827380</updated>
     </task>
     <task id="LOCAL-00124" summary="start work on ai features; refactor api on the backend">
       <option name="closed" value="true" />
@@ -539,7 +530,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760744635099</updated>
     </task>
-    <option name="localTasksCounter" value="172" />
+    <task id="LOCAL-00172" summary="improve worker loading">
+      <option name="closed" value="true" />
+      <created>1760744875704</created>
+      <option name="number" value="00172" />
+      <option name="presentableId" value="LOCAL-00172" />
+      <option name="project" value="LOCAL" />
+      <updated>1760744875704</updated>
+    </task>
+    <option name="localTasksCounter" value="173" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -557,7 +556,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add dynamic collapsable title" />
     <MESSAGE value="start work on pdf viewer; adjust loading button messages" />
     <MESSAGE value="change input accent color" />
     <MESSAGE value="add semi-functional pdf viewer" />
@@ -582,6 +580,7 @@
     <MESSAGE value="added feedback display" />
     <MESSAGE value="improve padding in SubmissionView.jsx" />
     <MESSAGE value="extract pdf viewer logic to a separate file" />
-    <option name="LAST_COMMIT_MESSAGE" value="extract pdf viewer logic to a separate file" />
+    <MESSAGE value="improve worker loading" />
+    <option name="LAST_COMMIT_MESSAGE" value="improve worker loading" />
   </component>
 </project>
