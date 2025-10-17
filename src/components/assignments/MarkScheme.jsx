@@ -29,7 +29,7 @@ function MarkScheme({rubrics}) {
               <div>
                 <div className="flex items-center gap-2">
                   <h1 className="font-bold">Answer</h1>
-                  <span className="flex items-center">
+                  <span className="flex items-center gap-1">
                     (Precise: <Boolean flag={rubric.precise_answer}/>)
                   </span>
                 </div>

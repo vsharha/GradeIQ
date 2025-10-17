@@ -16,9 +16,11 @@ function Truncate({length = 100, children}) {
   return (
     <p>
       {truncate(children)}
-      <span className="text-primary underline cursor-pointer flex" onClick={()=>setOpen((open)=>!open)}>
-        {open?"Show less...":"Show more..."}
-      </span>
+      {children.length > length &&
+        <span className="text-primary underline cursor-pointer flex" onClick={() => setOpen((open) => !open)}>
+          {length && open ? "Show less..." : "Show more..."}
+        </span>
+      }
     </p>
   )
 }
