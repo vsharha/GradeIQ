@@ -35,6 +35,18 @@ function MarkSchemeForm({onSubmit, setGenerated}) {
     }
   })
 
+  const messages = [
+    "Crunching grades...",
+    "Consulting the grading oracle...",
+    "Applying fairness filters...",
+    "Polishing rubrics...",
+    "Formatting constructive feedback...",
+    "Summoning teaching assistants (virtual)...",
+    "Calibrating confidence scores...",
+    "Searching for the perfect comment...",
+    "Checking for academic flair...",
+    "Optimising for clarity and kindness...",
+  ];
 
   return (
     <Form className="w-full" {...form}>
@@ -65,7 +77,7 @@ function MarkSchemeForm({onSubmit, setGenerated}) {
             </FormItem>
           )}
         />
-        <LoadingButton isLoading={isPending} className="w-full" type="generate">
+        <LoadingButton isLoading={isPending} className="w-full" messages={messages}>
           Generate
         </LoadingButton>
         <Button onClick={onSubmit} className="w-full" variant="secondary" disabled={isPending}>

@@ -129,7 +129,7 @@ export async function generateRubrics(mark_scheme, headers) {
     return data;
 }
 
-export async function downloadSubmissionFile(submission_id, headers) {
+export async function getSubmissionFileURL(submission_id, headers) {
     const response = await fetch(`${process.env.NEXT_PUBLIC_FASTAPI_URL}/submissions/${submission_id}/file`, { headers });
     let data;
     try {
@@ -138,5 +138,24 @@ export async function downloadSubmissionFile(submission_id, headers) {
         throw new Error("Could not parse error response");
     }
     if(!response.ok) handleApiError(response, data, "Could not fetch submission file");
+    return data;
+}
+
+export async function gradeSubmissions(assignment_id, submission_ids, headers) {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_FASTAPI_URL}/assignments/${assignment_id}/grade`, {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json",
+            ...headers
+        },
+        body: JSON.stringify({submission_ids})
+    })
+    let data;
+    try {
+        data = await response.json();
+    } catch (e) {
+        throw new Error("Could not parse error response");
+    }
+    if(!response.ok) handleApiError(response, data, "Could not grade submissions");
     return data;
 }

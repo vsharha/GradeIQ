@@ -10,7 +10,7 @@ import PageLoader from "@/components/loader/PageLoader";
 import ErrorMessage from "@/components/custom/ErrorMessage";
 import { useRouter } from "next/navigation";
 import UploadSubmissions from "@/components/submissions/UploadSubmissions";
-import LoadingButton from "@/components/loader/LoadingButton";
+import GradeSubmissions from "@/components/submissions/GradeSubmissions";
 
 function Page({params}) {
   const {id} = use(params);
@@ -35,9 +35,6 @@ function Page({params}) {
     router.push("/app");
   }
 
-  const trueCount = selected.filter(Boolean).length;
-  const submissionSelected = trueCount > 0;
-
   return(
     <div className="flex flex-col gap-3 w-full max-w-content">
       <BackButton href="/app/assignments"/>
@@ -48,12 +45,7 @@ function Page({params}) {
             <h1 className="text-xl font-bold">Submissions</h1>
             <div className="flex justify-between gap-2 items-center justify-center">
               <UploadSubmissions assignment_id={assignment.id}/>
-              <div className="flex gap-5 justify-center items-center">
-                <LoadingButton disabled={!submissionSelected}>
-                  Grade
-                </LoadingButton>
-                {submissionSelected&&<span>Selected: {trueCount}</span>}
-              </div>
+              <GradeSubmissions selected={selected} assignment_id={id}/>
             </div>
           </CardHeader>
           <CardContent className="px-3 sm:px-4">

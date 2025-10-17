@@ -15,11 +15,12 @@ import { Input } from "@/components/ui/input";
 function SubmissionTable({assignment, selected, setSelected}) {
   const {id, max_grade, passing_grade} = assignment
 
-  const toggleSelection = (rowIndex) => {
-    setSelected((prev) => {
-      const next = [...prev];
-      next[rowIndex] = !next[rowIndex];
-      return next;
+  function toggleSelection(rowIndex) {
+    setSelected((selected) => {
+      if(!selected.includes(rowIndex)) {
+        return [...selected, rowIndex]
+      }
+      return selected.filter((index) => index !== rowIndex);
     });
   };
 
@@ -31,7 +32,7 @@ function SubmissionTable({assignment, selected, setSelected}) {
         const submission = info.row.original;
         const rowIndex = info.row.index
         return <div className="flex flex-row items-center gap-3 w-fit sm:gap-5">
-          <Input type="checkbox" className="accent-primary h-full" checked={!!selected[rowIndex]} onChange={()=>toggleSelection(rowIndex)}/>
+          <Input type="checkbox" className="accent-primary h-full" checked={selected.includes(rowIndex)} onChange={()=>toggleSelection(rowIndex)}/>
           <SubmissionView submission={submission} assignment={assignment} />
           <span>{rowIndex+1}</span>
         </div>;

@@ -2,28 +2,11 @@ import BlockLoader from "@/components/loader/BlockLoader";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect, useMemo } from "react";
 
-function LoadingButton({ isLoading, children, type, loadingMessages: customMessages, ...props }) {
+function LoadingButton({ isLoading=false, children, messages=[], ...props }) {
   const [loadingMessage, setLoadingMessage] = useState("");
 
-  const defaultMessages = [
-    "Crunching grades...",
-    "Consulting the grading oracle...",
-    "Applying fairness filters...",
-    "Polishing rubrics...",
-    "Formatting constructive feedback...",
-    "Summoning teaching assistants (virtual)...",
-    "Calibrating confidence scores...",
-    "Searching for the perfect comment...",
-    "Checking for academic flair...",
-    "Optimising for clarity and kindness...",
-  ];
-
-  const messages = useMemo(() => {
-    return Array.isArray(customMessages) && customMessages.length > 0 ? customMessages : defaultMessages;
-  }, [customMessages]);
-
   useEffect(() => {
-    if (!isLoading || type !== "generate") {
+    if (!isLoading || !messages.length) {
       setLoadingMessage("");
       return;
     }
@@ -60,7 +43,7 @@ function LoadingButton({ isLoading, children, type, loadingMessages: customMessa
     return () => {
       if (timer) clearTimeout(timer);
     };
-  }, [isLoading, messages, type]);
+  }, [isLoading, messages]);
 
   return (
     <Button disabled={isLoading} {...props}>
@@ -68,7 +51,7 @@ function LoadingButton({ isLoading, children, type, loadingMessages: customMessa
         {isLoading ? (
           <>
             <BlockLoader />
-            {type === "generate" ? (
+            {messages.length > 0 ? (
               <span style={{ fontSize: 14 }} aria-live="polite">{loadingMessage}</span>
             ) : null}
           </>

@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import getClientAuthHeaders from "@/services/getClientAuthHeaders";
-import { downloadSubmissionFile, fetchUser } from "@/services/fetchApi";
+import { getSubmissionFileURL, fetchUser } from "@/services/fetchApi";
 
 export default function useDownloadSubmission(submission_id, options = {}) {
     const { enabled: optEnabled, ...restOptions } = options
@@ -16,7 +16,7 @@ export default function useDownloadSubmission(submission_id, options = {}) {
                 return null
             }
 
-            return await downloadSubmissionFile(submission_id,headers);
+            return await getSubmissionFileURL(submission_id,headers);
         },
         enabled: typeof optEnabled === "boolean" ? optEnabled : Boolean(submission_id),
         refetchOnWindowFocus: true,
