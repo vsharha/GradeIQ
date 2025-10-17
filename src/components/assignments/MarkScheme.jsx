@@ -27,36 +27,38 @@ function MarkScheme({rubrics}) {
                 </div>
               </div>
               <div>
-                <h1 className="font-bold">Answer</h1>
+                <div className="flex items-center gap-2">
+                  <h1 className="font-bold">Answer</h1>
+                  <span className="flex items-center">
+                    (Precise: <Boolean flag={rubric.precise_answer}/>)
+                  </span>
+                </div>
                 <div className="border-2 p-2 rounded-sm mt-2">
                   <Truncate length={250}>
                     {rubric.answer}
                   </Truncate>
                 </div>
               </div>
-              <div className="flex flex-row gap-2">
-                <span className="font-bold">Precise answer:</span>
-                <Boolean flag={rubric.precise_answer}/>
-              </div>
               {rubric.options?.map((option, i)=>
                 <p key={i}>{option}</p>
               )}
-              <div className="flex flex-col gap-2">
-                <h1 className="font-bold">Rubrics</h1>
-                <div className="rounded-sm mt-2 border-2 overflow-hidden">
-                  {rubric.rubrics.map((rubric, i)=>
-                    <div key={i} className="flex gap-4 justify-between border-1 p-2">
+              {rubric.rubrics.length !== 0 &&
+                <div className="flex flex-col gap-2">
+                  <h1 className="font-bold">Rubrics</h1>
+                  <div className="rounded-sm mt-2 border-2 overflow-hidden">
+                    {rubric.rubrics.map((rubric, i) =>
+                      <div key={i} className="flex gap-4 justify-between border-1 p-2">
                       <span>
                         {rubric.criterion}
                       </span>
-                      <span className="font-bold">
+                        <span className="font-bold">
                         {rubric.marks}
                       </span>
-                    </div>
-                  )}
-                </div>
+                      </div>,
+                    )}
+                  </div>
+                </div>}
               </div>
-            </div>
           </TabsContent>
         )}
       </StyledCollapsible>
