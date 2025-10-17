@@ -2,6 +2,7 @@ import Boolean from "@/components/custom/Boolean";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import StyledCollapsible from "@/components/custom/StyledCollapsible";
 import { useState } from "react";
+import Truncate from "@/components/custom/Truncate";
 
 function MarkScheme({rubrics}) {
   const [value, setValue] = useState(0);
@@ -13,17 +14,25 @@ function MarkScheme({rubrics}) {
           <TabsTrigger value={i} key={i} className="min-w-[8%] w-[50%] max-w-[calc(100%*1/3)]">{rubric.number}</TabsTrigger>
         )}
       </TabsList>
-      <StyledCollapsible title={`Question ${rubrics.mark_scheme[value].number}`} defaultOpen={false} className="font-bold text-xl">
+      <StyledCollapsible title={`Question ${rubrics.mark_scheme[value].number}`} defaultOpen={true} className="font-bold text-xl">
         {rubrics.mark_scheme.map((rubric, i)=>
           <TabsContent value={i} key={i}>
             <div key={i} className="flex flex-col gap-3">
               <div>
                 <h1 className="font-bold">Question</h1>
-                <h1 className="border-2 p-2 rounded-sm mt-2">{rubric.question}</h1>
+                <div className="border-2 p-2 rounded-sm mt-2">
+                  <Truncate length={250}>
+                    {rubric.question}
+                  </Truncate>
+                </div>
               </div>
               <div>
                 <h1 className="font-bold">Answer</h1>
-                <h1 className="border-2 p-2 rounded-sm mt-2">{rubric.answer}</h1>
+                <div className="border-2 p-2 rounded-sm mt-2">
+                  <Truncate length={250}>
+                    {rubric.answer}
+                  </Truncate>
+                </div>
               </div>
               <div className="flex flex-row gap-2">
                 <span className="font-bold">Precise answer:</span>

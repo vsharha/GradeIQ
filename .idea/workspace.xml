@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="adjust tab width; improve selecting rows">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="adjust markscheme display">
+      <change afterPath="$PROJECT_DIR$/src/components/custom/Truncate.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/assignments/CreateAssignment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/CreateAssignment.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/assignments/MarkScheme.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/MarkScheme.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/assignments/MarkschemeForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/MarkSchemeForm.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,15 +146,7 @@
       <workItem from="1760620135444" duration="284000" />
       <workItem from="1760634540751" duration="3279000" />
       <workItem from="1760637876572" duration="5520000" />
-      <workItem from="1760724247174" duration="4191000" />
-    </task>
-    <task id="LOCAL-00110" summary="start work on assignment edit/delete">
-      <option name="closed" value="true" />
-      <created>1760392189154</created>
-      <option name="number" value="00110" />
-      <option name="presentableId" value="LOCAL-00110" />
-      <option name="project" value="LOCAL" />
-      <updated>1760392189154</updated>
+      <workItem from="1760724247174" duration="5412000" />
     </task>
     <task id="LOCAL-00111" summary="form error handling">
       <option name="closed" value="true" />
@@ -539,7 +532,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760728393014</updated>
     </task>
-    <option name="localTasksCounter" value="159" />
+    <task id="LOCAL-00159" summary="adjust markscheme display">
+      <option name="closed" value="true" />
+      <created>1760728475618</created>
+      <option name="number" value="00159" />
+      <option name="presentableId" value="LOCAL-00159" />
+      <option name="project" value="LOCAL" />
+      <updated>1760728475618</updated>
+    </task>
+    <option name="localTasksCounter" value="160" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -557,7 +558,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add the option to enter by hand" />
     <MESSAGE value="add submissions uploading" />
     <MESSAGE value="fixed display for no grade" />
     <MESSAGE value="fix display for no grade" />
@@ -582,6 +582,7 @@
     <MESSAGE value="improve pdf viewer, add checkboxes to table" />
     <MESSAGE value="improve pdf viewer" />
     <MESSAGE value="adjust tab width; improve selecting rows" />
-    <option name="LAST_COMMIT_MESSAGE" value="adjust tab width; improve selecting rows" />
+    <MESSAGE value="adjust markscheme display" />
+    <option name="LAST_COMMIT_MESSAGE" value="adjust markscheme display" />
   </component>
 </project>
