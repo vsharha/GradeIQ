@@ -48,7 +48,7 @@ function SubmissionTable({assignment, selected, setSelected}) {
       cell: info => {
         const grade = info.getValue();
         return <div>
-          {grade!==undefined?`${grade?.toFixed(2)} / ${max_grade?.toFixed(2)}`:"N/A"}
+          {Number.isFinite(grade)?`${grade?.toFixed(2)} / ${max_grade?.toFixed(2)}`:"N/A"}
         </div>
       }
     },
