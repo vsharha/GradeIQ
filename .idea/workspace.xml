@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add grade all button">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add styled pdf viewer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/custom/PdfViewer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/PdfViewer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/submissions/SubmissionView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/SubmissionView.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,15 +142,8 @@
       <workItem from="1760613577070" duration="4783000" />
       <workItem from="1760620135444" duration="284000" />
       <workItem from="1760634540751" duration="3279000" />
-      <workItem from="1760637876572" duration="4902000" />
-    </task>
-    <task id="LOCAL-00104" summary="fix log out loading state">
-      <option name="closed" value="true" />
-      <created>1760386129450</created>
-      <option name="number" value="00104" />
-      <option name="presentableId" value="LOCAL-00104" />
-      <option name="project" value="LOCAL" />
-      <updated>1760386129450</updated>
+      <workItem from="1760637876572" duration="5520000" />
+      <workItem from="1760724247174" duration="302000" />
     </task>
     <task id="LOCAL-00105" summary="change logout button type">
       <option name="closed" value="true" />
@@ -537,7 +529,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760646200767</updated>
     </task>
-    <option name="localTasksCounter" value="153" />
+    <task id="LOCAL-00153" summary="add styled pdf viewer">
+      <option name="closed" value="true" />
+      <created>1760646644414</created>
+      <option name="number" value="00153" />
+      <option name="presentableId" value="LOCAL-00153" />
+      <option name="project" value="LOCAL" />
+      <updated>1760646644414</updated>
+    </task>
+    <option name="localTasksCounter" value="154" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -555,7 +555,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added options field array" />
     <MESSAGE value="fix fetching for ai generation; add verbose error logging; removed temporary data" />
     <MESSAGE value="change ambiguous field names" />
     <MESSAGE value="add default grade values" />
@@ -580,6 +579,7 @@
     <MESSAGE value="add semi-functional pdf viewer" />
     <MESSAGE value="adjust pdf viewer scale" />
     <MESSAGE value="add grade all button" />
-    <option name="LAST_COMMIT_MESSAGE" value="add grade all button" />
+    <MESSAGE value="add styled pdf viewer" />
+    <option name="LAST_COMMIT_MESSAGE" value="add styled pdf viewer" />
   </component>
 </project>
