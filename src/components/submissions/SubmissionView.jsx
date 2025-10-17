@@ -8,7 +8,7 @@ import {
 import { Eye, Gauge, Maximize, Maximize2, User } from "lucide-react";
 import VariableView from "@/components/custom/VariableView";
 import { useState } from "react";
-import PdfViewer from "@/components/custom/PdfViewer";
+import CustomPdfViewer from "@/components/custom/CustomPdfViewer";
 import useDownloadSubmission from "@/hooks/useDownloadSubmission";
 import GradeSubmissions from "@/components/submissions/GradeSubmissions";
 import Feedback from "@/components/submissions/Feedback";
@@ -49,7 +49,7 @@ function SubmissionView({submission, assignment}) {
               </div>
             </div>
             <div className="p-2 sm:p-4 pt-0 sm:pt-0 flex-1">
-              {!isLoading&&<PdfViewer url={file?.url} />}
+              {!isLoading&&<CustomPdfViewer url={file?.url} />}
             </div>
           </div>
         </DialogContent>
