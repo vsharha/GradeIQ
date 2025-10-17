@@ -31,13 +31,13 @@ function Feedback({feedback}) {
                 const {number, question_text, total_marks, awarded_marks, criteria_feedback} = question_grade
                 return (
                   <TabsContent value={i} key={i}>
-                    <div className="flex gap-3 justify-between border-1 border-primary p-2 rounded-sm mt-4 mb-6">
-                      <div>
+                    <div className="flex gap-3 justify-between border-1 border-primary p-2 rounded-sm mt-4 mb-6 flex-col">
+                      <div className="flex flex-row items-centers justify-between gap-4">
                         <div className="font-bold">Question {number}</div>
                         {/*to be taken from mark scheme*/}
-                        <Truncate length={200}>{question_text}</Truncate>
+                        <div className="font-bold">{Number(total_marks).toFixed(2)}/{Number(awarded_marks).toFixed(2)}</div>
                       </div>
-                      <div className="font-bold mt-5">{Number(total_marks).toFixed(2)}/{Number(awarded_marks).toFixed(2)}</div>
+                      <Truncate length={200}>{question_text}</Truncate>
                     </div>
                     <div>
                       {criteria_feedback.map((criteria, i) => {

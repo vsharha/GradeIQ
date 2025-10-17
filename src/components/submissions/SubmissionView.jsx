@@ -49,7 +49,7 @@ function SubmissionView({submission, assignment}) {
               </div>
             </div>
             <div className="p-2 sm:p-4 pt-0 sm:pt-0 flex-1">
-              <PdfViewer url={file?.url}/>
+              {!isLoading&&<PdfViewer url={file?.url} />}
             </div>
           </div>
         </DialogContent>

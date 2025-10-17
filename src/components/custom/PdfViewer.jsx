@@ -8,6 +8,7 @@ export default function PdfViewer({ url }) {
   const [PdfModule, setPdfModule] = useState(null);
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
+  const [isWorkerReady, setIsWorkerReady] = useState(false);
 
   const [height, setHeight] = useState(600);
   const containerRef = useRef(null);
@@ -21,6 +22,7 @@ export default function PdfViewer({ url }) {
       ).toString();
 
       setPdfModule(mod);
+      setIsWorkerReady(true);
     });
   }, []);
 
@@ -62,7 +64,7 @@ export default function PdfViewer({ url }) {
             className="overflow-auto h-fit w-full"
             // style={{ maxHeight: `${height}px` }}
           >
-            {!PdfModule?
+            {!PdfModule || !isWorkerReady ?
               <p>Loading PDF module...</p>
               :
               <PdfModule.Document
