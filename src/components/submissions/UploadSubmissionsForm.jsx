@@ -7,7 +7,7 @@ import { Dropzone, DropzoneContent, DropzoneEmptyState } from "@/components/ui/s
 import LoadingButton from "@/components/loader/LoadingButton";
 import fileToBase64 from "@/services/fileToBase64";
 
-function UploadSubmissionsForm({assignment_id}) {
+function UploadSubmissionsForm({assignment_id, onUpload}) {
   const form = useForm({
     defaultValues: {
       files: null
@@ -27,6 +27,9 @@ function UploadSubmissionsForm({assignment_id}) {
         }
       }
       const result = await uploadSubmissions(assignment_id, {encoded_files}, headers)
+      if(typeof onUpload === "function") {
+        onUpload()
+      }
       return result
     })
 
