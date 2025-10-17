@@ -31,7 +31,7 @@ function SubmissionView({submission, assignment}) {
         </DialogTrigger>
         <DialogContent className="sm:h-fit max-h-[calc(100dvh*9/10)] w-600 sm:max-w-1/2 overflow-hidden flex flex-col p-0">
           <div className="overflow-auto flex flex-col gap-3">
-            <div className="p-6 pb-0 w-full">
+            <div className="p-8 pb-0 w-full">
               <DialogHeader className="mb-4 flex flex-row justify-between items-center">
                 <DialogTitle>
                   Submission
