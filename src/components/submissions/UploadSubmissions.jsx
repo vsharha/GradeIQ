@@ -5,7 +5,7 @@ import { UploadIcon } from "lucide-react";
 import { useState } from "react";
 
 function UploadSubmissions({assignment_id}) {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>

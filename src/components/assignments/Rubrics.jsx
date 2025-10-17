@@ -19,11 +19,11 @@ function Rubrics({rubrics}) {
             <div key={i} className="flex flex-col gap-2">
               <div>
                 <h1 className="font-bold">Question</h1>
-                <h1>{rubric.question}</h1>
+                <h1 className="border-1 p-2 rounded-sm mt-2">{rubric.question}</h1>
               </div>
               <div>
                 <h1 className="font-bold">Answer</h1>
-                <h1>{rubric.answer}</h1>
+                <h1 className="border-1 p-2 rounded-sm mt-2">{rubric.answer}</h1>
               </div>
               <div className="flex flex-row gap-2">
                 <span className="font-bold">Precise answer:</span>
@@ -34,16 +34,18 @@ function Rubrics({rubrics}) {
               )}
               <div className="flex flex-col gap-2">
                 <h1 className="font-bold">Rubrics</h1>
-                {rubric.rubrics.map((rubric, i)=>
-                  <div key={i} className="flex gap-1 justify-between">
-                    <span>
-                      {rubric.criterion}
-                    </span>
-                    <span className="font-bold">
-                      {rubric.marks}
-                    </span>
-                  </div>
-                )}
+                <div className="rounded-sm mt-2 border-2 overflow-hidden">
+                  {rubric.rubrics.map((rubric, i)=>
+                    <div key={i} className="flex gap-4 justify-between border-1 p-2">
+                      <span>
+                        {rubric.criterion}
+                      </span>
+                      <span className="font-bold">
+                        {rubric.marks}
+                      </span>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           </TabsContent>

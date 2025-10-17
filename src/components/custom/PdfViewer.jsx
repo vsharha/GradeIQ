@@ -10,7 +10,7 @@ export default function PdfViewer({ url }) {
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
 
-  const [width, setWidth] = useState(600);
+  const [height, setHeight] = useState(600);
   const containerRef = useRef();
 
   useEffect(() => {
@@ -26,10 +26,13 @@ export default function PdfViewer({ url }) {
   }, []);
 
   useEffect(() => {
-    const updateWidth = () => setWidth(containerRef.current?.offsetWidth || 600);
-    updateWidth();
-    window.addEventListener("resize", updateWidth);
-    return () => window.removeEventListener("resize", updateWidth);
+    const updateHeight = () => {
+      const h = containerRef.current?.clientHeight ?? containerRef.current?.offsetHeight ?? 600;
+      setHeight(h || 600);
+    };
+    updateHeight();
+    window.addEventListener("resize", updateHeight);
+    return () => window.removeEventListener("resize", updateHeight);
   }, []);
 
   if (!PdfModule) return <p>Loading PDF module…</p>;
@@ -40,12 +43,9 @@ export default function PdfViewer({ url }) {
   const goNext = () => setPageNumber((p) => Math.min(numPages || p, p + 1));
 
   return (
-    <div ref={containerRef}>
+    <div className="max-h-full">
       <div className="flex items-center justify-center gap-2 mb-2">
-        <Button
-          onClick={goPrevious}
-          disabled={pageNumber <= 1}
-        >
+        <Button onClick={goPrevious} disabled={pageNumber <= 1}>
           <ArrowLeft/>
         </Button>
 
@@ -54,30 +54,36 @@ export default function PdfViewer({ url }) {
           {numPages ? ` / ${numPages}` : ''}
         </span>
 
-        <Button
-          onClick={goNext}
-          disabled={!numPages || pageNumber >= numPages}
-        >
+        <Button onClick={goNext} disabled={!numPages || pageNumber >= numPages}>
           <ArrowRight/>
         </Button>
       </div>
 
-      <Document
-        file={url}
-        onLoadSuccess={({ numPages }) => {
-          setNumPages(numPages);
-          setPageNumber((p) => Math.min(Math.max(1, p), numPages));
-        }}
-        loading={<p>Loading PDF …</p>}
-        error={<p>Failed to load PDF.</p>}
-        className="overflow-auto h-fit w-fit rounded-sm"
-      >
-        <Page
-          key={pageNumber}
-          pageNumber={pageNumber}
-          width={Math.floor(width * 0.9)}
-        />
-      </Document>
+      <div ref={containerRef} className="mt-3 w-full flex justify-center max-h-full">
+        <div className="w-fit rounded-sm overflow-hidden">
+          <div
+            className="overflow-auto"
+            style={{ maxHeight: `${height}px` }}
+          >
+            <Document
+              file={url}
+              onLoadSuccess={({ numPages }) => {
+                setNumPages(numPages);
+                setPageNumber((p) => Math.min(Math.max(1, p), numPages));
+              }}
+              loading={<p>Loading PDF …</p>}
+              error={<p>Failed to load PDF.</p>}
+              className="w-fit"
+            >
+              <Page
+                key={pageNumber}
+                pageNumber={pageNumber}
+                scale={1}
+              />
+            </Document>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

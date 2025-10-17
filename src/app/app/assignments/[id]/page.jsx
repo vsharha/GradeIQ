@@ -1,6 +1,6 @@
 "use client";
 
-import { use, useEffect } from "react";
+import { use, useEffect, useState } from "react";
 import AssignmentView from "@/components/assignments/AssignmentView";
 import BackButton from "@/components/custom/BackButton";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -14,6 +14,8 @@ import LoadingButton from "@/components/loader/LoadingButton";
 
 function Page({params}) {
   const {id} = use(params);
+
+  const [selected, setSelected] = useState([]);
 
   const router = useRouter();
 
@@ -43,13 +45,13 @@ function Page({params}) {
             <h1 className="text-xl font-bold">Submissions</h1>
             <div className="flex justify-between gap-2 items-center justify-center">
               <UploadSubmissions assignment_id={assignment.id}/>
-              <LoadingButton>
-                Grade All
+              <LoadingButton disabled={!selected.some(Boolean)}>
+                Grade
               </LoadingButton>
             </div>
           </CardHeader>
           <CardContent className="px-3 sm:px-4">
-            <SubmissionTable assignment={assignment}/>
+            <SubmissionTable assignment={assignment} selected={selected} setSelected={setSelected}/>
           </CardContent>
         </Card>
       </div>

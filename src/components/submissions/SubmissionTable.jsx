@@ -10,9 +10,18 @@ import SubmissionView from "@/components/submissions/SubmissionView";
 import useSubmissions from "@/hooks/useSubmissions";
 import ErrorMessage from "@/components/custom/ErrorMessage";
 import BlockLoader from "@/components/loader/BlockLoader";
+import { Input } from "@/components/ui/input";
 
-function SubmissionTable({assignment}) {
+function SubmissionTable({assignment, selected, setSelected}) {
   const {id, max_grade, passing_grade} = assignment
+
+  const toggleSelection = (rowIndex) => {
+    setSelected((prev) => {
+      const next = [...prev];
+      next[rowIndex] = !next[rowIndex];
+      return next;
+    });
+  };
 
   const columns = [
     {
@@ -20,9 +29,11 @@ function SubmissionTable({assignment}) {
       header: "",
       cell: info => {
         const submission = info.row.original;
+        const rowIndex = info.row.index
         return <div className="flex flex-row items-center gap-3 w-fit sm:gap-5">
+          <Input type="checkbox" className="accent-primary h-full" checked={!!selected[rowIndex]} onChange={()=>toggleSelection(rowIndex)}/>
           <SubmissionView submission={submission} assignment={assignment} />
-          <span>{info.row.index+1}</span>
+          <span>{rowIndex+1}</span>
         </div>;
       }
     },
