@@ -1,4 +1,3 @@
-// javascript
 import { useEffect, useRef, useState } from "react";
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
@@ -11,7 +10,7 @@ export default function PdfViewer({ url }) {
   const [pageNumber, setPageNumber] = useState(1);
 
   const [height, setHeight] = useState(600);
-  const containerRef = useRef();
+  const containerRef = useRef(null);
 
   useEffect(() => {
     import("react-pdf").then((mod) => {
@@ -43,7 +42,7 @@ export default function PdfViewer({ url }) {
   const goNext = () => setPageNumber((p) => Math.min(numPages || p, p + 1));
 
   return (
-    <div className="max-h-full">
+    <div className="mb-2">
       <div className="flex items-center justify-center gap-2 mb-2">
         <Button onClick={goPrevious} disabled={pageNumber <= 1}>
           <ArrowLeft/>
@@ -62,8 +61,8 @@ export default function PdfViewer({ url }) {
       <div ref={containerRef} className="mt-3 w-full flex justify-center max-h-full">
         <div className="w-fit rounded-sm overflow-hidden">
           <div
-            className="overflow-auto"
-            style={{ maxHeight: `${height}px` }}
+            className="overflow-auto h-100 sm:h-150 bg-white text-black w-full sm:min-w-120 sm:w-fit"
+            // style={{ maxHeight: `${height}px` }}
           >
             <Document
               file={url}
@@ -73,7 +72,7 @@ export default function PdfViewer({ url }) {
               }}
               loading={<p>Loading PDF …</p>}
               error={<p>Failed to load PDF.</p>}
-              className="w-fit"
+              className="min-h-full min-w-full w-fit flex items-center justify-center"
             >
               <Page
                 key={pageNumber}
