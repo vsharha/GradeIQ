@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="fix grade display">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="fix grade display again">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/custom/VariableTitleView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/VariableTitleView.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom/PdfViewer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/PdfViewer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/submissions/SubmissionView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/SubmissionView.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -144,15 +144,7 @@
       <workItem from="1760620135444" duration="284000" />
       <workItem from="1760634540751" duration="3279000" />
       <workItem from="1760637876572" duration="5520000" />
-      <workItem from="1760724247174" duration="10476000" />
-    </task>
-    <task id="LOCAL-00118" summary="change get submissions api">
-      <option name="closed" value="true" />
-      <created>1760474101416</created>
-      <option name="number" value="00118" />
-      <option name="presentableId" value="LOCAL-00118" />
-      <option name="project" value="LOCAL" />
-      <updated>1760474101416</updated>
+      <workItem from="1760724247174" duration="10773000" />
     </task>
     <task id="LOCAL-00119" summary="fix deletion">
       <option name="closed" value="true" />
@@ -538,7 +530,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760734926225</updated>
     </task>
-    <option name="localTasksCounter" value="167" />
+    <task id="LOCAL-00167" summary="fix grade display again">
+      <option name="closed" value="true" />
+      <created>1760735066260</created>
+      <option name="number" value="00167" />
+      <option name="presentableId" value="LOCAL-00167" />
+      <option name="project" value="LOCAL" />
+      <updated>1760735066261</updated>
+    </task>
+    <option name="localTasksCounter" value="168" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -556,7 +556,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add loading messages when generating" />
     <MESSAGE value="add rubrics view to assignments" />
     <MESSAGE value="improve behaviour" />
     <MESSAGE value="handle missing rubrics case" />
@@ -581,6 +580,7 @@
     <MESSAGE value="add pdf viewer background" />
     <MESSAGE value="integrate grading endpoint" />
     <MESSAGE value="fix grade display" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix grade display" />
+    <MESSAGE value="fix grade display again" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix grade display again" />
   </component>
 </project>

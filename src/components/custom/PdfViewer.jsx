@@ -59,7 +59,7 @@ export default function PdfViewer({ url }) {
       <div ref={containerRef} className="mt-3 w-full flex justify-center max-h-full">
         <div className="w-fit rounded-sm overflow-hidden">
           <div
-            className="overflow-auto h-100 sm:h-150 w-full"
+            className="overflow-auto h-fit w-full"
             // style={{ maxHeight: `${height}px` }}
           >
             {!PdfModule?

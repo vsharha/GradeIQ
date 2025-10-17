@@ -27,20 +27,22 @@ function SubmissionView({submission, assignment}) {
             {open?<Maximize size={20}/>:<Maximize2 size={20} />}
           </button>
         </DialogTrigger>
-        <DialogContent className="sm:h-fit max-h-[calc(100dvh*9/10)] w-600 sm:max-w-1/2 overflow-hidden p-0 flex flex-col">
-          <div className="overflow-hidden max-h-full p-6 pb-0 w-full flex-1">
-            <DialogHeader className="mb-4">
-              <DialogTitle>Submission</DialogTitle>
-            </DialogHeader>
-            <VariableView>
-              <User size={15}/> {student_name}
-            </VariableView>
-            <VariableView>
-              <Gauge size={15}/> {Number.isFinite(grade)?`${grade?.toFixed(2)} / ${max_grade?.toFixed(2)}`:"N/A"}
-            </VariableView>
-          </div>
-          <div className="p-2 sm:p-4 pt-0 sm:pt-0 flex-1 max-h-full">
-            <PdfViewer url={file?.url}/>
+        <DialogContent className="sm:h-fit max-h-[calc(100dvh*9/10)] w-600 sm:max-w-1/2 overflow-hidden flex flex-col p-0">
+          <div className="overflow-auto flex flex-col gap-3">
+            <div className="p-6 pb-0 w-full">
+              <DialogHeader className="mb-4">
+                <DialogTitle>Submission</DialogTitle>
+              </DialogHeader>
+              <VariableView>
+                <User size={15}/> {student_name}
+              </VariableView>
+              <VariableView>
+                <Gauge size={15}/> {Number.isFinite(grade)?`${grade?.toFixed(2)} / ${max_grade?.toFixed(2)}`:"N/A"}
+              </VariableView>
+            </div>
+            <div className="p-2 sm:p-4 pt-0 sm:pt-0 flex-1">
+              <PdfViewer url={file?.url}/>
+            </div>
           </div>
         </DialogContent>
       </Dialog>
