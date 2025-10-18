@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="adjust header height values" />
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="comment out prefetching logic for now">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/user/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/user/Profile.jsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -145,14 +148,7 @@
       <workItem from="1760753188253" duration="979000" />
       <workItem from="1760754346729" duration="1432000" />
       <workItem from="1760755940475" duration="139000" />
-    </task>
-    <task id="LOCAL-00145" summary="handle missing rubrics case">
-      <option name="closed" value="true" />
-      <created>1760637713680</created>
-      <option name="number" value="00145" />
-      <option name="presentableId" value="LOCAL-00145" />
-      <option name="project" value="LOCAL" />
-      <updated>1760637713680</updated>
+      <workItem from="1760822865730" duration="580000" />
     </task>
     <task id="LOCAL-00146" summary="keep tabs when collapsed">
       <option name="closed" value="true" />
@@ -538,7 +534,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760756076992</updated>
     </task>
-    <option name="localTasksCounter" value="194" />
+    <task id="LOCAL-00194" summary="comment out prefetching logic for now">
+      <option name="closed" value="true" />
+      <created>1760822974850</created>
+      <option name="number" value="00194" />
+      <option name="presentableId" value="LOCAL-00194" />
+      <option name="project" value="LOCAL" />
+      <updated>1760822974851</updated>
+    </task>
+    <option name="localTasksCounter" value="195" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -556,7 +560,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added feedback display" />
     <MESSAGE value="improve padding in SubmissionView.jsx" />
     <MESSAGE value="extract pdf viewer logic to a separate file" />
     <MESSAGE value="improve worker loading" />
@@ -581,6 +584,7 @@
     <MESSAGE value="fix select all" />
     <MESSAGE value="adjust user button styles" />
     <MESSAGE value="adjust header height values" />
-    <option name="LAST_COMMIT_MESSAGE" value="adjust header height values" />
+    <MESSAGE value="comment out prefetching logic for now" />
+    <option name="LAST_COMMIT_MESSAGE" value="comment out prefetching logic for now" />
   </component>
 </project>

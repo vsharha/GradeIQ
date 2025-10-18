@@ -12,6 +12,7 @@ import ErrorMessage from "@/components/custom/ErrorMessage";
 import BlockLoader from "@/components/loader/BlockLoader";
 import { Input } from "@/components/ui/input";
 import PassingGrade from "@/components/submissions/PassingGrade";
+import CheckX from "@/components/custom/CheckX";
 
 function SubmissionTable({assignment, selected, setSelected, pending}) {
   const {id, max_grade, passing_grade} = assignment
@@ -70,14 +71,14 @@ function SubmissionTable({assignment, selected, setSelected, pending}) {
         return <PassingGrade grade={grade} passing_grade={passing_grade} max_grade={max_grade}/>
       }
     },
-    // {
-    //   accessorKey: "grade_confirmed",
-    //   header: "Confirmed",
-    //   cell: info => {
-    //     const gradeConfirmed = info.getValue();
-    //     return <CheckX value={gradeConfirmed}/>;
-    //   }
-    // },
+    {
+      accessorKey: "grade_confirmed",
+      header: "Confirmed",
+      cell: info => {
+        const gradeConfirmed = info.getValue();
+        return <CheckX value={gradeConfirmed}/>;
+      }
+    },
     {
       accessorKey: "created_at",
       header: "Submitted On",

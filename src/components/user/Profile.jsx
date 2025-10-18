@@ -6,7 +6,6 @@ import LogoutButton from "@/components/login/LogoutButton";
 import LoginButton from "@/components/login/LoginButton";
 import useUser from "@/hooks/useUser";
 import AnimatedLoader from "@/components/loader/AnimatedLoader";
-import { Button } from "@/components/ui/button";
 
 function Profile() {
   const {user, isLoading, error} = useUser()
