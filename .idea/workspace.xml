@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add grade confirmed column">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="fix certain errors">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/[id]/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/[id]/page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/custom/PdfViewer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/PdfViewer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/submissions/Feedback.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/Feedback.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/submissions/GradeSubmissions.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/GradeSubmissions.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/submissions/SubmissionView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/SubmissionView.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/assignments/MarkScheme.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/MarkScheme.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/assignments/MarkSchemeFieldArray.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/MarkSchemeFieldArray.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,15 +150,7 @@
       <workItem from="1760754346729" duration="1432000" />
       <workItem from="1760755940475" duration="139000" />
       <workItem from="1760822865730" duration="741000" />
-      <workItem from="1760823679450" duration="973000" />
-    </task>
-    <task id="LOCAL-00147" summary="add dynamic collapsable title">
-      <option name="closed" value="true" />
-      <created>1760638175310</created>
-      <option name="number" value="00147" />
-      <option name="presentableId" value="LOCAL-00147" />
-      <option name="project" value="LOCAL" />
-      <updated>1760638175310</updated>
+      <workItem from="1760823679450" duration="1218000" />
     </task>
     <task id="LOCAL-00148" summary="start work on pdf viewer; adjust loading button messages">
       <option name="closed" value="true" />
@@ -547,7 +536,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760823489821</updated>
     </task>
-    <option name="localTasksCounter" value="196" />
+    <task id="LOCAL-00196" summary="fix certain errors">
+      <option name="closed" value="true" />
+      <created>1760824788587</created>
+      <option name="number" value="00196" />
+      <option name="presentableId" value="LOCAL-00196" />
+      <option name="project" value="LOCAL" />
+      <updated>1760824788589</updated>
+    </task>
+    <option name="localTasksCounter" value="197" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -565,7 +562,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="extract pdf viewer logic to a separate file" />
     <MESSAGE value="improve worker loading" />
     <MESSAGE value="further improve worker loading" />
     <MESSAGE value="fix previous commit" />
@@ -590,6 +586,7 @@
     <MESSAGE value="adjust header height values" />
     <MESSAGE value="comment out prefetching logic for now" />
     <MESSAGE value="add grade confirmed column" />
-    <option name="LAST_COMMIT_MESSAGE" value="add grade confirmed column" />
+    <MESSAGE value="fix certain errors" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix certain errors" />
   </component>
 </project>

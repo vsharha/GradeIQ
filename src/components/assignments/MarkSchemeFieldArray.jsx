@@ -30,7 +30,7 @@ function MarkSchemeFieldArray({form, defaultMarkScheme, defaultRubric}) {
         <div className="flex-1">
           <TabsList className="flex flex-wrap mb-3 w-full h-fit">
             {markSchemeFields.map((field, index) => (
-              <TabsTrigger value={field.id} key={field.id} className="min-w-[8%] w-[50%] max-w-[calc(100%*1/3)]">
+              <TabsTrigger value={field.id} key={field.id} className="min-w-[12%] w-[50%] max-w-[calc(100%*1/3)]">
                 {form.watch(`mark_scheme.${index}.number`)}
               </TabsTrigger>
             ))}
