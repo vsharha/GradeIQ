@@ -22,19 +22,19 @@ async function Layout({children, params}) {
   if(!assignment) {
     redirect("/app")
   } else {
-    await queryClient.prefetchQuery({
-      queryKey: ['submissions', assignment.id],
-      queryFn: async ()=>{
-        const headers = await getServerAuthHeaders();
-        return await fetchSubmissions(assignment.id, headers)
-      },
-    });
+    // await queryClient.prefetchQuery({
+    //   queryKey: ['submissions', assignment.id],
+    //   queryFn: async ()=>{
+    //     const headers = await getServerAuthHeaders();
+    //     return await fetchSubmissions(assignment.id, headers)
+    //   },
+    // });
   }
 
   return (
-    <HydrationBoundary state={dehydrate(queryClient)}>
-      {children}
-    </HydrationBoundary>
+    // <HydrationBoundary state={dehydrate(queryClient)}>
+      children
+    // </HydrationBoundary>
   );
 }
 

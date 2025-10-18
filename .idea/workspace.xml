@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="fix certain errors">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="adjust tab min width">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/assignments/MarkScheme.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/MarkScheme.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/assignments/MarkSchemeFieldArray.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/MarkSchemeFieldArray.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/[id]/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/[id]/layout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/Header.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,15 +150,7 @@
       <workItem from="1760754346729" duration="1432000" />
       <workItem from="1760755940475" duration="139000" />
       <workItem from="1760822865730" duration="741000" />
-      <workItem from="1760823679450" duration="1218000" />
-    </task>
-    <task id="LOCAL-00148" summary="start work on pdf viewer; adjust loading button messages">
-      <option name="closed" value="true" />
-      <created>1760644160138</created>
-      <option name="number" value="00148" />
-      <option name="presentableId" value="LOCAL-00148" />
-      <option name="project" value="LOCAL" />
-      <updated>1760644160138</updated>
+      <workItem from="1760823679450" duration="1686000" />
     </task>
     <task id="LOCAL-00149" summary="change input accent color">
       <option name="closed" value="true" />
@@ -544,7 +536,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760824788589</updated>
     </task>
-    <option name="localTasksCounter" value="197" />
+    <task id="LOCAL-00197" summary="adjust tab min width">
+      <option name="closed" value="true" />
+      <created>1760824927825</created>
+      <option name="number" value="00197" />
+      <option name="presentableId" value="LOCAL-00197" />
+      <option name="project" value="LOCAL" />
+      <updated>1760824927825</updated>
+    </task>
+    <option name="localTasksCounter" value="198" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -562,7 +562,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="improve worker loading" />
     <MESSAGE value="further improve worker loading" />
     <MESSAGE value="fix previous commit" />
     <MESSAGE value="add logo" />
@@ -587,6 +586,7 @@
     <MESSAGE value="comment out prefetching logic for now" />
     <MESSAGE value="add grade confirmed column" />
     <MESSAGE value="fix certain errors" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix certain errors" />
+    <MESSAGE value="adjust tab min width" />
+    <option name="LAST_COMMIT_MESSAGE" value="adjust tab min width" />
   </component>
 </project>

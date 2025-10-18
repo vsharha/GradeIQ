@@ -1,5 +1,4 @@
 import Logo from "@/components/custom/Logo";
-import Navbar from "@/components/custom/Navbar";
 import { ModeToggle } from "@/components/ui/mode-toggle";
 import Link from "next/link";
 
