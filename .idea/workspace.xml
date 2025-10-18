@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="fix select all">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="adjust user button styles">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/Header.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/user/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/user/Profile.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -146,15 +147,8 @@
       <workItem from="1760724247174" duration="14809000" />
       <workItem from="1760742011811" duration="1846000" />
       <workItem from="1760753188253" duration="979000" />
-      <workItem from="1760754346729" duration="1407000" />
-    </task>
-    <task id="LOCAL-00143" summary="add rubrics view to assignments">
-      <option name="closed" value="true" />
-      <created>1760637112614</created>
-      <option name="number" value="00143" />
-      <option name="presentableId" value="LOCAL-00143" />
-      <option name="project" value="LOCAL" />
-      <updated>1760637112614</updated>
+      <workItem from="1760754346729" duration="1432000" />
+      <workItem from="1760755940475" duration="112000" />
     </task>
     <task id="LOCAL-00144" summary="improve behaviour">
       <option name="closed" value="true" />
@@ -540,7 +534,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760755380986</updated>
     </task>
-    <option name="localTasksCounter" value="192" />
+    <task id="LOCAL-00192" summary="adjust user button styles">
+      <option name="closed" value="true" />
+      <created>1760755782260</created>
+      <option name="number" value="00192" />
+      <option name="presentableId" value="LOCAL-00192" />
+      <option name="project" value="LOCAL" />
+      <updated>1760755782260</updated>
+    </task>
+    <option name="localTasksCounter" value="193" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -558,7 +560,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix grade display again" />
     <MESSAGE value="adjust pdf viewer" />
     <MESSAGE value="added feedback display" />
     <MESSAGE value="improve padding in SubmissionView.jsx" />
@@ -583,6 +584,7 @@
     <MESSAGE value="add passing/failing grade coloring" />
     <MESSAGE value="add PassingGrade.jsx to SubmissionView.jsx" />
     <MESSAGE value="fix select all" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix select all" />
+    <MESSAGE value="adjust user button styles" />
+    <option name="LAST_COMMIT_MESSAGE" value="adjust user button styles" />
   </component>
 </project>

@@ -29,7 +29,7 @@ function Profile() {
     <div className="h-full flex items-center relative">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <button className="h-full cursor-pointer flex items-center gap-4 py-2 px-4 hover:bg-accent hover:text-accent-foreground rounded-md flex items-center justify-center text-start transition-all">
+          <button className="cursor-pointer flex items-center gap-4 py-1 px-2 hover:bg-accent hover:text-accent-foreground rounded-md flex items-center justify-center text-start transition-all">
             <div className="h-full flex items-center justify-center">
               <UserCircle size={25}/>
             </div>
