@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="adjust landing page scrollbar">
-      <change afterPath="$PROJECT_DIR$/src/components/submissions/DeleteSubmissions.jsx" afterDir="false" />
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add delete submissions functionality">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app/assignments/[id]/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/[id]/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/submissions/DeleteSubmissions.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/DeleteSubmissions.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/submissions/GradeSubmissions.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/GradeSubmissions.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/fetchApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/fetchApi.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,14 +148,6 @@
       <workItem from="1760637876572" duration="5520000" />
       <workItem from="1760724247174" duration="14809000" />
       <workItem from="1760742011811" duration="1846000" />
-    </task>
-    <task id="LOCAL-00133" summary="close form on submit; final touches on assignment uploading">
-      <option name="closed" value="true" />
-      <created>1760580206536</created>
-      <option name="number" value="00133" />
-      <option name="presentableId" value="LOCAL-00133" />
-      <option name="project" value="LOCAL" />
-      <updated>1760580206536</updated>
     </task>
     <task id="LOCAL-00134" summary="add the option to enter by hand">
       <option name="closed" value="true" />
@@ -542,7 +533,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760749433744</updated>
     </task>
-    <option name="localTasksCounter" value="182" />
+    <task id="LOCAL-00182" summary="add delete submissions functionality">
+      <option name="closed" value="true" />
+      <created>1760750747493</created>
+      <option name="number" value="00182" />
+      <option name="presentableId" value="LOCAL-00182" />
+      <option name="project" value="LOCAL" />
+      <updated>1760750747493</updated>
+    </task>
+    <option name="localTasksCounter" value="183" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -560,7 +559,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="improve pdf viewer" />
     <MESSAGE value="adjust tab width; improve selecting rows" />
     <MESSAGE value="adjust markscheme display" />
     <MESSAGE value="added text truncation" />
@@ -585,6 +583,7 @@
     <MESSAGE value="prevent pdf viewer flickering" />
     <MESSAGE value="adjust scrollbar" />
     <MESSAGE value="adjust landing page scrollbar" />
-    <option name="LAST_COMMIT_MESSAGE" value="adjust landing page scrollbar" />
+    <MESSAGE value="add delete submissions functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="add delete submissions functionality" />
   </component>
 </project>

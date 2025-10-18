@@ -12,7 +12,7 @@ import ErrorMessage from "@/components/custom/ErrorMessage";
 import BlockLoader from "@/components/loader/BlockLoader";
 import { Input } from "@/components/ui/input";
 
-function SubmissionTable({assignment, selected, setSelected}) {
+function SubmissionTable({assignment, selected, setSelected, pending}) {
   const {id, max_grade} = assignment
 
   function toggleSelection(rowIndex) {
@@ -49,8 +49,9 @@ function SubmissionTable({assignment, selected, setSelected}) {
       cell: info => {
         const submission = info.row.original;
         const rowIndex = info.row.index;
+        console.log(pending, submission.id)
         return <div className="flex flex-row items-center gap-3 w-fit sm:gap-5">
-          <Input type="checkbox" className="accent-primary h-full" checked={selected.includes(submission.id)} onChange={()=>toggleSelection(submission.id)}/>
+          <Input type="checkbox" className="accent-primary h-full" checked={selected.includes(submission.id)} onChange={()=>toggleSelection(submission.id)} disabled={pending.includes(submission.id)}/>
           <SubmissionView submission={submission} assignment={assignment} />
           <span>{rowIndex+1}</span>
         </div>;
