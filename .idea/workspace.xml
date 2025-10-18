@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="disable checkboxes on pending" />
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="remove console.log">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/[id]/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/[id]/layout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/layout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/submissions/Feedback.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/Feedback.jsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -142,14 +148,6 @@
       <workItem from="1760637876572" duration="5520000" />
       <workItem from="1760724247174" duration="14809000" />
       <workItem from="1760742011811" duration="1846000" />
-    </task>
-    <task id="LOCAL-00135" summary="add submissions uploading">
-      <option name="closed" value="true" />
-      <created>1760617090450</created>
-      <option name="number" value="00135" />
-      <option name="presentableId" value="LOCAL-00135" />
-      <option name="project" value="LOCAL" />
-      <updated>1760617090450</updated>
     </task>
     <task id="LOCAL-00136" summary="fix display for no grade">
       <option name="closed" value="true" />
@@ -535,7 +533,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760751334536</updated>
     </task>
-    <option name="localTasksCounter" value="184" />
+    <task id="LOCAL-00184" summary="remove console.log">
+      <option name="closed" value="true" />
+      <created>1760751355802</created>
+      <option name="number" value="00184" />
+      <option name="presentableId" value="LOCAL-00184" />
+      <option name="project" value="LOCAL" />
+      <updated>1760751355802</updated>
+    </task>
+    <option name="localTasksCounter" value="185" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -553,7 +559,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="adjust markscheme display" />
     <MESSAGE value="added text truncation" />
     <MESSAGE value="improve pdf viewer styling" />
     <MESSAGE value="changed markscheme display" />
@@ -578,6 +583,7 @@
     <MESSAGE value="adjust landing page scrollbar" />
     <MESSAGE value="add delete submissions functionality" />
     <MESSAGE value="disable checkboxes on pending" />
-    <option name="LAST_COMMIT_MESSAGE" value="disable checkboxes on pending" />
+    <MESSAGE value="remove console.log" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove console.log" />
   </component>
 </project>

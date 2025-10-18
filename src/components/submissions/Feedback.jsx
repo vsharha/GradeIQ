@@ -35,7 +35,7 @@ function Feedback({feedback}) {
                       <div className="flex flex-row items-centers justify-between gap-4">
                         <div className="font-bold">Question {number}</div>
                         {/*to be taken from mark scheme*/}
-                        <div className="font-bold">{Number(total_marks).toFixed(2)}/{Number(awarded_marks).toFixed(2)}</div>
+                        <div className="font-bold">{Number(awarded_marks).toFixed(2)}/{Number(total_marks).toFixed(2)}</div>
                       </div>
                       <Truncate length={200}>{question_text}</Truncate>
                     </div>
