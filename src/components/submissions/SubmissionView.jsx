@@ -37,7 +37,7 @@ function SubmissionView({submission, assignment}) {
                 <DialogTitle>
                   Submission
                 </DialogTitle>
-                <GradeSubmissions selected={[id]} className="w-fit"/>
+                <GradeSubmissions assignment_id={id} selected={[id]} className="w-fit"/>
               </DialogHeader>
               <VariableView>
                 <User size={15}/> {student_name}

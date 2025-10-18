@@ -19,7 +19,9 @@ function GradeSubmissions({ selected, setSelected, assignment_id, setPending, ..
 
   const { mutate, isPending } = useSubmissionMutation(assignment_id, async ({ assignment_id, submission_ids }) => {
     setPendingSubmissions(selected);
-    setPending((pending)=>[...pending, ...selected])
+    if(typeof setPending==="function") {
+      setPending((pending)=>[...pending, ...selected])
+    }
     const headers = await getClientAuthHeaders();
     return await gradeSubmissions(assignment_id, submission_ids, headers);
   });
@@ -29,6 +31,8 @@ function GradeSubmissions({ selected, setSelected, assignment_id, setPending, ..
     setOpen(false);
     if (typeof setSelected === "function") {
       setSelected([]);
+    }
+    if(typeof setPending === "function") {
       setPending((pending)=>pending.filter((id)=>!pendingSubmissions.includes(id)));
     }
   }

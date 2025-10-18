@@ -20,14 +20,14 @@ function Feedback({feedback}) {
       <StyledCollapsible title="Feedback" className="font-bold text-lg">
         <h2 className="font-semibold">Overall feedback</h2>
         <Truncate length={150}>{overall_feedback}</Truncate>
-        {question_grades.length > 0 &&
+        {question_grades?.length > 0 &&
           <Tabs defaultValue={0} value={value} onValueChange={setValue}>
             <TabsList className="w-full">
               {question_grades.map((question_grade, i)=>
                 <TabsTrigger value={i} key={i}>{question_grade.number}</TabsTrigger>
               )}
             </TabsList>
-              {question_grades.map((question_grade, i) => {
+              {question_grades?.map((question_grade, i) => {
                 const {number, question_text, total_marks, awarded_marks, criteria_feedback} = question_grade
                 return (
                   <TabsContent value={i} key={i}>
