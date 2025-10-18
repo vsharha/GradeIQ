@@ -13,7 +13,7 @@ import BlockLoader from "@/components/loader/BlockLoader";
 import { Input } from "@/components/ui/input";
 
 function SubmissionTable({assignment, selected, setSelected}) {
-  const {id, max_grade, passing_grade} = assignment
+  const {id, max_grade} = assignment
 
   function toggleSelection(rowIndex) {
     setSelected((selected) => {
@@ -29,16 +29,22 @@ function SubmissionTable({assignment, selected, setSelected}) {
   const columns = [
     {
       id: "view",
-      header: ({table})=>
-        <div className="flex items-start justify-start w-full">
-          <Input type="checkbox" className="w-fit accent-primary" checked={!isLoading && selected.length===submissions.length} onChange={()=>{
-            if(submissions.length===selected.length) {
+      header: ({table})=> {
+        if(!submissions.length) {
+          return null
+        }
+
+        return <div className="flex items-start justify-start w-full">
+          <Input type="checkbox" className="w-fit accent-primary"
+                 checked={!isLoading && selected.length === submissions.length} onChange={() => {
+            if (submissions.length === selected.length) {
               setSelected([])
             } else {
               setSelected(submissions.reduce((selected, current) => [...selected, current.id], []))
             }
-          }}/>
+          }} />
         </div>
+      }
       ,
       cell: info => {
         const submission = info.row.original;
@@ -114,7 +120,7 @@ function SubmissionTable({assignment, selected, setSelected}) {
           {!error && !isLoading && !table.getRowModel().rows?.length &&
             <TableRow>
               <TableCell colSpan={columns.length} className="h-24 text-center">
-                No results.
+                No submissions.
               </TableCell>
             </TableRow>
           }

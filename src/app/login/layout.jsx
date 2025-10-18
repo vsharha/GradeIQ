@@ -11,12 +11,12 @@ async function Layout({children}) {
   }
 
   return (
-    <>
+    <div className="overflow-hidden h-screen-dynamic flex flex-col">
       <Header />
-      <main className="py-5 overscroll-contain px-4 sm:px-6 sm:py-7 flex-1 w-full flex flex-col items-center">
+      <main className="py-5 overscroll-contain px-4 sm:px-6 sm:py-7 flex-1 w-full flex flex-col items-center overflow-auto">
         {children}
       </main>
-    </>
+    </div>
   );
 }
 

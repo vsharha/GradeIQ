@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add select all button">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="prevent pdf viewer flickering">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/custom/PdfViewer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/PdfViewer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/layout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/login/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/layout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,14 +147,6 @@
       <workItem from="1760637876572" duration="5520000" />
       <workItem from="1760724247174" duration="14809000" />
       <workItem from="1760742011811" duration="1846000" />
-    </task>
-    <task id="LOCAL-00130" summary="change ambiguous field names">
-      <option name="closed" value="true" />
-      <created>1760578311655</created>
-      <option name="number" value="00130" />
-      <option name="presentableId" value="LOCAL-00130" />
-      <option name="project" value="LOCAL" />
-      <updated>1760578311655</updated>
     </task>
     <task id="LOCAL-00131" summary="add default grade values">
       <option name="closed" value="true" />
@@ -538,7 +532,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760747787234</updated>
     </task>
-    <option name="localTasksCounter" value="179" />
+    <task id="LOCAL-00179" summary="prevent pdf viewer flickering">
+      <option name="closed" value="true" />
+      <created>1760748484072</created>
+      <option name="number" value="00179" />
+      <option name="presentableId" value="LOCAL-00179" />
+      <option name="project" value="LOCAL" />
+      <updated>1760748484072</updated>
+    </task>
+    <option name="localTasksCounter" value="180" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -556,7 +558,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add page switcher" />
     <MESSAGE value="close upload form on upload" />
     <MESSAGE value="improve pdf viewer, add checkboxes to table" />
     <MESSAGE value="improve pdf viewer" />
@@ -581,6 +582,7 @@
     <MESSAGE value="ensure one assignment showing loader at a time" />
     <MESSAGE value="dynamic pdf viewer width/height" />
     <MESSAGE value="add select all button" />
-    <option name="LAST_COMMIT_MESSAGE" value="add select all button" />
+    <MESSAGE value="prevent pdf viewer flickering" />
+    <option name="LAST_COMMIT_MESSAGE" value="prevent pdf viewer flickering" />
   </component>
 </project>
