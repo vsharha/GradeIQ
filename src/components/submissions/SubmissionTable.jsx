@@ -41,7 +41,7 @@ function SubmissionTable({assignment, selected, setSelected, pending}) {
             if (submissions.length === selected.length) {
               setSelected([])
             } else {
-              setSelected(submissions.reduce((selected, current) => [...selected, current.id], []))
+              setSelected(submissions.reduce((selected, current) => [...selected, current.id], []).filter((id)=>!pending.includes(id)))
             }
           }} />
         </div>
