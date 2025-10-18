@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="adjust user button styles">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/custom/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/user/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/user/Profile.jsx" afterDir="false" />
-    </list>
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="adjust header height values" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -148,15 +144,7 @@
       <workItem from="1760742011811" duration="1846000" />
       <workItem from="1760753188253" duration="979000" />
       <workItem from="1760754346729" duration="1432000" />
-      <workItem from="1760755940475" duration="112000" />
-    </task>
-    <task id="LOCAL-00144" summary="improve behaviour">
-      <option name="closed" value="true" />
-      <created>1760637225960</created>
-      <option name="number" value="00144" />
-      <option name="presentableId" value="LOCAL-00144" />
-      <option name="project" value="LOCAL" />
-      <updated>1760637225961</updated>
+      <workItem from="1760755940475" duration="139000" />
     </task>
     <task id="LOCAL-00145" summary="handle missing rubrics case">
       <option name="closed" value="true" />
@@ -542,7 +530,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760755782260</updated>
     </task>
-    <option name="localTasksCounter" value="193" />
+    <task id="LOCAL-00193" summary="adjust header height values">
+      <option name="closed" value="true" />
+      <created>1760756076992</created>
+      <option name="number" value="00193" />
+      <option name="presentableId" value="LOCAL-00193" />
+      <option name="project" value="LOCAL" />
+      <updated>1760756076992</updated>
+    </task>
+    <option name="localTasksCounter" value="194" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -560,7 +556,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="adjust pdf viewer" />
     <MESSAGE value="added feedback display" />
     <MESSAGE value="improve padding in SubmissionView.jsx" />
     <MESSAGE value="extract pdf viewer logic to a separate file" />
@@ -585,6 +580,7 @@
     <MESSAGE value="add PassingGrade.jsx to SubmissionView.jsx" />
     <MESSAGE value="fix select all" />
     <MESSAGE value="adjust user button styles" />
-    <option name="LAST_COMMIT_MESSAGE" value="adjust user button styles" />
+    <MESSAGE value="adjust header height values" />
+    <option name="LAST_COMMIT_MESSAGE" value="adjust header height values" />
   </component>
 </project>
