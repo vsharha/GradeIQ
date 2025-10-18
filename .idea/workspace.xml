@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="fix loader issue; fix pre-fetching by setting HydrationBoundary">
-      <change beforePath="$PROJECT_DIR$/src/app/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.jsx" afterDir="false" />
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="apply pre-fetching fix for user fetching">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,15 +145,7 @@
       <workItem from="1760637876572" duration="5520000" />
       <workItem from="1760724247174" duration="14809000" />
       <workItem from="1760742011811" duration="1846000" />
-      <workItem from="1760753188253" duration="433000" />
-    </task>
-    <task id="LOCAL-00139" summary="adjust form paddings">
-      <option name="closed" value="true" />
-      <created>1760618335174</created>
-      <option name="number" value="00139" />
-      <option name="presentableId" value="LOCAL-00139" />
-      <option name="project" value="LOCAL" />
-      <updated>1760618335174</updated>
+      <workItem from="1760753188253" duration="948000" />
     </task>
     <task id="LOCAL-00140" summary="make number always a string">
       <option name="closed" value="true" />
@@ -538,7 +531,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760753581938</updated>
     </task>
-    <option name="localTasksCounter" value="188" />
+    <task id="LOCAL-00188" summary="apply pre-fetching fix for user fetching">
+      <option name="closed" value="true" />
+      <created>1760753638312</created>
+      <option name="number" value="00188" />
+      <option name="presentableId" value="LOCAL-00188" />
+      <option name="project" value="LOCAL" />
+      <updated>1760753638312</updated>
+    </task>
+    <option name="localTasksCounter" value="189" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -556,7 +557,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix truncate for short strings" />
     <MESSAGE value="add pdf viewer background" />
     <MESSAGE value="integrate grading endpoint" />
     <MESSAGE value="fix grade display" />
@@ -581,6 +581,7 @@
     <MESSAGE value="added server side prefetching" />
     <MESSAGE value="add dialog descriptions" />
     <MESSAGE value="fix loader issue; fix pre-fetching by setting HydrationBoundary" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix loader issue; fix pre-fetching by setting HydrationBoundary" />
+    <MESSAGE value="apply pre-fetching fix for user fetching" />
+    <option name="LAST_COMMIT_MESSAGE" value="apply pre-fetching fix for user fetching" />
   </component>
 </project>

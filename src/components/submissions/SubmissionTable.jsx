@@ -13,7 +13,7 @@ import BlockLoader from "@/components/loader/BlockLoader";
 import { Input } from "@/components/ui/input";
 
 function SubmissionTable({assignment, selected, setSelected, pending}) {
-  const {id, max_grade} = assignment
+  const {id, max_grade, passing_grade} = assignment
 
   function toggleSelection(rowIndex) {
     setSelected((selected) => {
@@ -65,8 +65,14 @@ function SubmissionTable({assignment, selected, setSelected, pending}) {
       header: "Grade",
       cell: info => {
         const grade = info.getValue();
+
         return <div>
-          {Number.isFinite(grade)?`${grade?.toFixed(2)} / ${max_grade?.toFixed(2)}`:"N/A"}
+          {Number.isFinite(grade)?
+            <>
+              <span className={grade>=passing_grade?"text-passed":"text-failed"}>{grade?.toFixed(2)}</span> / <span>{max_grade?.toFixed(2)}</span>
+            </>
+            :"N/A"
+          }
         </div>
       }
     },
