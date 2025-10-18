@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add PassingGrade.jsx to SubmissionView.jsx">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="fix select all">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/user/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/user/Profile.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,15 +146,7 @@
       <workItem from="1760724247174" duration="14809000" />
       <workItem from="1760742011811" duration="1846000" />
       <workItem from="1760753188253" duration="979000" />
-      <workItem from="1760754346729" duration="1016000" />
-    </task>
-    <task id="LOCAL-00142" summary="add loading messages when generating">
-      <option name="closed" value="true" />
-      <created>1760635351580</created>
-      <option name="number" value="00142" />
-      <option name="presentableId" value="LOCAL-00142" />
-      <option name="project" value="LOCAL" />
-      <updated>1760635351580</updated>
+      <workItem from="1760754346729" duration="1407000" />
     </task>
     <task id="LOCAL-00143" summary="add rubrics view to assignments">
       <option name="closed" value="true" />
@@ -540,7 +532,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760754592221</updated>
     </task>
-    <option name="localTasksCounter" value="191" />
+    <task id="LOCAL-00191" summary="fix select all">
+      <option name="closed" value="true" />
+      <created>1760755380986</created>
+      <option name="number" value="00191" />
+      <option name="presentableId" value="LOCAL-00191" />
+      <option name="project" value="LOCAL" />
+      <updated>1760755380986</updated>
+    </task>
+    <option name="localTasksCounter" value="192" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -558,7 +558,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix grade display" />
     <MESSAGE value="fix grade display again" />
     <MESSAGE value="adjust pdf viewer" />
     <MESSAGE value="added feedback display" />
@@ -583,6 +582,7 @@
     <MESSAGE value="apply pre-fetching fix for user fetching" />
     <MESSAGE value="add passing/failing grade coloring" />
     <MESSAGE value="add PassingGrade.jsx to SubmissionView.jsx" />
-    <option name="LAST_COMMIT_MESSAGE" value="add PassingGrade.jsx to SubmissionView.jsx" />
+    <MESSAGE value="fix select all" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix select all" />
   </component>
 </project>

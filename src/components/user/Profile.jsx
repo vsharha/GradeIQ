@@ -6,6 +6,7 @@ import LogoutButton from "@/components/login/LogoutButton";
 import LoginButton from "@/components/login/LoginButton";
 import useUser from "@/hooks/useUser";
 import AnimatedLoader from "@/components/loader/AnimatedLoader";
+import { Button } from "@/components/ui/button";
 
 function Profile() {
   const {user, isLoading, error} = useUser()
@@ -28,15 +29,15 @@ function Profile() {
     <div className="h-full flex items-center relative">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <div className="h-full cursor-pointer flex items-center gap-1 mr-2">
-            <div className="h-full flex items-center aspect-square justify-center">
+          <button className="h-full cursor-pointer flex items-center gap-4 py-2 px-4 hover:bg-accent hover:text-accent-foreground rounded-md flex items-center justify-center text-start transition-all">
+            <div className="h-full flex items-center justify-center">
               <UserCircle size={25}/>
             </div>
             <div className="flex flex-col">
               <span className="text-sm">{user_name}</span>
               <span className="text-muted-foreground text-sm">{role}</span>
             </div>
-          </div>
+          </button>
         </DropdownMenuTrigger>
         <DropdownMenuContent className="w-fit">
           <LogoutButton/>
