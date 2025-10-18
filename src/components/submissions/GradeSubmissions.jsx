@@ -1,5 +1,12 @@
 import LoadingButton from "@/components/loader/LoadingButton";
-import { Dialog, DialogContent, DialogFooter, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import getClientAuthHeaders from "@/services/getClientAuthHeaders";
@@ -50,6 +57,9 @@ function GradeSubmissions({ selected, setSelected, assignment_id, setPending, ..
         <DialogTitle>
           Grade {selected.length} submission{selected.length > 1 ? "s" : ""}?
         </DialogTitle>
+        <DialogDescription>
+          Our AI will grade your submissions
+        </DialogDescription>
         <DialogFooter>
           <Button variant="secondary" onClick={() => setOpen(false)}>
             No

@@ -1,4 +1,11 @@
-import { Dialog, DialogContent, DialogFooter, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import { Trash } from "lucide-react";
 import LoadingButton from "@/components/loader/LoadingButton";
 import useSubmissionMutation from "@/hooks/useSubmissionMutation";
@@ -38,6 +45,9 @@ function DeleteSubmissions({selected, setSelected, assignment_id, setPending}) {
         <DialogTitle>
           Delete {selected.length} submission{selected.length > 1 ? "s" : ""}?
         </DialogTitle>
+        <DialogDescription>
+          This action is permanent
+        </DialogDescription>
         <DialogFooter>
           <Button variant="secondary" onClick={() => setOpen(false)}>
             No
