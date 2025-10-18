@@ -1,7 +1,6 @@
 "use client";
 
 import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
-import {useState, useEffect} from "react";
 import OverlayLoader from "@/components/loader/OverlayLoader";
 import { formatDate } from "@/lib/formatDate";
 import { Calendar, Menu } from "lucide-react";
@@ -10,24 +9,18 @@ import { cn } from "@/lib/utils";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import DeleteAssignment from "@/components/assignments/DeleteAssignment";
 
-function Assignment({assignment, onClick}) {
+function Assignment({assignment, onClick, loading, setLoading}) {
   const { title, description, due, id } = assignment
 
-  const [isLoading, setIsLoading] = useState(false)
-
-  useEffect(() => {
-    setIsLoading(false);
-  }, [assignment]);
-
   function handleClick() {
-    setIsLoading(true)
+    setLoading()
     onClick()
   }
 
   return (
     <div className="w-full py-1.5 min-h-64 sm:px-2 sm:w-1/2 md:w-1/3 lg:w-1/4 select-none">
       <Card className="w-full h-full overflow-hidden transition-all duration-150 relative cursor-pointer hover:brightness-98 dark:hover:brightness-85" onClick={handleClick}>
-        <OverlayLoader isLoading={isLoading}/>
+        <OverlayLoader isLoading={loading}/>
         <CardHeader>
           <div className="font-bold text-lg flex flex-row justify-between relative">
             <span className="w-7/8">

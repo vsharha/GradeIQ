@@ -4,7 +4,7 @@ import Assignment from "@/components/assignments/Assignment";
 import CreateAssignment from "@/components/assignments/CreateAssignment";
 import { useRouter } from "next/navigation";
 import Sort from "@/components/custom/Sort";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import useAssignments from "@/hooks/useAssignments";
 import ErrorMessage from "@/components/custom/ErrorMessage";
 import PageLoader from "@/components/loader/PageLoader";
@@ -22,6 +22,11 @@ function Page() {
   const [direction, setDirection] = useState("up");
   const [sort, setSort] = useState("date");
   const [searchQuery, setSearchQuery] = useState("");
+  const [loading, setLoading] = useState(null);
+
+  useEffect(() => {
+    setLoading(null);
+  }, []);
 
   return (
     <div className="flex flex-col gap-4 w-full max-w-content">
@@ -60,7 +65,7 @@ function Page() {
           })
           .filter((assignment)=>assignment.title.toLowerCase().includes(searchQuery.toLowerCase()))
           .map((assignment, i)=>
-          <Assignment key={assignment.id} index={i} assignment={assignment} onClick={()=>handleClick(assignment.id)}/>
+          <Assignment key={assignment.id} index={i} assignment={assignment} onClick={()=>handleClick(assignment.id)} loading={loading===i} setLoading={()=>setLoading(i)}/>
         )}
       </div>
     </div>
