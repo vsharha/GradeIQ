@@ -7,12 +7,12 @@ import Profile from "@/components/user/Profile";
 
 export default function Home() {
   return (
-    <div className="flex-1 min-h-screen-dynamic flex flex-col">
-      <div className="flex-1">
-        <Header>
-          <Profile/>
-        </Header>
-        <main className="flex flex-col justify-center items-center">
+    <div className="flex flex-col h-screen-dynamic overflow-hidden">
+      <Header>
+        <Profile/>
+      </Header>
+      <div className="flex-1 overflow-auto">
+        <main className="flex flex-col justify-center items-center flex-1">
           <section className="flex items-center justify-center relative bg-card border-1 border-border w-full">
             <div className="absolute top-20 h-20 w-80 bg-primary rounded-full blur-3xl z-1 opacity-0 dark:animate-pulse"></div>
               <div className="h-full w-full flex flex-col items-center justify-center pt-10 pb-8 md:pt-20 md:pb-15 z-2 dark:backdrop-brightness-90 gap-8">
@@ -53,10 +53,10 @@ export default function Home() {
             ]}/>
           </section>
         </main>
+        <footer className="flex items-center justify-center py-4">
+          <p className="text-center w-fit">&copy; GradeIQ, 2025</p>
+        </footer>
       </div>
-      <footer className="flex items-center justify-center py-4">
-        <p className="text-center w-fit">&copy; GradeIQ, 2025</p>
-      </footer>
     </div>
   );
 }

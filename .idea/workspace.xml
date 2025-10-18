@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="prevent pdf viewer flickering">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="adjust scrollbar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/layout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/login/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/layout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -147,14 +147,6 @@
       <workItem from="1760637876572" duration="5520000" />
       <workItem from="1760724247174" duration="14809000" />
       <workItem from="1760742011811" duration="1846000" />
-    </task>
-    <task id="LOCAL-00131" summary="add default grade values">
-      <option name="closed" value="true" />
-      <created>1760578379589</created>
-      <option name="number" value="00131" />
-      <option name="presentableId" value="LOCAL-00131" />
-      <option name="project" value="LOCAL" />
-      <updated>1760578379589</updated>
     </task>
     <task id="LOCAL-00132" summary="change camelCase to snake_case in precise_answer">
       <option name="closed" value="true" />
@@ -540,7 +532,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760748484072</updated>
     </task>
-    <option name="localTasksCounter" value="180" />
+    <task id="LOCAL-00180" summary="adjust scrollbar">
+      <option name="closed" value="true" />
+      <created>1760748996156</created>
+      <option name="number" value="00180" />
+      <option name="presentableId" value="LOCAL-00180" />
+      <option name="project" value="LOCAL" />
+      <updated>1760748996156</updated>
+    </task>
+    <option name="localTasksCounter" value="181" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -558,7 +558,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="close upload form on upload" />
     <MESSAGE value="improve pdf viewer, add checkboxes to table" />
     <MESSAGE value="improve pdf viewer" />
     <MESSAGE value="adjust tab width; improve selecting rows" />
@@ -583,6 +582,7 @@
     <MESSAGE value="dynamic pdf viewer width/height" />
     <MESSAGE value="add select all button" />
     <MESSAGE value="prevent pdf viewer flickering" />
-    <option name="LAST_COMMIT_MESSAGE" value="prevent pdf viewer flickering" />
+    <MESSAGE value="adjust scrollbar" />
+    <option name="LAST_COMMIT_MESSAGE" value="adjust scrollbar" />
   </component>
 </project>

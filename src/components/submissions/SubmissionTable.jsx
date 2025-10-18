@@ -30,7 +30,7 @@ function SubmissionTable({assignment, selected, setSelected}) {
     {
       id: "view",
       header: ({table})=> {
-        if(!submissions.length) {
+        if(!submissions?.length) {
           return null
         }
 
