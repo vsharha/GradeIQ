@@ -1,7 +1,7 @@
 import { fetchAssignments, fetchSubmissions, fetchUser } from "@/services/fetchApi";
 import { redirect } from "next/navigation";
 import getServerAuthHeaders from "@/services/getServerAuthHeaders";
-import { QueryClient } from "@tanstack/react-query";
+import { dehydrate, HydrationBoundary, QueryClient } from "@tanstack/react-query";
 
 async function Layout({children, params}) {
   const {id} = await params;
@@ -17,12 +17,7 @@ async function Layout({children, params}) {
   });
 
   const assignments = queryClient.getQueryData(['assignments']);
-
-  let assignment = null;
-  try {
-    assignment = assignments.find((assignment) => assignment.id === Number(id));
-  } catch(e) {
-  }
+  const assignment = assignments?.find((a) => a.id === Number(id));
 
   if(!assignment) {
     redirect("/app")
@@ -36,7 +31,11 @@ async function Layout({children, params}) {
     });
   }
 
-  return children;
+  return (
+    <HydrationBoundary state={dehydrate(queryClient)}>
+      {children}
+    </HydrationBoundary>
+  );
 }
 
 export default Layout;

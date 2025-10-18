@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="added server side prefetching">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add dialog descriptions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/submissions/DeleteSubmissions.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/DeleteSubmissions.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/submissions/GradeSubmissions.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/GradeSubmissions.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/[id]/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/[id]/layout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/loader/AnimatedLoader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/loader/AnimatedLoader.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,14 +146,7 @@
       <workItem from="1760637876572" duration="5520000" />
       <workItem from="1760724247174" duration="14809000" />
       <workItem from="1760742011811" duration="1846000" />
-    </task>
-    <task id="LOCAL-00137" summary="Change upload submissions name">
-      <option name="closed" value="true" />
-      <created>1760617535649</created>
-      <option name="number" value="00137" />
-      <option name="presentableId" value="LOCAL-00137" />
-      <option name="project" value="LOCAL" />
-      <updated>1760617535649</updated>
+      <workItem from="1760753188253" duration="367000" />
     </task>
     <task id="LOCAL-00138" summary="adjust assignment creation form; adjust options array schema">
       <option name="closed" value="true" />
@@ -539,7 +532,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760752342777</updated>
     </task>
-    <option name="localTasksCounter" value="186" />
+    <task id="LOCAL-00186" summary="add dialog descriptions">
+      <option name="closed" value="true" />
+      <created>1760752983710</created>
+      <option name="number" value="00186" />
+      <option name="presentableId" value="LOCAL-00186" />
+      <option name="project" value="LOCAL" />
+      <updated>1760752983710</updated>
+    </task>
+    <option name="localTasksCounter" value="187" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -557,7 +558,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="improve pdf viewer styling" />
     <MESSAGE value="changed markscheme display" />
     <MESSAGE value="fix truncate for short strings" />
     <MESSAGE value="add pdf viewer background" />
@@ -582,6 +582,7 @@
     <MESSAGE value="disable checkboxes on pending" />
     <MESSAGE value="remove console.log" />
     <MESSAGE value="added server side prefetching" />
-    <option name="LAST_COMMIT_MESSAGE" value="added server side prefetching" />
+    <MESSAGE value="add dialog descriptions" />
+    <option name="LAST_COMMIT_MESSAGE" value="add dialog descriptions" />
   </component>
 </project>
