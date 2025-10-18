@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="ensure one assignment showing loader at a time">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="dynamic pdf viewer width/height">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/custom/PdfViewer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/PdfViewer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,14 +145,6 @@
       <workItem from="1760637876572" duration="5520000" />
       <workItem from="1760724247174" duration="14809000" />
       <workItem from="1760742011811" duration="1846000" />
-    </task>
-    <task id="LOCAL-00128" summary="added options field array">
-      <option name="closed" value="true" />
-      <created>1760574298254</created>
-      <option name="number" value="00128" />
-      <option name="presentableId" value="LOCAL-00128" />
-      <option name="project" value="LOCAL" />
-      <updated>1760574298254</updated>
     </task>
     <task id="LOCAL-00129" summary="fix fetching for ai generation; add verbose error logging; removed temporary data">
       <option name="closed" value="true" />
@@ -538,7 +530,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760746368094</updated>
     </task>
-    <option name="localTasksCounter" value="177" />
+    <task id="LOCAL-00177" summary="dynamic pdf viewer width/height">
+      <option name="closed" value="true" />
+      <created>1760747236154</created>
+      <option name="number" value="00177" />
+      <option name="presentableId" value="LOCAL-00177" />
+      <option name="project" value="LOCAL" />
+      <updated>1760747236154</updated>
+    </task>
+    <option name="localTasksCounter" value="178" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -556,7 +556,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add grade all button" />
     <MESSAGE value="add styled pdf viewer" />
     <MESSAGE value="add page switcher" />
     <MESSAGE value="close upload form on upload" />
@@ -581,6 +580,7 @@
     <MESSAGE value="fix previous commit" />
     <MESSAGE value="add logo" />
     <MESSAGE value="ensure one assignment showing loader at a time" />
-    <option name="LAST_COMMIT_MESSAGE" value="ensure one assignment showing loader at a time" />
+    <MESSAGE value="dynamic pdf viewer width/height" />
+    <option name="LAST_COMMIT_MESSAGE" value="dynamic pdf viewer width/height" />
   </component>
 </project>

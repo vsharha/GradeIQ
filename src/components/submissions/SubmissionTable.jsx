@@ -24,15 +24,27 @@ function SubmissionTable({assignment, selected, setSelected}) {
     });
   };
 
+  const {submissions, error, isLoading} = useSubmissions(id)
+
   const columns = [
     {
       id: "view",
-      header: "",
+      header: ({table})=>
+        <div className="flex items-start justify-start w-full">
+          <Input type="checkbox" className="w-fit accent-primary" checked={!isLoading && selected.length===submissions.length} onChange={()=>{
+            if(submissions.length===selected.length) {
+              setSelected([])
+            } else {
+              setSelected(submissions.reduce((selected, current) => [...selected, current.id], []))
+            }
+          }}/>
+        </div>
+      ,
       cell: info => {
         const submission = info.row.original;
-        const rowIndex = info.row.index
+        const rowIndex = info.row.index;
         return <div className="flex flex-row items-center gap-3 w-fit sm:gap-5">
-          <Input type="checkbox" className="accent-primary h-full" checked={selected.includes(rowIndex)} onChange={()=>toggleSelection(rowIndex)}/>
+          <Input type="checkbox" className="accent-primary h-full" checked={selected.includes(submission.id)} onChange={()=>toggleSelection(submission.id)}/>
           <SubmissionView submission={submission} assignment={assignment} />
           <span>{rowIndex+1}</span>
         </div>;
@@ -69,9 +81,6 @@ function SubmissionTable({assignment, selected, setSelected}) {
       }
     },
   ]
-
-
-  const {submissions, error, isLoading} = useSubmissions(id)
 
   const table = useReactTable({
     data: submissions || [],
