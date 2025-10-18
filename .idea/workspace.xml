@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="improve worker loading">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/custom/PdfViewer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/PdfViewer.jsx" afterDir="false" />
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="fix previous commit">
+      <change afterPath="$PROJECT_DIR$/public/favicon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom/Logo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/Logo.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,11 +68,11 @@
       <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\gradeiq\src\app\app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\GradeIQ\public" />
       <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\GradeIQ\src\components\ui" />
       <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\GradeIQ\src\components\landing" />
       <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\GradeIQ\src\app\app" />
       <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\GradeIQ\src\app" />
-      <recent name="\\wsl.localhost\Ubuntu\home\viktor\projects\GradeIQ\src\app\api\proxy\[endpoint]" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.assignments">
@@ -145,22 +147,6 @@
       <workItem from="1760637876572" duration="5520000" />
       <workItem from="1760724247174" duration="14809000" />
       <workItem from="1760742011811" duration="1846000" />
-    </task>
-    <task id="LOCAL-00124" summary="start work on ai features; refactor api on the backend">
-      <option name="closed" value="true" />
-      <created>1760563629944</created>
-      <option name="number" value="00124" />
-      <option name="presentableId" value="LOCAL-00124" />
-      <option name="project" value="LOCAL" />
-      <updated>1760563629944</updated>
-    </task>
-    <task id="LOCAL-00125" summary="added improved assignment creation form">
-      <option name="closed" value="true" />
-      <created>1760570711348</created>
-      <option name="number" value="00125" />
-      <option name="presentableId" value="LOCAL-00125" />
-      <option name="project" value="LOCAL" />
-      <updated>1760570711348</updated>
     </task>
     <task id="LOCAL-00126" summary="fix multiple rows on tabs">
       <option name="closed" value="true" />
@@ -538,7 +524,23 @@
       <option name="project" value="LOCAL" />
       <updated>1760744875704</updated>
     </task>
-    <option name="localTasksCounter" value="173" />
+    <task id="LOCAL-00173" summary="further improve worker loading">
+      <option name="closed" value="true" />
+      <created>1760745092849</created>
+      <option name="number" value="00173" />
+      <option name="presentableId" value="LOCAL-00173" />
+      <option name="project" value="LOCAL" />
+      <updated>1760745092849</updated>
+    </task>
+    <task id="LOCAL-00174" summary="fix previous commit">
+      <option name="closed" value="true" />
+      <created>1760745618633</created>
+      <option name="number" value="00174" />
+      <option name="presentableId" value="LOCAL-00174" />
+      <option name="project" value="LOCAL" />
+      <updated>1760745618633</updated>
+    </task>
+    <option name="localTasksCounter" value="175" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -556,8 +558,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="start work on pdf viewer; adjust loading button messages" />
-    <MESSAGE value="change input accent color" />
     <MESSAGE value="add semi-functional pdf viewer" />
     <MESSAGE value="adjust pdf viewer scale" />
     <MESSAGE value="add grade all button" />
@@ -581,6 +581,8 @@
     <MESSAGE value="improve padding in SubmissionView.jsx" />
     <MESSAGE value="extract pdf viewer logic to a separate file" />
     <MESSAGE value="improve worker loading" />
-    <option name="LAST_COMMIT_MESSAGE" value="improve worker loading" />
+    <MESSAGE value="further improve worker loading" />
+    <MESSAGE value="fix previous commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix previous commit" />
   </component>
 </project>

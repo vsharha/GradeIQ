@@ -4,7 +4,12 @@ import Providers from "@/app/providers";
 
 export const metadata = {
   title: "GradeIQ",
-  description: "Your AI tutoring companionn",
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' }
+    ]
+  },
+  description: "Your AI tutoring companion",
 };
 
 const ubuntu = Ubuntu({
