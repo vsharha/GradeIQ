@@ -12,10 +12,11 @@ import CustomPdfViewer from "@/components/custom/CustomPdfViewer";
 import useDownloadSubmission from "@/hooks/useDownloadSubmission";
 import GradeSubmissions from "@/components/submissions/GradeSubmissions";
 import Feedback from "@/components/submissions/Feedback";
+import PassingGrade from "@/components/submissions/PassingGrade";
 
 function SubmissionView({submission, assignment}) {
   const {student_name, grade, id, feedback} = submission
-  const {max_grade} = assignment
+  const {max_grade, passing_grade} = assignment
 
   const [open, setOpen] = useState(false)
 
@@ -42,7 +43,7 @@ function SubmissionView({submission, assignment}) {
                 <User size={15}/> {student_name}
               </VariableView>
               <VariableView>
-                <Gauge size={15}/> {Number.isFinite(grade)?`${grade?.toFixed(2)} / ${max_grade?.toFixed(2)}`:"N/A"}
+                <Gauge size={15}/> <PassingGrade grade={grade} max_grade={max_grade} passing_grade={passing_grade}/>
               </VariableView>
               <div className="mt-2">
                 <Feedback feedback={feedback}/>

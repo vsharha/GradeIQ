@@ -11,6 +11,7 @@ import useSubmissions from "@/hooks/useSubmissions";
 import ErrorMessage from "@/components/custom/ErrorMessage";
 import BlockLoader from "@/components/loader/BlockLoader";
 import { Input } from "@/components/ui/input";
+import PassingGrade from "@/components/submissions/PassingGrade";
 
 function SubmissionTable({assignment, selected, setSelected, pending}) {
   const {id, max_grade, passing_grade} = assignment
@@ -66,14 +67,7 @@ function SubmissionTable({assignment, selected, setSelected, pending}) {
       cell: info => {
         const grade = info.getValue();
 
-        return <div>
-          {Number.isFinite(grade)?
-            <>
-              <span className={grade>=passing_grade?"text-passed":"text-failed"}>{grade?.toFixed(2)}</span> / <span>{max_grade?.toFixed(2)}</span>
-            </>
-            :"N/A"
-          }
-        </div>
+        return <PassingGrade grade={grade} passing_grade={passing_grade} max_grade={max_grade}/>
       }
     },
     // {
