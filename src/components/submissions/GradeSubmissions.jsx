@@ -6,19 +6,19 @@ import getClientAuthHeaders from "@/services/getClientAuthHeaders";
 import { gradeSubmissions } from "@/services/fetchApi";
 import useSubmissionMutation from "@/hooks/useSubmissionMutation";
 
-function GradeSubmissions({selected, setSelected, assignment_id, ...props}) {
+function GradeSubmissions({ selected, setSelected, assignment_id, ...props }) {
   const [open, setOpen] = useState(false);
 
-  const {mutate, isPending} = useSubmissionMutation(assignment_id, async ({ assignment_id, submission_ids }) => {
+  const { mutate, isPending } = useSubmissionMutation(assignment_id, async ({ assignment_id, submission_ids }) => {
     const headers = await getClientAuthHeaders();
     return await gradeSubmissions(assignment_id, submission_ids, headers);
-  })
+  });
 
   function handleGrade() {
-    mutate({assignment_id, selected})
-    setOpen(false)
-    if(typeof setSelected === "function") {
-      setSelected([])
+    mutate({ assignment_id, submission_ids:selected });
+    setOpen(false);
+    if (typeof setSelected === "function") {
+      setSelected([]);
     }
   }
 
@@ -32,22 +32,22 @@ function GradeSubmissions({selected, setSelected, assignment_id, ...props}) {
     "Normalizing grade curves...",
     "Scouting apt phrasing...",
     "Validating academic tone...",
-    "Polishing expression..."
+    "Polishing expression...",
   ];
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger disabled={selected.length===0} asChild>
-        <LoadingButton isLoading={isPending} messages={messages} {...props}>
+      <DialogTrigger asChild>
+        <LoadingButton isLoading={isPending} messages={messages} disabled={selected.length === 0} {...props}>
           Grade
         </LoadingButton>
       </DialogTrigger>
       <DialogContent>
         <DialogTitle>
-          Grade {selected.length} submission{selected.length>1?"s":""}?
+          Grade {selected.length} submission{selected.length > 1 ? "s" : ""}?
         </DialogTitle>
         <DialogFooter>
-          <Button variant="secondary" onClick={()=>setOpen(false)} >
+          <Button variant="secondary" onClick={() => setOpen(false)}>
             No
           </Button>
           <Button onClick={handleGrade}>

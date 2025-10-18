@@ -11,12 +11,12 @@ import ErrorMessage from "@/components/custom/ErrorMessage";
 import { useRouter } from "next/navigation";
 import UploadSubmissions from "@/components/submissions/UploadSubmissions";
 import GradeSubmissions from "@/components/submissions/GradeSubmissions";
+import DeleteSubmissions from "@/components/submissions/DeleteSubmissions";
 
 function Page({params}) {
   const {id} = use(params);
 
   const [selected, setSelected] = useState([]);
-
   const router = useRouter();
 
   const { assignments, isLoading, error } = useAssignments();
@@ -43,12 +43,13 @@ function Page({params}) {
         <Card className="gap-2 pb-6 lg:flex-1 lg:min-h-[calc(100dvh*3/4)]">
           <CardHeader className="flex flex-col">
             <h1 className="text-xl font-bold">Submissions</h1>
-            <div className="flex justify-between gap-2 items-center justify-center">
-              <UploadSubmissions assignment_id={assignment.id}/>
-              <div className="flex gap-4 justify-center items-center">
+            <div className="flex gap-4 items-center justify-between w-full">
+              <div className="flex items-center gap-2">
+                <DeleteSubmissions selected={selected} assignment_id={id} setSelected={setSelected}/>
                 <GradeSubmissions selected={selected} assignment_id={id} setSelected={setSelected}/>
-                {selected.length!==0&&<span>Selected: {selected.length}</span>}
+                {selected.length!==0&&<span className="ml-2">Selected: {selected.length}</span>}
               </div>
+              <UploadSubmissions assignment_id={id}/>
             </div>
           </CardHeader>
           <CardContent className="px-3 sm:px-4">

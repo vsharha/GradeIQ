@@ -29,7 +29,7 @@ function SubmissionTable({assignment, selected, setSelected}) {
   const columns = [
     {
       id: "view",
-      header: ({table})=> {
+      header: ()=> {
         if(!submissions?.length) {
           return null
         }

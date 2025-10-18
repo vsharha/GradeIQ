@@ -142,7 +142,7 @@ export async function getSubmissionFileURL(submission_id, headers) {
 }
 
 export async function gradeSubmissions(assignment_id, submission_ids, headers) {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_FASTAPI_URL}/assignments/${assignment_id}/grade`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_FASTAPI_URL}/assignments/${assignment_id}/submissions/grade`, {
         method: 'POST',
         headers: {
             "Content-Type": "application/json",
@@ -157,5 +157,25 @@ export async function gradeSubmissions(assignment_id, submission_ids, headers) {
         throw new Error("Could not parse error response");
     }
     if(!response.ok) handleApiError(response, data, "Could not grade submissions");
+    return data;
+}
+
+export async function deleteSubmissions(assignment_id, submission_ids, headers) {
+    console.log(submission_ids)
+    const response = await fetch(`${process.env.NEXT_PUBLIC_FASTAPI_URL}/assignments/${assignment_id}/submissions`, {
+        method: 'DELETE',
+        headers: {
+            "Content-Type": "application/json",
+            ...headers
+        },
+        body: JSON.stringify({submission_ids})
+    })
+    let data;
+    try {
+        data = await response.json();
+    } catch (e) {
+        throw new Error("Could not parse error response");
+    }
+    if(!response.ok) handleApiError(response, data, "Could not delete submissions");
     return data;
 }
