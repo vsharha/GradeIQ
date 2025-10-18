@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add delete submissions functionality">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/[id]/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/[id]/page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/submissions/DeleteSubmissions.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/DeleteSubmissions.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/submissions/GradeSubmissions.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/GradeSubmissions.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" afterDir="false" />
-    </list>
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="disable checkboxes on pending" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -148,14 +142,6 @@
       <workItem from="1760637876572" duration="5520000" />
       <workItem from="1760724247174" duration="14809000" />
       <workItem from="1760742011811" duration="1846000" />
-    </task>
-    <task id="LOCAL-00134" summary="add the option to enter by hand">
-      <option name="closed" value="true" />
-      <created>1760580662541</created>
-      <option name="number" value="00134" />
-      <option name="presentableId" value="LOCAL-00134" />
-      <option name="project" value="LOCAL" />
-      <updated>1760580662541</updated>
     </task>
     <task id="LOCAL-00135" summary="add submissions uploading">
       <option name="closed" value="true" />
@@ -541,7 +527,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760750747493</updated>
     </task>
-    <option name="localTasksCounter" value="183" />
+    <task id="LOCAL-00183" summary="disable checkboxes on pending">
+      <option name="closed" value="true" />
+      <created>1760751334536</created>
+      <option name="number" value="00183" />
+      <option name="presentableId" value="LOCAL-00183" />
+      <option name="project" value="LOCAL" />
+      <updated>1760751334536</updated>
+    </task>
+    <option name="localTasksCounter" value="184" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -559,7 +553,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="adjust tab width; improve selecting rows" />
     <MESSAGE value="adjust markscheme display" />
     <MESSAGE value="added text truncation" />
     <MESSAGE value="improve pdf viewer styling" />
@@ -584,6 +577,7 @@
     <MESSAGE value="adjust scrollbar" />
     <MESSAGE value="adjust landing page scrollbar" />
     <MESSAGE value="add delete submissions functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="add delete submissions functionality" />
+    <MESSAGE value="disable checkboxes on pending" />
+    <option name="LAST_COMMIT_MESSAGE" value="disable checkboxes on pending" />
   </component>
 </project>

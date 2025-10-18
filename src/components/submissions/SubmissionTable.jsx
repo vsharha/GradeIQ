@@ -49,7 +49,6 @@ function SubmissionTable({assignment, selected, setSelected, pending}) {
       cell: info => {
         const submission = info.row.original;
         const rowIndex = info.row.index;
-        console.log(pending, submission.id)
         return <div className="flex flex-row items-center gap-3 w-fit sm:gap-5">
           <Input type="checkbox" className="accent-primary h-full" checked={selected.includes(submission.id)} onChange={()=>toggleSelection(submission.id)} disabled={pending.includes(submission.id)}/>
           <SubmissionView submission={submission} assignment={assignment} />
