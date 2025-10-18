@@ -1,7 +1,7 @@
 import "@/app/globals.css"
 import { Archivo_Black, Ubuntu } from "next/font/google";
 import Providers from "@/app/providers";
-import { QueryClient } from "@tanstack/react-query";
+import { dehydrate, HydrationBoundary, QueryClient } from "@tanstack/react-query";
 import getServerAuthHeaders from "@/services/getServerAuthHeaders";
 import { fetchAssignments, fetchUser } from "@/services/fetchApi";
 
@@ -44,7 +44,9 @@ export default async function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning className={`${ubuntu.variable} ${archivo_black.variable}`}>
       <body className="min-h-screen-dynamic flex flex-col">
         <Providers>
-          {children}
+          <HydrationBoundary state={dehydrate(queryClient)}>
+            {children}
+          </HydrationBoundary>
         </Providers>
       </body>
     </html>
