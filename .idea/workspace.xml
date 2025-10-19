@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="fix pdf viewer for good?">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/submissions/SubmissionView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/SubmissionView.jsx" afterDir="false" />
-    </list>
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="undo last change" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -155,23 +152,7 @@
       <workItem from="1760909549265" duration="290000" />
       <workItem from="1760911104396" duration="727000" />
       <workItem from="1760912393121" duration="312000" />
-      <workItem from="1760913033063" duration="355000" />
-    </task>
-    <task id="LOCAL-00158" summary="adjust tab width; improve selecting rows">
-      <option name="closed" value="true" />
-      <created>1760728393014</created>
-      <option name="number" value="00158" />
-      <option name="presentableId" value="LOCAL-00158" />
-      <option name="project" value="LOCAL" />
-      <updated>1760728393014</updated>
-    </task>
-    <task id="LOCAL-00159" summary="adjust markscheme display">
-      <option name="closed" value="true" />
-      <created>1760728475618</created>
-      <option name="number" value="00159" />
-      <option name="presentableId" value="LOCAL-00159" />
-      <option name="project" value="LOCAL" />
-      <updated>1760728475618</updated>
+      <workItem from="1760913033063" duration="654000" />
     </task>
     <task id="LOCAL-00160" summary="added text truncation">
       <option name="closed" value="true" />
@@ -549,7 +530,23 @@
       <option name="project" value="LOCAL" />
       <updated>1760912703896</updated>
     </task>
-    <option name="localTasksCounter" value="207" />
+    <task id="LOCAL-00207" summary="add pdf viewer fix number whatever">
+      <option name="closed" value="true" />
+      <created>1760913405576</created>
+      <option name="number" value="00207" />
+      <option name="presentableId" value="LOCAL-00207" />
+      <option name="project" value="LOCAL" />
+      <updated>1760913405576</updated>
+    </task>
+    <task id="LOCAL-00208" summary="undo last change">
+      <option name="closed" value="true" />
+      <created>1760913652902</created>
+      <option name="number" value="00208" />
+      <option name="presentableId" value="LOCAL-00208" />
+      <option name="project" value="LOCAL" />
+      <updated>1760913652904</updated>
+    </task>
+    <option name="localTasksCounter" value="209" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -567,8 +564,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add delete submissions functionality" />
-    <MESSAGE value="disable checkboxes on pending" />
     <MESSAGE value="remove console.log" />
     <MESSAGE value="added server side prefetching" />
     <MESSAGE value="add dialog descriptions" />
@@ -592,6 +587,8 @@
     <MESSAGE value="fix footer layout" />
     <MESSAGE value="adjust tabs width for feedback" />
     <MESSAGE value="fix pdf viewer for good?" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix pdf viewer for good?" />
+    <MESSAGE value="add pdf viewer fix number whatever" />
+    <MESSAGE value="undo last change" />
+    <option name="LAST_COMMIT_MESSAGE" value="undo last change" />
   </component>
 </project>
