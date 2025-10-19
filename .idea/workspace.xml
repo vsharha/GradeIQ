@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="handle no url edgecase">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="improve pending status by using database values">
+      <change afterPath="$PROJECT_DIR$/src/components/submissions/ConfirmSubmissions.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app/assignments/[id]/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/[id]/page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/submissions/DeleteSubmissions.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/DeleteSubmissions.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/submissions/GradeSubmissions.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/GradeSubmissions.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/fetchApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/fetchApi.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,15 +153,7 @@
       <workItem from="1760755940475" duration="139000" />
       <workItem from="1760822865730" duration="741000" />
       <workItem from="1760823679450" duration="3699000" />
-      <workItem from="1760907031219" duration="811000" />
-    </task>
-    <task id="LOCAL-00152" summary="add grade all button">
-      <option name="closed" value="true" />
-      <created>1760646200767</created>
-      <option name="number" value="00152" />
-      <option name="presentableId" value="LOCAL-00152" />
-      <option name="project" value="LOCAL" />
-      <updated>1760646200767</updated>
+      <workItem from="1760907031219" duration="1299000" />
     </task>
     <task id="LOCAL-00153" summary="add styled pdf viewer">
       <option name="closed" value="true" />
@@ -546,7 +539,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760907165219</updated>
     </task>
-    <option name="localTasksCounter" value="201" />
+    <task id="LOCAL-00201" summary="improve pending status by using database values">
+      <option name="closed" value="true" />
+      <created>1760907869018</created>
+      <option name="number" value="00201" />
+      <option name="presentableId" value="LOCAL-00201" />
+      <option name="project" value="LOCAL" />
+      <updated>1760907869018</updated>
+    </task>
+    <option name="localTasksCounter" value="202" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -564,7 +565,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ensure one assignment showing loader at a time" />
     <MESSAGE value="dynamic pdf viewer width/height" />
     <MESSAGE value="add select all button" />
     <MESSAGE value="prevent pdf viewer flickering" />
@@ -589,6 +589,7 @@
     <MESSAGE value="updates" />
     <MESSAGE value="add error handling to pdf module" />
     <MESSAGE value="handle no url edgecase" />
-    <option name="LAST_COMMIT_MESSAGE" value="handle no url edgecase" />
+    <MESSAGE value="improve pending status by using database values" />
+    <option name="LAST_COMMIT_MESSAGE" value="improve pending status by using database values" />
   </component>
 </project>

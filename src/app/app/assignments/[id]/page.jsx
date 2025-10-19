@@ -13,6 +13,7 @@ import { useRouter } from "next/navigation";
 import UploadSubmissions from "@/components/submissions/UploadSubmissions";
 import GradeSubmissions from "@/components/submissions/GradeSubmissions";
 import DeleteSubmissions from "@/components/submissions/DeleteSubmissions";
+import ConfirmSubmissions from "@/components/submissions/ConfirmSubmissions";
 
 function Page({ params }) {
   const { id } = use(params);
@@ -57,6 +58,7 @@ function Page({ params }) {
             <div className="flex gap-4 items-center justify-between w-full">
               <div className="flex items-center gap-2">
                 <DeleteSubmissions selected={selected} assignment_id={id} setSelected={setSelected} />
+                <ConfirmSubmissions selected={selected} assignment_id={id} setSelected={setSelected}/>
                 <GradeSubmissions selected={selected} assignment_id={id} setSelected={setSelected} />
                 {selected.length !== 0 && <span className="ml-2">Selected: {selected.length}</span>}
               </div>

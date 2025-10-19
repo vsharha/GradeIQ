@@ -179,3 +179,22 @@ export async function deleteSubmissions(assignment_id, submission_ids, headers) 
     if(!response.ok) handleApiError(response, data, "Could not delete submissions");
     return data;
 }
+
+export async function confirmSubmissionGrades(assignment_id, submission_ids, headers) {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_FASTAPI_URL}/assignments/${assignment_id}/submissions/confirm-grades`, {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json",
+            ...headers
+        },
+        body: JSON.stringify({submission_ids})
+    })
+    let data;
+    try {
+        data = await response.json();
+    } catch (e) {
+        throw new Error("Could not parse error response");
+    }
+    if(!response.ok) handleApiError(response, data, "Could not confirm submissions");
+    return data;
+}
