@@ -42,7 +42,7 @@ export default async function RootLayout({ children }) {
 
   return (
     <html lang="en" suppressHydrationWarning className={`${ubuntu.variable} ${archivo_black.variable}`}>
-      <body className="min-h-screen-dynamic flex flex-col">
+      <body className="min-h-screen-dynamic flex flex-col overscroll-contain">
         <Providers>
           {/*<HydrationBoundary state={dehydrate(queryClient)}>*/}
             {children}

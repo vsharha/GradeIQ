@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add grade confirmation">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="adjust mobile table action layout">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/[id]/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/[id]/page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/submissions/ConfirmSubmissions.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/ConfirmSubmissions.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/submissions/DeleteSubmissions.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/DeleteSubmissions.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,15 +151,7 @@
       <workItem from="1760822865730" duration="741000" />
       <workItem from="1760823679450" duration="3699000" />
       <workItem from="1760907031219" duration="1350000" />
-      <workItem from="1760908671021" duration="347000" />
-    </task>
-    <task id="LOCAL-00154" summary="add page switcher">
-      <option name="closed" value="true" />
-      <created>1760724568044</created>
-      <option name="number" value="00154" />
-      <option name="presentableId" value="LOCAL-00154" />
-      <option name="project" value="LOCAL" />
-      <updated>1760724568044</updated>
+      <workItem from="1760908671021" duration="528000" />
     </task>
     <task id="LOCAL-00155" summary="close upload form on upload">
       <option name="closed" value="true" />
@@ -547,7 +537,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760908363479</updated>
     </task>
-    <option name="localTasksCounter" value="203" />
+    <task id="LOCAL-00203" summary="adjust mobile table action layout">
+      <option name="closed" value="true" />
+      <created>1760909049981</created>
+      <option name="number" value="00203" />
+      <option name="presentableId" value="LOCAL-00203" />
+      <option name="project" value="LOCAL" />
+      <updated>1760909049981</updated>
+    </task>
+    <option name="localTasksCounter" value="204" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -565,7 +563,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add select all button" />
     <MESSAGE value="prevent pdf viewer flickering" />
     <MESSAGE value="adjust scrollbar" />
     <MESSAGE value="adjust landing page scrollbar" />
@@ -590,6 +587,7 @@
     <MESSAGE value="handle no url edgecase" />
     <MESSAGE value="improve pending status by using database values" />
     <MESSAGE value="add grade confirmation" />
-    <option name="LAST_COMMIT_MESSAGE" value="add grade confirmation" />
+    <MESSAGE value="adjust mobile table action layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="adjust mobile table action layout" />
   </component>
 </project>
