@@ -11,6 +11,7 @@ try {
 
 function PdfViewer({url, setNumPages, pageNumber, setPageNumber}) {
   const [dimensions, setDimensions] = useState({ width: null, height: null });
+  const [documentLoaded, setDocumentLoaded] = useState(false);
 
   if(!url) {
     return <div><p>Failed to load PDF file.</p></div>;
@@ -27,27 +28,31 @@ function PdfViewer({url, setNumPages, pageNumber, setPageNumber}) {
         onLoadSuccess={({ numPages }) => {
           setNumPages(numPages);
           setPageNumber((p) => Math.min(Math.max(1, p), numPages));
+          setDocumentLoaded(true);
         }}
         error={<p>Failed to load PDF.</p>}
+        loading={<div>Loading PDF...</div>}
       >
-        <div
-          style={
-            dimensions.width && dimensions.height
-              ? { minHeight: dimensions.height, minWidth: dimensions.width, display: 'flex', alignItems: 'center', justifyContent: 'center' }
-              : {}
-          }
-        >
-          <Page
-            key={pageNumber}
-            pageNumber={pageNumber}
-            scale={scale}
-            onLoadSuccess={(page) => {
-              const viewport = page.getViewport({ scale });
-              setDimensions({ height: viewport.height, width: viewport.width });
-            }}
-            loading={<div style={{ height: dimensions.height || 'auto', width: dimensions.width || 'auto', background: 'white', text: 'black' }} />}
-          />
-        </div>
+        {documentLoaded && (
+          <div
+            style={
+              dimensions.width && dimensions.height
+                ? { minHeight: dimensions.height, minWidth: dimensions.width, display: 'flex', alignItems: 'center', justifyContent: 'center' }
+                : {}
+            }
+          >
+            <Page
+              key={pageNumber}
+              pageNumber={pageNumber}
+              scale={scale}
+              onLoadSuccess={(page) => {
+                const viewport = page.getViewport({ scale });
+                setDimensions({ height: viewport.height, width: viewport.width });
+              }}
+              loading={<div style={{ height: dimensions.height || 'auto', width: dimensions.width || 'auto', background: 'white', text: 'black' }} />}
+            />
+          </div>
+        )}
       </Document>
     </div>
   );

@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="fix footer layout">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="adjust tabs width for feedback">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/page.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/custom/PdfViewer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/PdfViewer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/submissions/Feedback.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/Feedback.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,15 +153,8 @@
       <workItem from="1760907031219" duration="1350000" />
       <workItem from="1760908671021" duration="528000" />
       <workItem from="1760909549265" duration="290000" />
-      <workItem from="1760911104396" duration="425000" />
-    </task>
-    <task id="LOCAL-00156" summary="improve pdf viewer, add checkboxes to table">
-      <option name="closed" value="true" />
-      <created>1760727078168</created>
-      <option name="number" value="00156" />
-      <option name="presentableId" value="LOCAL-00156" />
-      <option name="project" value="LOCAL" />
-      <updated>1760727078168</updated>
+      <workItem from="1760911104396" duration="727000" />
+      <workItem from="1760912393121" duration="298000" />
     </task>
     <task id="LOCAL-00157" summary="improve pdf viewer">
       <option name="closed" value="true" />
@@ -549,7 +540,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760909838512</updated>
     </task>
-    <option name="localTasksCounter" value="205" />
+    <task id="LOCAL-00205" summary="adjust tabs width for feedback">
+      <option name="closed" value="true" />
+      <created>1760911824164</created>
+      <option name="number" value="00205" />
+      <option name="presentableId" value="LOCAL-00205" />
+      <option name="project" value="LOCAL" />
+      <updated>1760911824164</updated>
+    </task>
+    <option name="localTasksCounter" value="206" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -567,7 +566,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="adjust scrollbar" />
     <MESSAGE value="adjust landing page scrollbar" />
     <MESSAGE value="add delete submissions functionality" />
     <MESSAGE value="disable checkboxes on pending" />
@@ -592,6 +590,7 @@
     <MESSAGE value="add grade confirmation" />
     <MESSAGE value="adjust mobile table action layout" />
     <MESSAGE value="fix footer layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix footer layout" />
+    <MESSAGE value="adjust tabs width for feedback" />
+    <option name="LAST_COMMIT_MESSAGE" value="adjust tabs width for feedback" />
   </component>
 </project>
