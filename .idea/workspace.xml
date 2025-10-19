@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="adjust tab min width">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/[id]/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/[id]/layout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/custom/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/Header.jsx" afterDir="false" />
-    </list>
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="updates" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -150,15 +146,7 @@
       <workItem from="1760754346729" duration="1432000" />
       <workItem from="1760755940475" duration="139000" />
       <workItem from="1760822865730" duration="741000" />
-      <workItem from="1760823679450" duration="1686000" />
-    </task>
-    <task id="LOCAL-00149" summary="change input accent color">
-      <option name="closed" value="true" />
-      <created>1760644230675</created>
-      <option name="number" value="00149" />
-      <option name="presentableId" value="LOCAL-00149" />
-      <option name="project" value="LOCAL" />
-      <updated>1760644230675</updated>
+      <workItem from="1760823679450" duration="2897000" />
     </task>
     <task id="LOCAL-00150" summary="add semi-functional pdf viewer">
       <option name="closed" value="true" />
@@ -544,7 +532,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760824927825</updated>
     </task>
-    <option name="localTasksCounter" value="198" />
+    <task id="LOCAL-00198" summary="updates">
+      <option name="closed" value="true" />
+      <created>1760825421315</created>
+      <option name="number" value="00198" />
+      <option name="presentableId" value="LOCAL-00198" />
+      <option name="project" value="LOCAL" />
+      <updated>1760825421315</updated>
+    </task>
+    <option name="localTasksCounter" value="199" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -562,7 +558,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="further improve worker loading" />
     <MESSAGE value="fix previous commit" />
     <MESSAGE value="add logo" />
     <MESSAGE value="ensure one assignment showing loader at a time" />
@@ -587,6 +582,7 @@
     <MESSAGE value="add grade confirmed column" />
     <MESSAGE value="fix certain errors" />
     <MESSAGE value="adjust tab min width" />
-    <option name="LAST_COMMIT_MESSAGE" value="adjust tab min width" />
+    <MESSAGE value="updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="updates" />
   </component>
 </project>

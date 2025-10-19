@@ -3,10 +3,19 @@
 import { Document, Page, pdfjs } from "react-pdf";
 import { useState } from "react";
 
-pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.mjs";
+try {
+  pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.mjs";
+} catch (error) {
+  console.error("Failed to initialize PDF worker:", error);
+}
 
 function PdfViewer({url, setNumPages, pageNumber, setPageNumber}) {
   const [dimensions, setDimensions] = useState({ width: null, height: null });
+  const [error, setError] = useState(null);
+
+  if (error) {
+    return <div style={{ padding: '20px' }}><p>Failed to load PDF viewer.</p></div>;
+  }
 
   const scale = 1
 
@@ -19,6 +28,10 @@ function PdfViewer({url, setNumPages, pageNumber, setPageNumber}) {
         onLoadSuccess={({ numPages }) => {
           setNumPages(numPages);
           setPageNumber((p) => Math.min(Math.max(1, p), numPages));
+        }}
+        onLoadError={(error) => {
+          console.error("PDF load error:", error);
+          setError(error);
         }}
         error={<p>Failed to load PDF.</p>}
       >
