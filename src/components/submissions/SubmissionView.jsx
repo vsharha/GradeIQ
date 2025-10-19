@@ -15,7 +15,7 @@ import Feedback from "@/components/submissions/Feedback";
 import PassingGrade from "@/components/submissions/PassingGrade";
 
 function SubmissionView({submission, assignment}) {
-  const {student_name, grade, id, feedback} = submission
+  const {student_name, grade, id, feedback, grading_status} = submission
   const {max_grade, passing_grade} = assignment
 
   const [open, setOpen] = useState(false)
@@ -37,7 +37,7 @@ function SubmissionView({submission, assignment}) {
                 <DialogTitle>
                   Submission
                 </DialogTitle>
-                <GradeSubmissions assignment_id={id} selected={[id]} className="w-fit"/>
+                <GradeSubmissions assignment_id={id} selected={grading_status==="pending"?[]:[id]} className="w-fit"/>
               </DialogHeader>
               <VariableView>
                 <User size={15}/> {student_name}
