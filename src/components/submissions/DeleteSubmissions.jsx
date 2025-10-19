@@ -34,7 +34,7 @@ function DeleteSubmissions({selected, setSelected, assignment_id}) {
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         <LoadingButton variant="secondary" className="flex items-center" disabled={selected.length === 0} isLoading={isPending}>
-          <Trash/> Delete
+          <Trash/> <span className="hidden sm:block">Delete</span>
         </LoadingButton>
       </DialogTrigger>
       <DialogContent>

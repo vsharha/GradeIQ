@@ -54,15 +54,17 @@ function Page({ params }) {
         <AssignmentView assignment={assignment} />
         <Card className="gap-2 pb-6 lg:flex-1 lg:min-h-[calc(100dvh*3/4)]">
           <CardHeader className="flex flex-col">
-            <h1 className="text-xl font-bold">Submissions</h1>
-            <div className="flex gap-4 items-center justify-between w-full">
+            <div className="flex justify-between w-full">
+              <h1 className="text-xl font-bold">Submissions</h1>
+              <UploadSubmissions assignment_id={id} />
+            </div>
+            <div className="flex items-center gap-4 w-full sm:w-fit justify-between">
               <div className="flex items-center gap-2">
                 <DeleteSubmissions selected={selected} assignment_id={id} setSelected={setSelected} />
                 <ConfirmSubmissions selected={selected} assignment_id={id} setSelected={setSelected}/>
                 <GradeSubmissions selected={selected} assignment_id={id} setSelected={setSelected} />
-                {selected.length !== 0 && <span className="ml-2">Selected: {selected.length}</span>}
               </div>
-              <UploadSubmissions assignment_id={id} />
+              {selected.length !== 0 && <span>Selected: {selected.length}</span>}
             </div>
           </CardHeader>
           <CardContent className="px-3 sm:px-4">

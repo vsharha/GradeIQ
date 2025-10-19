@@ -34,7 +34,7 @@ function ConfirmSubmissions({ selected, setSelected, assignment_id, ...props }) 
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         <LoadingButton isLoading={isPending} disabled={selected.length === 0} variant="secondary" {...props}>
-          <Check/> Confirm
+          <Check/> <span className="hidden sm:block">Confirm</span>
         </LoadingButton>
       </DialogTrigger>
       <DialogContent>
