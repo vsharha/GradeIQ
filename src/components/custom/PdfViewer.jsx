@@ -13,8 +13,13 @@ function PdfViewer({url, setNumPages, pageNumber, setPageNumber}) {
   const [dimensions, setDimensions] = useState({ width: null, height: null });
   const [error, setError] = useState(null);
 
+  if(!url) {
+    return <div><p>Failed to load PDF file.</p></div>;
+  }
+
+
   if (error) {
-    return <div style={{ padding: '20px' }}><p>Failed to load PDF viewer.</p></div>;
+    return <div><p>Failed to load PDF viewer.</p></div>;
   }
 
   const scale = 1

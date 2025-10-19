@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="updates" />
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add error handling to pdf module">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom/PdfViewer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/PdfViewer.jsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -146,15 +149,8 @@
       <workItem from="1760754346729" duration="1432000" />
       <workItem from="1760755940475" duration="139000" />
       <workItem from="1760822865730" duration="741000" />
-      <workItem from="1760823679450" duration="2897000" />
-    </task>
-    <task id="LOCAL-00150" summary="add semi-functional pdf viewer">
-      <option name="closed" value="true" />
-      <created>1760645734771</created>
-      <option name="number" value="00150" />
-      <option name="presentableId" value="LOCAL-00150" />
-      <option name="project" value="LOCAL" />
-      <updated>1760645734771</updated>
+      <workItem from="1760823679450" duration="3699000" />
+      <workItem from="1760907031219" duration="113000" />
     </task>
     <task id="LOCAL-00151" summary="adjust pdf viewer scale">
       <option name="closed" value="true" />
@@ -540,7 +536,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760825421315</updated>
     </task>
-    <option name="localTasksCounter" value="199" />
+    <task id="LOCAL-00199" summary="add error handling to pdf module">
+      <option name="closed" value="true" />
+      <created>1760904277679</created>
+      <option name="number" value="00199" />
+      <option name="presentableId" value="LOCAL-00199" />
+      <option name="project" value="LOCAL" />
+      <updated>1760904277680</updated>
+    </task>
+    <option name="localTasksCounter" value="200" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -558,7 +562,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix previous commit" />
     <MESSAGE value="add logo" />
     <MESSAGE value="ensure one assignment showing loader at a time" />
     <MESSAGE value="dynamic pdf viewer width/height" />
@@ -583,6 +586,7 @@
     <MESSAGE value="fix certain errors" />
     <MESSAGE value="adjust tab min width" />
     <MESSAGE value="updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="updates" />
+    <MESSAGE value="add error handling to pdf module" />
+    <option name="LAST_COMMIT_MESSAGE" value="add error handling to pdf module" />
   </component>
 </project>
