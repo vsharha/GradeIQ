@@ -14,13 +14,10 @@ import { deleteSubmissions } from "@/services/fetchApi";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
-function DeleteSubmissions({selected, setSelected, assignment_id, setPending}) {
+function DeleteSubmissions({selected, setSelected, assignment_id}) {
   const [open, setOpen] = useState(false);
-  const [pendingSubmissions, setPendingSubmissions] = useState([]);
 
   const {isPending, mutate} = useSubmissionMutation(assignment_id, async ({ assignment_id, submission_ids })=>{
-    setPendingSubmissions(selected);
-    setPending((pending)=>[...pending, ...selected])
     const headers = await getClientAuthHeaders();
     return await deleteSubmissions(assignment_id, submission_ids, headers);
   })
@@ -30,7 +27,6 @@ function DeleteSubmissions({selected, setSelected, assignment_id, setPending}) {
     setOpen(false);
     if (typeof setSelected === "function") {
       setSelected([]);
-      setPending((pending)=>pending.filter((id)=>!pendingSubmissions.includes(id)));
     }
   }
 

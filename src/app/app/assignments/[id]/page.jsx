@@ -18,7 +18,6 @@ function Page({ params }) {
   const { id } = use(params);
 
   const [selected, setSelected] = useState([]);
-  const [pending, setPending] = useState([]);
 
   const router = useRouter();
 
@@ -57,15 +56,15 @@ function Page({ params }) {
             <h1 className="text-xl font-bold">Submissions</h1>
             <div className="flex gap-4 items-center justify-between w-full">
               <div className="flex items-center gap-2">
-                <DeleteSubmissions selected={selected} assignment_id={id} setSelected={setSelected} setPending={setPending} />
-                <GradeSubmissions selected={selected} assignment_id={id} setSelected={setSelected} setPending={setPending} />
+                <DeleteSubmissions selected={selected} assignment_id={id} setSelected={setSelected} />
+                <GradeSubmissions selected={selected} assignment_id={id} setSelected={setSelected} />
                 {selected.length !== 0 && <span className="ml-2">Selected: {selected.length}</span>}
               </div>
               <UploadSubmissions assignment_id={id} />
             </div>
           </CardHeader>
           <CardContent className="px-3 sm:px-4">
-            <SubmissionTable assignment={assignment} selected={selected} setSelected={setSelected} pending={pending} />
+            <SubmissionTable assignment={assignment} selected={selected} setSelected={setSelected} />
           </CardContent>
         </Card>
       </div>

@@ -14,7 +14,7 @@ import { Input } from "@/components/ui/input";
 import PassingGrade from "@/components/submissions/PassingGrade";
 import CheckX from "@/components/custom/CheckX";
 
-function SubmissionTable({assignment, selected, setSelected, pending}) {
+function SubmissionTable({assignment, selected, setSelected}) {
   const {id, max_grade, passing_grade} = assignment
 
   function toggleSelection(rowIndex) {
@@ -36,13 +36,21 @@ function SubmissionTable({assignment, selected, setSelected, pending}) {
           return null
         }
 
+        const filteredIDs = submissions
+          .filter((submission)=>submission.grading_status!=="pending")
+          .reduce((selected, current) => [...selected, current.id], [])
+
+        const allSelected = selected.length === filteredIDs.length
+
         return <div className="flex items-start justify-start w-full">
           <Input type="checkbox" className="w-fit accent-primary"
-                 checked={!isLoading && selected.length === submissions.length} onChange={() => {
-            if (submissions.length === selected.length) {
+                 checked={!isLoading && allSelected} onChange={() => {
+            if (allSelected) {
               setSelected([])
             } else {
-              setSelected(submissions.reduce((selected, current) => [...selected, current.id], []).filter((id)=>!pending.includes(id)))
+              setSelected(
+                filteredIDs
+              )
             }
           }} />
         </div>
@@ -52,7 +60,7 @@ function SubmissionTable({assignment, selected, setSelected, pending}) {
         const submission = info.row.original;
         const rowIndex = info.row.index;
         return <div className="flex flex-row items-center gap-3 w-fit sm:gap-5">
-          <Input type="checkbox" className="accent-primary h-full" checked={selected.includes(submission.id)} onChange={()=>toggleSelection(submission.id)} disabled={pending.includes(submission.id)}/>
+          <Input type="checkbox" className="accent-primary h-full" checked={selected.includes(submission.id)} onChange={()=>toggleSelection(submission.id)} disabled={submission.grading_status==="pending"}/>
           <SubmissionView submission={submission} assignment={assignment} />
           <span>{rowIndex+1}</span>
         </div>;
