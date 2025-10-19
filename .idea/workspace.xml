@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="remove overscroll">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/submissions/SubmissionView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/SubmissionView.jsx" afterDir="false" />
-    </list>
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="gray out grade button when pending" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -158,15 +155,7 @@
       <workItem from="1760913033063" duration="1335000" />
       <workItem from="1760914440739" duration="349000" />
       <workItem from="1760915256494" duration="87000" />
-      <workItem from="1760916494662" duration="112000" />
-    </task>
-    <task id="LOCAL-00163" summary="fix truncate for short strings">
-      <option name="closed" value="true" />
-      <created>1760730654295</created>
-      <option name="number" value="00163" />
-      <option name="presentableId" value="LOCAL-00163" />
-      <option name="project" value="LOCAL" />
-      <updated>1760730654295</updated>
+      <workItem from="1760916494662" duration="290000" />
     </task>
     <task id="LOCAL-00164" summary="add pdf viewer background">
       <option name="closed" value="true" />
@@ -552,7 +541,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760915341043</updated>
     </task>
-    <option name="localTasksCounter" value="212" />
+    <task id="LOCAL-00212" summary="gray out grade button when pending">
+      <option name="closed" value="true" />
+      <created>1760916626965</created>
+      <option name="number" value="00212" />
+      <option name="presentableId" value="LOCAL-00212" />
+      <option name="project" value="LOCAL" />
+      <updated>1760916626972</updated>
+    </task>
+    <option name="localTasksCounter" value="213" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -570,7 +567,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix loader issue; fix pre-fetching by setting HydrationBoundary" />
     <MESSAGE value="apply pre-fetching fix for user fetching" />
     <MESSAGE value="add passing/failing grade coloring" />
     <MESSAGE value="add PassingGrade.jsx to SubmissionView.jsx" />
@@ -595,6 +591,7 @@
     <MESSAGE value="implement rendering pdf viewer when dialog open only" />
     <MESSAGE value="add refs to prevent race conditions" />
     <MESSAGE value="remove overscroll" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove overscroll" />
+    <MESSAGE value="gray out grade button when pending" />
+    <option name="LAST_COMMIT_MESSAGE" value="gray out grade button when pending" />
   </component>
 </project>
