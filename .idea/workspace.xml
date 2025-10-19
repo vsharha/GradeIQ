@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="undo last change" />
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="implement rendering pdf viewer when dialog open only">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom/PdfViewer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/PdfViewer.jsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -152,15 +155,8 @@
       <workItem from="1760909549265" duration="290000" />
       <workItem from="1760911104396" duration="727000" />
       <workItem from="1760912393121" duration="312000" />
-      <workItem from="1760913033063" duration="654000" />
-    </task>
-    <task id="LOCAL-00160" summary="added text truncation">
-      <option name="closed" value="true" />
-      <created>1760729679654</created>
-      <option name="number" value="00160" />
-      <option name="presentableId" value="LOCAL-00160" />
-      <option name="project" value="LOCAL" />
-      <updated>1760729679654</updated>
+      <workItem from="1760913033063" duration="1335000" />
+      <workItem from="1760914440739" duration="315000" />
     </task>
     <task id="LOCAL-00161" summary="improve pdf viewer styling">
       <option name="closed" value="true" />
@@ -546,7 +542,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760913652904</updated>
     </task>
-    <option name="localTasksCounter" value="209" />
+    <task id="LOCAL-00209" summary="implement rendering pdf viewer when dialog open only">
+      <option name="closed" value="true" />
+      <created>1760913719592</created>
+      <option name="number" value="00209" />
+      <option name="presentableId" value="LOCAL-00209" />
+      <option name="project" value="LOCAL" />
+      <updated>1760913719592</updated>
+    </task>
+    <option name="localTasksCounter" value="210" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -564,7 +568,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="remove console.log" />
     <MESSAGE value="added server side prefetching" />
     <MESSAGE value="add dialog descriptions" />
     <MESSAGE value="fix loader issue; fix pre-fetching by setting HydrationBoundary" />
@@ -589,6 +592,7 @@
     <MESSAGE value="fix pdf viewer for good?" />
     <MESSAGE value="add pdf viewer fix number whatever" />
     <MESSAGE value="undo last change" />
-    <option name="LAST_COMMIT_MESSAGE" value="undo last change" />
+    <MESSAGE value="implement rendering pdf viewer when dialog open only" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement rendering pdf viewer when dialog open only" />
   </component>
 </project>
