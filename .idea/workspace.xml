@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="adjust mobile table action layout">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,6 +152,7 @@
       <workItem from="1760823679450" duration="3699000" />
       <workItem from="1760907031219" duration="1350000" />
       <workItem from="1760908671021" duration="528000" />
+      <workItem from="1760909549265" duration="183000" />
     </task>
     <task id="LOCAL-00155" summary="close upload form on upload">
       <option name="closed" value="true" />
