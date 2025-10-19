@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="adjust tabs width for feedback">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="fix pdf viewer for good?">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/custom/PdfViewer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/PdfViewer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/submissions/SubmissionView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/SubmissionView.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,15 +154,8 @@
       <workItem from="1760908671021" duration="528000" />
       <workItem from="1760909549265" duration="290000" />
       <workItem from="1760911104396" duration="727000" />
-      <workItem from="1760912393121" duration="298000" />
-    </task>
-    <task id="LOCAL-00157" summary="improve pdf viewer">
-      <option name="closed" value="true" />
-      <created>1760727985967</created>
-      <option name="number" value="00157" />
-      <option name="presentableId" value="LOCAL-00157" />
-      <option name="project" value="LOCAL" />
-      <updated>1760727985967</updated>
+      <workItem from="1760912393121" duration="312000" />
+      <workItem from="1760913033063" duration="355000" />
     </task>
     <task id="LOCAL-00158" summary="adjust tab width; improve selecting rows">
       <option name="closed" value="true" />
@@ -548,7 +541,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760911824164</updated>
     </task>
-    <option name="localTasksCounter" value="206" />
+    <task id="LOCAL-00206" summary="fix pdf viewer for good?">
+      <option name="closed" value="true" />
+      <created>1760912703896</created>
+      <option name="number" value="00206" />
+      <option name="presentableId" value="LOCAL-00206" />
+      <option name="project" value="LOCAL" />
+      <updated>1760912703896</updated>
+    </task>
+    <option name="localTasksCounter" value="207" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -566,7 +567,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="adjust landing page scrollbar" />
     <MESSAGE value="add delete submissions functionality" />
     <MESSAGE value="disable checkboxes on pending" />
     <MESSAGE value="remove console.log" />
@@ -591,6 +591,7 @@
     <MESSAGE value="adjust mobile table action layout" />
     <MESSAGE value="fix footer layout" />
     <MESSAGE value="adjust tabs width for feedback" />
-    <option name="LAST_COMMIT_MESSAGE" value="adjust tabs width for feedback" />
+    <MESSAGE value="fix pdf viewer for good?" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix pdf viewer for good?" />
   </component>
 </project>
