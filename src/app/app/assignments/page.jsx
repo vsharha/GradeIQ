@@ -43,7 +43,7 @@ function Page() {
       <div className="flex flex-row flex-wrap h-fit sm:gap-y-2 w-full">
         {isLoading && <PageLoader/>}
         {error && <ErrorMessage error={error} className="mt-5"/>}
-        {!isLoading && !error && assignments.length === 0 &&
+        {!isLoading && !error && assignments?.length === 0 &&
           <div className="w-full flex flex-col justify-center items-center gap-5 mt-10">
             <p className="w-fit text-2xl">Add your first assignment</p>
             <CreateAssignment className="w-fit" wide={true}/>

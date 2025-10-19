@@ -22,9 +22,9 @@ function Feedback({feedback}) {
         <Truncate length={150}>{overall_feedback}</Truncate>
         {question_grades?.length > 0 &&
           <Tabs defaultValue={0} value={value} onValueChange={setValue}>
-            <TabsList className="w-full">
+            <TabsList className="flex flex-wrap mb-3 w-full h-fit">
               {question_grades.map((question_grade, i)=>
-                <TabsTrigger value={i} key={i}>{question_grade.number}</TabsTrigger>
+                <TabsTrigger value={i} key={i} className="min-w-[12%] w-[50%] max-w-[calc(100%*1/3)]">{question_grade.number}</TabsTrigger>
               )}
             </TabsList>
               {question_grades?.map((question_grade, i) => {
