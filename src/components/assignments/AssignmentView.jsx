@@ -5,9 +5,10 @@ import SubmissionProgress from "@/components/custom/SubmissionProgress";
 import VariableTitleView from "@/components/custom/VariableTitleView";
 import DeleteAssignment from "@/components/assignments/DeleteAssignment";
 import MarkScheme from "@/components/assignments/MarkScheme";
+import EditAssignment from "@/components/assignments/EditAssignment";
 
 function AssignmentView({assignment}) {
-  const { title, created_at, due, description, max_grade, passing_grade, id, rubrics } = assignment
+  const { title, created_at, due, description, max_grade, passing_grade, id, mark_scheme } = assignment
 
   return (
     <div className="flex flex-col gap-3 sm:max-w-120">
@@ -19,6 +20,7 @@ function AssignmentView({assignment}) {
           </div>
           <div className="flex w-full gap-3 items-center sm:w-fit h-full">
             <DeleteAssignment assignment_id={id}/>
+            <EditAssignment assignment={assignment}/>
           </div>
         </CardHeader>
         <CardContent>
@@ -43,10 +45,10 @@ function AssignmentView({assignment}) {
           <SubmissionProgress assignment={assignment}/>
         </CardContent>
       </Card>
-      {rubrics &&
+      {mark_scheme &&
         <Card>
           <CardContent>
-            <MarkScheme rubrics={rubrics} />
+            <MarkScheme mark_scheme={mark_scheme} />
           </CardContent>
         </Card>
       }

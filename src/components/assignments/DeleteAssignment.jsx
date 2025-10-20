@@ -5,7 +5,6 @@ import { useState } from "react";
 import useAssignmentMutation from "@/hooks/useAssignmentMutation";
 import getClientAuthHeaders from "@/services/getClientAuthHeaders";
 import { deleteAssignment } from "@/services/fetchApi";
-import BlockLoader from "@/components/loader/BlockLoader";
 import LoadingButton from "@/components/loader/LoadingButton";
 
 function DeleteAssignment({assignment_id, title=false, ...props}) {

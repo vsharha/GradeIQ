@@ -1,3 +1,5 @@
+import { toast } from "sonner";
+
 function handleApiError(response, data, defaultMessage) {
     if (data && data.errors && Array.isArray(data.errors)) {
         const errorMsg = data.errors.map(err => err.message).join(", ");
@@ -65,6 +67,7 @@ export async function createAssignment(assignment, headers, setError) {
             }
         }
 
+        toast.error("Could not create assignment")
         throw new Error("Could not create assignment")
     }
 
@@ -196,5 +199,49 @@ export async function confirmSubmissionGrades(assignment_id, submission_ids, hea
         throw new Error("Could not parse error response");
     }
     if(!response.ok) handleApiError(response, data, "Could not confirm submissions");
+    return data;
+}
+
+export async function updateAssignment(assignment_id, payload, headers, setError) {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_FASTAPI_URL}/assignments/${assignment_id}`, {
+        method: 'PUT',
+        headers: {
+            "Content-Type": "application/json",
+            ...headers
+        },
+        body: JSON.stringify(payload)
+    })
+    const data = await response.json()
+
+    if(!response.ok) {
+        if(data.errors) {
+            for(const err of data.errors) {
+                setError(err.field, {message: err.message})
+            }
+        }
+
+        toast.error("Could not edit assignment")
+        throw new Error("Could not edit assignment")
+    }
+
+    return data;
+}
+
+export async function updateSubmission(submission_id, payload, setError, headers) {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_FASTAPI_URL}/submissions/${submission_id}`, {
+        method: 'PUT',
+        headers: {
+            "Content-Type": "application/json",
+            ...headers
+        },
+        body: JSON.stringify(payload)
+    })
+    let data;
+    try {
+        data = await response.json();
+    } catch (e) {
+        throw new Error("Could not parse error response");
+    }
+    if(!response.ok) handleApiError(response, data, "Could not edit submission");
     return data;
 }

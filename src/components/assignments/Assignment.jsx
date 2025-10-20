@@ -8,6 +8,7 @@ import SubmissionProgress from "@/components/custom/SubmissionProgress";
 import { cn } from "@/lib/utils";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import DeleteAssignment from "@/components/assignments/DeleteAssignment";
+import EditAssignment from "@/components/assignments/EditAssignment";
 
 function Assignment({assignment, onClick, loading, setLoading}) {
   const { title, description, due, id } = assignment
@@ -31,8 +32,9 @@ function Assignment({assignment, onClick, loading, setLoading}) {
                 <DropdownMenuTrigger className="w-fit h-fit">
                   <Menu/>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent>
+                <DropdownMenuContent className="flex flex-col gap-2">
                   <DeleteAssignment assignment_id={id} title={true} className="w-full" onClick={(e)=>e.stopPropagation()}/>
+                  <EditAssignment assignment_id={id} title={true} className="w-full" onClick={(e)=>e.stopPropagation()} assignment={assignment}/>
                 </DropdownMenuContent>
               </DropdownMenu>
             </div>

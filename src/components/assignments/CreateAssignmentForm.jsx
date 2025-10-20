@@ -6,12 +6,10 @@ import { Input } from "@/components/ui/input";
 import { useForm } from "react-hook-form";
 import { Textarea } from "@/components/ui/textarea";
 import useAssignmentMutation from "@/hooks/useAssignmentMutation";
-import getClientAuthHeaders from "@/services/getClientAuthHeaders";
-import { createAssignment } from "@/services/fetchApi";
 import LoadingButton from "@/components/loader/LoadingButton";
 import MarkSchemeFieldArray from "@/components/assignments/MarkSchemeFieldArray";
 
-function CreateAssignmentForm({generated = {}, onSubmit}) {
+function CreateAssignmentForm({generated = {}, submitButtonText, onSubmit}) {
   const defaultRubric = {
     criterion: "",
     marks: "",
@@ -22,7 +20,7 @@ function CreateAssignmentForm({generated = {}, onSubmit}) {
     question: "",
     answer: "",
     precise_answer: false,
-    rubrics: [
+    mark_scheme: [
       defaultRubric
     ]
   }
@@ -43,18 +41,14 @@ function CreateAssignmentForm({generated = {}, onSubmit}) {
   })
 
   const {mutate, isPending} = useAssignmentMutation(async (assignment) => {
-    const headers = await getClientAuthHeaders();
-    const result = await createAssignment(assignment, headers, form.setError);
     if(typeof onSubmit === "function") {
-      onSubmit();
+      onSubmit(assignment, form.setError);
     }
-    return result;
   })
-
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(mutate)} className="space-y-3 mt-5">
+      <form onSubmit={form.handleSubmit(mutate)} className="space-y-3 mt-5 h-full overflow-y-scroll py-6 px-4 sm:p-8 pt-0 flex-1">
         <FormField
           control={form.control}
           name="title"
@@ -131,7 +125,7 @@ function CreateAssignmentForm({generated = {}, onSubmit}) {
         />
         <MarkSchemeFieldArray form={form} defaultMarkScheme={defaultMarkScheme} defaultRubric={defaultRubric}/>
         <LoadingButton isLoading={isPending} className="w-full">
-          Create
+          {submitButtonText?submitButtonText:"Create"}
         </LoadingButton>
       </form>
     </Form>
