@@ -227,7 +227,7 @@ export async function updateAssignment(assignment_id, payload, headers, setError
     return data;
 }
 
-export async function updateSubmission(submission_id, payload, setError, headers) {
+export async function updateSubmission(submission_id, payload, headers, setError) {
     const response = await fetch(`${process.env.NEXT_PUBLIC_FASTAPI_URL}/submissions/${submission_id}`, {
         method: 'PUT',
         headers: {

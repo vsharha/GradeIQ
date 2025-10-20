@@ -13,6 +13,8 @@ import BlockLoader from "@/components/loader/BlockLoader";
 import { Input } from "@/components/ui/input";
 import PassingGrade from "@/components/submissions/PassingGrade";
 import CheckX from "@/components/custom/CheckX";
+import EditSubmission from "@/components/submissions/EditSubmission";
+import Checkbox from "@/components/custom/Checkbox";
 
 function SubmissionTable({assignment, selected, setSelected}) {
   const {id, max_grade, passing_grade} = assignment
@@ -43,8 +45,7 @@ function SubmissionTable({assignment, selected, setSelected}) {
         const allSelected = selected.length === filteredIDs.length
 
         return <div className="flex items-start justify-start w-full">
-          <Input type="checkbox" className="w-fit accent-primary"
-                 checked={!isLoading && allSelected} onChange={() => {
+          <Checkbox checked={!isLoading && allSelected} onChange={() => {
             if (allSelected) {
               setSelected([])
             } else {
@@ -60,7 +61,7 @@ function SubmissionTable({assignment, selected, setSelected}) {
         const submission = info.row.original;
         const rowIndex = info.row.index;
         return <div className="flex flex-row items-center gap-3 w-fit sm:gap-5">
-          <Input type="checkbox" className="accent-primary h-full" checked={selected.includes(submission.id)} onChange={()=>toggleSelection(submission.id)} disabled={submission.grading_status==="pending"}/>
+          <Checkbox className="w-full h-full" checked={selected.includes(submission.id)} onChange={()=>toggleSelection(submission.id)} disabled={submission.grading_status==="pending"}/>
           <SubmissionView submission={submission} assignment={assignment} />
           <span>{rowIndex+1}</span>
         </div>;
@@ -95,6 +96,13 @@ function SubmissionTable({assignment, selected, setSelected}) {
         return value ? formatDate(value) : "";
       }
     },
+    {
+      id: "edit",
+      cell: info => {
+        const submission = info.row.original;
+        return <EditSubmission submission={submission} assignment_id={assignment.id}/>
+      }
+    }
   ]
 
   const table = useReactTable({

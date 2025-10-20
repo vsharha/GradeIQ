@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import OptionsFieldArray from "@/components/assignments/OptionsFieldArray";
 import { Button } from "@/components/ui/button";
 import { Trash } from "lucide-react";
+import Checkbox from "@/components/custom/Checkbox";
 
 function MarkSchemeFieldArray({form, defaultMarkScheme, defaultRubric}) {
 
@@ -90,8 +91,7 @@ function MarkSchemeFieldArray({form, defaultMarkScheme, defaultRubric}) {
             </FormItem>
             <FormItem className="flex-1 flex items-center">
               <FormControl className="flex items-start">
-                <Input type="checkbox"
-                       className="w-5 accent-primary" {...form.register(`mark_scheme.${index}.precise_answer`)} />
+                <Checkbox {...form.register(`mark_scheme.${index}.precise_answer`)} />
               </FormControl>
               <FormLabel>Answer is precise</FormLabel>
               <FormDescription />

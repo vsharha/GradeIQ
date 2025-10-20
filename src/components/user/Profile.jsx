@@ -15,7 +15,7 @@ function Profile() {
   }
 
   if(error) {
-    return <span><LucideX/></span>
+    return <span><LucideX/> Failed to load</span>
   }
 
   if(!user) {

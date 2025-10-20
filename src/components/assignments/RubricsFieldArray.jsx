@@ -18,7 +18,7 @@ function RubricsFieldArray({form, index, defaultRubric={}}) {
   });
 
   return (
-    <StyledCollapsible title="MarkScheme" defaultOpen={true}>
+    <StyledCollapsible title="Mark scheme" defaultOpen={true}>
       {
         rubricFields.map((field, index) =>
           <div key={field.id} className="flex gap-3 items-center">
