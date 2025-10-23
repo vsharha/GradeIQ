@@ -9,6 +9,14 @@ import {
 } from "@/components/ui/select";
 import useModels from "@/hooks/useModels";
 import { useState } from "react";
+import { SiAnthropic, SiGoogle } from 'react-icons/si';
+import _ from "lodash"
+import { Brain } from "lucide-react";
+
+const providerIcons = {
+  anthropic: <SiAnthropic />,
+  google: <SiGoogle />,
+};
 
 function SelectModel({ onChange, ...props }) {
   const {models, isLoading} = useModels();
@@ -35,9 +43,11 @@ function SelectModel({ onChange, ...props }) {
       <SelectContent>
         {!isLoading && Object.entries(models).map(([provider, models])=>
           <SelectGroup key={provider}>
-            <SelectLabel>{provider}</SelectLabel>
+            <SelectLabel className="flex gap-2 items-center">{_.capitalize(provider)}</SelectLabel>
             {models.map((model)=>
-              <SelectItem value={`${provider}:${model}`} key={model}>{model}</SelectItem>
+              <SelectItem value={`${provider}:${model}`} key={model}>
+                {providerIcons[provider] || <Brain/>} {model}
+              </SelectItem>
             )}
           </SelectGroup>
         )}
