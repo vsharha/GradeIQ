@@ -113,14 +113,14 @@ export async function deleteAssignment(assignment_id, headers) {
     return data;
 }
 
-export async function generateRubrics(mark_scheme, headers) {
+export async function generateRubrics(payload, headers) {
     const response = await fetch(`${process.env.NEXT_PUBLIC_FASTAPI_URL}/rubrics/generate`, {
         method: 'POST',
         headers: {
             "Content-Type": "application/json",
             ...headers
         },
-        body: JSON.stringify(mark_scheme)
+        body: JSON.stringify(payload)
     })
     let data;
     try {

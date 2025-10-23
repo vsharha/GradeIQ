@@ -17,7 +17,7 @@ import SelectModel from "@/components/custom/SelectModel";
 function MarkSchemeForm({ onSubmit, setGenerated }) {
   const form = useForm({
     defaultValues: {
-      ai_config: "",
+      ai_config: {},
       files: null,
     },
   });
@@ -30,7 +30,7 @@ function MarkSchemeForm({ onSubmit, setGenerated }) {
     if (files && files.length > 0) {
       encoded = await fileToBase64(files[0]);
     }
-    const payload = { encoded };
+    const payload = { ai_config:data.ai_config, encoded };
     const response = await generateRubrics(payload, headers);
 
     const result = { ...response, encoded };

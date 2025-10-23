@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add model selection to generate rubrics">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add provider icons">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/custom/SelectModel.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/SelectModel.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/fetchApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/fetchApi.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,15 +165,8 @@
       <workItem from="1761078497500" duration="507000" />
       <workItem from="1761171135585" duration="120000" />
       <workItem from="1761227277950" duration="871000" />
-      <workItem from="1761229410597" duration="6219000" />
-    </task>
-    <task id="LOCAL-00169" summary="added feedback display">
-      <option name="closed" value="true" />
-      <created>1760739387884</created>
-      <option name="number" value="00169" />
-      <option name="presentableId" value="LOCAL-00169" />
-      <option name="project" value="LOCAL" />
-      <updated>1760739387884</updated>
+      <workItem from="1761229410597" duration="6395000" />
+      <workItem from="1761238316731" duration="59000" />
     </task>
     <task id="LOCAL-00170" summary="improve padding in SubmissionView.jsx">
       <option name="closed" value="true" />
@@ -561,7 +552,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761236877006</updated>
     </task>
-    <option name="localTasksCounter" value="218" />
+    <task id="LOCAL-00218" summary="add provider icons">
+      <option name="closed" value="true" />
+      <created>1761237329652</created>
+      <option name="number" value="00218" />
+      <option name="presentableId" value="LOCAL-00218" />
+      <option name="project" value="LOCAL" />
+      <updated>1761237329652</updated>
+    </task>
+    <option name="localTasksCounter" value="219" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -579,7 +578,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="adjust header height values" />
     <MESSAGE value="comment out prefetching logic for now" />
     <MESSAGE value="add grade confirmed column" />
     <MESSAGE value="fix certain errors" />
@@ -604,6 +602,7 @@
     <MESSAGE value="add edit submission button" />
     <MESSAGE value="remove create assignment form defaults" />
     <MESSAGE value="add model selection to generate rubrics" />
-    <option name="LAST_COMMIT_MESSAGE" value="add model selection to generate rubrics" />
+    <MESSAGE value="add provider icons" />
+    <option name="LAST_COMMIT_MESSAGE" value="add provider icons" />
   </component>
 </project>
