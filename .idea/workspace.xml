@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add provider icons">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="fix model selection payload">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/fetchApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/fetchApi.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,15 +165,8 @@
       <workItem from="1761171135585" duration="120000" />
       <workItem from="1761227277950" duration="871000" />
       <workItem from="1761229410597" duration="6395000" />
-      <workItem from="1761238316731" duration="59000" />
-    </task>
-    <task id="LOCAL-00170" summary="improve padding in SubmissionView.jsx">
-      <option name="closed" value="true" />
-      <created>1760743648784</created>
-      <option name="number" value="00170" />
-      <option name="presentableId" value="LOCAL-00170" />
-      <option name="project" value="LOCAL" />
-      <updated>1760743648784</updated>
+      <workItem from="1761238316731" duration="165000" />
+      <workItem from="1761238791489" duration="335000" />
     </task>
     <task id="LOCAL-00171" summary="extract pdf viewer logic to a separate file">
       <option name="closed" value="true" />
@@ -560,7 +552,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761237329652</updated>
     </task>
-    <option name="localTasksCounter" value="219" />
+    <task id="LOCAL-00219" summary="fix model selection payload">
+      <option name="closed" value="true" />
+      <created>1761238479967</created>
+      <option name="number" value="00219" />
+      <option name="presentableId" value="LOCAL-00219" />
+      <option name="project" value="LOCAL" />
+      <updated>1761238479967</updated>
+    </task>
+    <option name="localTasksCounter" value="220" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -578,7 +578,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="comment out prefetching logic for now" />
     <MESSAGE value="add grade confirmed column" />
     <MESSAGE value="fix certain errors" />
     <MESSAGE value="adjust tab min width" />
@@ -603,6 +602,7 @@
     <MESSAGE value="remove create assignment form defaults" />
     <MESSAGE value="add model selection to generate rubrics" />
     <MESSAGE value="add provider icons" />
-    <option name="LAST_COMMIT_MESSAGE" value="add provider icons" />
+    <MESSAGE value="fix model selection payload" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix model selection payload" />
   </component>
 </project>

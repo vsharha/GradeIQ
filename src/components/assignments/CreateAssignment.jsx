@@ -57,7 +57,7 @@ function CreateAssignment({className, wide=false}) {
             <DialogHeader className="p-5 pb-0">
               <DialogTitle>Create assignment</DialogTitle>
             </DialogHeader>
-            <CreateAssignmentForm onSubmit={()=>handleSubmit()} generated={generated}/>
+            <CreateAssignmentForm onSubmit={handleSubmit} generated={generated}/>
           </>
         }
       </DialogContent>
