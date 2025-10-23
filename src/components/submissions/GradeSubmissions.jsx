@@ -13,17 +13,23 @@ import getClientAuthHeaders from "@/services/getClientAuthHeaders";
 import { gradeSubmissions } from "@/services/fetchApi";
 import useSubmissionMutation from "@/hooks/useSubmissionMutation";
 import { Brain, BrainCircuit } from "lucide-react";
+import SelectModel from "@/components/custom/SelectModel";
+import { Label } from "@/components/ui/label";
 
 function GradeSubmissions({ selected, setSelected, assignment_id, ...props }) {
   const [open, setOpen] = useState(false);
 
-  const { mutate, isPending } = useSubmissionMutation(assignment_id, async ({ assignment_id, submission_ids }) => {
+  const { mutate, isPending } = useSubmissionMutation(assignment_id, async ({ assignment_id, payload }) => {
     const headers = await getClientAuthHeaders();
-    return await gradeSubmissions(assignment_id, submission_ids, headers);
+    return await gradeSubmissions(assignment_id, payload, headers);
   });
 
+
+  const [config, setConfig] = useState();
+
   async function handleGrade() {
-    await mutate({ assignment_id, submission_ids:selected });
+    const payload = {ai_config: config, submission_ids:selected}
+    await mutate({ assignment_id, payload });
     setOpen(false);
     if (typeof setSelected === "function") {
       setSelected([]);
@@ -43,6 +49,7 @@ function GradeSubmissions({ selected, setSelected, assignment_id, ...props }) {
     "Polishing expression...",
   ];
 
+
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
@@ -57,6 +64,7 @@ function GradeSubmissions({ selected, setSelected, assignment_id, ...props }) {
         <DialogDescription>
           Our AI will grade your submissions
         </DialogDescription>
+        <SelectModel onChange={setConfig}/>
         <DialogFooter>
           <Button variant="secondary" onClick={() => setOpen(false)}>
             No

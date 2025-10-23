@@ -36,8 +36,8 @@ function SelectModel({ onChange, ...props }) {
   }
 
   return (
-    <Select {...props} value={model} onValueChange={handleChange}>
-      <SelectTrigger>
+    <Select id="select-model" {...props} value={model} onValueChange={handleChange}>
+      <SelectTrigger className="w-full" >
         <SelectValue placeholder="Select a model"/>
       </SelectTrigger>
       <SelectContent>

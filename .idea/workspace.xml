@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="fix model selection payload">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="fix assignment creation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom/SelectModel.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/SelectModel.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/submissions/GradeSubmissions.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/GradeSubmissions.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/select.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/select.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/fetchApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/fetchApi.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,15 +170,8 @@
       <workItem from="1761227277950" duration="871000" />
       <workItem from="1761229410597" duration="6395000" />
       <workItem from="1761238316731" duration="165000" />
-      <workItem from="1761238791489" duration="335000" />
-    </task>
-    <task id="LOCAL-00171" summary="extract pdf viewer logic to a separate file">
-      <option name="closed" value="true" />
-      <created>1760744635099</created>
-      <option name="number" value="00171" />
-      <option name="presentableId" value="LOCAL-00171" />
-      <option name="project" value="LOCAL" />
-      <updated>1760744635099</updated>
+      <workItem from="1761238791489" duration="981000" />
+      <workItem from="1761240883100" duration="1260000" />
     </task>
     <task id="LOCAL-00172" summary="improve worker loading">
       <option name="closed" value="true" />
@@ -560,7 +557,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761238479967</updated>
     </task>
-    <option name="localTasksCounter" value="220" />
+    <task id="LOCAL-00220" summary="fix assignment creation">
+      <option name="closed" value="true" />
+      <created>1761239308986</created>
+      <option name="number" value="00220" />
+      <option name="presentableId" value="LOCAL-00220" />
+      <option name="project" value="LOCAL" />
+      <updated>1761239308986</updated>
+    </task>
+    <option name="localTasksCounter" value="221" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -578,7 +583,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add grade confirmed column" />
     <MESSAGE value="fix certain errors" />
     <MESSAGE value="adjust tab min width" />
     <MESSAGE value="updates" />
@@ -603,6 +607,7 @@
     <MESSAGE value="add model selection to generate rubrics" />
     <MESSAGE value="add provider icons" />
     <MESSAGE value="fix model selection payload" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix model selection payload" />
+    <MESSAGE value="fix assignment creation" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix assignment creation" />
   </component>
 </project>

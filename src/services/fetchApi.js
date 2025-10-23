@@ -128,7 +128,10 @@ export async function generateRubrics(payload, headers) {
     } catch (e) {
         throw new Error("Could not parse error response");
     }
-    if(!response.ok) handleApiError(response, data, "Could not upload mark scheme");
+    if(!response.ok) {
+        toast.error("Could not generate rubrics")
+        handleApiError(response, data, "Could not upload mark scheme");
+    }
     return data;
 }
 
@@ -144,14 +147,14 @@ export async function getSubmissionFileURL(submission_id, headers) {
     return data;
 }
 
-export async function gradeSubmissions(assignment_id, submission_ids, headers) {
+export async function gradeSubmissions(assignment_id, payload, headers) {
     const response = await fetch(`${process.env.NEXT_PUBLIC_FASTAPI_URL}/assignments/${assignment_id}/submissions/grade`, {
         method: 'POST',
         headers: {
             "Content-Type": "application/json",
             ...headers
         },
-        body: JSON.stringify({submission_ids})
+        body: JSON.stringify(payload)
     })
     let data;
     try {
