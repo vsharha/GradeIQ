@@ -15,6 +15,7 @@ import PassingGrade from "@/components/submissions/PassingGrade";
 import CheckX from "@/components/custom/CheckX";
 import EditSubmission from "@/components/submissions/EditSubmission";
 import Checkbox from "@/components/custom/Checkbox";
+import { Loader } from "lucide-react";
 
 function SubmissionTable({assignment, selected, setSelected}) {
   const {id, max_grade, passing_grade} = assignment
@@ -64,6 +65,7 @@ function SubmissionTable({assignment, selected, setSelected}) {
           <Checkbox className="w-full h-full" checked={selected.includes(submission.id)} onChange={()=>toggleSelection(submission.id)} disabled={submission.grading_status==="pending"}/>
           <SubmissionView submission={submission} assignment={assignment} />
           <span>{rowIndex+1}</span>
+          {submission.grading_status==="pending"&&<BlockLoader />}
         </div>;
       }
     },

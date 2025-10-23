@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="fix assignment creation">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add submission ai selection">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/custom/SelectModel.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom/SelectModel.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/submissions/GradeSubmissions.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/GradeSubmissions.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/select.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/select.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/fetchApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/fetchApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,15 +168,8 @@
       <workItem from="1761229410597" duration="6395000" />
       <workItem from="1761238316731" duration="165000" />
       <workItem from="1761238791489" duration="981000" />
-      <workItem from="1761240883100" duration="1260000" />
-    </task>
-    <task id="LOCAL-00172" summary="improve worker loading">
-      <option name="closed" value="true" />
-      <created>1760744875704</created>
-      <option name="number" value="00172" />
-      <option name="presentableId" value="LOCAL-00172" />
-      <option name="project" value="LOCAL" />
-      <updated>1760744875704</updated>
+      <workItem from="1761240883100" duration="1276000" />
+      <workItem from="1761242251674" duration="153000" />
     </task>
     <task id="LOCAL-00173" summary="further improve worker loading">
       <option name="closed" value="true" />
@@ -565,7 +555,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761239308986</updated>
     </task>
-    <option name="localTasksCounter" value="221" />
+    <task id="LOCAL-00221" summary="add submission ai selection">
+      <option name="closed" value="true" />
+      <created>1761242163908</created>
+      <option name="number" value="00221" />
+      <option name="presentableId" value="LOCAL-00221" />
+      <option name="project" value="LOCAL" />
+      <updated>1761242163908</updated>
+    </task>
+    <option name="localTasksCounter" value="222" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -583,7 +581,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix certain errors" />
     <MESSAGE value="adjust tab min width" />
     <MESSAGE value="updates" />
     <MESSAGE value="add error handling to pdf module" />
@@ -608,6 +605,7 @@
     <MESSAGE value="add provider icons" />
     <MESSAGE value="fix model selection payload" />
     <MESSAGE value="fix assignment creation" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix assignment creation" />
+    <MESSAGE value="add submission ai selection" />
+    <option name="LAST_COMMIT_MESSAGE" value="add submission ai selection" />
   </component>
 </project>
