@@ -1,6 +1,6 @@
 "use client";
 
-import { Form, FormControl, FormDescription, FormField, FormItem, FormMessage } from "@/components/ui/form";
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Dropzone, DropzoneContent, DropzoneEmptyState } from "@/components/ui/shadcn-io/dropzone";
 import { useForm } from "react-hook-form";
 import getClientAuthHeaders from "@/services/getClientAuthHeaders";
@@ -9,15 +9,21 @@ import useGenerate from "@/hooks/useGenerate";
 import LoadingButton from "@/components/loader/LoadingButton";
 import { Button } from "@/components/ui/button";
 import fileToBase64 from "@/services/fileToBase64";
+import { Input } from "@/components/ui/input";
+import { Trash } from "lucide-react";
+import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import SelectModel from "@/components/custom/SelectModel";
 
-function MarkSchemeForm({onSubmit, setGenerated}) {
+function MarkSchemeForm({ onSubmit, setGenerated }) {
   const form = useForm({
     defaultValues: {
+      ai_config: "",
       files: null,
-    }
-  })
+    },
+  });
 
-  const {mutate, isPending} = useGenerate(async (data)=>{
+  const { mutate, isPending } = useGenerate(async (data) => {
+    console.log(data)
     const headers = await getClientAuthHeaders();
     const files = data.files;
     let encoded = null;
@@ -27,13 +33,13 @@ function MarkSchemeForm({onSubmit, setGenerated}) {
     const payload = { encoded };
     const response = await generateRubrics(payload, headers);
 
-    const result = {...response, encoded}
-    console.log(result)
+    const result = { ...response, encoded };
+    console.log(result);
     setGenerated(result);
-    if(typeof onSubmit === "function") {
+    if (typeof onSubmit === "function") {
       onSubmit();
     }
-  })
+  });
 
   const messages = [
     "Crunching grades...",
@@ -75,6 +81,22 @@ function MarkSchemeForm({onSubmit, setGenerated}) {
               </FormDescription>
               <FormMessage />
             </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="ai_config"
+          render={({ field }) => (
+        <FormItem className="flex-1">
+          <FormControl>
+            <div className="flex gap-3 flex-col">
+              <FormLabel>Select AI model</FormLabel>
+              <SelectModel disabled={isPending} {...field}/>
+            </div>
+          </FormControl>
+          <FormDescription />
+          <FormMessage />
+        </FormItem>
           )}
         />
         <LoadingButton isLoading={isPending} className="w-full" messages={messages}>

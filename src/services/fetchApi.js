@@ -245,3 +245,15 @@ export async function updateSubmission(submission_id, payload, headers, setError
     if(!response.ok) handleApiError(response, data, "Could not edit submission");
     return data;
 }
+
+export async function fetchModels() {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_FASTAPI_URL}/models`)
+    let data;
+    try {
+        data = await response.json();
+    } catch (e) {
+        throw new Error("Could not parse error response");
+    }
+    if(!response.ok) handleApiError(response, data, "Could not edit submission");
+    return data;
+}
