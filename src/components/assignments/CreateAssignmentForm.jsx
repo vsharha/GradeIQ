@@ -28,8 +28,8 @@ function CreateAssignmentForm({generated = {}, submitButtonText, onSubmit}) {
   const form = useForm({
     defaultValues: {
       due: generated.due ?? new Date(Date.now() + 24 * 60 * 60 * 1000),
-      max_grade: generated.max_grade ?? 100,
-      passing_grade: generated.passing_grade ?? 40,
+      max_grade: generated.max_grade ?? "",
+      passing_grade: generated.passing_grade ?? "",
       files: generated.files ?? null,
       title: generated.title ?? "",
       description: generated.description ?? "",

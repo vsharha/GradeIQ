@@ -4,19 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add assignment edit functionality">
-      <change afterPath="$PROJECT_DIR$/src/components/custom/Checkbox.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/landing/LandingFooter.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/landing/LandingMain.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/submissions/EditSubmission.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/submissions/EditSubmissionForm.jsx" afterDir="false" />
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="remove create assignment form defaults">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/assignments/MarkSchemeFieldArray.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/MarkSchemeFieldArray.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/assignments/RubricsFieldArray.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/RubricsFieldArray.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/user/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/user/Profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/fetchApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/fetchApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/assignments/CreateAssignmentForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/assignments/CreateAssignmentForm.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,15 +161,11 @@
       <workItem from="1760916494662" duration="290000" />
       <workItem from="1760916860351" duration="235000" />
       <workItem from="1760979345297" duration="4696000" />
-      <workItem from="1760994516848" duration="2997000" />
-    </task>
-    <task id="LOCAL-00166" summary="fix grade display">
-      <option name="closed" value="true" />
-      <created>1760734926225</created>
-      <option name="number" value="00166" />
-      <option name="presentableId" value="LOCAL-00166" />
-      <option name="project" value="LOCAL" />
-      <updated>1760734926225</updated>
+      <workItem from="1760994516848" duration="3843000" />
+      <workItem from="1761078497500" duration="507000" />
+      <workItem from="1761171135585" duration="120000" />
+      <workItem from="1761227277950" duration="871000" />
+      <workItem from="1761229410597" duration="304000" />
     </task>
     <task id="LOCAL-00167" summary="fix grade display again">
       <option name="closed" value="true" />
@@ -565,7 +551,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760984066939</updated>
     </task>
-    <option name="localTasksCounter" value="215" />
+    <task id="LOCAL-00215" summary="add edit submission button">
+      <option name="closed" value="true" />
+      <created>1760997717717</created>
+      <option name="number" value="00215" />
+      <option name="presentableId" value="LOCAL-00215" />
+      <option name="project" value="LOCAL" />
+      <updated>1760997717717</updated>
+    </task>
+    <option name="localTasksCounter" value="216" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -583,8 +577,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add PassingGrade.jsx to SubmissionView.jsx" />
-    <MESSAGE value="fix select all" />
     <MESSAGE value="adjust user button styles" />
     <MESSAGE value="adjust header height values" />
     <MESSAGE value="comment out prefetching logic for now" />
@@ -608,6 +600,8 @@
     <MESSAGE value="gray out grade button when pending" />
     <MESSAGE value="fix grade single" />
     <MESSAGE value="add assignment edit functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="add assignment edit functionality" />
+    <MESSAGE value="add edit submission button" />
+    <MESSAGE value="remove create assignment form defaults" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove create assignment form defaults" />
   </component>
 </project>
