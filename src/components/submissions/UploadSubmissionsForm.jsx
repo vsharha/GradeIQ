@@ -22,10 +22,11 @@ function UploadSubmissionsForm({assignment_id, onUpload}) {
       let encoded_files = [];
       if (files && files.length > 0) {
         for(const file of files) {
-          const encoded = await fileToBase64(files[0])
+          const encoded = await fileToBase64(file)
           encoded_files.push(encoded);
         }
       }
+      console.log(encoded_files)
       const result = await uploadSubmissions(assignment_id, {encoded_files}, headers)
       if(typeof onUpload === "function") {
         onUpload()

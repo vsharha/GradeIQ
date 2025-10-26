@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add submission ai selection">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add loader">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/SubmissionTable.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/submissions/UploadSubmissionsForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/UploadSubmissionsForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/data.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,15 +171,15 @@
       <workItem from="1761238316731" duration="165000" />
       <workItem from="1761238791489" duration="981000" />
       <workItem from="1761240883100" duration="1276000" />
-      <workItem from="1761242251674" duration="153000" />
-    </task>
-    <task id="LOCAL-00173" summary="further improve worker loading">
-      <option name="closed" value="true" />
-      <created>1760745092849</created>
-      <option name="number" value="00173" />
-      <option name="presentableId" value="LOCAL-00173" />
-      <option name="project" value="LOCAL" />
-      <updated>1760745092849</updated>
+      <workItem from="1761242251674" duration="195000" />
+      <workItem from="1761263262969" duration="116000" />
+      <workItem from="1761263700008" duration="2232000" />
+      <workItem from="1761267320300" duration="3000" />
+      <workItem from="1761267336844" duration="80000" />
+      <workItem from="1761301009719" duration="9000" />
+      <workItem from="1761395404721" duration="968000" />
+      <workItem from="1761396459676" duration="4000" />
+      <workItem from="1761521398582" duration="782000" />
     </task>
     <task id="LOCAL-00174" summary="fix previous commit">
       <option name="closed" value="true" />
@@ -563,7 +565,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761242163908</updated>
     </task>
-    <option name="localTasksCounter" value="222" />
+    <task id="LOCAL-00222" summary="add loader">
+      <option name="closed" value="true" />
+      <created>1761242424670</created>
+      <option name="number" value="00222" />
+      <option name="presentableId" value="LOCAL-00222" />
+      <option name="project" value="LOCAL" />
+      <updated>1761242424670</updated>
+    </task>
+    <option name="localTasksCounter" value="223" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -581,7 +591,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="adjust tab min width" />
     <MESSAGE value="updates" />
     <MESSAGE value="add error handling to pdf module" />
     <MESSAGE value="handle no url edgecase" />
@@ -606,6 +615,7 @@
     <MESSAGE value="fix model selection payload" />
     <MESSAGE value="fix assignment creation" />
     <MESSAGE value="add submission ai selection" />
-    <option name="LAST_COMMIT_MESSAGE" value="add submission ai selection" />
+    <MESSAGE value="add loader" />
+    <option name="LAST_COMMIT_MESSAGE" value="add loader" />
   </component>
 </project>

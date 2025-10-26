@@ -33,7 +33,7 @@ function Page() {
       <div className="flex items-center flex-col gap-4 sm:gap-6 sm:flex-row sm:justify-between px-1">
         <div className="flex flex-row gap-3 justify-between w-full flex-1 items-center">
           <h1 className="font-bold text-2xl w-full flex-1 text-left">Created Assignments</h1>
-          {!isLoading && !error && assignments.length !== 0 && <CreateAssignment className="mr-auto sm:m-none" />}
+          {!isLoading && !error && assignments?.length !== 0 && <CreateAssignment className="mr-auto sm:m-none" />}
         </div>
         <div className="w-full sm:w-fit flex items-center gap-3 mr-auto">
           <Input placeholder="Search..." autoComplete="new-password" value={searchQuery} onChange={(e)=>setSearchQuery(e.target.value)} className="flex-1 w-full sm:w-35 md:w-60"/>
