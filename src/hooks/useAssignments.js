@@ -3,8 +3,6 @@ import { fetchAssignments } from "@/services/fetchApi";
 import getClientAuthHeaders from "@/services/getClientAuthHeaders";
 
 function useAssignments() {
-    const headers = getClientAuthHeaders()
-
     const query = useQuery({
         queryKey: ["assignments"],
         queryFn: async () => {
@@ -12,6 +10,7 @@ function useAssignments() {
             return fetchAssignments(headers)
         },
         refetchOnWindowFocus: true,
+        staleTime: 0,
     })
 
     return {...query, assignments: query.data}

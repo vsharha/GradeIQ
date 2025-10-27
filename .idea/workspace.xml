@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="add loader">
+    <list default="true" id="7518a2e6-bae9-44a8-9c24-65e2102999a3" name="Changes" comment="fix uploading multiple submissions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app/assignments/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app/assignments/page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/submissions/UploadSubmissionsForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/submissions/UploadSubmissionsForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useAssignments.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useAssignments.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useSubmissions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useSubmissions.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,15 +178,9 @@
       <workItem from="1761301009719" duration="9000" />
       <workItem from="1761395404721" duration="968000" />
       <workItem from="1761396459676" duration="4000" />
-      <workItem from="1761521398582" duration="782000" />
-    </task>
-    <task id="LOCAL-00174" summary="fix previous commit">
-      <option name="closed" value="true" />
-      <created>1760745618633</created>
-      <option name="number" value="00174" />
-      <option name="presentableId" value="LOCAL-00174" />
-      <option name="project" value="LOCAL" />
-      <updated>1760745618633</updated>
+      <workItem from="1761521398582" duration="864000" />
+      <workItem from="1761522302474" duration="5000" />
+      <workItem from="1761525028194" duration="566000" />
     </task>
     <task id="LOCAL-00175" summary="add logo">
       <option name="closed" value="true" />
@@ -573,7 +566,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761242424670</updated>
     </task>
-    <option name="localTasksCounter" value="223" />
+    <task id="LOCAL-00223" summary="fix uploading multiple submissions">
+      <option name="closed" value="true" />
+      <created>1761522237791</created>
+      <option name="number" value="00223" />
+      <option name="presentableId" value="LOCAL-00223" />
+      <option name="project" value="LOCAL" />
+      <updated>1761522237792</updated>
+    </task>
+    <option name="localTasksCounter" value="224" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -591,7 +592,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="updates" />
     <MESSAGE value="add error handling to pdf module" />
     <MESSAGE value="handle no url edgecase" />
     <MESSAGE value="improve pending status by using database values" />
@@ -616,6 +616,7 @@
     <MESSAGE value="fix assignment creation" />
     <MESSAGE value="add submission ai selection" />
     <MESSAGE value="add loader" />
-    <option name="LAST_COMMIT_MESSAGE" value="add loader" />
+    <MESSAGE value="fix uploading multiple submissions" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix uploading multiple submissions" />
   </component>
 </project>

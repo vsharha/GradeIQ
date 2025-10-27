@@ -10,6 +10,13 @@ function useSubmissions(assignment_id) {
             return fetchSubmissions(assignment_id, headers)
         },
         refetchOnWindowFocus: true,
+        staleTime: 0,
+        refetchInterval: (query) => {
+            const hasPending = query.state.data?.some(
+                submission => submission?.grading_status === "pending"
+            );
+            return hasPending ? 3000 : false;
+        },
     })
 
     return {...query, submissions: query.data}
