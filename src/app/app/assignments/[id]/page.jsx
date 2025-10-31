@@ -50,7 +50,7 @@ function Page({ params }) {
   return (
     <div className="flex flex-col gap-3 w-full max-w-content">
       <BackButton href="/app/assignments" />
-      <div className="flex flex-col lg:flex-row gap-6 lg:gap-4">
+      <div className="flex flex-col w-full flex-1 lg:flex-row gap-6 lg:gap-4">
         <AssignmentView assignment={assignment} />
         <Card className="gap-2 pb-6 lg:flex-1 lg:min-h-[calc(100dvh*3/4)]">
           <CardHeader className="flex flex-col">
