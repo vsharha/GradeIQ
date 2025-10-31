@@ -11,8 +11,8 @@ function AssignmentView({assignment}) {
   const { title, created_at, due, description, max_grade, passing_grade, id, mark_scheme } = assignment
 
   return (
-    <div className="flex flex-col gap-3">
-      <Card className="">
+    <div className="flex flex-col gap-3 lg:max-w-120">
+      <Card>
         <CardHeader className="flex flex-col gap-5">
           <div className="flex w-full gap-3 sm:gap-2 items-start flex-col">
             <h1 className="font-bold text-xl sm:text-2xl w-fit">{title}</h1>
