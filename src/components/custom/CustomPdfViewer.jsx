@@ -1,8 +1,8 @@
 import { useState } from "react";
-import 'react-pdf/dist/Page/AnnotationLayer.css';
-import 'react-pdf/dist/Page/TextLayer.css';
-import {Button} from "@/components/ui/button";
-import {ArrowLeft, ArrowRight} from "lucide-react";
+import "react-pdf/dist/Page/AnnotationLayer.css";
+import "react-pdf/dist/Page/TextLayer.css";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import dynamic from "next/dynamic";
 
 const PdfViewer = dynamic(() => import("./PdfViewer"), { ssr: false });
@@ -26,13 +26,22 @@ export default function CustomPdfViewer({ url }) {
           {numPages ? ` / ${numPages}` : ""}
         </span>
 
-        <Button onClick={goNext} disabled={!numPages || pageNumber >= numPages} variant="ghost">
+        <Button
+          onClick={goNext}
+          disabled={!numPages || pageNumber >= numPages}
+          variant="ghost"
+        >
           <ArrowRight />
         </Button>
       </div>
       <div className="mt-3 w-full flex justify-center max-h-full">
         <div className="w-fit rounded-sm overflow-hidden">
-          <PdfViewer url={url} setNumPages={setNumPages} pageNumber={pageNumber} setPageNumber={setPageNumber}/>
+          <PdfViewer
+            url={url}
+            setNumPages={setNumPages}
+            pageNumber={pageNumber}
+            setPageNumber={setPageNumber}
+          />
         </div>
       </div>
     </div>

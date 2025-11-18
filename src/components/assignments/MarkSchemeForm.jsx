@@ -1,7 +1,19 @@
 "use client";
 
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { Dropzone, DropzoneContent, DropzoneEmptyState } from "@/components/ui/shadcn-io/dropzone";
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import {
+  Dropzone,
+  DropzoneContent,
+  DropzoneEmptyState,
+} from "@/components/ui/shadcn-io/dropzone";
 import { useForm } from "react-hook-form";
 import getClientAuthHeaders from "@/services/getClientAuthHeaders";
 import { generateRubrics } from "@/services/fetchApi";
@@ -11,7 +23,14 @@ import { Button } from "@/components/ui/button";
 import fileToBase64 from "@/services/fileToBase64";
 import { Input } from "@/components/ui/input";
 import { Trash } from "lucide-react";
-import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import SelectModel from "@/components/custom/SelectModel";
 
 function MarkSchemeForm({ onSubmit, setGenerated }) {
@@ -23,14 +42,14 @@ function MarkSchemeForm({ onSubmit, setGenerated }) {
   });
 
   const { mutate, isPending } = useGenerate(async (data) => {
-    console.log(data)
+    console.log(data);
     const headers = await getClientAuthHeaders();
     const files = data.files;
     let encoded = null;
     if (files && files.length > 0) {
       encoded = await fileToBase64(files[0]);
     }
-    const payload = { ai_config:data.ai_config, encoded };
+    const payload = { ai_config: data.ai_config, encoded };
     const response = await generateRubrics(payload, headers);
 
     const result = { ...response, encoded };
@@ -56,7 +75,10 @@ function MarkSchemeForm({ onSubmit, setGenerated }) {
 
   return (
     <Form className="w-full" {...form}>
-      <form onSubmit={form.handleSubmit(mutate)} className="space-y-3 mt-2 w-full">
+      <form
+        onSubmit={form.handleSubmit(mutate)}
+        className="space-y-3 mt-2 w-full"
+      >
         <FormField
           control={form.control}
           name="files"
@@ -76,9 +98,7 @@ function MarkSchemeForm({ onSubmit, setGenerated }) {
                   <DropzoneContent />
                 </Dropzone>
               </FormControl>
-              <FormDescription>
-
-              </FormDescription>
+              <FormDescription></FormDescription>
               <FormMessage />
             </FormItem>
           )}
@@ -87,22 +107,31 @@ function MarkSchemeForm({ onSubmit, setGenerated }) {
           control={form.control}
           name="ai_config"
           render={({ field }) => (
-        <FormItem className="flex-1">
-          <FormControl>
-            <div className="flex gap-3 flex-col">
-              <FormLabel>Select AI model</FormLabel>
-              <SelectModel disabled={isPending} {...field}/>
-            </div>
-          </FormControl>
-          <FormDescription />
-          <FormMessage />
-        </FormItem>
+            <FormItem className="flex-1">
+              <FormControl>
+                <div className="flex gap-3 flex-col">
+                  <FormLabel>Select AI model</FormLabel>
+                  <SelectModel disabled={isPending} {...field} />
+                </div>
+              </FormControl>
+              <FormDescription />
+              <FormMessage />
+            </FormItem>
           )}
         />
-        <LoadingButton isLoading={isPending} className="w-full" messages={messages}>
+        <LoadingButton
+          isLoading={isPending}
+          className="w-full"
+          messages={messages}
+        >
           Generate
         </LoadingButton>
-        <Button onClick={onSubmit} className="w-full" variant="secondary" disabled={isPending}>
+        <Button
+          onClick={onSubmit}
+          className="w-full"
+          variant="secondary"
+          disabled={isPending}
+        >
           Enter manually
         </Button>
       </form>

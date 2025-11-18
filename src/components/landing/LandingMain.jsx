@@ -9,11 +9,18 @@ function LandingMain() {
         <div className="max-w-150 sm:max-w-200 flex items-center justify-center flex-col gap-3 p-3 pb-0 animate-fade-in">
           <div className="font-bold font-heading text-center text-landing sm:text-3xl md:text-4xl">
             <h1>Grading, Reimagined.</h1>
-            <div className="text-center flex flex-col sm:gap-[0.25em] sm:flex-row"><span>Powered by</span> <h1><span className="text-primary">Artificial Intelligence</span>.
-            </h1>
+            <div className="text-center flex flex-col sm:gap-[0.25em] sm:flex-row">
+              <span>Powered by</span>{" "}
+              <h1>
+                <span className="text-primary">Artificial Intelligence</span>.
+              </h1>
             </div>
           </div>
-          <p className="text-center text-md sm:text-lg text-muted-foreground px-3 pb-0">Stop spending nights grading papers. GradeIQ uses advanced AI to provide instant, accurate, and insightful feedback, so you can focus on what matters most: teaching.</p>
+          <p className="text-center text-md sm:text-lg text-muted-foreground px-3 pb-0">
+            Stop spending nights grading papers. GradeIQ uses advanced AI to
+            provide instant, accurate, and insightful feedback, so you can focus
+            on what matters most: teaching.
+          </p>
         </div>
         <Link href={"/app"}>
           <Button className="text-lg font-semibold px-7 py-6 shadow-primary shadow-2xl animate-fade-in">

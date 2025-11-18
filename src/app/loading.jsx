@@ -1,9 +1,7 @@
 import PageLoader from "@/components/loader/PageLoader";
 
 function Loading() {
-  return (
-    <PageLoader/>
-  );
+  return <PageLoader />;
 }
 
 export default Loading;

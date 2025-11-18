@@ -6,10 +6,13 @@ function Page() {
   return (
     <Card className="w-full max-w-120">
       <CardHeader>
-        <CardTitle className="text-xl font-heading flex flex-row  gap-2 items-center"><LogIn/>Log in</CardTitle>
+        <CardTitle className="text-xl font-heading flex flex-row  gap-2 items-center">
+          <LogIn />
+          Log in
+        </CardTitle>
       </CardHeader>
       <CardContent>
-        <LoginForm/>
+        <LoginForm />
       </CardContent>
     </Card>
   );

@@ -6,8 +6,10 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint",
-    "postinstall": "cp node_modules/pdfjs-dist/build/pdf.worker.min.mjs public/"
+		"lint": "eslint",
+    "postinstall": "cp node_modules/pdfjs-dist/build/pdf.worker.min.mjs public/",
+    "fix": "eslint . --fix",
+    "format": "prettier --write ./src"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

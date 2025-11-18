@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Document, Page, pdfjs } from "react-pdf";
 import { useState, useEffect, useRef } from "react";
@@ -9,7 +9,7 @@ try {
   console.error("Failed to initialize PDF worker:", error);
 }
 
-function PdfViewer({url, setNumPages, pageNumber, setPageNumber}) {
+function PdfViewer({ url, setNumPages, pageNumber, setPageNumber }) {
   const [dimensions, setDimensions] = useState({ width: null, height: null });
   const [documentLoaded, setDocumentLoaded] = useState(false);
   const mountedRef = useRef(true);
@@ -24,16 +24,18 @@ function PdfViewer({url, setNumPages, pageNumber, setPageNumber}) {
     };
   }, [url]);
 
-  if(!url) {
-    return <div><p>Failed to load PDF file.</p></div>;
+  if (!url) {
+    return (
+      <div>
+        <p>Failed to load PDF file.</p>
+      </div>
+    );
   }
 
-  const scale = 1
+  const scale = 1;
 
   return (
-    <div
-      style={{overflow:'auto', width:'full'}}
-    >
+    <div style={{ overflow: "auto", width: "full" }}>
       <Document
         key={url}
         file={url}
@@ -54,7 +56,13 @@ function PdfViewer({url, setNumPages, pageNumber, setPageNumber}) {
           <div
             style={
               dimensions.width && dimensions.height
-                ? { minHeight: dimensions.height, minWidth: dimensions.width, display: 'flex', alignItems: 'center', justifyContent: 'center' }
+                ? {
+                    minHeight: dimensions.height,
+                    minWidth: dimensions.width,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }
                 : {}
             }
           >
@@ -68,10 +76,22 @@ function PdfViewer({url, setNumPages, pageNumber, setPageNumber}) {
               onLoadSuccess={(page) => {
                 if (mountedRef.current) {
                   const viewport = page.getViewport({ scale });
-                  setDimensions({ height: viewport.height, width: viewport.width });
+                  setDimensions({
+                    height: viewport.height,
+                    width: viewport.width,
+                  });
                 }
               }}
-              loading={<div style={{ height: dimensions.height || 'auto', width: dimensions.width || 'auto', background: 'white', text: 'black' }} />}
+              loading={
+                <div
+                  style={{
+                    height: dimensions.height || "auto",
+                    width: dimensions.width || "auto",
+                    background: "white",
+                    text: "black",
+                  }}
+                />
+              }
             />
           </div>
         )}
@@ -80,4 +100,4 @@ function PdfViewer({url, setNumPages, pageNumber, setPageNumber}) {
   );
 }
 
-export default PdfViewer
+export default PdfViewer;

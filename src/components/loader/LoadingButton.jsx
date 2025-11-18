@@ -2,7 +2,12 @@ import BlockLoader from "@/components/loader/BlockLoader";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect, useMemo } from "react";
 
-function LoadingButton({ isLoading=false, children, messages=[], ...props }) {
+function LoadingButton({
+  isLoading = false,
+  children,
+  messages = [],
+  ...props
+}) {
   const [loadingMessage, setLoadingMessage] = useState("");
 
   useEffect(() => {
@@ -52,7 +57,9 @@ function LoadingButton({ isLoading=false, children, messages=[], ...props }) {
           <>
             <BlockLoader />
             {messages.length > 0 ? (
-              <span style={{ fontSize: 14 }} aria-live="polite">{loadingMessage}</span>
+              <span style={{ fontSize: 14 }} aria-live="polite">
+                {loadingMessage}
+              </span>
             ) : null}
           </>
         ) : (

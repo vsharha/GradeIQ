@@ -14,16 +14,19 @@ import { deleteSubmissions } from "@/services/fetchApi";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
-function DeleteSubmissions({selected, setSelected, assignment_id}) {
+function DeleteSubmissions({ selected, setSelected, assignment_id }) {
   const [open, setOpen] = useState(false);
 
-  const {isPending, mutate} = useSubmissionMutation(assignment_id, async ({ assignment_id, submission_ids })=>{
-    const headers = await getClientAuthHeaders();
-    return await deleteSubmissions(assignment_id, submission_ids, headers);
-  })
+  const { isPending, mutate } = useSubmissionMutation(
+    assignment_id,
+    async ({ assignment_id, submission_ids }) => {
+      const headers = await getClientAuthHeaders();
+      return await deleteSubmissions(assignment_id, submission_ids, headers);
+    },
+  );
 
   async function handleDelete() {
-    await mutate({ assignment_id, submission_ids:selected });
+    await mutate({ assignment_id, submission_ids: selected });
     setOpen(false);
     if (typeof setSelected === "function") {
       setSelected([]);
@@ -33,24 +36,25 @@ function DeleteSubmissions({selected, setSelected, assignment_id}) {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <LoadingButton variant="secondary" className="flex items-center" disabled={selected.length === 0} isLoading={isPending}>
-          <Trash/> <span className="hidden sm:block">Delete</span>
+        <LoadingButton
+          variant="secondary"
+          className="flex items-center"
+          disabled={selected.length === 0}
+          isLoading={isPending}
+        >
+          <Trash /> <span className="hidden sm:block">Delete</span>
         </LoadingButton>
       </DialogTrigger>
       <DialogContent>
         <DialogTitle>
           Delete {selected.length} submission{selected.length > 1 ? "s" : ""}?
         </DialogTitle>
-        <DialogDescription>
-          This action is permanent
-        </DialogDescription>
+        <DialogDescription>This action is permanent</DialogDescription>
         <DialogFooter>
           <Button variant="secondary" onClick={() => setOpen(false)}>
             No
           </Button>
-          <Button onClick={handleDelete}>
-            Yes
-          </Button>
+          <Button onClick={handleDelete}>Yes</Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>

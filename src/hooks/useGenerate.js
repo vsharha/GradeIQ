@@ -3,14 +3,13 @@ import { useMutation } from "@tanstack/react-query";
 function useGenerate(mutationFn) {
   const mutation = useMutation({
     mutationFn,
-    onSuccess: async () => {
-    },
+    onSuccess: async () => {},
     onError: (error) => {
       console.error(error);
-    }
+    },
   });
 
-  return mutation
+  return mutation;
 }
 
-export default useGenerate
+export default useGenerate;

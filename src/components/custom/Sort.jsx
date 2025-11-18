@@ -7,17 +7,16 @@ import {
 import { Button } from "@/components/ui/button";
 import { ArrowDown, ArrowUp } from "lucide-react";
 
-
-function Sort({sort, setSort, direction, setDirection}) {
-  function handleSetDirection(){
-    setDirection((direction)=>direction==="up"?"down":"up")
+function Sort({ sort, setSort, direction, setDirection }) {
+  function handleSetDirection() {
+    setDirection((direction) => (direction === "up" ? "down" : "up"));
   }
 
   return (
     <div className="flex items-center gap-1">
       <Button variant="outline" onClick={handleSetDirection}>
-        {direction==="down"&&<ArrowDown />}
-        {direction==="up"&&<ArrowUp />}
+        {direction === "down" && <ArrowDown />}
+        {direction === "up" && <ArrowUp />}
       </Button>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>

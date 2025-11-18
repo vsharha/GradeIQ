@@ -19,16 +19,18 @@ import { Label } from "@/components/ui/label";
 function GradeSubmissions({ selected, setSelected, assignment_id, ...props }) {
   const [open, setOpen] = useState(false);
 
-  const { mutate, isPending } = useSubmissionMutation(assignment_id, async ({ assignment_id, payload }) => {
-    const headers = await getClientAuthHeaders();
-    return await gradeSubmissions(assignment_id, payload, headers);
-  });
-
+  const { mutate, isPending } = useSubmissionMutation(
+    assignment_id,
+    async ({ assignment_id, payload }) => {
+      const headers = await getClientAuthHeaders();
+      return await gradeSubmissions(assignment_id, payload, headers);
+    },
+  );
 
   const [config, setConfig] = useState();
 
   async function handleGrade() {
-    const payload = {ai_config: config, submission_ids:selected}
+    const payload = { ai_config: config, submission_ids: selected };
     await mutate({ assignment_id, payload });
     setOpen(false);
     if (typeof setSelected === "function") {
@@ -49,11 +51,15 @@ function GradeSubmissions({ selected, setSelected, assignment_id, ...props }) {
     "Polishing expression...",
   ];
 
-
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <LoadingButton isLoading={isPending} messages={messages} disabled={selected.length === 0} {...props}>
+        <LoadingButton
+          isLoading={isPending}
+          messages={messages}
+          disabled={selected.length === 0}
+          {...props}
+        >
           Grade
         </LoadingButton>
       </DialogTrigger>
@@ -64,14 +70,12 @@ function GradeSubmissions({ selected, setSelected, assignment_id, ...props }) {
         <DialogDescription>
           Our AI will grade your submissions
         </DialogDescription>
-        <SelectModel onChange={setConfig}/>
+        <SelectModel onChange={setConfig} />
         <DialogFooter>
           <Button variant="secondary" onClick={() => setOpen(false)}>
             No
           </Button>
-          <Button onClick={handleGrade}>
-            Yes
-          </Button>
+          <Button onClick={handleGrade}>Yes</Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>

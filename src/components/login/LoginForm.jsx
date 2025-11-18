@@ -1,6 +1,13 @@
-"use client"
+"use client";
 
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
 import { useForm } from "react-hook-form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -15,24 +22,33 @@ function LoginForm() {
     defaultValues: {
       email: "",
       password: "",
-    }
-  })
+    },
+  });
 
   const [isLoading, setIsLoading] = useState(false);
 
   async function onSubmit(data) {
-    setIsLoading(true)
+    setIsLoading(true);
     const { email, password } = data;
 
     const supabase = await createClient();
 
-    const { error } = await supabase.auth.signInWithPassword({ email, password });
+    const { error } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    });
 
     if (error) {
-      form.setError("email", { type: "manual", message: "Invalid email or password" });
-      form.setError("password", { type: "manual", message: "Invalid email or password" });
+      form.setError("email", {
+        type: "manual",
+        message: "Invalid email or password",
+      });
+      form.setError("password", {
+        type: "manual",
+        message: "Invalid email or password",
+      });
       toast(error.message);
-      setIsLoading(false)
+      setIsLoading(false);
     } else {
       window.location.href = "/app";
     }
@@ -40,38 +56,39 @@ function LoginForm() {
 
   return (
     <Form {...form}>
-      <form className="flex flex-col gap-5" onSubmit={form.handleSubmit(onSubmit)}>
+      <form
+        className="flex flex-col gap-5"
+        onSubmit={form.handleSubmit(onSubmit)}
+      >
         <FormField
-          control = {form.control}
-          name = "email"
+          control={form.control}
+          name="email"
           disabled={isLoading}
-          render={({field})=> (
+          render={({ field }) => (
             <FormItem>
               <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input placeholder="" {...field} type="email"/>
+                <Input placeholder="" {...field} type="email" />
               </FormControl>
-              <FormMessage/>
+              <FormMessage />
             </FormItem>
           )}
         />
         <FormField
-          control = {form.control}
-          name = "password"
+          control={form.control}
+          name="password"
           disabled={isLoading}
-          render={({field})=> (
+          render={({ field }) => (
             <FormItem>
               <FormLabel>Password</FormLabel>
               <FormControl>
-                <Input placeholder="" type="password" {...field}/>
+                <Input placeholder="" type="password" {...field} />
               </FormControl>
-              <FormMessage/>
+              <FormMessage />
             </FormItem>
           )}
         />
-        <LoadingButton isLoading={isLoading}>
-          Log in
-        </LoadingButton>
+        <LoadingButton isLoading={isLoading}>Log in</LoadingButton>
       </form>
     </Form>
   );

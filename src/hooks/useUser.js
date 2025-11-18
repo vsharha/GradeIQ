@@ -3,23 +3,23 @@ import { fetchUser } from "@/services/fetchApi";
 import getClientAuthHeaders from "@/services/getClientAuthHeaders";
 
 function useUser() {
-    const query = useQuery({
-        queryKey: ["user"],
-        queryFn: async () => {
-            let headers = {}
+  const query = useQuery({
+    queryKey: ["user"],
+    queryFn: async () => {
+      let headers = {};
 
-            try {
-                headers = await getClientAuthHeaders()
-            } catch (e) {
-                return null
-            }
+      try {
+        headers = await getClientAuthHeaders();
+      } catch (e) {
+        return null;
+      }
 
-            return await fetchUser(headers);
-        },
-        refetchOnWindowFocus: true,
-    })
+      return await fetchUser(headers);
+    },
+    refetchOnWindowFocus: true,
+  });
 
-    return {...query, user: query.data}
+  return { ...query, user: query.data };
 }
 
-export default useUser
+export default useUser;

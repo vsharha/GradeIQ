@@ -1,14 +1,10 @@
 import { Check, LucideX } from "lucide-react";
 
-function Boolean({flag}) {
-  if(flag) {
-    return <Check/>
-  }
-
-  else {
-    return (
-      <LucideX/>
-    );
+function Boolean({ flag }) {
+  if (flag) {
+    return <Check />;
+  } else {
+    return <LucideX />;
   }
 }
 

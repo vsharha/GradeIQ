@@ -1,6 +1,14 @@
-"use client"
+"use client";
 
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
 import { DateTimePicker } from "@/components/ui/datetime-picker";
 import { Input } from "@/components/ui/input";
 import { useForm } from "react-hook-form";
@@ -9,21 +17,19 @@ import useAssignmentMutation from "@/hooks/useAssignmentMutation";
 import LoadingButton from "@/components/loader/LoadingButton";
 import MarkSchemeFieldArray from "@/components/assignments/MarkSchemeFieldArray";
 
-function CreateAssignmentForm({generated = {}, submitButtonText, onSubmit}) {
+function CreateAssignmentForm({ generated = {}, submitButtonText, onSubmit }) {
   const defaultRubric = {
     criterion: "",
     marks: "",
-  }
+  };
 
   const defaultMarkScheme = {
     number: 1,
     question: "",
     answer: "",
     precise_answer: false,
-    mark_scheme: [
-      defaultRubric
-    ]
-  }
+    mark_scheme: [defaultRubric],
+  };
 
   const form = useForm({
     defaultValues: {
@@ -33,22 +39,23 @@ function CreateAssignmentForm({generated = {}, submitButtonText, onSubmit}) {
       files: generated.files ?? null,
       title: generated.title ?? "",
       description: generated.description ?? "",
-      encoded: generated.encoded??"",
-      mark_scheme: generated.mark_scheme ?? [
-        defaultMarkScheme
-      ]
-    }
-  })
+      encoded: generated.encoded ?? "",
+      mark_scheme: generated.mark_scheme ?? [defaultMarkScheme],
+    },
+  });
 
-  const {mutate, isPending} = useAssignmentMutation(async (assignment) => {
-    if(typeof onSubmit === "function") {
+  const { mutate, isPending } = useAssignmentMutation(async (assignment) => {
+    if (typeof onSubmit === "function") {
       onSubmit(assignment, form.setError);
     }
-  })
+  });
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(mutate)} className="space-y-3 mt-5 h-full overflow-y-scroll py-6 px-4 sm:p-8 pt-0 flex-1">
+      <form
+        onSubmit={form.handleSubmit(mutate)}
+        className="space-y-3 mt-5 h-full overflow-y-scroll py-6 px-4 sm:p-8 pt-0 flex-1"
+      >
         <FormField
           control={form.control}
           name="title"
@@ -56,7 +63,7 @@ function CreateAssignmentForm({generated = {}, submitButtonText, onSubmit}) {
             <FormItem>
               <FormLabel>Assignment title</FormLabel>
               <FormControl>
-                <Input placeholder="" {...field}/>
+                <Input placeholder="" {...field} />
               </FormControl>
               <FormDescription />
               <FormMessage />
@@ -70,7 +77,7 @@ function CreateAssignmentForm({generated = {}, submitButtonText, onSubmit}) {
             <FormItem>
               <FormLabel>Assignment description</FormLabel>
               <FormControl>
-                <Textarea placeholder="" {...field}/>
+                <Textarea placeholder="" {...field} />
               </FormControl>
               <FormDescription />
               <FormMessage />
@@ -85,7 +92,7 @@ function CreateAssignmentForm({generated = {}, submitButtonText, onSubmit}) {
               <FormItem className="flex-1">
                 <FormLabel>Max grade</FormLabel>
                 <FormControl>
-                  <Input type="number" {...field}/>
+                  <Input type="number" {...field} />
                 </FormControl>
                 <FormDescription />
                 <FormMessage />
@@ -99,7 +106,7 @@ function CreateAssignmentForm({generated = {}, submitButtonText, onSubmit}) {
               <FormItem className="flex-1">
                 <FormLabel>Passing grade</FormLabel>
                 <FormControl>
-                  <Input type="number" {...field}/>
+                  <Input type="number" {...field} />
                 </FormControl>
                 <FormDescription />
                 <FormMessage />
@@ -114,18 +121,20 @@ function CreateAssignmentForm({generated = {}, submitButtonText, onSubmit}) {
             <FormItem>
               <FormLabel>Due date</FormLabel>
               <FormControl>
-                <DateTimePicker
-                  {...field}
-                />
+                <DateTimePicker {...field} />
               </FormControl>
               <FormDescription />
               <FormMessage />
             </FormItem>
           )}
         />
-        <MarkSchemeFieldArray form={form} defaultMarkScheme={defaultMarkScheme} defaultRubric={defaultRubric}/>
+        <MarkSchemeFieldArray
+          form={form}
+          defaultMarkScheme={defaultMarkScheme}
+          defaultRubric={defaultRubric}
+        />
         <LoadingButton isLoading={isPending} className="w-full">
-          {submitButtonText?submitButtonText:"Create"}
+          {submitButtonText ? submitButtonText : "Create"}
         </LoadingButton>
       </form>
     </Form>

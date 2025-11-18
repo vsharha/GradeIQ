@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
@@ -15,7 +15,7 @@ function LogoutButton() {
   const [isLoading, setIsLoading] = useState(false);
 
   async function handleLogout() {
-    setIsLoading(true)
+    setIsLoading(true);
     const supabase = await createClient();
     await supabase.auth.signOut();
 
@@ -25,7 +25,12 @@ function LogoutButton() {
   }
 
   return (
-    <LoadingButton className="w-full" onClick={handleLogout} isLoading={isLoading} variant="secondary">
+    <LoadingButton
+      className="w-full"
+      onClick={handleLogout}
+      isLoading={isLoading}
+      variant="secondary"
+    >
       Log out
     </LoadingButton>
   );

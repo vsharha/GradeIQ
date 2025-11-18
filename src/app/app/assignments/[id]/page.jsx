@@ -41,7 +41,9 @@ function Page({ params }) {
     return <ErrorMessage error={error} />;
   }
 
-  const assignment = assignments.find((assignment) => assignment.id === Number(id));
+  const assignment = assignments.find(
+    (assignment) => assignment.id === Number(id),
+  );
 
   if (!assignment) {
     return null;
@@ -60,15 +62,33 @@ function Page({ params }) {
             </div>
             <div className="flex items-center gap-4 w-full sm:w-fit justify-between">
               <div className="flex items-center gap-2">
-                <DeleteSubmissions selected={selected} assignment_id={id} setSelected={setSelected} />
-                <ConfirmSubmissions selected={selected} assignment_id={id} setSelected={setSelected}/>
-                <GradeSubmissions selected={selected} assignment_id={id} setSelected={setSelected} />
+                <DeleteSubmissions
+                  selected={selected}
+                  assignment_id={id}
+                  setSelected={setSelected}
+                />
+                <ConfirmSubmissions
+                  selected={selected}
+                  assignment_id={id}
+                  setSelected={setSelected}
+                />
+                <GradeSubmissions
+                  selected={selected}
+                  assignment_id={id}
+                  setSelected={setSelected}
+                />
               </div>
-              {selected.length !== 0 && <span>Selected: {selected.length}</span>}
+              {selected.length !== 0 && (
+                <span>Selected: {selected.length}</span>
+              )}
             </div>
           </CardHeader>
           <CardContent className="px-3 sm:px-4">
-            <SubmissionTable assignment={assignment} selected={selected} setSelected={setSelected} />
+            <SubmissionTable
+              assignment={assignment}
+              selected={selected}
+              setSelected={setSelected}
+            />
           </CardContent>
         </Card>
       </div>

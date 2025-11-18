@@ -5,12 +5,12 @@ function useModels() {
   const query = useQuery({
     queryKey: ["models"],
     queryFn: async () => {
-      return fetchModels()
+      return fetchModels();
     },
     refetchOnWindowFocus: true,
-  })
+  });
 
-  return {...query, models: query.data}
+  return { ...query, models: query.data };
 }
 
-export default useModels
+export default useModels;

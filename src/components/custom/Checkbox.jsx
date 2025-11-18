@@ -1,9 +1,13 @@
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 
-function Checkbox({className, ...props}) {
+function Checkbox({ className, ...props }) {
   return (
-    <Input type="checkbox" className={cn("accent-primary w-fit", className)} {...props}/>
+    <Input
+      type="checkbox"
+      className={cn("accent-primary w-fit", className)}
+      {...props}
+    />
   );
 }
 

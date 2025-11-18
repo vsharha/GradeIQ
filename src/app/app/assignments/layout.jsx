@@ -2,7 +2,7 @@
 // import getServerAuthHeaders from "@/services/getServerAuthHeaders";
 // import { fetchAssignments } from "@/services/fetchApi";
 
-async function Layout({children}) {
+async function Layout({ children }) {
   // const queryClient = new QueryClient();
   //
   // await queryClient.prefetchQuery({
@@ -15,7 +15,7 @@ async function Layout({children}) {
 
   return (
     // <HydrationBoundary state={dehydrate(queryClient)}>
-      children
+    children
     // </HydrationBoundary>
   );
 }
